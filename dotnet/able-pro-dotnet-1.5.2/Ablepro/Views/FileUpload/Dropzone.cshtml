@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "File Upload";
+    ViewBag.BreadcrumbItemActive = "File Upload";
+    ViewBag.BreadcrumItem = "Forms";
+    ViewBag.plugintitle="Dropzone";
+    ViewBag.text="Dropzone.js is one of the most popular drag and drop JavaScript libraries. It is free, fully open source, and makes it easy for you to handle dropped files on your website.";
+    ViewBag.link="https://www.dropzone.dev/";
+}
+
+@section styles {
+  <!-- [Page specific CSS] start -->
+  <!-- fileupload-custom css -->
+  <link rel="stylesheet" href="../assets/css/plugins/dropzone.min.css" >
+  <!-- [Page specific CSS] end -->
+}
+
+@Html.Partial("~/Views/Shared/_breadcrumb.cshtml")
+
+<!-- [ Main Content ] start -->
+@Html.Partial("~/Views/Shared/_component-link.cshtml")
+<div class="row">
+  <!-- [ file-upload ] start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>File Upload</h5>
+      </div>
+      <div class="card-body">
+        <form action="../assets/json/file-upload.php" class="dropzone">
+          <div class="fallback">
+            <input name="file" type="file" multiple>
+          </div>
+        </form>
+        <div class="text-center m-t-20">
+          <button class="btn btn-primary">Upload Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ file-upload ] end -->
+</div>
+<!-- [ Main Content ] end -->
+@section scripts {
+  <!-- [Page Specific JS] start -->
+  <!-- file-upload Js -->
+  <script src="../assets/js/plugins/dropzone-amd-module.min.js"></script>
+  <!-- [Page Specific JS] end -->
+}

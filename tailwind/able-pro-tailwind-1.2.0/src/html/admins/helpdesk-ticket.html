@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Helpdesk'})
+  <link href="https://tutsplus.github.io/syntax-highlighter-demos/highlighters/highlightjs/styles/monokai_sublime.css"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/plugins/quill.core.css" />
+  <link rel="stylesheet" href="../assets/css/plugins/quill.snow.css" />
+  <link rel="stylesheet" href="../assets/css/plugins/prism-coy.css" />
+  @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+  @@include('../layouts/layout-vertical.html')
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Helpdesk', 'breadcrumb-item-active': 'Ticket list'})
+
+      <!-- [ Main Content ] start -->
+      <div class="grid grid-cols-12 gap-x-6">
+        <div class="col-span-12 xl:col-span-8 help-main group">
+          <div class="card">
+            <div class="card-body">
+              <nav class="flex  justify-between p-0 items-center">
+                <h5>Ticket List</h5>
+                <div class="inline-flex items-center help-filter" role="group">
+                  <label
+                    class="btn btn-sm btn-light-secondary cursor-pointer ltr:rounded-r-none rtl:rounded-l-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                    onclick='filterchange("sm")' for="btnrdolite1">
+                    <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdolite1"
+                      name="btn_radio2" /><i class="feather icon-align-justify m-0"></i></label>
+                  <label
+                    class="btn btn-sm btn-light-secondary cursor-pointer rounded-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                    onclick='filterchange("md")' for="btnrdolite2">
+                    <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdolite2"
+                      name="btn_radio2" /><i class="feather icon-menu m-0"></i></label>
+                  <label
+                    class="btn btn-sm btn-light-secondary cursor-pointer ltr:rounded-l-none rtl:rounded-r-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                    onclick='filterchange("large")' for="btnrdolite3">
+                    <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdolite3"
+                      name="btn_radio2" checked /><i class="feather icon-grid m-0"></i></label>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="card ticket-card">
+            <div class="card-body">
+              <div class="flex max-sm:flex-col items-start gap-6">
+                <div class="shrink-0 mr-3">
+                  <div class="d-sm-inline-block d-flex align-items-center">
+                    <img class="media-object w-[60px] rounded-full" src="../assets/images/user/avatar-1.jpg"
+                      alt="Generic placeholder image " />
+                    <div class="ml-3 sm:ml-0">
+                      <ul class="sm:text-center list-unstyled mt-2 ml-0 mb-0 inline-block">
+                        <li class="list-unstyled-item"><a href="#" class="text-secondary-500">1 Ticket</a></li>
+                        <li class="list-unstyled-item"><a href="#" class="text-danger-500"><i class="fas fa-heart"></i>
+                            3</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="grow">
+                  <div class="popup-trigger">
+                    <div class="h5 font-weight-bold">John lui <small
+                        class="badge bg-secondary-500/10 text-secondary-500 dark:text-white ms-2">Replied</small></div>
+                    <div class="group-[.sm-view]:hidden">
+                      <ul class="flex flex-wrap mt-2 mb-0 text-muted gap-2">
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><img src="../assets/images/admin/p1.jpg"
+                            alt="" class="w-5 rounded" />Piaf able</li>
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><img
+                            src="../assets/images/user/avatar-5.jpg" alt="" class="w-5 rounded" />Assigned to
+                          <b>Robert alia</b>
+                        </li>
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><i
+                            class="w-5 material-icons-two-tone text-center text-base">calendar_today</i>Updated 22 hours
+                          ago</li>
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><i
+                            class="w-5 material-icons-two-tone text-center text-base">chat</i>9
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="h5 mt-3"><i class="material-icons-two-tone text-[16px] mr-1">lock</i> Theme
+                      customisation issue</div>
+                    <div class="group-[.md-view]:hidden group-[.sm-view]:hidden">
+                      <div class="bg-theme-bodybg dark:bg-themedark-bodybg rounded-lg mb-3 p-4">
+                        <h6 class="mb-2">
+                          <img src="../assets/images/user/avatar-5.jpg" alt=""
+                            class="w-5 mr-2 rounded-md inline-block" />
+                          Last comment from
+                          <a href="#" class="text-muted">Robert alia:</a>
+                        </h6>
+                        <p class="mb-0">
+                          <b>hello John lui</b>,<br />
+                          you need to create <b>"toolbar-options" div only</b> once in a page&nbsp;in your code,<br />
+                          this div fill found every "td" tag in your page,<br />
+                          just remove those things and also in option button add
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <a href="helpdesk-ticket-details.html" class="m-1 btn btn-sm btn-light-primary"><i
+                        class="feather icon-eye mx-1"></i>View Ticket</a>
+                    <a href="#" class="m-1 btn btn-sm btn-light-danger"><i
+                        class="feather icon-trash-2 mx-1"></i>Delete</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card ticket-card border-l-4 border-l-danger-500">
+            <div class="card-body">
+              <div class="flex max-sm:flex-col items-start gap-6">
+                <div class="shrink-0 mr-3">
+                  <div class="d-sm-inline-block d-flex align-items-center">
+                    <img class="media-object w-[60px] rounded-full" src="../assets/images/user/avatar-1.jpg"
+                      alt="Generic placeholder image " />
+                    <div class="ml-3 sm:ml-0">
+                      <ul class="sm:text-center list-unstyled mt-2 ml-0 mb-0 inline-block">
+                        <li class="list-unstyled-item"><a href="#" class="text-secondary-500">1 Ticket</a></li>
+                        <li class="list-unstyled-item"><a href="#" class="text-danger-500"><i class="fas fa-heart"></i>
+                            3</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="grow">
+                  <div class="popup-trigger">
+                    <div class="h5 font-weight-bold">John lui <small
+                        class="badge bg-secondary-500/10 text-secondary-500 dark:text-white ms-2">Replied</small></div>
+                    <div class="group-[.sm-view]:hidden">
+                      <ul class="flex flex-wrap mt-2 mb-0 text-muted gap-2">
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><img src="../assets/images/admin/p1.jpg"
+                            alt="" class="w-5 rounded" />Piaf able</li>
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><img
+                            src="../assets/images/user/avatar-5.jpg" alt="" class="w-5 rounded" />Assigned to
+                          <b>Robert alia</b>
+                        </li>
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><i
+                            class="w-5 material-icons-two-tone text-center text-base">calendar_today</i>Updated 22 hours
+                          ago</li>
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><i
+                            class="w-5 material-icons-two-tone text-center text-base">chat</i>9
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="h5 mt-3"><i class="material-icons-two-tone text-[16px] mr-1">lock</i> Theme
+                      customisation issue</div>
+                    <div class="group-[.md-view]:hidden group-[.sm-view]:hidden">
+                      <div class="bg-theme-bodybg dark:bg-themedark-bodybg rounded-lg mb-3 p-4">
+                        <h6 class="mb-2">
+                          <img src="../assets/images/user/avatar-5.jpg" alt=""
+                            class="w-5 mr-2 rounded-md inline-block" />
+                          Last comment from
+                          <a href="#" class="text-muted">Robert alia:</a>
+                        </h6>
+                        <p class="mb-0">
+                          <b>hello John lui</b>,<br />
+                          you need to create <b>"toolbar-options" div only</b> once in a page&nbsp;in your code,<br />
+                          this div fill found every "td" tag in your page,<br />
+                          just remove those things and also in option button add
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <a href="helpdesk-ticket-details.html" class="m-1 btn btn-sm btn-light-primary"><i
+                        class="feather icon-eye mx-1"></i>View Ticket</a>
+                    <a href="#" class="m-1 btn btn-sm btn-light-danger"><i
+                        class="feather icon-trash-2 mx-1"></i>Delete</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card ticket-card border-l-4 border-l-success-500">
+            <div class="card-body">
+              <div class="flex max-sm:flex-col items-start gap-6">
+                <div class="shrink-0 mr-3">
+                  <div class="d-sm-inline-block d-flex align-items-center">
+                    <img class="media-object w-[60px] rounded-full" src="../assets/images/user/avatar-1.jpg"
+                      alt="Generic placeholder image " />
+                    <div class="ml-3 sm:ml-0">
+                      <ul class="sm:text-center list-unstyled mt-2 ml-0 mb-0 inline-block">
+                        <li class="list-unstyled-item"><a href="#" class="text-secondary-500">1 Ticket</a></li>
+                        <li class="list-unstyled-item"><a href="#" class="text-danger-500"><i class="fas fa-heart"></i>
+                            3</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="grow">
+                  <div class="popup-trigger">
+                    <div class="h5 font-weight-bold">John lui <small
+                        class="badge bg-secondary-500/10 text-secondary-500 dark:text-white ms-2">Replied</small></div>
+                    <div class="group-[.sm-view]:hidden">
+                      <ul class="flex flex-wrap mt-2 mb-0 text-muted gap-2">
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><img src="../assets/images/admin/p1.jpg"
+                            alt="" class="w-5 rounded" />Piaf able</li>
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><img
+                            src="../assets/images/user/avatar-5.jpg" alt="" class="w-5 rounded" />Assigned to
+                          <b>Robert alia</b>
+                        </li>
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><i
+                            class="w-5 material-icons-two-tone text-center text-base">calendar_today</i>Updated 22 hours
+                          ago</li>
+                        <li class="sm:inline-flex items-center flex gap-1 mt-1"><i
+                            class="w-5 material-icons-two-tone text-center text-base">chat</i>9
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="h5 mt-3"><i class="material-icons-two-tone text-[16px] mr-1">lock</i> Theme
+                      customisation issue</div>
+                    <div class="group-[.md-view]:hidden group-[.sm-view]:hidden">
+                      <div class="bg-theme-bodybg dark:bg-themedark-bodybg rounded-lg mb-3 p-4">
+                        <h6 class="mb-2">
+                          <img src="../assets/images/user/avatar-5.jpg" alt=""
+                            class="w-5 mr-2 rounded-md inline-block" />
+                          Last comment from
+                          <a href="#" class="text-muted">Robert alia:</a>
+                        </h6>
+                        <p class="mb-0">
+                          <b>hello John lui</b>,<br />
+                          you need to create <b>"toolbar-options" div only</b> once in a page&nbsp;in your code,<br />
+                          this div fill found every "td" tag in your page,<br />
+                          just remove those things and also in option button add
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <a href="helpdesk-ticket-details.html" class="m-1 btn btn-sm btn-light-primary"><i
+                        class="feather icon-eye mx-1"></i>View Ticket</a>
+                    <a href="#" class="m-1 btn btn-sm btn-light-danger"><i
+                        class="feather icon-trash-2 mx-1"></i>Delete</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 xl:col-span-4">
+          <div class="right-side">
+            <div class="card mb-3">
+              <div class="card-header">
+                <h5>Ticket Categories</h5>
+              </div>
+              <ul
+                class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                <li class="list-group-item">
+                  <div class="inline-block">
+                    <img src="../assets/images/admin/p1.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />
+                    <a href="#">Piaf able</a>
+                  </div>
+                  <div class="ltr:float-right rtl:float-left">
+                    <a href="#" class="badge bg-danger-500/10 text-danger-500 rounded-full mr-1">1</a>
+                    <a href="#"
+                      class="badge bg-secondary-500/10 text-secondary-500 dark:text-white rounded-full mr-0">3</a>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="inline-block">
+                    <img src="../assets/images/admin/p2.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />
+                    <a href="#">Pro able</a>
+                  </div>
+                  <div class="ltr:float-right rtl:float-left">
+                    <a href="#"
+                      class="badge bg-secondary-500/10 text-secondary-500 dark:text-white rounded-full mr-0">3</a>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="inline-block">
+                    <img src="../assets/images/admin/p3.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />
+                    <a href="#">CRM admin</a>
+                  </div>
+                  <div class="ltr:float-right rtl:float-left">
+                    <a href="#" class="badge bg-danger-500/10 text-danger-500 rounded-full mr-1">1</a>
+                    <a href="#"
+                      class="badge bg-secondary-500/10 text-secondary-500 dark:text-white rounded-full mr-0">3</a>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="inline-block">
+                    <img src="../assets/images/admin/p4.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />
+                    <a href="#">Alpha pro</a>
+                  </div>
+                  <div class="ltr:float-right rtl:float-left">
+                    <a href="#"
+                      class="badge bg-secondary-500/10 text-secondary-500 dark:text-white rounded-full mr-0">3</a>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="inline-block">
+                    <img src="../assets/images/admin/p5.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />
+                    <a href="#">Carbon able</a>
+                  </div>
+                  <div class="ltr:float-right rtl:float-left">
+                    <a href="#"
+                      class="badge bg-secondary-500/10 text-secondary-500 dark:text-white rounded-full mr-0">3</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-header pt-4 pb-4">
+                <h5>Support Aggent</h5>
+              </div>
+              <ul
+                class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                <li class="list-group-item">
+                  <div class="inline-block">
+                    <img src="../assets/images/user/avatar-5.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />
+                    <a href="#">Tom Cook</a>
+                  </div>
+                  <div class="ltr:float-right rtl:float-left">
+                    <a href="#" class="badge bg-danger-500/10 text-danger-500 rounded-full mr-1"
+                      data-pc-toggle="tooltip" data-bs-placement="top" title=""
+                      data-original-title="tooltip on top">1</a>
+                    <a href="#" class="badge bg-secondary-500/10 text-secondary-500 dark:text-white rounded-full mr-0"
+                      data-pc-toggle="tooltip" data-bs-placement="top" title=""
+                      data-original-title="tooltip on top">3</a>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="inline-block">
+                    <img src="../assets/images/user/avatar-4.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />
+                    <a href="#">Brad Larry</a>
+                  </div>
+                  <div class="ltr:float-right rtl:float-left">
+                    <a href="#" class="badge bg-danger-500/10 text-danger-500 rounded-full mr-1"
+                      data-pc-toggle="tooltip" data-bs-placement="top" title=""
+                      data-original-title="tooltip on top">1</a>
+                    <a href="#" class="badge bg-secondary-500/10 text-secondary-500 dark:text-white rounded-full mr-0"
+                      data-pc-toggle="tooltip" data-bs-placement="top" title=""
+                      data-original-title="tooltip on top">3</a>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="inline-block">
+                    <img src="../assets/images/user/avatar-3.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />
+                    <a href="#">Jhon White</a>
+                  </div>
+                  <div class="ltr:float-right rtl:float-left">
+                    <a href="#" class="badge bg-secondary-500/10 text-secondary-500 dark:text-white rounded-full mr-0"
+                      data-pc-toggle="tooltip" data-bs-placement="top" title=""
+                      data-original-title="tooltip on top">3</a>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="inline-block">
+                    <img src="../assets/images/user/avatar-2.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />
+                    <a href="#">Mark Jobs</a>
+                  </div>
+                  <div class="ltr:float-right rtl:float-left">
+                    <a href="#" class="badge bg-secondary-500/10 text-secondary-500 dark:text-white rounded-full mr-0"
+                      data-pc-toggle="tooltip" data-bs-placement="top" title=""
+                      data-original-title="tooltip on top">3</a>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="inline-block">
+                    <img src="../assets/images/user/avatar-1.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />
+                    <a href="#">Able Pro</a>
+                  </div>
+                  <div class="ltr:float-right rtl:float-left">
+                    <a href="#" class="badge bg-secondary-500/10 text-secondary-500 dark:text-white rounded-full mr-0"
+                      data-pc-toggle="tooltip" data-bs-placement="top" title=""
+                      data-original-title="tooltip on top">3</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+
+  <div class="offcanvas group offcanvas-end !w-[550px] [&:not(.show)]:right-[-550px] has-[.show]:right-0" tabindex="-1"
+    id="qviewModal" aria-labelledby="qviewModalLabel">
+    <div class="offcanvas-header ">
+      <h5 class="modal-title grow me-2">
+        Chrome bug The page uses a roller to slide under a black block
+        <span class="badge bg-danger-500/10 text-danger-500 uppercase ml-2">Private</span>
+      </h5>
+      <div class="shrink-0">
+        <button data-pc-dismiss="#qviewModal"
+          class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500">
+          <i class="ti ti-x"></i>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-div position-relative" style="height: calc(100vh - 90px)">
+      <div class="offcanvas-body border-y border-theme-border dark:border-themedark-border px-4">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 md:col-span-7">
+            <span class="badge bg-success-500/10 text-success-500 mr-1"><i class="feather icon-check mr-1"></i>
+              Closed</span>
+            <p class="mb-0 inline-block">
+              <img src="../assets/images/admin/p1.jpg" alt="" class="w-5 rounded-lg ltr:mr-1 rtl:ml-1 inline-block" />Alpha pro
+            </p>
+          </div>
+          <div class="col-span-12 md:col-span-5 text-right">
+            <p class="inline-block mb-0"><i
+                class="w-5 material-icons-two-tone text-center align-text-top text-[16px] mr-2">calendar_today</i><label
+                class="mb-0">Jan,1st,2019</label></p>
+          </div>
+        </div>
+      </div>
+      <div class="offcanvas-body border-y border-theme-border dark:border-themedark-border px-4">
+        <div class="flex items-start">
+          <div class="shrink-0 ltr:mr-3 rtl:ml-3">
+            <img class="w-[60px] rounded-full" src="../assets/images/user/avatar-5.jpg"
+              alt="Generic placeholder image " />
+          </div>
+          <div class="grow">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Note!</strong> This ticket is closed. If you want to re-open it, just post a reply below.
+              <button data-pc-dismiss="alert"
+                class="text-lg flex items-center justify-center rounded w-7 h-7 text-inherit bg-transparent hover:bg-inherit bg-opacity-10">
+                <i class="ti ti-x"></i>
+              </button>
+            </div>
+            <div id="tinymce-editor" style="height: 150px">
+              <p>hello..</p>
+            </div>
+            <div class="btn-block mt-3">
+              <div class="btn-group inline-flex items-center me-2 mb-2">
+                <button type="button" class="btn btn-sm btn-light-primary rounded-r-none">Primary</button>
+                <button type="button"
+                  class="btn btn-sm btn-light-primary rounded-l-none dropdown-toggle dropdown-toggle-split"
+                  data-pc-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#!">Action</a>
+                  <a class="dropdown-item" href="#!">Another action</a>
+                  <a class="dropdown-item" href="#!">Something else here</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#!">Separated link</a>
+                </div>
+              </div>
+              <label class="btn btn-sm btn-light-secondary mb-2" for="mod-flup">
+                <i class="feather icon-paperclip mr-1"></i> Add Atachment
+              </label>
+              <input type="file" name="file" class="hidden" id="mod-flup" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offcanvas-body border-y border-theme-border dark:border-themedark-border px-4">
+        <div class="flex items-start">
+          <div class="shrink-0 ltr:mr-3 rtl:ml-3">
+            <img class="w-[60px] rounded-full" src="../assets/images/user/avatar-5.jpg"
+              alt="Generic placeholder image " />
+          </div>
+          <div class="grow">
+            <h6 class="mb-0">Support Agent name<span
+                class="badge bg-secondary-500/10 text-secondary-500 dark:text-white ms-2">Support Agent</span></h6>
+            <label class="text-muted">5 Month ago</label>
+          </div>
+          <div class="shrink-0 ml-3">
+            <ul class="flex items-center gap-1 mb-0">
+              <li><a href="#"><i class="feather icon-edit text-muted"></i></a></li>
+              <li><a href="#"><i class="feather icon-trash-2 text-muted"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-3 mb-4">
+          <p>hello John lui,</p>
+          <p>you need to create <strong>"toolbar-options" div only once</strong> in a page in your code, this div fill
+            found
+            <strong>every "td"</strong> tag in your page, just remove those things.
+          </p>
+          <p>and also</p>
+          <p>in option button add "<strong>p-0</strong>" class in "<strong>I</strong>" tag</p>
+          <p>to</p>
+          <p></p>
+          <p>Thanks...</p>
+        </div>
+        <div class="code-toolbar">
+          <pre class="before:!hidden after:!hidden language-markup ">
+<code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>language-css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    p {
+        color: #1abc9c
+    }
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">&gt;</span></span>
+</code>
+                    </pre>
+        </div>
+      </div>
+      <div class="offcanvas-body border-y border-theme-border dark:border-themedark-border px-4">
+        <div class="flex items-start">
+          <div class="shrink-0 ltr:mr-3 rtl:ml-3">
+            <img class="w-[60px] rounded-full" src="../assets/images/user/avatar-1.jpg"
+              alt="Generic placeholder image " />
+          </div>
+          <div class="grow">
+            <h6 class="mb-0">Support Agent name<span
+                class="badge bg-secondary-500/10 text-secondary-500 dark:text-white ms-2">Support Agent</span></h6>
+            <label class="text-muted">5 Month ago</label>
+          </div>
+          <div class="shrink-0 ml-3">
+            <ul class="flex items-center gap-1 mb-0">
+              <li><a href="#"><i class="feather icon-edit text-muted"></i></a></li>
+              <li><a href="#"><i class="feather icon-trash-2 text-muted"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-3 mb-4">
+          <p>hello John lui,</p>
+          <p>you need to create <strong>"toolbar-options" div only once</strong> in a page in your code, this div fill
+            found
+            <strong>every "td"</strong> tag in your page, just remove those things.
+          </p>
+          <p>and also</p>
+          <p>in option button add "<strong>p-0</strong>" class in "<strong>I</strong>" tag</p>
+          <p>to</p>
+          <p></p>
+          <p>Thanks...</p>
+        </div>
+        <div class="grid grid-cols-12 gap-2 text-center mb-2">
+          <div class="xl:col-span-2 lg:col-span-3 sm:col-span-4 col-span-6">
+            <img src="../assets/images/light-box/sl1.jpg" class="w-full rounded-md" alt="" />
+          </div>
+          <div class="xl:col-span-2 lg:col-span-3 sm:col-span-4 col-span-6">
+            <img src="../assets/images/light-box/sl2.jpg" class="w-full rounded-md" alt="" />
+          </div>
+          <div class="xl:col-span-2 lg:col-span-3 sm:col-span-4 col-span-6">
+            <img src="../assets/images/light-box/sl5.jpg" class="w-full rounded-md" alt="" />
+          </div>
+          <div class="xl:col-span-2 lg:col-span-3 sm:col-span-4 col-span-6">
+            <img src="../assets/images/light-box/sl6.jpg" class="w-full rounded-md" alt="" />
+          </div>
+          <div class="xl:col-span-2 lg:col-span-3 sm:col-span-4 col-span-6">
+            <img src="../assets/images/light-box/sl1.jpg" class="w-full rounded-md" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="offcanvas-body border-y border-theme-border dark:border-themedark-border px-4">
+        <div class="flex items-start">
+          <div class="shrink-0 ltr:mr-3 rtl:ml-3">
+            <img class="w-[60px] rounded-full" src="../assets/images/user/avatar-5.jpg"
+              alt="Generic placeholder image " />
+          </div>
+          <div class="grow">
+            <h6 class="mb-0">Support Agent name<span
+                class="badge bg-secondary-500/10 text-secondary-500 dark:text-white ms-2">Support Agent</span></h6>
+            <label class="text-muted">5 Month ago</label>
+          </div>
+          <div class="shrink-0 ml-3">
+            <ul class="flex items-center gap-1 mb-0">
+              <li><a href="#"><i class="feather icon-edit text-muted"></i></a></li>
+              <li><a href="#"><i class="feather icon-trash-2 text-muted"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-3 mb-4">
+          <p>hello John lui,</p>
+          <p>you need to create <strong>"toolbar-options" div only once</strong> in a page in your code, this div fill
+            found
+            <strong>every "td"</strong> tag in your page, just remove those things.
+          </p>
+          <p>and also</p>
+          <p>in option button add "<strong>p-0</strong>" class in "<strong>I</strong>" tag</p>
+          <p>to</p>
+          <p></p>
+          <p>Thanks...</p>
+        </div>
+        <div class="code-toolbar">
+          <pre class="before:!hidden after:!hidden language-markup ">
+<code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>language-css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    p {
+        color: #1abc9c
+    }
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">&gt;</span></span>
+</code>
+                    </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+  <!-- [Page Specific JS] start -->
+  <!-- prism Js -->
+  <script src="../assets/js/plugins/prism.js"></script>
+  <script src="../assets/js/plugins/quill.js"></script>
+
+  <script>
+
+    const helpMain = document.querySelector('.help-main');
+    const qviewpopup = document.getElementById('qviewModal');
+    const popupTriggers = document.querySelectorAll('.popup-trigger');
+    const helpFilterLinks = document.querySelectorAll('.help-filter a');
+    const scrollDiv = document.querySelector('.scroll-div');
+
+    function filterchange(tempnum) {
+      helpMain.classList.remove('sm-view', 'md-view', 'large-view');
+      helpMain.classList.add(`${tempnum}-view`);
+    }
+
+    // Initialize Quill editor
+    new Quill('#tinymce-editor', {
+      modules: {
+        toolbar: [
+          [{ header: [1, 2, false] }],
+          ['bold', 'italic', 'underline'],
+          ['image', 'code-block']
+        ]
+      },
+      placeholder: 'Type your text here...',
+      theme: 'snow'
+    });
+
+    // Popup triggers
+    popupTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const backDropOverlay = document.createElement('div');
+        backDropOverlay.className = 'fixed inset-0 bg-gray-900/20 z-[1027] backdrop-blur-sm';
+        backDropOverlay.id = 'offcanvasoverlay';
+        document.body.appendChild(backDropOverlay);
+        backDropOverlay.addEventListener('click', offcanvasclose);
+        qviewpopup.classList.add('show');
+      });
+    });
+
+    // Initialize custom scrollbar if needed
+    if (scrollDiv) {
+      new SimpleBar(scrollDiv);
+    }
+
+    // Help filter click events
+    helpFilterLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+        const activeLink = document.querySelector('.help-filter a.active');
+        if (activeLink) {
+          activeLink.classList.remove('active');
+        }
+
+        let targetElement = event.target;
+        if (targetElement.tagName === 'I') {
+          targetElement = targetElement.parentNode;
+        }
+
+        targetElement.classList.add('active');
+      });
+    });
+
+  </script>
+  <!-- [Page Specific JS] end -->
+  @@include('../layouts/customizer.html')
+</body>
+<!-- [Body] end -->
+
+</html>

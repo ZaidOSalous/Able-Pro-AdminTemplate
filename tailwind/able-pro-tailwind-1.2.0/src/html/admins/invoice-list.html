@@ -1,0 +1,1482 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'List Invoice'})
+    <link rel="stylesheet" href="../assets/css/plugins/style.css" />
+    @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Invoice', 'breadcrumb-item-active':'List'})
+        
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-x-6">
+          <div class="col-span-12 2xl:col-span-8">
+            <div class="grid grid-cols-12 gap-4 mb-3">
+              <div class="col-span-12 md:col-span-6 lg:col-span-4">
+                <div class="card mb-0">
+                  <div class="card-body">
+                    <div class="mb-2 flex items-center justify-between gap-1">
+                      <h6 class="mb-0">Total</h6>
+                      <p class="mb-0 text-muted flex items-center gap-1">
+                        <svg class="pc-icon text-success-500 w-[15px] h-[15px]">
+                          <use xlink:href="#custom-arrow-up"></use>
+                        </svg>
+                        70.5%
+                      </p>
+                    </div>
+                    <div class="grid grid-cols-12 gap-4 g-2">
+                      <div class="col-span-6 self-center">
+                        <h5 class="mb-2 mt-3">$7,825</h5>
+                        <div class="flex items-center gap-1">
+                          <h5 class="mb-0">9</h5>
+                          <p class="mb-0 text-muted flex items-center gap-2">invoices</p>
+                        </div>
+                      </div>
+                      <div class="col-span-6 self-center">
+                        <div id="total-invoice-1-chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6 lg:col-span-4">
+                <div class="card mb-0">
+                  <div class="card-body">
+                    <div class="flex mb-2 items-center justify-between gap-1">
+                      <h6 class="mb-0">Paid</h6>
+                      <p class="mb-0 text-muted flex items-center gap-1">
+                        <svg class="pc-icon text-warning-500 w-[15px] h-[15px]">
+                          <use xlink:href="#custom-arrow-down"></use>
+                        </svg>
+                        -8.73%
+                      </p>
+                    </div>
+                    <div class="grid grid-cols-12 gap-4 g-2">
+                      <div class="col-span-6 self-center">
+                        <h5 class="mb-2 mt-3">£5678.09</h5>
+                        <div class="flex items-center gap-1">
+                          <h5 class="mb-0">5</h5>
+                          <p class="mb-0 text-muted flex items-center gap-2">invoices</p>
+                        </div>
+                      </div>
+                      <div class="col-span-6 self-center">
+                        <div id="total-invoice-2-chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-12 lg:col-span-4">
+                <div class="card mb-0">
+                  <div class="card-body">
+                    <div class="mb-2 flex items-center justify-between gap-1">
+                      <h6 class="mb-0">Overdue</h6>
+                      <p class="mb-0 text-muted flex items-center gap-1">
+                        <svg class="pc-icon text-danger-500 w-[15px] h-[15px]">
+                          <use xlink:href="#custom-arrow-down"></use>
+                        </svg>
+                        -4.73%
+                      </p>
+                    </div>
+                    <div class="grid grid-cols-12 gap-4 g-2">
+                      <div class="col-span-6 self-center">
+                        <h5 class="mb-2 mt-3">£5678.09</h5>
+                        <div class="flex items-center gap-1">
+                          <h5 class="mb-0">5</h5>
+                          <p class="mb-0 text-muted flex items-center gap-2">invoices</p>
+                        </div>
+                      </div>
+                      <div class="col-span-6 self-center">
+                        <div id="total-invoice-3-chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 2xl:col-span-4">
+            <div class="card bg-primary">
+              <div class="card-body">
+                <div class="flex items-center">
+                  <div class="shrink-0">
+                    <div class="w-12 h-12 rounded-xl inline-flex items-center justify-center bg-white/10 text-white">
+                      <i class="ph-duotone ph-user-plus text-[22px]"></i>
+                    </div>
+                  </div>
+                  <div class="grow ltr:ml-3 rtl:mr-3">
+                    <p class="text-white mb-1 flex items-center gap-2">Total Recievables <i data-feather="alert-circle"></i></p>
+                    <div class="flex items-center justify-between">
+                      <p class="text-white mb-0 flex items-center gap-2">Current <span class="font-medium text-[16px]">109.1k</span> </p>
+                      <p class="text-white mb-0 flex items-center gap-2">Overdue <span class="font-medium text-[16px]">62k</span> </p>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="text-white mt-3 mb-1">$43,078</h4>
+                <div class="flex items-center">
+                  <div class="grow mr-3">
+                    <div class="w-full bg-warning-500/10 rounded-lg h-2">
+                      <div
+                        class="bg-warning-500 h-full rounded-lg"
+                        role="progressbar"
+                        style="width: 90%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="shrink-0 ltr:!text-right rtl:!text-left w-[30px]">
+                    <p class="text-white mb-0">90%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12">
+            <div class="card">
+              <div class="card-body">
+                <ul class="flex flex-wrap w-full text-center nav-tabs border-b border-b-theme-border dark:border-b-themedark-border">
+                  <li class="group active">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="analytics-1"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                    All<span class="badge bg-primary-500/10 text-primary-500 rounded-full ml-2 align-bottom">5</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="analytics-2"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                    Paid <span class="badge bg-success-500/10 text-success-500 rounded-full ml-2 align-bottom">2</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="analytics-3"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                      Unpaid <span class="badge bg-warning-500/10 text-warning-500 rounded-full ml-2 align-bottom">2</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="analytics-4"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                    Cancelled
+                      <span class="badge bg-danger-500/10 text-danger-500 rounded-full ml-2 align-bottom">1</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div class="block tab-pane" id="analytics-1">
+                    <div class="table-responsive">
+                      <table class="table table-hover" id="pc-dt-simple-1">
+                        <thead>
+                          <tr>
+                            <th>Invoice Id</th>
+                            <th>User Name</th>
+                            <th>Create Date</th>
+                            <th>Due Date</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-9.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-10.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-4.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-7.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-8.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="analytics-2">
+                    <div class="table-responsive">
+                      <table class="table table-hover" id="pc-dt-simple-2">
+                        <thead>
+                          <tr>
+                            <th>Invoice Id</th>
+                            <th>User Name</th>
+                            <th>Create Date</th>
+                            <th>Due Date</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                         
+                          <tr>
+                            <td>4</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-9.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-10.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-4.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-7.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-8.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="analytics-3">
+                    <div class="table-responsive">
+                      <table class="table table-hover" id="pc-dt-simple-3">
+                        <thead>
+                          <tr>
+                            <th>Invoice Id</th>
+                            <th>User Name</th>
+                            <th>Create Date</th>
+                            <th>Due Date</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-9.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-10.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-4.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-7.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-8.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="analytics-4">
+                    <div class="table-responsive">
+                      <table class="table table-hover" id="pc-dt-simple-4">
+                        <thead>
+                          <tr>
+                            <th>Invoice Id</th>
+                            <th>User Name</th>
+                            <th>Create Date</th>
+                            <th>Due Date</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                         
+                          <tr>
+                            <td>4</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-9.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-10.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-4.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Mickie Melmoth</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">mmsht23@gmail.com</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>5/5/2022</td>
+                            <td>7/11/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-success-500/10 text-success-500">Paid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-7.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">Shelba Thews</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>7/6/2022</td>
+                            <td>7/8/2022</td>
+                            <td>3000</td>
+                            <td><span class="badge bg-danger-500/10 text-danger-500">Cancelled</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>
+                              <div class="flex items-center">
+                                <div class="shrink-0 w-10">
+                                  <img src="../assets/images/user/avatar-8.jpg" alt="user-image" class="w-10 h-10 rounded-full" />
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h6 class="mb-1"><span class="truncate w-full">tass23@gmail.com</span> </h6>
+                                  <p class="f-12 mb-0"
+                                    ><a href="#!" class="text-muted"><span class="truncate w-full">Shelba Thews</span></a></p
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                            <td>05/01/2022</td>
+                            <td>06/02/2022</td>
+                            <td>1000</td>
+                            <td><span class="badge bg-info-500/10 text-info-500">Unpaid</span></td>
+                            <td>
+                              <ul class="inline-flex items-center gap-2 mb-0">
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-info btn-pc-default"><i class="ti ti-eye text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-success btn-pc-default"><i class="ti ti-edit text-xl leading-none"></i></a
+                                ></li>
+                                <li class="list-inline-item"
+                                  ><a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-danger btn-pc-default"><i class="ti ti-trash text-xl leading-none"></i></a
+                                ></li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <script src="../assets/js/plugins/apexcharts.min.js"></script>
+    <script src="../assets/js/plugins/simple-datatables.js"></script>
+    <!-- custom widget js -->
+    <script src="../assets/js/widgets/total-invoice-all-chart.js"></script>
+    <script>
+      const dataTable1 = new simpleDatatables.DataTable('#pc-dt-simple-1', { sortable: false });
+      const dataTable2 = new simpleDatatables.DataTable('#pc-dt-simple-2', { sortable: false });
+      const dataTable3 = new simpleDatatables.DataTable('#pc-dt-simple-3', { sortable: false });
+      const dataTable4 = new simpleDatatables.DataTable('#pc-dt-simple-4', { sortable: false });
+    </script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

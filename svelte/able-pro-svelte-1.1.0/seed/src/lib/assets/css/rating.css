@@ -1,0 +1,18 @@
+:root {
+  --gl-star-empty: url('/assets/images/rating/star-empty.svg');
+  --gl-star-full: url('/assets/images/rating/star-full.svg');
+  --gl-star-size: 35px;
+}
+
+.gl-star-rating--stars {
+  flex-wrap: wrap;
+}
+
+.gl-star-rating [data-value]:not(.gl-active) .gl-emote-bg {
+  fill: #dcdce6;
+}
+
+.gl-active svg.feather {
+  fill: var(--bs-danger);
+  stroke: var(--bs-danger);
+}

@@ -1,0 +1,1969 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'File Manger'})
+    <!-- [Page specific CSS] start -->
+    <link rel="stylesheet" href="../assets/css/plugins/uppy.min.css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Application', 'breadcrumb-item-active':'File Manager'})
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- [ sample-page ] start -->
+          <div class="col-span-12">
+            <a
+              class="h5 hover:text-primary-500 my-3 block"
+              data-pc-toggle="collapse"
+              href="#collapseFilefilter"
+              role="button"
+              aria-expanded="false"
+            >
+              Quick Filter
+            </a>
+            <div class="show" id="collapseFilefilter">
+              <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                  <div class="card transition-all hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+                    <div class="card-body">
+                      <div class="w-12 h-12 rounded-xl inline-flex items-center justify-center bg-primary-500/10 text-primary-500">
+                        <svg class="pc-icon w-[30px] h-[30px]">
+                          <use xlink:href="#custom-note-1"></use>
+                        </svg>
+                      </div>
+                      <div class="flex items-end justify-between mt-4">
+                        <div>
+                          <h6 class="mb-1">Documents</h6>
+                          <p class="mb-0">100 files</p>
+                        </div>
+                        <span class="badge bg-primary-500 text-white text-sm">15 GB</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                  <div class="card transition-all hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+                    <div class="card-body">
+                      <div class="w-12 h-12 rounded-xl inline-flex items-center justify-center bg-danger-500/10 text-danger-500">
+                        <svg class="pc-icon w-[30px] h-[30px]">
+                          <use xlink:href="#custom-video-play"></use>
+                        </svg>
+                      </div>
+                      <div class="flex items-end justify-between mt-4">
+                        <div>
+                          <h6 class="mb-1">Videos</h6>
+                          <p class="mb-0">100 files</p>
+                        </div>
+                        <span class="badge bg-danger-500 text-white text-sm">2.4 GB</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                  <div class="card transition-all hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+                    <div class="card-body">
+                      <div class="w-12 h-12 rounded-xl inline-flex items-center justify-center bg-success-500/10 text-success-500">
+                        <svg class="pc-icon w-[30px] h-[30px]">
+                          <use xlink:href="#custom-image"></use>
+                        </svg>
+                      </div>
+                      <div class="flex items-end justify-between mt-4">
+                        <div>
+                          <h6 class="mb-1">Images</h6>
+                          <p class="mb-0">100 files</p>
+                        </div>
+                        <span class="badge bg-success-500 text-white text-sm">2.4 GB</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                  <div
+                    class="card border-0 shadow-none drp-upgrade-card bg-cover"
+                    style="background-image: url(../assets/images/layout/img-profile-card.jpg)"
+                  >
+                    <div class="card-body">
+                      <h5 class="mb-0 text-muted">20.5GB of 50GB</h5>
+                      <div class="flex items-center justify-between my-2">
+                        <div class="flex-[1_0_0%]">
+                          <div class="w-full bg-theme-bodybg rounded-lg h-1.5 dark:bg-themedark-bodybg">
+                            <div
+                              class="bg-primary-500 h-full rounded-lg"
+                              role="progressbar"
+                              style="width: 70%"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                        <div class="flex-[0_0_auto]">
+                          <p class="mb-0 text-muted ml-5">70%</p>
+                        </div>
+                      </div>
+                      <button class="btn btn-warning mt-3">Want More Storage?</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-4 border-t border-theme-border dark:border-themedark-border" />
+            <a
+              class="h5 hover:text-primary-500 my-3 block"
+              data-pc-toggle="collapse"
+              href="#collapseRecentFile"
+              role="button"
+              aria-expanded="false"
+            >
+              Recent file
+            </a>
+            <div class="show" id="collapseRecentFile">
+              <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                  <div class="card transition-all hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+                    <div class="card-body">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <svg class="pc-icon w-10 h-10 text-warning-500">
+                            <use xlink:href="#custom-folder-open"></use>
+                          </svg>
+                        </div>
+                        <div class="grow mx-3">
+                          <h5 class="mb-0"><span class="text-truncate w-full">Documents</span></h5>
+                          <p class="mb-0"><small>24 files</small></p>
+                        </div>
+                        <div class="shrink-0">
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                  <div class="card transition-all hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+                    <div class="card-body">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <svg class="pc-icon w-10 h-10 text-warning-500">
+                            <use xlink:href="#custom-folder-open"></use>
+                          </svg>
+                        </div>
+                        <div class="grow mx-3">
+                          <h5 class="mb-0"><span class="text-truncate w-full">Root</span></h5>
+                          <p class="mb-0"><small>50 files</small></p>
+                        </div>
+                        <div class="shrink-0">
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                  <div class="card transition-all hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+                    <div class="card-body">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <svg class="pc-icon w-10 h-10 text-warning-500">
+                            <use xlink:href="#custom-folder-open"></use>
+                          </svg>
+                        </div>
+                        <div class="grow mx-3">
+                          <h5 class="mb-0"><span class="text-truncate w-full">Images</span></h5>
+                          <p class="mb-0"><small>100 files</small></p>
+                        </div>
+                        <div class="shrink-0">
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                  <div class="card transition-all hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+                    <div class="card-body">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <svg class="pc-icon w-10 h-10 text-warning-500">
+                            <use xlink:href="#custom-folder-open"></use>
+                          </svg>
+                        </div>
+                        <div class="grow mx-3">
+                          <h5 class="mb-0"><span class="text-truncate w-full">Music and video</span></h5>
+                          <p class="mb-0"><small>100 files</small></p>
+                        </div>
+                        <div class="shrink-0">
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-4 border-t border-theme-border dark:border-themedark-border" />
+            <div class="grid grid-cols-12 gap-6 my-2">
+              <div class="col-span-12 sm:col-span-6">
+                <ul class="flex items-center *:mr-2 ml-auto mb-3">
+                  <li class="list-inline-item">
+                    <div class="relative">
+                      <i class="ti ti-search absolute top-4 left-3"></i>
+                      <input type="search" class="form-control pl-9" placeholder="Search Followers" />
+                    </div>
+                  </li>
+                  <li class="list-inline-item">
+                    <select class="form-select my-1">
+                      <option>All Type</option>
+                      <option>Documents</option>
+                      <option>Videos</option>
+                      <option>Images</option>
+                    </select>
+                  </li>
+                  <li class="list-inline-item">
+                    <input type="date" class="form-control my-1" id="example-datemax" max="1979-12-31" />
+                  </li>
+                </ul>
+              </div>
+              <div class="col-span-12 sm:col-span-6 ltr:sm:text-right rtl:sm:text-left">
+                <ul
+                  class="inline-flex flex-wrap items-center text-center p-2 nav-tabs rounded-lg border border-theme-border dark:border-themedark-border"
+                >
+                  <li class="group active">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="ecomtab-1"
+                      class="inline-block mr-1 transition-all duration-300 ease-linear"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-lg group-[.active]:bg-theme-cardbg group-[.active]:dark:bg-themedark-cardbg group-[.active]:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] inline-flex items-center justify-center"
+                      >
+                        <i class="ti ti-layout-grid text-lg leading-none"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="ecomtab-2"
+                      class="inline-block transition-all duration-300 ease-linear"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-lg group-[.active]:bg-theme-cardbg group-[.active]:dark:bg-themedark-cardbg group-[.active]:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] inline-flex items-center justify-center"
+                      >
+                        <i class="ti ti-layout-list text-lg leading-none"></i>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid grid-cols-12 gap-6 my-3">
+              <div class="col-span-12 sm:col-span-6">
+                <div class="flex items-center">
+                  <h5 class="mb-0 me-2">File</h5>
+                  <div class=""></div>
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full inline-flex items-center justify-center btn btn-primary p-0"
+                    data-pc-toggle="modal"
+                    data-pc-target="#uploadFile"
+                  >
+                    <i class="ti ti-plus text-lg leading-none"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-span-12 sm:col-span-6 ltr:sm:text-right rtl:sm:text-left">
+                <button class="btn btn-outline-secondary btn-sm">
+                  View All
+                  <i class="ti ti-chevron-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="block tab-pane" id="ecomtab-1">
+                <div class="grid grid-cols-12 gap-6 my-3">
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-1"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-1" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-doc.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-2"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-2" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-xls.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-3"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-3" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-pdf.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <div
+                            class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border-2 *:border-white"
+                          >
+                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                          </div>
+                          <div class="user-group p-1"></div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-4"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-4" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-xls.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-5"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-5" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-rar.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-6"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-6" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-imgview.jpg" alt="img" class="img-fluid mx-auto rounded" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-7"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-7" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-ppt.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-8"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-8" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-ai.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-9"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-9" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-ppt.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-10"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-10" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-txt.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-11"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-11" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-img.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-12"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-12" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-doc.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-13"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-13" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-rar.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-14"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-14" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-doc.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-15"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-15" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-ppt.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+                    <label
+                      class="card group block overflow-hidden transition-all mb-0 hover:shadow-[0px_8px_24px_rgba(27,46,94,0.08)] file-card"
+                      for="file-check-16"
+                    >
+                      <div
+                        class="card-body group-has-[:checked]:bg-primary-500/[.03] border-2 border-transparent group-has-[:checked]:border-primary-500 rounded-xl"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div class="form-check">
+                            <input type="radio" name="file-radio" class="form-check-input input-primary" id="file-check-16" />
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="my-3 text-center">
+                          <img src="../assets/images/application/img-file-ai.svg" alt="img" class="img-fluid mx-auto" />
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                          <div class="grow mr-2">
+                            <h6 class="mb-0"><span class="text-truncate w-full">Document-final.docx</span></h6>
+                            <p class="mb-0 text-muted"><small>16 Nov 2022</small></p>
+                          </div>
+                          <a
+                            href="#"
+                            class="shrink-0 w-10 h-10 rounded-xl inline-flex items-center justify-center btn-light-secondary user-popup"
+                            data-pc-toggle="modal"
+                            data-pc-target="#assignFile"
+                          >
+                            <svg class="pc-icon w-[22px] h-[22px]">
+                              <use xlink:href="#custom-user-add"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden tab-pane" id="ecomtab-2">
+                <div class="table-responsive card bg-transparent border-0 shadow-none">
+                  <table class="table table-borderless border-separate file-card border-spacing-y-2.5 mx-2.5 w-[calc(100%_-_20px)]">
+                    <tbody class="*:bg-theme-cardbg dark:*:bg-themedark-cardbg *:shadow-[0px_8px_24px_rgba(27,46,94,0.08)]">
+                      <tr>
+                        <td>
+                          <div class="inline-flex items-center relative">
+                            <input
+                              class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                              type="checkbox"
+                            />
+                            <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">
+                              check_box_outline_blank
+                            </i>
+                            <i class="material-icons-two-tone bg-primary-500 hidden peer-checked/filecheck:block leading-normal">check_box</i>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex items-center">
+                            <img src="../assets/images/application/img-file-doc.svg" alt="user-image" class="w-[35px]" />
+                            <h6 class="mb-0 ml-2 text-truncate">Document-final.docx</h6>
+                          </div>
+                        </td>
+                        <td>16.3 MB</td>
+                        <td>16 Nov 2022</td>
+                        <td>
+                          <div
+                            class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border *:border-2 *:border-white"
+                          >
+                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                            <span class="avtar bg-theme-cardbg dark:bg-themedark-cardbg overflow-hidden">
+                              <span class="flex items-center justify-center w-full h-full bg-primary-500/10 text-primary-500">+2</span>
+                            </span>
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="flex items-center justify-end">
+                            <li class="list-inline-item ml-2 leading-none">
+                              <div class="inline-flex items-center relative">
+                                <input
+                                  class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                                  type="checkbox"
+                                  checked=""
+                                />
+                                <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">star_outline</i>
+                                <i class="material-icons-two-tone bg-warning-500 hidden peer-checked/filecheck:block leading-normal">star</i>
+                              </div>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                              <div class="dropdown">
+                                <a
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                                  href="#"
+                                  data-pc-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inline-flex items-center relative">
+                            <input
+                              class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                              type="checkbox"
+                            />
+                            <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">
+                              check_box_outline_blank
+                            </i>
+                            <i class="material-icons-two-tone bg-primary-500 hidden peer-checked/filecheck:block leading-normal">check_box</i>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex items-center">
+                            <img src="../assets/images/application/img-file-xls.svg" alt="user-image" class="w-[35px]" />
+                            <h6 class="mb-0 ml-2 text-truncate">ablepro-design.sketch</h6>
+                          </div>
+                        </td>
+                        <td>16.3 MB</td>
+                        <td>16 Nov 2022</td>
+                        <td>
+                          <div
+                            class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border *:border-2 *:border-white"
+                          >
+                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="flex items-center justify-end">
+                            <li class="list-inline-item ml-2 leading-none">
+                              <div class="inline-flex items-center relative">
+                                <input
+                                  class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                                  type="checkbox"
+                                />
+                                <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">star_outline</i>
+                                <i class="material-icons-two-tone bg-warning-500 hidden peer-checked/filecheck:block leading-normal">star</i>
+                              </div>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                              <div class="dropdown">
+                                <a
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                                  href="#"
+                                  data-pc-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inline-flex items-center relative">
+                            <input
+                              class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                              type="checkbox"
+                            />
+                            <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">
+                              check_box_outline_blank
+                            </i>
+                            <i class="material-icons-two-tone bg-primary-500 hidden peer-checked/filecheck:block leading-normal">check_box</i>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex items-center">
+                            <img src="../assets/images/application/img-file-pdf.svg" alt="user-image" class="w-[35px]" />
+                            <h6 class="mb-0 ml-2 text-truncate">Document-final.docx</h6>
+                          </div>
+                        </td>
+                        <td>16.3 MB</td>
+                        <td>16 Nov 2022</td>
+                        <td>
+                          <div
+                            class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border *:border-2 *:border-white"
+                          >
+                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                            <span class="avtar bg-theme-cardbg dark:bg-themedark-cardbg overflow-hidden">
+                              <span class="flex items-center justify-center w-full h-full bg-primary-500/10 text-primary-500">+2</span>
+                            </span>
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="flex items-center justify-end">
+                            <li class="list-inline-item ml-2 leading-none">
+                              <div class="inline-flex items-center relative">
+                                <input
+                                  class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                                  type="checkbox"
+                                />
+                                <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">star_outline</i>
+                                <i class="material-icons-two-tone bg-warning-500 hidden peer-checked/filecheck:block leading-normal">star</i>
+                              </div>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                              <div class="dropdown">
+                                <a
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                                  href="#"
+                                  data-pc-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inline-flex items-center relative">
+                            <input
+                              class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                              type="checkbox"
+                            />
+                            <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">
+                              check_box_outline_blank
+                            </i>
+                            <i class="material-icons-two-tone bg-primary-500 hidden peer-checked/filecheck:block leading-normal">check_box</i>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex items-center">
+                            <img src="../assets/images/application/img-file-ai.svg" alt="user-image" class="w-[35px]" />
+                            <h6 class="mb-0 ml-2 text-truncate">Document-final.docx</h6>
+                          </div>
+                        </td>
+                        <td>16.3 MB</td>
+                        <td>16 Nov 2022</td>
+                        <td>
+                          <div
+                            class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border *:border-2 *:border-white"
+                          >
+                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                            <span class="avtar bg-theme-cardbg dark:bg-themedark-cardbg overflow-hidden">
+                              <span class="flex items-center justify-center w-full h-full bg-primary-500/10 text-primary-500">+2</span>
+                            </span>
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="flex items-center justify-end">
+                            <li class="list-inline-item ml-2 leading-none">
+                              <div class="inline-flex items-center relative">
+                                <input
+                                  class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                                  type="checkbox"
+                                />
+                                <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">star_outline</i>
+                                <i class="material-icons-two-tone bg-warning-500 hidden peer-checked/filecheck:block leading-normal">star</i>
+                              </div>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                              <div class="dropdown">
+                                <a
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                                  href="#"
+                                  data-pc-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inline-flex items-center relative">
+                            <input
+                              class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                              type="checkbox"
+                            />
+                            <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">
+                              check_box_outline_blank
+                            </i>
+                            <i class="material-icons-two-tone bg-primary-500 hidden peer-checked/filecheck:block leading-normal">check_box</i>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex items-center">
+                            <img src="../assets/images/application/img-file-img.svg" alt="user-image" class="w-[35px]" />
+                            <h6 class="mb-0 ml-2 text-truncate">ablepro-design.sketch</h6>
+                          </div>
+                        </td>
+                        <td>16.3 MB</td>
+                        <td>16 Nov 2022</td>
+                        <td>
+                          <div
+                            class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border *:border-2 *:border-white"
+                          >
+                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="flex items-center justify-end">
+                            <li class="list-inline-item ml-2 leading-none">
+                              <div class="inline-flex items-center relative">
+                                <input
+                                  class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                                  type="checkbox"
+                                />
+                                <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">star_outline</i>
+                                <i class="material-icons-two-tone bg-warning-500 hidden peer-checked/filecheck:block leading-normal">star</i>
+                              </div>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                              <div class="dropdown">
+                                <a
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                                  href="#"
+                                  data-pc-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inline-flex items-center relative">
+                            <input
+                              class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                              type="checkbox"
+                            />
+                            <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">
+                              check_box_outline_blank
+                            </i>
+                            <i class="material-icons-two-tone bg-primary-500 hidden peer-checked/filecheck:block leading-normal">check_box</i>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex items-center">
+                            <img src="../assets/images/application/img-file-img.svg" alt="user-image" class="w-[35px]" />
+                            <h6 class="mb-0 ml-2 text-truncate">ablepro-design.sketch</h6>
+                          </div>
+                        </td>
+                        <td>16.3 MB</td>
+                        <td>16 Nov 2022</td>
+                        <td>
+                          <div
+                            class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border *:border-2 *:border-white"
+                          >
+                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="flex items-center justify-end">
+                            <li class="list-inline-item ml-2 leading-none">
+                              <div class="inline-flex items-center relative">
+                                <input
+                                  class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                                  type="checkbox"
+                                />
+                                <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">star_outline</i>
+                                <i class="material-icons-two-tone bg-warning-500 hidden peer-checked/filecheck:block leading-normal">star</i>
+                              </div>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                              <div class="dropdown">
+                                <a
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                                  href="#"
+                                  data-pc-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inline-flex items-center relative">
+                            <input
+                              class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                              type="checkbox"
+                            />
+                            <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">
+                              check_box_outline_blank
+                            </i>
+                            <i class="material-icons-two-tone bg-primary-500 hidden peer-checked/filecheck:block leading-normal">check_box</i>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex items-center">
+                            <img src="../assets/images/application/img-file-ppt.svg" alt="user-image" class="w-[35px]" />
+                            <h6 class="mb-0 ml-2 text-truncate">Document-final.docx</h6>
+                          </div>
+                        </td>
+                        <td>16.3 MB</td>
+                        <td>16 Nov 2022</td>
+                        <td>
+                          <div
+                            class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border *:border-2 *:border-white"
+                          >
+                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                            <span class="avtar bg-theme-cardbg dark:bg-themedark-cardbg overflow-hidden">
+                              <span class="flex items-center justify-center w-full h-full bg-primary-500/10 text-primary-500">+2</span>
+                            </span>
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="flex items-center justify-end">
+                            <li class="list-inline-item ml-2 leading-none">
+                              <div class="inline-flex items-center relative">
+                                <input
+                                  class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                                  type="checkbox"
+                                />
+                                <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">star_outline</i>
+                                <i class="material-icons-two-tone bg-warning-500 hidden peer-checked/filecheck:block leading-normal">star</i>
+                              </div>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                              <div class="dropdown">
+                                <a
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                                  href="#"
+                                  data-pc-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inline-flex items-center relative">
+                            <input
+                              class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                              type="checkbox"
+                            />
+                            <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">
+                              check_box_outline_blank
+                            </i>
+                            <i class="material-icons-two-tone bg-primary-500 hidden peer-checked/filecheck:block leading-normal">check_box</i>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex items-center">
+                            <img src="../assets/images/application/img-file-txt.svg" alt="user-image" class="w-[35px]" />
+                            <h6 class="mb-0 ml-2 text-truncate">ablepro-design.sketch</h6>
+                          </div>
+                        </td>
+                        <td>16.3 MB</td>
+                        <td>16 Nov 2022</td>
+                        <td>
+                          <div
+                            class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border *:border-2 *:border-white"
+                          >
+                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="flex items-center justify-end">
+                            <li class="list-inline-item ml-2 leading-none">
+                              <div class="inline-flex items-center relative">
+                                <input
+                                  class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                                  type="checkbox"
+                                />
+                                <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">star_outline</i>
+                                <i class="material-icons-two-tone bg-warning-500 hidden peer-checked/filecheck:block leading-normal">star</i>
+                              </div>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                              <div class="dropdown">
+                                <a
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                                  href="#"
+                                  data-pc-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="inline-flex items-center relative">
+                            <input
+                              class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                              type="checkbox"
+                            />
+                            <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">
+                              check_box_outline_blank
+                            </i>
+                            <i class="material-icons-two-tone bg-primary-500 hidden peer-checked/filecheck:block leading-normal">check_box</i>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex items-center">
+                            <img src="../assets/images/application/img-file-rar.svg" alt="user-image" class="w-[35px]" />
+                            <h6 class="mb-0 ml-2 text-truncate">Document-final.docx</h6>
+                          </div>
+                        </td>
+                        <td>16.3 MB</td>
+                        <td>16 Nov 2022</td>
+                        <td>
+                          <div
+                            class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border *:border-2 *:border-white"
+                          >
+                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
+                            <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                            <span class="avtar bg-theme-cardbg dark:bg-themedark-cardbg overflow-hidden">
+                              <span class="flex items-center justify-center w-full h-full bg-primary-500/10 text-primary-500">+2</span>
+                            </span>
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="flex items-center justify-end">
+                            <li class="list-inline-item ml-2 leading-none">
+                              <div class="inline-flex items-center relative">
+                                <input
+                                  class="form-check-input cursor-pointer opacity-0 absolute top-0 left-0 w-full h-full peer/filecheck"
+                                  type="checkbox"
+                                />
+                                <i class="material-icons-two-tone bg-secondary-500 block peer-checked/filecheck:hidden leading-normal">star_outline</i>
+                                <i class="material-icons-two-tone bg-warning-500 hidden peer-checked/filecheck:block leading-normal">star</i>
+                              </div>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                              <div class="dropdown">
+                                <a
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                                  href="#"
+                                  data-pc-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a class="dropdown-item" href="#">Edit</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ sample-page ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+
+    <div class="modal fade" id="uploadFile" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Upload Files</h5>
+            <button
+              data-pc-modal-dismiss="#uploadFile"
+              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+            >
+              <i class="ti ti-x"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="pc-uppy-3">
+              <div class="for-DragDrop"></div>
+              <div class="for-ProgressBar"></div>
+              <div class="uploaded-files mt-3">
+                <h5>Uploaded files:</h5>
+                <ol></ol>
+              </div>
+            </div>
+            <hr class="my-3 border border-secondary-subtle" />
+            <div class="input-group">
+              <button class="btn btn-outline-secondary">Copy link</button>
+              <input type="text" class="form-control" placeholder="Enter URL" value="https://www.figma.com/file/" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary mr-2" data-pc-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary" data-pc-dismiss="modal">Add Files</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="assignFile" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="assignFileLabel">Share</h5>
+            <button
+              data-pc-modal-dismiss="#assignFile"
+              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+            >
+              <i class="ti ti-x"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <label class="input-group-text">Invite People</label>
+              <input type="text" class="form-control" placeholder="Email" />
+              <select class="form-select">
+                <option>View</option>
+                <option>Edit</option>
+              </select>
+            </div>
+            <div class="flex items-center my-3">
+              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-2.jpg" alt="User image" />
+              <div class="grow mx-2">
+                <p class="mb-0">Addie Bass</p>
+              </div>
+              <div class="text-primary">Owner</div>
+            </div>
+            <div class="flex items-center my-3">
+              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+              <div class="grow mx-2">
+                <p class="mb-0">Mark E. Kinder</p>
+              </div>
+              <select class="form-select w-auto" disabled>
+                <option>Can view</option>
+                <option>Can Edit</option>
+              </select>
+            </div>
+            <div class="flex items-center my-3">
+              <span class=""></span>
+              <div class="w-10 h-10 rounded-full inline-flex items-center justify-center bg-primary-500/10 text-primary-500">
+                <span class="text-lg leading-none">Q</span>
+              </div>
+              <div class="grow mx-2">
+                <p class="mb-0">Quentin</p>
+              </div>
+              <select class="form-select w-auto">
+                <option>Can view</option>
+                <option>Can Edit</option>
+              </select>
+            </div>
+            <div class="flex items-center my-3">
+              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-3.jpg" alt="User image" />
+              <div class="grow mx-2">
+                <p class="mb-0">Richard J. Doran</p>
+              </div>
+              <select class="form-select w-auto">
+                <option>Can view</option>
+                <option>Can Edit</option>
+              </select>
+            </div>
+            <hr class="my-3 border border-theme-border dark:border-themedark-border" />
+            <div class="input-group">
+              <button class="btn btn-outline-secondary">Copy link</button>
+              <input type="text" class="form-control" placeholder="Enter URL" value="https://www.figma.com/file/" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFileDesc">
+      <div class="offcanvas-header justify-between">
+        <h5 class="offcanvas-title">File Preview</h5>
+        <button
+          data-pc-dismiss="#offcanvasFileDesc"
+          class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+        >
+          <i class="ti ti-x"></i>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="my-3 text-center">
+          <img src="../assets/images/application/img-file-doc.svg" alt="img" class="img-fluid w-[100px] mx-auto" />
+          <h5 class="mb-1 mt-5">Document-final.docx</h5>
+          <p class="mb-0 text-muted">16 Nov 2022</p>
+        </div>
+        <hr class="my-4 border-t border-theme-border dark:border-themedark-border" />
+        <h5>File share with</h5>
+        <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+          <li>
+            <div class="flex items-center">
+              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+              <div class="grow ml-2">
+                <h6 class="mb-0">John Doe</h6>
+                <p class="mb-0 text-sm"><a class="link-secondary" href="mailto:John_Doe@ablepro.io">John_Doe@ablepro.io</a></p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+              <div class="grow ml-2">
+                <h6 class="mb-0">Addie Bass</h6>
+                <p class="mb-0 text-sm"><a class="link-secondary" href="mailto:Addie_B@ablepro.io">Addie_B@ablepro.io</a></p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-3.jpg" alt="User image" />
+              <div class="grow ml-2">
+                <h6 class="mb-0">Alberta Robbins</h6>
+                <p class="mb-0 text-sm"><a class="link-secondary" href="mailto:Alberta@ablepro.io">Alberta@ablepro.io</a></p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-4.jpg" alt="User image" />
+              <div class="grow ml-2">
+                <h6 class="mb-0">Agnes McGee</h6>
+                <p class="mb-0 text-sm"><a class="link-secondary" href="mailto:Agnes.Gee@ablepro.io">Agnes.Gee@ablepro.io</a></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <hr class="my-4 border-t border-theme-border dark:border-themedark-border" />
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12">
+            <button class="btn w-full btn-primary">Share</button>
+          </div>
+          <div class="col-span-6">
+            <button class="btn w-full btn-light-secondary">Edit</button>
+          </div>
+          <div class="col-span-6">
+            <button class="btn w-full btn-light-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <script src="../assets/js/plugins/uppy.min.js"></script>
+    <script>
+      const Tus = Uppy.Tus;
+      const DragDrop = Uppy.DragDrop;
+      const ProgressBar = Uppy.ProgressBar;
+
+      const onUploadSuccess = (elForUploadedFiles) => (file, response) => {
+        const url = response.uploadURL;
+        const fileName = file.name;
+
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = url;
+        a.target = '_blank';
+        a.appendChild(document.createTextNode(fileName));
+        li.appendChild(a);
+
+        document.querySelector(elForUploadedFiles).appendChild(li);
+      };
+      (function () {
+        const pc_uppy_3 = new Uppy.Uppy({ debug: true, autoProceed: true });
+        pc_uppy_3
+          .use(DragDrop, { target: '.pc-uppy-3 .for-DragDrop' })
+          .use(Tus, { endpoint: 'https://tusd.tusdemo.net/files/' })
+          .use(ProgressBar, { target: '.pc-uppy-3 .for-ProgressBar', hideAfterFinish: false })
+          .on('upload-success', onUploadSuccess('.pc-uppy-3 .uploaded-files ol'));
+      })();
+      document.addEventListener('DOMContentLoaded', function () {
+        const offcanvasFileDesc = document.querySelector('#offcanvasFileDesc');
+        var FileDescAction = document.querySelectorAll('.file-card input, .file-card td:nth-child(2)');
+        for (var i = 0; i < FileDescAction.length; i++) {
+          FileDescAction[i].addEventListener('click', function (event) {
+            offcanvasFileDesc.classList.add('show');
+            var backDropOverlay = document.createElement('div');
+            backDropOverlay.className = 'fixed inset-0 bg-gray-900/20 z-[1027] backdrop-blur-sm';
+            backDropOverlay.id = 'offcanvasoverlay';
+            document.getElementsByTagName('body')[0].appendChild(backDropOverlay);
+            document.getElementById('offcanvasoverlay').addEventListener('click', function (event) {
+              offcanvasFileDesc.classList.remove('show');
+              document.getElementById('offcanvasoverlay').remove();
+            });
+          });
+        }
+      });
+    </script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Pricing'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Membership', 'breadcrumb-item-active': 'Pricing'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- [ sample-page ] start -->
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div class="card price-card p-5 border-success-500 border-2 h-full">
+              <div class="card-body bg-success-500/10 rounded-lg flex flex-col h-full text-center">
+                <div class="price-head mb-6">
+                  <h4 class="mb-0 text-success-500">Casual</h4>
+                  <div class="text-[40px] font-bold leading-none mt-3">$50 <span class="text-muted mt-2 font-normal text-base opacity-80 block"> month</span></div>
+                </div>
+                <ul class="*:my-2 product-list flex-auto">
+                  <li class="list-group-item enable"><i class="ti ti-check text-success-500"></i> Full Facility Access</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-success-500"></i> Meals plans</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-success-500"></i> 10% Discounts</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-success-500"></i> Cancel anytime</li>
+                </ul>
+                <div class="grid"><a class="btn btn-dark mt-4" href="#">Buy Now</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div class="card price-card p-5 border-primary-500 border-2 h-full">
+              <div class="card-body bg-primary-500/10 rounded-lg flex flex-col h-full text-center">
+                <div class="price-head mb-6">
+                  <h4 class="mb-0 text-primary-500">Addicted</h4>
+                  <div class="text-[40px] font-bold leading-none mt-3">$150 <span class="text-muted mt-2 font-normal text-base opacity-80 block"> month</span></div>
+                </div>
+                <ul class="*:my-2 product-list flex-auto">
+                  <li class="list-group-item enable"><i class="ti ti-check text-primary-500"></i> Full Facility Access</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-primary-500"></i> Meals plans</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-primary-500"></i> 50% Discounts</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-primary-500"></i> Cancel anytime</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-primary-500"></i> Basic feature</li>
+                </ul>
+                <div class="grid"><a class="btn btn-dark mt-4" href="#">Buy Now</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div class="card price-card p-5 border-warning-500 border-2 h-full">
+              <div class="card-body bg-warning-500/10 rounded-lg flex flex-col h-full text-center">
+                <div class="price-head mb-6">
+                  <h4 class="mb-0 text-warning-500">Diehard</h4>
+                  <div class="text-[40px] font-bold leading-none mt-3">$250 <span class="text-muted mt-2 font-normal text-base opacity-80 block"> month</span></div>
+                </div>
+                <ul class="*:my-2 product-list flex-auto">
+                  <li class="list-group-item enable"><i class="ti ti-check text-warning-500"></i> Full Facility Access</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-warning-500"></i> Meals plans</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-warning-500"></i> 75% Discounts</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-warning-500"></i> Primmum feature</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-warning-500"></i> Cancel anytime</li>
+                  <li class="list-group-item enable"><i class="ti ti-check text-warning-500"></i> Online booking</li>
+                </ul>
+                <div class="grid"><a class="btn btn-dark mt-4" href="#">Buy Now</a></div>
+              </div>
+            </div>
+          </div>
+          <!-- [ sample-page ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html') @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

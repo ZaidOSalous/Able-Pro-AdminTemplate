@@ -1,0 +1,61 @@
+<%- contentFor('title') %>  
+<%- include('../layouts/head-page-meta', { title:"Fetch API" }) %>
+    
+
+<%- contentFor('css1') %>  
+<!-- Add your CSS block content here if any -->
+<link rel="stylesheet" href="/libs/simple-datatables/dist/style.css" />
+    
+
+<%- contentFor('css2') %>
+<!-- Add your second CSS block content here if any -->
+
+<%- contentFor('mainContent') %>  
+        <%-include('../layouts/breadcrumb', { parentTitle:'Fetch API', title:'Table' }) %>
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- prettier-ignore -->
+          <%- include('../layouts/component/component-link', { title:"Simple-datatables", text:"A lightweight, extendable, JavaScript HTML table library written in TypeScript and transpilled to Vanilla JavaScript. Similar to jQuery DataTables for use in modern browsers, but without the jQuery dependency." , link:"https://github.com/fiduswriter/simple-datatables" }) %>
+        </div>
+        <div class="row">
+          <!-- [ basic-table ] start -->
+          <div class="col-xl-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Fetch API</h5>
+              </div>
+              <div class="card-body table-border-style">
+                <div class="table-responsive">
+                  <table class="table" id="pc-dt-fetchapi"> </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ basic-table ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    
+
+<%- contentFor('js1') %>
+    <!-- [Page Specific JS] start -->
+    <script src="/libs/simple-datatables/dist/umd/simple-datatables.js"></script>
+    <script>
+      fetch('../assets/json/datatable.json')
+        .then((response) => response.json())
+        .then((data) => {
+          if (!data.length) {
+            return;
+          }
+          let table = new simpleDatatables.DataTable('#pc-dt-fetchapi', {
+            data: {
+              headings: Object.keys(data[0]),
+              data: data.map((item) => Object.values(item))
+            }
+          });
+        });
+    </script>
+    <!-- [Page Specific JS] end -->
+<%- contentFor('js2') %>
+
+    
+

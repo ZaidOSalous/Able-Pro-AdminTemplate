@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "reCaptcha";
+    ViewBag.BreadcrumbItemActive = "reCaptcha";
+    ViewBag.BreadcrumItem = "Forms";
+    ViewBag.plugintitle="ReCaptcha";
+    ViewBag.text="reCAPTCHA uses an advanced risk analysis engine and adaptive challenges to keep malicious software from engaging in abusive activities on your website.";
+    ViewBag.link="https://www.google.com/recaptcha/about/";
+}
+
+@Html.Partial("~/Views/Shared/_breadcrumb.cshtml")
+
+<!-- [ Main Content ] start -->
+@Html.Partial("~/Views/Shared/_component-link.cshtml")
+<div class="row">
+    <!-- [ form-element ] start -->
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                  <div class="mb-0 row">
+                    <label class="col-form-label col-lg-3 col-sm-12 text-lg-end">reCaptcha</label>
+                    <div class="col-lg-4 col-md-9 col-sm-12">
+                      <div class="g-recaptcha" data-sitekey="6LdnLwgUAAAAAAIb9L3PQlHQgvSCi16sYgbMIMFR"></div>
+                    </div>
+                    <script src="https://www.google.com/recaptcha/api.js"></script>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [ form-element ] end -->

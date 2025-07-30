@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- title %>
+        <%- css1 %>
+
+        <%- include('./head-css') %>
+        
+        <%- css2 %>
+    </head>
+
+    <body data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-layout="vertical" data-pc-direction="ltr" data-pc-theme_contrast="" data-pc-theme="light">
+    
+    <%- include('./layout-vertical') %> 
+
+    <div class="pc-container">
+    <div class="pc-content">
+        <%- mainContent %>
+      </div>
+    </div>
+      <!-- Add your main content here -->
+      <%- include('./footer-block') %>
+      <%- include('./customizer') %>
+    
+    <%- js1 %>
+    <%- include('./footer-js') %>
+    <%- js2 %>
+  <body>
+
+</html>

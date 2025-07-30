@@ -1,0 +1,49 @@
+<%- contentFor('title') %>
+<%- include('../layouts/head-page-meta', { title:"File Upload" }) %>
+    
+
+<%- contentFor('css1') %>  
+<link rel="stylesheet" href="/libs/dropzone/dist/min/dropzone.min.css" />
+    
+
+<%- contentFor('css2') %>
+<!-- Add your second CSS block content here if any -->
+
+<%- contentFor('mainContent') %>  
+        <%-include('../layouts/breadcrumb', { parentTitle:'File Upload', title:'Forms' }) %>
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- prettier-ignore -->
+          <%- include('../layouts/component/component-link', { title:"CKEditor", text:"CKEditor 5 allows users to create any type of content in your application, be it documents, reports, emails, notes or chat messages." , link:"https://ckeditor.com/" }) %>
+        </div>
+        <div class="row">
+          <!-- [ file-upload ] start -->
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>File Upload</h5>
+              </div>
+              <div class="card-body">
+                <form action="../assets/json/file-upload.php" class="dropzone">
+                  <div class="fallback">
+                    <input name="file" type="file" multiple />
+                  </div>
+                </form>
+                <div class="text-center m-t-20">
+                  <button class="btn btn-primary">Upload Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ file-upload ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    
+
+<%- contentFor('js1') %>
+    <!-- [Page Specific JS] start -->
+    <!-- file-upload Js -->
+    <script src="/libs/dropzone/dist/min/dropzone-amd-module.min.js"></script>
+    <!-- [Page Specific JS] end -->
+    
+    <%- contentFor('js2') %>

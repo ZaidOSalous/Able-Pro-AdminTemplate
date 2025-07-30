@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'DatePicker'})
+    <!-- [Page specific CSS] start -->
+    <!-- Bootstrap DatePicker -->
+    <link rel="stylesheet" href="../assets/css/plugins/datepicker-bs5.min.css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+
+  <body>
+    <!-- [ Main Content ] start -->
+    @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+    <section class="pt-20 xl:pt-28">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+          <div class="col-span-12 xl:col-span-9">
+            <div class="grid grid-cols-12 gap-6">
+              <!-- prettier-ignore -->
+              @@include('../layouts/component/component-breadcrumb.html',{title:'DatePicker',text:'datepicker provides a flexible datepicker widget.'})
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ bootstrap-datetimepicker ] start -->
+              <div class="col-span-12 xl:col-span-4 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Days of Week Disabled</h5>
+                  </div>
+                  <div class="card-body">
+                    <input type="text" class="form-control" id="d_week" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 xl:col-span-4 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Days of Week Highlighted</h5>
+                  </div>
+                  <div class="card-body">
+                    <input type="text" class="form-control" id="d_highlight" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 xl:col-span-4 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>AutoClose</h5>
+                  </div>
+                  <div class="card-body">
+                    <input type="text" class="form-control" id="d_auto" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 xl:col-span-4 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>DatesDisabled</h5>
+                  </div>
+                  <div class="card-body">
+                    <input type="text" class="form-control" id="d_disable" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 xl:col-span-4 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Today Highlight</h5>
+                  </div>
+                  <div class="card-body">
+                    <input type="text" class="form-control" id="d_today" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 xl:col-span-4 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Calendar Weeks</h5>
+                  </div>
+                  <div class="card-body">
+                    <input type="text" class="form-control" id="disp_week" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 xl:col-span-8 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Date Range</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="input-daterange input-group flex items-center" id="datepicker_range">
+                      <input type="text" class="form-control text-left rounded-r-none" placeholder="Start date" name="range-start" />
+                      <input type="text" class="form-control text-end rounded-l-none" placeholder="End date" name="range-end" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ bootstrap-datetimepicker ] End -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <!-- DatePicker js -->
+    <script src="../assets/js/plugins/datepicker-full.min.js"></script>
+    <script src="../assets/js/elements/ac-datepicker.js"></script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+</html>

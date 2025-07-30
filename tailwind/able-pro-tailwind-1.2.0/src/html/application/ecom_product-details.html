@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Products Details'})
+    <!-- [Page specific CSS] start -->
+    <link rel="stylesheet" href="../assets/css/plugins/tiny-slider.css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'E-commerce', 'breadcrumb-item-active': 'Products Details'})
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- [ sample-page ] start -->
+          <div class="col-span-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="grid grid-cols-12 gap-6">
+                  <div class="col-span-12 md:col-span-6">
+                    <div class="sticky-md-top sticky top-header-height">
+                      <div id="slider3">
+                        <div class="card-img-top relative px-2 pt-2 rounded-md overflow-hidden" dir="ltr">
+                          <div class="customize" id="customize">
+                            <div>
+                              <div>
+                                <img
+                                  src="../assets/images/application/img-prod-1.jpg"
+                                  class="block rounded-lg"
+                                  alt="Product images"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div>
+                                <img
+                                  src="../assets/images/application/img-prod-2.jpg"
+                                  class="block rounded-lg"
+                                  alt="Product images"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div>
+                                <img
+                                  src="../assets/images/application/img-prod-3.jpg"
+                                  class="block rounded-lg"
+                                  alt="Product images"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div>
+                                <img
+                                  src="../assets/images/application/img-prod-4.jpg"
+                                  class="block rounded-lg"
+                                  alt="Product images"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div>
+                                <img
+                                  src="../assets/images/application/img-prod-5.jpg"
+                                  class="block rounded-lg"
+                                  alt="Product images"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div>
+                                <img
+                                  src="../assets/images/application/img-prod-6.jpg"
+                                  class="block rounded-lg"
+                                  alt="Product images"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div>
+                                <img
+                                  src="../assets/images/application/img-prod-7.jpg"
+                                  class="block rounded-lg"
+                                  alt="Product images"
+                                />
+                              </div>
+                            </div>
+                            <div>
+                              <div>
+                                <img
+                                  src="../assets/images/application/img-prod-8.jpg"
+                                  class="block rounded-lg"
+                                  alt="Product images"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body absolute right-0 top-0">
+                            <div class="form-check prod-likes relative">
+                              <input
+                                type="checkbox"
+                                class="cursor-pointer opacity-0 form-check-input absolute top-0 left-0 w-full h-full peer/prodlike"
+                                checked
+                              />
+                              <i
+                                data-feather="heart"
+                                class="prod-likes-icon transition-all duration-300 fill-secondary-500/10 stroke-secondary-500 peer-checked/prodlike:fill-danger-500 peer-checked/prodlike:stroke-danger-500"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="card-body absolute right-0 bottom-0">
+                            <ul class="flex items-center ml-auto mb-0">
+                              <li class="list-inline-item m-0">
+                                <a
+                                  href="#"
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center text-white hover:text-primary-500"
+                                >
+                                  <i class="ti ti-zoom-in text-lg leading-none"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item m-0">
+                                <a
+                                  href="#"
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center text-white hover:text-primary-500"
+                                >
+                                  <i class="ti ti-zoom-out text-lg leading-none"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item m-0">
+                                <a
+                                  href="#"
+                                  class="w-8 h-8 rounded-xl inline-flex items-center justify-center text-white hover:text-primary-500"
+                                >
+                                  <i class="ti ti-rotate-clockwise text-lg leading-none"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="customize-tools">
+                          <ul class="thumbnails overflow-x-auto whitespace-nowrap horizontal-scroll-block" id="customize-thumbnails">
+                            <li>
+                              <img src="../assets/images/application/img-prod-1.jpg" alt="" class="block rounded-lg" />
+                            </li>
+                            <li>
+                              <img src="../assets/images/application/img-prod-2.jpg" alt="" class="block rounded-lg" />
+                            </li>
+                            <li>
+                              <img src="../assets/images/application/img-prod-3.jpg" alt="" class="block rounded-lg" />
+                            </li>
+                            <li>
+                              <img src="../assets/images/application/img-prod-4.jpg" alt="" class="block rounded-lg" />
+                            </li>
+                            <li>
+                              <img src="../assets/images/application/img-prod-5.jpg" alt="" class="block rounded-lg" />
+                            </li>
+                            <li>
+                              <img src="../assets/images/application/img-prod-6.jpg" alt="" class="block rounded-lg" />
+                            </li>
+                            <li>
+                              <img src="../assets/images/application/img-prod-7.jpg" alt="" class="block rounded-lg" />
+                            </li>
+                            <li>
+                              <img src="../assets/images/application/img-prod-8.jpg" alt="" class="block rounded-lg" />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 md:col-span-6">
+                    <span class="badge bg-success-500 text-white !text-base">In stock</span>
+                    <h5 class="my-3">Apple Watch SE Smartwatch (GPS, 40mm) (Heart Rate Monitoring)</h5>
+                    <div class="star text-lg leading-none mb-3">
+                      <i class="fas fa-star text-warning-500"></i>
+                      <i class="fas fa-star text-warning-500"></i>
+                      <i class="fas fa-star text-warning-500"></i>
+                      <i class="fas fa-star-half-alt text-warning-500"></i>
+                      <i class="far fa-star text-muted"></i>
+                      <span class="text-sm text-muted">(4.0)</span>
+                    </div>
+                    <h5 class="mt-4 mb-3">Offer</h5>
+                    <div class="horizontal-scroll-block overflow-x-auto">
+                      <div class="offer-check-block flex flex-nowrap flex-row *:m-3 *:first:ml-0">
+                        <label
+                          for="customCheckdef1"
+                          class="offer-check block rounded-lg border border-theme-border dark:border-themedark-border has-[:checked]:shadow-[inset_0_0_0_2px_rgba(0,0,0,.5)] has-[:checked]:shadow-primary-500 has-[:checked]:bg-primary-500/10 p-4 w-[180px] flex-[0_0_auto] relative"
+                        >
+                          <div class="form-check relative">
+                            <input
+                              type="radio"
+                              name="radio1"
+                              class="form-check-input absolute ltr:right-0 rtl:left-0 top-0"
+                              id="customCheckdef1"
+                              checked=""
+                            />
+                            <div class="form-check-label flex flex-col gap-3">
+                              <span class="h6 mb-0 d-block">No Cost EMI</span>
+                              <span class="text-muted offer-details line-clamp-2">
+                                Upto ₹2,322.51 EMI interest savings on select Credit CardsUpto ₹2,322.51 EMI interest savings on select
+                                Credit Cards
+                              </span>
+                              <span class="h6 mb-0 text-primary">
+                                1 Offer
+                                <i class="ti ti-arrow-narrow-right"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </label>
+                        <label
+                          for="customCheckdef2"
+                          class="offer-check block rounded-lg border border-theme-border dark:border-themedark-border has-[:checked]:shadow-[inset_0_0_0_2px_rgba(0,0,0,.5)] has-[:checked]:shadow-primary-500 has-[:checked]:bg-primary-500/10 p-4 w-[180px] flex-[0_0_auto] relative"
+                        >
+                          <div class="form-check relative">
+                            <input type="radio" name="radio1" class="form-check-input absolute ltr:right-0 rtl:left-0 top-0" id="customCheckdef2" />
+                            <div class="form-check-label flex flex-col gap-3">
+                              <span class="h6 mb-0 d-block">Bank Offer</span>
+                              <span class="text-muted offer-details line-clamp-2">
+                                Upto ₹1,250.00 discount on select Credit CardsUpto ₹2,322.51 EMI interest savings on select Credit Cards
+                              </span>
+                              <span class="h6 mb-0 text-primary">
+                                1 Offer
+                                <i class="ti ti-arrow-narrow-right"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </label>
+                        <label
+                          for="customCheckdef3"
+                          class="offer-check block rounded-lg border border-theme-border dark:border-themedark-border has-[:checked]:shadow-[inset_0_0_0_2px_rgba(0,0,0,.5)] has-[:checked]:shadow-primary-500 has-[:checked]:bg-primary-500/10 p-4 w-[180px] flex-[0_0_auto] relative"
+                        >
+                          <div class="form-check relative">
+                            <input type="radio" name="radio1" class="form-check-input absolute ltr:right-0 rtl:left-0 top-0" id="customCheckdef3" />
+                            <div class="form-check-label flex flex-col gap-3">
+                              <span class="h6 mb-0 d-block">No Cost EMI</span>
+                              <span class="text-muted offer-details line-clamp-2">
+                                Upto ₹2,322.51 EMI interest savings on select Credit CardsUpto ₹2,322.51 EMI interest savings on select
+                                Credit Cards
+                              </span>
+                              <span class="h6 mb-0 text-primary">
+                                1 Offer
+                                <i class="ti ti-arrow-narrow-right"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </label>
+                        <label
+                          for="customCheckdef4"
+                          class="offer-check block rounded-lg border border-theme-border dark:border-themedark-border has-[:checked]:shadow-[inset_0_0_0_2px_rgba(0,0,0,.5)] has-[:checked]:shadow-primary-500 has-[:checked]:bg-primary-500/10 p-4 w-[180px] flex-[0_0_auto] relative"
+                        >
+                          <div class="form-check relative">
+                            <input type="radio" name="radio1" class="form-check-input absolute ltr:right-0 rtl:left-0 top-0" id="customCheckdef4" />
+                            <div class="form-check-label flex flex-col gap-3">
+                              <span class="h6 mb-0 d-block">Bank Offer</span>
+                              <span class="text-muted offer-details line-clamp-2">
+                                Upto ₹1,250.00 discount on select Credit CardsUpto ₹2,322.51 EMI interest savings on select Credit Cards
+                              </span>
+                              <span class="h6 mb-0 text-primary">
+                                1 Offer
+                                <i class="ti ti-arrow-narrow-right"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <h5 class="mt-4 mb-3 f-w-500">About this item</h5>
+                    <ul class="list-disc pl-4 *:my-1">
+                      <li>Care Instructions: Hand Wash Only</li>
+                      <li>Fit Type: Regular</li>
+                      <li>Dark Blue Regular Women Jeans</li>
+                      <li>Fabric : 100% Cotton</li>
+                    </ul>
+                    <div class="mb-3 grid grid-cols-12 gap-6">
+                      <label class="col-span-12 lg:col-span-3 col-form-label self-center">
+                        Colors
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div class="col-span-12 lg:col-span-6 flex items-center self-center">
+                        <div class="flex items-center gap-1">
+                          <label
+                            for="prod-primary"
+                            class="group w-7 h-7 cursor-pointer inline-flex items-center justify-center rounded-full bg-primary-500 has-[:checked]:bg-primary-500/40"
+                          >
+                            <input class="form-check-input hidden" type="checkbox" id="prod-primary" />
+                            <i class="fas fa-check text-primary-500 hidden group-has-[:checked]:flex"></i>
+                          </label>
+                          <label
+                            for="prod-secondary"
+                            class="group w-7 h-7 cursor-pointer inline-flex items-center justify-center rounded-full bg-secondary-500 has-[:checked]:bg-secondary-500/40"
+                          >
+                            <input class="form-check-input hidden" type="checkbox" id="prod-secondary" />
+                            <i class="fas fa-check text-secondary-500 hidden group-has-[:checked]:flex"></i>
+                          </label>
+                          <label
+                            for="prod-info"
+                            class="group w-7 h-7 cursor-pointer inline-flex items-center justify-center rounded-full bg-info-500 has-[:checked]:bg-info-500/40"
+                          >
+                            <input class="form-check-input hidden" type="checkbox" id="prod-info" />
+                            <i class="fas fa-check text-info-500 hidden group-has-[:checked]:flex"></i>
+                          </label>
+                          <label
+                            for="prod-dark"
+                            class="group w-7 h-7 cursor-pointer inline-flex items-center justify-center rounded-full bg-dark-500 has-[:checked]:bg-dark-500/40"
+                          >
+                            <input class="form-check-input hidden" type="checkbox" id="prod-dark" />
+                            <i class="fas fa-check text-dark-500 hidden group-has-[:checked]:flex"></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3 grid grid-cols-12 gap-6">
+                      <label class="col-form-label col-span-12 lg:col-span-3 self-center">
+                        <span class="block">Size</span>
+                        <a class="text-primary-500 text-sm decoration-underline">Size Chart?</a>
+                      </label>
+                      <div class="col-span-12 lg:col-span-9 self-center">
+                        <div class="inline-flex items-center" role="group">
+                          <label
+                            class="btn btn-sm btn-light-primary cursor-pointer has-[:checked]:bg-primary-500 has-[:checked]:text-white"
+                            for="btnrdo1"
+                          >
+                            <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdo1" name="btn_radio1" />
+                            Small
+                          </label>
+                          <label
+                            class="btn btn-sm btn-light-primary cursor-pointer mx-1 has-[:checked]:bg-primary-500 has-[:checked]:text-white"
+                            for="btnrdo2"
+                          >
+                            <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdo2" name="btn_radio1" />
+                            Medium
+                          </label>
+                          <label
+                            class="btn btn-sm btn-light-primary cursor-pointer has-[:checked]:bg-primary-500 has-[:checked]:text-white"
+                            for="btnrdo3"
+                          >
+                            <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdo3" name="btn_radio1" />
+                            Large
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3 grid grid-cols-12 gap-6">
+                      <label class="col-form-label col-span-12 lg:col-span-3">
+                        Quantity
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div class="col-span-12 lg:col-span-6">
+                        <div class="inline-flex items-center mb-2 overflow-hidden border border-theme-border dark:border-themedark-border rounded-full" role="group">
+                          <button
+                            type="button"
+                            id="decrease"
+                            onclick="decreaseValue('number')"
+                            class="btn btn-link-secondary rounded-r-none"
+                          >
+                            <i class="ti ti-minus"></i>
+                          </button>
+                          <input
+                            class="w-[35px] text-center py-0 border-0 m-0 form-control rounded-0 shadow-none !bg-transparent dark:!bg-transparent"
+                            type="text"
+                            id="number"
+                            value="0"
+                          />
+                          <button
+                            type="button"
+                            id="increase"
+                            onclick="increaseValue('number')"
+                            class="btn btn-link-secondary rounded-l-none"
+                          >
+                            <i class="ti ti-plus"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <h3 class="mb-4">
+                      <span>$299.00</span>
+                      <span class="mx-2 text-lg text-muted font-normal line-through">$399.00</span>
+                    </h3>
+                    <div class="grid grid-cols-12 gap-6">
+                      <div class="col-span-6">
+                        <button type="button" class="btn w-full btn-primary">Buy Now</button>
+                      </div>
+                      <div class="col-span-6">
+                        <button type="button" class="btn w-full btn-outline-secondary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header !pb-0">
+                <ul class="flex flex-wrap w-full text-center nav-tabs">
+                  <li class="group active">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="ecomtab-1"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                      Features
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="ecomtab-2"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                      Specifications
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="ecomtab-3"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                      Overview
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="ecomtab-4"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                      Reviews
+                      <span class="badge bg-primary-500/10 text-primary-500 rounded-full ml-2 align-bottom">275</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="block tab-pane" id="ecomtab-1">
+                    <div class="table-responsive">
+                      <table class="table table-borderless">
+                        <tbody>
+                          <tr>
+                            <td class="text-muted !py-1">Band :</td>
+                            <td class="!py-1">Smart Band</td>
+                          </tr>
+                          <tr>
+                            <td class="text-muted !py-1">Compatible Devices :</td>
+                            <td class="!py-1">Smartphones</td>
+                          </tr>
+                          <tr>
+                            <td class="text-muted !py-1">Ideal For :</td>
+                            <td class="!py-1">Unisex</td>
+                          </tr>
+                          <tr>
+                            <td class="text-muted !py-1">Lifestyle :</td>
+                            <td class="!py-1">Fitness | Indoor | Sports | Swimming | Outdoor</td>
+                          </tr>
+                          <tr>
+                            <td class="text-muted !py-1">Basic Features :</td>
+                            <td class="!py-1">Calendar | Date & Time | Timer/Stop Watch</td>
+                          </tr>
+                          <tr>
+                            <td class="text-muted !py-1">Health Tracker :</td>
+                            <td class="!py-1">Heart Rate | Exercise Tracker</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="ecomtab-2">
+                    <div class="grid grid-cols-12 gap-6">
+                      <div class="col-span-12 md:col-span-6">
+                        <h5>Product Category</h5>
+                        <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                        <div class="table-responsive">
+                          <table class="table table-borderless">
+                            <tbody>
+                              <tr>
+                                <td class="text-muted !py-1">Wearable Device Type:</td>
+                                <td class="!py-1">Smart Band</td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted !py-1">Compatible Devices :</td>
+                                <td class="!py-1">Smartphones</td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted !py-1">Ideal For :</td>
+                                <td class="!py-1">Unisex</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="col-span-12 md:col-span-6">
+                        <h5>Manufacturer Details</h5>
+                        <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                        <div class="table-responsive">
+                          <table class="table table-borderless">
+                            <tbody>
+                              <tr>
+                                <td class="text-muted !py-1">Brand :</td>
+                                <td class="!py-1">Apple</td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted !py-1">Model Series :</td>
+                                <td class="!py-1">Watch SE</td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted !py-1">Model Number :</td>
+                                <td class="!py-1">MYDT2HN/A</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="ecomtab-3">
+                    <p class="text-muted mb-4">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s,
+                      <strong class="text-body">
+                        “When an unknown printer took a galley of type and scrambled it to make a type specimen book.”
+                      </strong>
+                      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                      unchanged. It was popularized in the 1960s with the release of Lestrade sheets containing Lorem Ipsum passages, and
+                      more recently with desktop publishing software like PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p class="text-muted">
+                      It was popularized in the 1960s with the release of Learjet sheets containing Lorem Ipsum passages, and more recently
+                      with desktop publishing software like PageMaker including versions of Lorem Ipsum.
+                    </p>
+                  </div>
+                  <div class="hidden tab-pane" id="ecomtab-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="grid grid-cols-12 gap-3">
+                          <div class="col-span-12 xl:col-span-7 2xl:col-span-4">
+                            <h2 class="mb-3">
+                              <b>
+                                3.5
+                                <small class="text-muted f-18">/5</small>
+                              </b>
+                            </h2>
+                            <p class="mb-2 text-muted">Based on 275 reviews</p>
+                            <div class="star mb-3 text-xl">
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star-half-alt text-warning"></i>
+                              <i class="far fa-star text-muted"></i>
+                            </div>
+                          </div>
+                          <div class="col-span-12 xl:col-span-5 2xl:col-span-4 col-end-12">
+                            <div class="d-flex align-items-center">
+                              <div class="w-full">
+                                <div class="flex items-center justify-between my-2">
+                                  <div class="flex-[1_0_0%]">
+                                    <div class="w-full bg-theme-bodybg rounded-lg h-1 dark:bg-themedark-bodybg">
+                                      <div
+                                        class="bg-warning-500 h-full rounded-lg"
+                                        role="progressbar"
+                                        style="width: 30%"
+                                        aria-valuenow="30"
+                                        aria-valuemin="0"
+                                        aria-valuemax="100"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                  <div class="flex-[0_0_auto]">
+                                    <p class="mb-0 text-muted ml-5">5 Stars</p>
+                                  </div>
+                                </div>
+                                <div class="flex items-center justify-between my-2">
+                                  <div class="flex-[1_0_0%]">
+                                    <div class="w-full bg-theme-bodybg rounded-lg h-1 dark:bg-themedark-bodybg">
+                                      <div
+                                        class="bg-warning-500 h-full rounded-lg"
+                                        role="progressbar"
+                                        style="width: 60%"
+                                        aria-valuenow="60"
+                                        aria-valuemin="0"
+                                        aria-valuemax="100"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                  <div class="flex-[0_0_auto]">
+                                    <p class="mb-0 text-muted ml-5">4 Stars</p>
+                                  </div>
+                                </div>
+                                <div class="flex items-center justify-between my-2">
+                                  <div class="flex-[1_0_0%]">
+                                    <div class="w-full bg-theme-bodybg rounded-lg h-1 dark:bg-themedark-bodybg">
+                                      <div
+                                        class="bg-warning-500 h-full rounded-lg"
+                                        role="progressbar"
+                                        style="width: 75%"
+                                        aria-valuenow="75"
+                                        aria-valuemin="0"
+                                        aria-valuemax="100"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                  <div class="flex-[0_0_auto]">
+                                    <p class="mb-0 text-muted ml-5">3 Stars</p>
+                                  </div>
+                                </div>
+                                <div class="flex items-center justify-between my-2">
+                                  <div class="flex-[1_0_0%]">
+                                    <div class="w-full bg-theme-bodybg rounded-lg h-1 dark:bg-themedark-bodybg">
+                                      <div
+                                        class="bg-warning-500 h-full rounded-lg"
+                                        role="progressbar"
+                                        style="width: 40%"
+                                        aria-valuenow="40"
+                                        aria-valuemin="0"
+                                        aria-valuemax="100"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                  <div class="flex-[0_0_auto]">
+                                    <p class="mb-0 text-muted ml-5">2 Stars</p>
+                                  </div>
+                                </div>
+                                <div class="flex items-center justify-between my-2">
+                                  <div class="flex-[1_0_0%]">
+                                    <div class="w-full bg-theme-bodybg rounded-lg h-1 dark:bg-themedark-bodybg">
+                                      <div
+                                        class="bg-warning-500 h-full rounded-lg"
+                                        role="progressbar"
+                                        style="width: 55%"
+                                        aria-valuenow="55"
+                                        aria-valuemin="0"
+                                        aria-valuemax="100"
+                                      ></div>
+                                    </div>
+                                  </div>
+                                  <div class="flex-[0_0_auto]">
+                                    <p class="mb-0 text-muted ml-5">1 Stars</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="flex items-start">
+                          <div class="shrink-0 chat-avtar relative">
+                            <img class="rounded-full w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                            <div class="bg-success-500 p-1 rounded-full chat-badge absolute right-0 bottom-0"></div>
+                          </div>
+                          <div class="grow-1 ms-3">
+                            <h6 class="mb-1">Harriet Wilson</h6>
+                            <p class="text-muted text-sm mb-1">2 hour ago</p>
+                            <div class="star">
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star-half-alt text-warning"></i>
+                              <i class="far fa-star text-muted"></i>
+                            </div>
+                            <p class="mb-0 text-muted mt-1">
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                              standard dummy text ever since the 1500.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="flex items-start">
+                          <div class="shrink-0 chat-avtar relative">
+                            <img class="rounded-full w-10" src="../assets/images/user/avatar-2.jpg" alt="User image" />
+                            <div class="bg-success-500 p-1 rounded-full chat-badge absolute right-0 bottom-0"></div>
+                          </div>
+                          <div class="grow-1 ms-3">
+                            <h6 class="mb-1">Lou Olson</h6>
+                            <p class="text-muted text-sm mb-1">2 hour ago</p>
+                            <div class="star">
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star text-warning"></i>
+                              <i class="fas fa-star-half-alt text-warning"></i>
+                              <i class="far fa-star text-muted"></i>
+                              <i class="far fa-star text-muted"></i>
+                            </div>
+                            <p class="mb-2 text-muted mt-1">
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                              standard dummy text ever since the 1500.
+                            </p>
+                            <a href="#" class="link-primary mb-1">https://phoenixcoded.net/</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-center mt-3">
+                      <button class="btn btn-link-primary">View more comments</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5>Related Product</h5>
+              </div>
+              <div class="card-body">
+                <div class="grid grid-cols-12 gap-x-6">
+                  <div class="col-span-12 sm:col-span-6 xl:col-span-3">
+                    <div class="card group overflow-hidden transition-all duration-3 hover:shadow-[0_8px_24px_rgba(27,46,94,.12)]">
+                      <div class="card-img-top relative px-2 pt-2 rounded-md overflow-hidden">
+                        <a href="../application/ecom_product-details.html">
+                          <img src="../assets/images/application/img-prod-1.jpg" alt="image" class="img-prod rounded-md img-fluid" />
+                        </a>
+                        <div class="card-body absolute right-0 top-0">
+                          <div class="form-check prod-likes relative">
+                            <input
+                              type="checkbox"
+                              class="cursor-pointer opacity-0 form-check-input absolute top-0 left-0 w-full h-full peer/prodlike"
+                              checked
+                            />
+                            <i
+                              data-feather="heart"
+                              class="prod-likes-icon transition-all duration-300 fill-secondary-500/10 stroke-secondary-500 peer-checked/prodlike:fill-danger-500 peer-checked/prodlike:stroke-danger-500"
+                            ></i>
+                          </div>
+                        </div>
+                        <div class="btn-prod-cart card-body absolute right-0 bottom-0">
+                          <a
+                            href="#"
+                            class="btn btn-warning w-11 h-11 rounded-full p-0 flex items-center justify-center transition-all duration-300 scale-0 -rotate-90 group-[:hover]:scale-100 group-[:hover]:rotate-0"
+                          >
+                            <svg class="pc-icon w-6 h-6">
+                              <use xlink:href="#custom-bag"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <a href="../application/ecom_product-details.html">
+                          <p class="prod-content mb-0 text-muted">Apple watch -4</p>
+                        </a>
+                        <div class="flex items-center justify-between mt-2">
+                          <h4 class="mb-0 text-truncate">$399.00</h4>
+                          <div class="prod-color flex -space-x-1 *:w-4 *:h-4 *:rounded-full *:flex *:shadow-[0_0_0_2px_#fff]">
+                            <span class="bg-success-400"></span>
+                            <span class="bg-dark-400"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 xl:col-span-3">
+                    <div class="card group overflow-hidden transition-all duration-3 hover:shadow-[0_8px_24px_rgba(27,46,94,.12)]">
+                      <div class="card-img-top relative px-2 pt-2 rounded-md overflow-hidden">
+                        <a href="../application/ecom_product-details.html">
+                          <img src="../assets/images/application/img-prod-2.jpg" alt="image" class="img-prod rounded-md img-fluid" />
+                        </a>
+                        <div class="card-body absolute right-0 top-0">
+                          <div class="form-check prod-likes relative">
+                            <input
+                              type="checkbox"
+                              class="cursor-pointer opacity-0 form-check-input absolute top-0 left-0 w-full h-full peer/prodlike"
+                            />
+                            <i
+                              data-feather="heart"
+                              class="prod-likes-icon transition-all duration-300 fill-secondary-500/10 stroke-secondary-500 peer-checked/prodlike:fill-danger-500 peer-checked/prodlike:stroke-danger-500"
+                            ></i>
+                          </div>
+                        </div>
+                        <div class="btn-prod-cart card-body absolute right-0 bottom-0">
+                          <a
+                            href="#"
+                            class="btn btn-warning w-11 h-11 rounded-full p-0 flex items-center justify-center transition-all duration-300 scale-0 -rotate-90 group-[:hover]:scale-100 group-[:hover]:rotate-0"
+                          >
+                            <svg class="pc-icon w-6 h-6">
+                              <use xlink:href="#custom-bag"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <a href="../application/ecom_product-details.html">
+                          <p class="prod-content mb-0 text-muted">Apple watch -4</p>
+                        </a>
+                        <div class="flex items-center justify-between mt-2">
+                          <h4 class="mb-0 text-truncate">$399.00</h4>
+                          <div class="prod-color flex -space-x-1 *:w-4 *:h-4 *:rounded-full *:flex *:shadow-[0_0_0_2px_#fff]">
+                            <span class="bg-primary-400"></span>
+                            <span class="bg-dark-400"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 xl:col-span-3">
+                    <div class="card group overflow-hidden transition-all duration-3 hover:shadow-[0_8px_24px_rgba(27,46,94,.12)]">
+                      <div class="card-img-top relative px-2 pt-2 rounded-md overflow-hidden">
+                        <a href="../application/ecom_product-details.html">
+                          <img src="../assets/images/application/img-prod-3.jpg" alt="image" class="img-prod rounded-md img-fluid" />
+                        </a>
+                        <div class="card-body absolute right-0 top-0">
+                          <div class="form-check prod-likes relative">
+                            <input
+                              type="checkbox"
+                              class="cursor-pointer opacity-0 form-check-input absolute top-0 left-0 w-full h-full peer/prodlike"
+                            />
+                            <i
+                              data-feather="heart"
+                              class="prod-likes-icon transition-all duration-300 fill-secondary-500/10 stroke-secondary-500 peer-checked/prodlike:fill-danger-500 peer-checked/prodlike:stroke-danger-500"
+                            ></i>
+                          </div>
+                        </div>
+                        <div class="btn-prod-cart card-body absolute right-0 bottom-0">
+                          <a
+                            href="#"
+                            class="btn btn-warning w-11 h-11 rounded-full p-0 flex items-center justify-center transition-all duration-300 scale-0 -rotate-90 group-[:hover]:scale-100 group-[:hover]:rotate-0"
+                          >
+                            <svg class="pc-icon w-6 h-6">
+                              <use xlink:href="#custom-bag"></use>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="card-body absolute left-0 top-0"><span class="badge bg-success-500 text-white">30%</span></div>
+                      </div>
+                      <div class="card-body">
+                        <a href="../application/ecom_product-details.html">
+                          <p class="prod-content mb-0 text-muted">Apple watch -4</p>
+                        </a>
+                        <div class="flex items-center justify-between mt-2">
+                          <h4 class="mb-0 text-truncate">
+                            $399.00
+                            <span class="text-sm text-muted font-normal line-through">$399.00</span>
+                          </h4>
+                          <div class="prod-color flex -space-x-1 *:w-4 *:h-4 *:rounded-full *:flex *:shadow-[0_0_0_2px_#fff]">
+                            <span class="bg-danger-400"></span>
+                            <span class="bg-dark-400"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 xl:col-span-3">
+                    <div class="card group overflow-hidden transition-all duration-3 hover:shadow-[0_8px_24px_rgba(27,46,94,.12)]">
+                      <div class="card-img-top relative px-2 pt-2 rounded-md overflow-hidden">
+                        <a href="../application/ecom_product-details.html">
+                          <img src="../assets/images/application/img-prod-4.jpg" alt="image" class="img-prod rounded-md img-fluid" />
+                        </a>
+                        <div class="card-body absolute right-0 top-0">
+                          <div class="form-check prod-likes relative">
+                            <input
+                              type="checkbox"
+                              class="cursor-pointer opacity-0 form-check-input absolute top-0 left-0 w-full h-full peer/prodlike"
+                              checked
+                            />
+                            <i
+                              data-feather="heart"
+                              class="prod-likes-icon transition-all duration-300 fill-secondary-500/10 stroke-secondary-500 peer-checked/prodlike:fill-danger-500 peer-checked/prodlike:stroke-danger-500"
+                            ></i>
+                          </div>
+                        </div>
+                        <div class="btn-prod-cart card-body absolute right-0 bottom-0">
+                          <a
+                            href="#"
+                            class="btn btn-warning w-11 h-11 rounded-full p-0 flex items-center justify-center transition-all duration-300 scale-0 -rotate-90 group-[:hover]:scale-100 group-[:hover]:rotate-0"
+                          >
+                            <svg class="pc-icon w-6 h-6">
+                              <use xlink:href="#custom-bag"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <a href="../application/ecom_product-details.html">
+                          <p class="prod-content mb-0 text-muted">Apple watch -4</p>
+                        </a>
+                        <div class="flex items-center justify-between mt-2">
+                          <h4 class="mb-0 text-truncate">$399.00</h4>
+                          <div class="prod-color flex -space-x-1 *:w-4 *:h-4 *:rounded-full *:flex *:shadow-[0_0_0_2px_#fff]">
+                            <span class="bg-success-400"></span>
+                            <span class="bg-dark-400"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ sample-page ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <script src="../assets/js/plugins/tiny-slider.js"></script>
+    <script>
+      var slider = tns({
+        container: '#customize',
+        items: 1,
+        center: true,
+        gutter: 10,
+        controls: false,
+        navContainer: '#customize-thumbnails',
+        navAsThumbnails: true,
+        autoplay: false,
+        autoplayButtonOutput: false,
+        autoplayButton: false
+      });
+      var tc = document.querySelectorAll('.horizontal-scroll-block');
+      for (var t = 0; t < tc.length; t++) {
+        new SimpleBar(tc[t]);
+      }
+      // quantity start
+      function increaseValue(counter) {
+        var value = parseInt(document.getElementById(counter).value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById(counter).value = value;
+      }
+
+      function decreaseValue(counter) {
+        var value = parseInt(document.getElementById(counter).value, 10);
+        value = isNaN(value) ? 0 : value;
+        value < 1 ? (value = 1) : '';
+        value--;
+        document.getElementById(counter).value = value;
+      }
+      // quantity end
+    </script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

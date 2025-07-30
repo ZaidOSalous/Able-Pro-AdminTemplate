@@ -1,0 +1,101 @@
+{% extends "layouts/main-layout.html" %}
+{% load static %}
+{% block title %}   
+{% include 'layouts/head-page-meta.html' with title='Create Ticket' %}
+{% endblock %}    
+
+{% block css1 %}
+<link rel="stylesheet" href={% static "/libs/dropzone/dist/min/dropzone.min.css" %} />
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css" rel="stylesheet" />
+<link rel="stylesheet" href={% static "/libs/quill/dist/quill.core.css" %} />
+<link rel="stylesheet" href={% static "/libs/quill/dist/quill.snow.css" %} />
+{% endblock %}    
+
+{% block css2 %}
+<!-- Add your second CSS block content here if any -->
+{% endblock %}
+
+{% block mainContent %}
+        {% include 'layouts/breadcrumb.html' with parentTitle='Create Ticket' title='Helpdesk' %}
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="mb-3">
+                        <label class="form-label">Customer</label>
+                        <select class="mb-3 form-select">
+                          <option>Default select</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <select class="mb-3 form-select">
+                          <option>Default select</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="exampleInputPassword1">Subject</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Subject" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="exampleInputPassword1">Description</label>
+                    <div id="tinymce-editor" style="height: 150px">
+                      <p>hello..</p>
+                    </div>
+                  </div>
+                  <form action="../assets/json/file-upload.php" class="dropzone">
+                    <div class="fallback">
+                      <input name="file" type="file" multiple />
+                    </div>
+                  </form>
+                  <div class="text-end mt-4">
+                    <button type="submit" class="btn btn-outline-secondary">Clear</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ Main Content ] end -->
+{% endblock %}
+
+{% block js1 %}
+{% endblock %}
+
+{% block js2 %}
+<!-- [Page Specific JS] start -->
+<!-- file-upload Js -->
+<script src={% static "/libs/dropzone/dist/min/dropzone-amd-module.min.js" %}></script>
+    <script src={% static "/libs/quill/dist/quill.js" %}></script>
+    <script type="text/javascript">
+      (function () {
+        var quill = new Quill('#tinymce-editor', {
+          modules: {
+            toolbar: [
+              [
+                {
+                  header: [1, 2, false]
+                }
+              ],
+              ['bold', 'italic', 'underline'],
+              ['image', 'code-block']
+            ]
+          },
+          placeholder: 'Type your text here...',
+          theme: 'snow'
+        });
+      })();
+    </script>
+    <!-- [Page Specific JS] end -->
+{% endblock %}
+   
+    

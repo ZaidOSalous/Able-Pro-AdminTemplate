@@ -1,0 +1,57 @@
+{% extends "layouts/main-layout.html" %}
+{% block title %} 
+{% with title='File Upload' %}
+{% include 'layouts/head-page-meta.html' %}
+{% endwith %}
+{% endblock %}    
+
+{% block css1 %}
+<link rel="stylesheet" href={{ url_for('static', filename='/libs/dropzone/dist/min/dropzone.min.css') }} />
+{% endblock %}    
+
+{% block css2 %}
+<!-- Add your second CSS block content here if any -->
+{% endblock %}
+
+{% block mainContent %}
+        {% with parentTitle='File Upload', title='Forms' %}
+{% include 'layouts/breadcrumb.html' %}
+{% endwith %}
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- prettier-ignore -->
+          {% with title='CKEditor', text='CKEditor 5 allows users to create any type of content in your application, be it documents, reports, emails, notes or chat messages.', link='https://ckeditor.com/' %}
+{% include 'layouts/component/component-link.html' %}
+{% endwith %}
+        </div>
+        <div class="row">
+          <!-- [ file-upload ] start -->
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>File Upload</h5>
+              </div>
+              <div class="card-body">
+                <form action="../assets/json/file-upload.php" class="dropzone">
+                  <div class="fallback">
+                    <input name="file" type="file" multiple />
+                  </div>
+                </form>
+                <div class="text-center m-t-20">
+                  <button class="btn btn-primary">Upload Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ file-upload ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+{% endblock %}    
+
+{% block js1 %}
+    <!-- [Page Specific JS] start -->
+    <!-- file-upload Js -->
+    <script src={{ url_for('static', filename='/libs/dropzone/dist/min/dropzone-amd-module.min.js') }}></script>
+    <!-- [Page Specific JS] end -->
+{% endblock %}    
+  

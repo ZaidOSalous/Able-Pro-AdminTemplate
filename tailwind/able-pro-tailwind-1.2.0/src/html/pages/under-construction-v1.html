@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Site is Under Maintenance'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/loader.html')
+    <!-- [ Main Content ] start -->
+    <div class="maintenance-block construction-card-1 min-h-screen w-full flex items-center justify-center bg-[url('../images/pages/img-cunstruct-1-bg.png')] bg-[length:100%] bg-no-repeat">
+      <div class="container">
+        <div class="card construction-card bg-transparent shadow-none border-none">
+          <div class="card-body">
+            <div class="construction-image-block">
+              <div class="grid grid-cols-12 gap-12 construction-card-bottom">
+                <div class="col-span-12 md:col-span-6 self-center">
+                  <div class="text-center">
+                    <h1 class="mt-4"><b>Under Construction</b></h1>
+                    <p class="my-4 text-muted"
+                      >Hey! Please check out this site later. We are doing <br />
+                      some maintenance on it right now.</p
+                    >
+                    <a href="../dashboard/index.html" class="btn btn-primary mb-3">Back To Home</a>
+                  </div>
+                </div>
+                <div class="col-span-12 md:col-span-6 self-center">
+                  <img class="img-fluid relative z-20" src="../assets/images/pages/img-cunstruct-1.svg" alt="img" />
+                </div>
+                <div class="col-span-12 relative">
+                  <img class="img-fluid w-100 absolute inset-x-0 bottom-0 z-10" src="../assets/images/pages/img-cunstruct-1-bottom.svg" alt="img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

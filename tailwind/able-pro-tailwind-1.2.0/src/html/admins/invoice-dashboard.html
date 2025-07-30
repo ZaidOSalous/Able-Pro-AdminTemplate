@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Invoice'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Invoice', 'breadcrumb-item-active':'Dashboard'})
+
+        <!-- [ Main Content ] start -->
+        
+        <div class="grid grid-cols-12 gap-x-6">
+          <div class="col-span-12 lg:col-span-9">
+            <div class="card">
+              <div class="card-body">
+                <div class="grid grid-cols-12 gap-6 mb-3">
+                  <div class="col-span-12 md:col-span-6 2xl:col-span-3">
+                    <div class="card border border-theme-border dark:border-themedark-border mb-0">
+                      <div class="card-body !p-4">
+                        <div class="flex items-center justify-between gap-1">
+                          <h6 class="mb-0">Total</h6>
+                          <p class="mb-0 text-muted flex items-center gap-1">
+                            <svg class="pc-icon text-warning-500 w-[15px] h-[15px]">
+                              <use xlink:href="#custom-arrow-down"></use>
+                            </svg>20.3%
+                          </p>
+                        </div>
+                        <h5 class="mb-2 mt-3">£5678.09</h5>
+                        <div class="flex items-center gap-1">
+                          <h5 class="mb-0">3</h5>
+                          <p class="mb-0 text-muted">invoices</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 2xl:col-span-3">
+                    <div class="card border border-theme-border dark:border-themedark-border mb-0">
+                      <div class="card-body !p-4">
+                        <div class="flex items-center justify-between gap-1">
+                          <h6 class="mb-0">Paid</h6>
+                          <p class="mb-0 text-muted flex items-center gap-1">
+                            <svg class="pc-icon text-danger-500 w-[15px] h-[15px]">
+                              <use xlink:href="#custom-arrow-down"></use>
+                            </svg>
+                            -8.73%
+                          </p>
+                        </div>
+                        <h5 class="mb-2 mt-3">£5678.09</h5>
+                        <div class="flex items-center gap-1">
+                          <h5 class="mb-0">5</h5>
+                          <p class="mb-0 text-muted">invoices</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 2xl:col-span-3">
+                    <div class="card border border-theme-border dark:border-themedark-border mb-0">
+                      <div class="card-body !p-4">
+                        <div class="flex items-center justify-between gap-1">
+                          <h6 class="mb-0">Pending</h6>
+                          <p class="mb-0 text-muted flex items-center gap-1">
+                            <svg class="pc-icon text-success-500 w-[15px] h-[15px]">
+                              <use xlink:href="#custom-arrow-up"></use>
+                            </svg>
+                            10.73%</p
+                          >
+                        </div>
+                        <h5 class="mb-2 mt-3">£5678.09</h5>
+                        <div class="flex items-center gap-1">
+                          <h5 class="mb-0">20</h5>
+                          <p class="mb-0 text-muted">invoices</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 md:col-span-6 2xl:col-span-3">
+                    <div class="card border border-theme-border dark:border-themedark-border mb-0">
+                      <div class="card-body !p-4">
+                        <div class="flex items-center justify-between gap-1">
+                          <h6 class="mb-0">Overdue</h6>
+                          <p class="mb-0 text-muted flex items-center gap-1">
+                            <svg class="pc-icon text-primary-500 w-[15px] h-[15px]">
+                              <use xlink:href="#custom-arrow-down"></use>
+                            </svg>
+                            -4.73%
+                          </p>
+                        </div>
+                        <h5 class="mb-2 mt-3">£5678.09</h5>
+                        <div class="flex items-center gap-1">
+                          <h5 class="mb-0">5</h5>
+                          <p class="mb-0 text-muted">invoices</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="invoice-chart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="grid grid-cols-12 gap-3 text-center">
+                  <div class="col-span-6">
+                    <div class="card mb-0">
+                      <div class="card-body py-4 px-2">
+                        <div class="w-12 h-12 inline-flex items-center justify-center bg-primary-500 rounded-full">
+                          <svg class="pc-icon text-white w-[22px] h-[22px]">
+                            <use xlink:href="#custom-document-text"></use>
+                          </svg>
+                        </div>
+                        <h6 class="mb-0 mt-3 text-muted">All Invoices</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-6">
+                    <div class="card mb-0">
+                      <div class="card-body py-4 px-2">
+                        <div class="w-12 h-12 inline-flex items-center justify-center bg-info-500 rounded-full">
+                          <svg class="pc-icon text-white w-[22px] h-[22px]">
+                            <use xlink:href="#custom-archive-book"></use>
+                          </svg>
+                        </div>
+                        <h6 class="mb-0 mt-3 text-muted">Reports</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-6">
+                    <div class="card mb-0">
+                      <div class="card-body py-4 px-2">
+                        <div class="w-12 h-12 inline-flex items-center justify-center bg-success-500 rounded-full">
+                          <svg class="pc-icon text-white w-[22px] h-[22px]">
+                            <use xlink:href="#custom-dollar-circle"></use>
+                          </svg>
+                        </div>
+                        <h6 class="mb-0 mt-3 text-muted">Paid</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-6">
+                    <div class="card mb-0">
+                      <div class="card-body py-4 px-2">
+                        <div class="w-12 h-12 inline-flex items-center justify-center bg-warning-500 rounded-full">
+                          <svg class="pc-icon text-white w-[22px] h-[22px]">
+                            <use xlink:href="#custom-document-filter"></use>
+                          </svg>
+                        </div>
+                        <h6 class="mb-0 mt-3 text-muted">Pending</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-6">
+                    <div class="card mb-0">
+                      <div class="card-body py-4 px-2">
+                        <div class="w-12 h-12 inline-flex items-center justify-center bg-danger-500 rounded-full">
+                          <svg class="pc-icon text-white w-[22px] h-[22px]">
+                            <use xlink:href="#custom-close-circle"></use>
+                          </svg>
+                        </div>
+                        <h6 class="mb-0 mt-3 text-muted">Cancelled</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-6">
+                    <div class="card mb-0">
+                      <div class="card-body py-4 px-2">
+                        <div class="w-12 h-12 inline-flex items-center justify-center bg-primary-500 rounded-full">
+                          <svg class="pc-icon text-white w-[22px] h-[22px]">
+                            <use xlink:href="#custom-shopping-bag"></use>
+                          </svg>
+                        </div>
+                        <h6 class="mb-0 mt-3 text-muted">Draft</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-4 md:col-span-6">
+            <div class="card">
+              <div class="card-body pb-0">
+                <div class="flex items-center justify-between">
+                  <h5 class="mb-0">Recent Invoice</h5>
+                  <div class="dropdown">
+                    <a
+                      class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                      href="#"
+                      data-pc-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="ti ti-dots-vertical text-lg leading-none"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#">Today</a>
+                      <a class="dropdown-item" href="#">Weekly</a>
+                      <a class="dropdown-item" href="#">Monthly</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                <li class="list-group-item border-0">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-10.jpg" alt="user-image" class="rounded-full w-10 h-10" />
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-1">David Jones <span class="text-muted"> - #790841</span></h6>
+                      <p class="mb-0 text-primary">$329.20</p>
+                    </div>
+                    <div class="shrink-0">
+                      <p class="text-muted mb-0">5 min ago</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="rounded-full w-10 h-10" />
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-1">Jenny Jones <span class="text-muted"> - #790841</span></h6>
+                      <p class="mb-0 text-primary">$329.20</p>
+                    </div>
+                    <div class="shrink-0">
+                      <p class="text-muted mb-0">1 day ago</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="rounded-full w-10 h-10" />
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-1">Harry Ben <span class="text-muted"> - #790841</span></h6>
+                      <p class="mb-0 text-primary">3 week ago</p>
+                    </div>
+                    <div class="shrink-0">
+                      <p class="text-muted mb-0">5 min ago</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="rounded-full w-10 h-10" />
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-1">Jenifer Vintage <span class="text-muted"> - #790841</span></h6>
+                      <p class="mb-0 text-primary">$329.20</p>
+                    </div>
+                    <div class="shrink-0">
+                      <p class="text-muted mb-0">3 week ago</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="rounded-full w-10 h-10" />
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-1">Stebin Ben <span class="text-muted"> - #790841</span></h6>
+                      <p class="mb-0 text-primary">$329.20</p>
+                    </div>
+                    <div class="shrink-0">
+                      <p class="text-muted mb-0">1 month ago</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  <div class="grid">
+                    <button class="btn btn-outline-secondary">View All</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-4 md:col-span-6">
+            <div class="card">
+              <div class="card-body pb-0">
+                <div class="flex items-center justify-between">
+                  <h5 class="mb-0">Total Expenses</h5>
+                  <div class="dropdown">
+                    <a
+                      class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                      href="#"
+                      data-pc-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="ti ti-dots-vertical text-lg leading-none"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#">Today</a>
+                      <a class="dropdown-item" href="#">Weekly</a>
+                      <a class="dropdown-item" href="#">Monthly</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div id="total-income-graph"></div>
+                <div class="mb-2 mt-3 flex items-center justify-between">
+                  <h6 class="mb-0 flex items-center gap-2"><i class="fas fa-circle leading-normal text-warning-500"></i> Pending</h6>
+                  <p class="mb-0 text-muted">$3,202</p>
+                </div>
+                <div class="mb-2 flex items-center justify-between">
+                  <h6 class="mb-0 flex items-center gap-2"><i class="fas fa-circle leading-normal text-success-500"></i> Paid</h6>
+                  <p class="mb-0 text-muted">$45,050</p>
+                </div>
+                <div class="mb-2 flex items-center justify-between">
+                  <h6 class="mb-0 flex items-center gap-2"><i class="fas fa-circle leading-normal text-danger-500"></i> Overdue</h6>
+                  <p class="mb-0 text-muted">$25,000</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <h6 class="mb-0 flex items-center gap-2"
+                    ><i class="fas fa-circle leading-normal text-primary-500/30"></i> Draft</h6
+                  >
+                  <p class="mb-0 text-muted">$7,694</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-4 md:col-span-6">
+            <div class="card">
+              <div class="card-body pb-0">
+                <div class="flex items-center justify-between">
+                  <h5 class="mb-0">Notification</h5>
+                  <div class="dropdown">
+                    <a
+                      class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                      href="#"
+                      data-pc-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="ti ti-dots-vertical text-lg leading-none"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#">Today</a>
+                      <a class="dropdown-item" href="#">Weekly</a>
+                      <a class="dropdown-item" href="#">Monthly</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                <li class="list-group-item border-0">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <div class="w-12 h-12 inline-flex items-center justify-center bg-success-500/10 text-success-500 rounded-full">
+                        <i class="ti ti-file-download text-[26px]"></i>
+                      </div>
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-1">Johnny sent you an invoice billed <a href="#!" class="link-primary">$1,000</a>.</h6>
+                      <p class="mb-0 text-muted text-sm">2 August</p>
+                    </div>
+                    <div class="shrink-0">
+                      <a href="#!" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary"><i class="ti ti-link text-xl leading-none"></i></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <div class="w-12 h-12 inline-flex items-center justify-center bg-primary-500/10 text-primary-500 rounded-full">
+                        <i class="ti ti-file-text text-[26px]"></i>
+                      </div>
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-1">Sent an invoice to Aida Bugg amount of <a href="#!" class="link-primary">$200</a>.</h6>
+                      <p class="mb-0 text-muted text-sm">7 hours ago</p>
+                    </div>
+                    <div class="shrink-0">
+                      <a href="#!" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary"><i class="ti ti-link text-xl leading-none"></i></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <div class="w-12 h-12 inline-flex items-center justify-center bg-danger-500/10 text-danger-500  rounded-full">
+                        <i class="ti ti-adjustments text-[26px]"></i>
+                      </div>
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-1">There was a failure to your setup</h6>
+                      <p class="mb-0 text-muted text-sm">7 hours ago</p>
+                    </div>
+                    <div class="shrink-0">
+                      <a href="#!" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary"><i class="ti ti-link text-xl leading-none"></i></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <div class="w-12 h-12 inline-flex items-center justify-center bg-primary-500/10 text-primary-500 rounded-full">
+                        <span class="text-2xl leading-none font-normal">c</span>
+                      </div>
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-1">Cristina danny invited to you join Meeting</h6>
+                      <p class="mb-0 text-muted text-sm">7 hours ago</p>
+                    </div>
+                    <div class="shrink-0">
+                      <a href="#!" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary"><i class="ti ti-link text-xl leading-none"></i></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <div class="w-12 h-12 inline-flex items-center justify-center bg-primary-500/10 text-primary-500 rounded-full">
+                        <span class="text-2xl leading-none font-normal">c</span>
+                      </div>
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-1">Cristina danny invited to you join Meeting</h6>
+                      <p class="mb-0 text-muted text-sm">7 hours ago</p>
+                    </div>
+                    <div class="shrink-0">
+                      <a href="#!" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary"><i class="ti ti-link text-xl leading-none"></i></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item border-0">
+                  <div class="grid">
+                    <button class="btn btn-outline-secondary">View All</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <script src="../assets/js/plugins/apexcharts.min.js"></script>
+    <!-- custom widget js -->
+    <script src="../assets/js/widgets/invoice-chart.js"></script>
+    <script src="../assets/js/widgets/total-income-graph.js"></script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Time Picker'})
+    <!-- [Page specific CSS] start -->
+    <link rel="stylesheet" href="../assets/css/plugins/flatpickr.min.css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Forms', 'breadcrumb-item-active': 'Time Picker'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- prettier-ignore -->
+          @@include('../layouts/component/component-link.html',{
+            title:'Time Picker',
+            text:'flatpickr is a lightweight and powerful datetime picker. Lean, UX-driven, and extensible, yet it doesn’t depend on any libraries. There’s minimal UI but many themes. Rich, exposed APIs and event system make it suitable for any environment.',
+            link:'https://flatpickr.js.org/examples/'})
+        </div>
+        <div class="grid grid-cols-12 gap-6">
+          <!-- [ form-element ] start -->
+          <div class="col-span-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Preview</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label">Simple Input</label>
+                    <div class="col-span-12 md:col-span-9 lg:col-span-4">
+                      <input class="form-control" id="pc-timepicker-1" placeholder="Select time" type="text" />
+                    </div>
+                  </div>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label">With Input Group</label>
+                    <div class="col-span-12 md:col-span-9 lg:col-span-4">
+                      <div class="input-group timepicker">
+                        <input class="form-control" id="pc-timepicker-2" placeholder="Select time" type="text" />
+                        <span class="input-group-text">
+                          <i class="feather icon-clock"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label">24 Hours</label>
+                    <div class="col-span-12 md:col-span-9 lg:col-span-4">
+                      <input class="form-control" id="pc-timepicker-3" type="text" placeholder="Select time" />
+                    </div>
+                  </div>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label">Time Picker w/ Limits</label>
+                    <div class="col-span-12 md:col-span-9 lg:col-span-4">
+                      <input class="form-control" id="pc-timepicker-4" type="text" placeholder="Select time" />
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label">Preloading Time</label>
+                    <div class="col-span-12 md:col-span-9 lg:col-span-4">
+                      <input class="form-control" id="pc-timepicker-5" type="text" placeholder="Select time" />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- [ form-element ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <!-- Time picker -->
+    <script src="../assets/js/plugins/flatpickr.min.js"></script>
+    <script>
+      document.querySelector('#pc-timepicker-1').flatpickr({
+        enableTime: true,
+        noCalendar: true
+      });
+      document.querySelector('#pc-timepicker-2').flatpickr({
+        enableTime: true,
+        noCalendar: true
+      });
+      document.querySelector('#pc-timepicker-3').flatpickr({
+        enableTime: true,
+        noCalendar: true,
+        time_24hr: true
+      });
+      document.querySelector('#pc-timepicker-4').flatpickr({
+        enableTime: true,
+        noCalendar: true,
+        minTime: '16:00',
+        maxTime: '22:30'
+      });
+      document.querySelector('#pc-timepicker-5').flatpickr({
+        enableTime: true,
+        noCalendar: true,
+        defaultDate: '13:45'
+      });
+    </script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

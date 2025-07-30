@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Ticket Details'})
+    <!-- prism css -->
+    <link rel="stylesheet" href="../assets/css/plugins/prism-coy.css" />
+    @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Helpdesk', 'breadcrumb-item-active': 'Ticket Details'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 lg:col-span-8">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="flex items-center gap-1.5"><i data-feather="lock" class="stroke-primary-500 fill-primary-500/10 w-5 h-5"></i><span>Private Ticket #1831786</span></h5>
+              </div>
+              <div class="card-body border-b border-theme-border dark:border-themedark-border !py-3">
+                <div class="grid grid-cols-12 gap-6">
+                  <div class="col-span-12 md:col-span-8 self-center">
+                    <h4 class="d-inline-block mb-0">Theme customization issue</h4>
+                  </div>
+                  <div class="col-span-12 md:col-span-4 self-center md:text-right">
+                    <div class="btn-star inline-flex items-center gap-2">
+                      <a href="#!" class="btn btn-light-success btn-sm">Mark as unread</a>
+                      <a href="#!"><i data-feather="star" class="stroke-warning-500 fill-warning-500/10 w-5 h-5"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="border-b border-theme-border dark:border-themedark-border card-body !py-3">
+                <div class="flex items-center flex-wrap gap-3">
+                  <button type="button" class="btn btn-sm btn-light-success"
+                    ><i class="mx-2 feather icon-message-square"></i>Post a reply</button
+                  >
+                  <button type="button" class="btn btn-sm btn-light-warning"
+                    ><i class="mx-2 feather icon-edit"></i>Post a Note</button
+                  >
+                  <button type="button" class="btn btn-sm btn-light-danger"
+                    ><i class="mx-2 feather icon-user-check"></i>Customer Notes</button
+                  >
+                </div>
+              </div>
+              <div class="border-b border-theme-border dark:border-themedark-border card-body">
+                <div class="sm:flex items-start gap-3">
+                  <div class="shrink-0 mb-3">
+                    <div class="sm:inline-block flex items-center">
+                      <img class="w-[60px] rounded-full mb-2" src="../assets/images/user/avatar-5.jpg" alt="Generic placeholder image " />
+                      <div class="ms-3 sm:ms-0 sm:text-center">
+                        <p><i class="material-icons-two-tone text-lg bg-primary-500 align-sub">thumb_up</i> 4</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grow">
+                    <div class="flex items-start">
+                      <div class="grow">
+                        <div class="">
+                          <h4 class="inline-block">You</h4>
+                          <span class="badge bg-secondary-500/10 text-secondary-500 mx-1">replied</span>
+                          <p class="text-muted">1 day ago on Wednesday at 8:18am</p>
+                        </div>
+                      </div>
+                      <div class="shrink-0">
+                        <ul class="list-unstyled mb-0">
+                          <li class="inline-block text-[20px] me-1">
+                            <a href="#">
+                              <i data-feather="edit" class="fill-success-500/10 stroke-success-500 w-5 h-5"></i>
+                            </a>
+                          </li>
+                          <li class="inline-block text-[20px]">
+                            <a href="#">
+                              <i data-feather="trash-2" class="fill-danger-500/10 stroke-danger-500 w-5 h-5"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="">
+                      <p class="mb-3"><b>hello john doe,</b></p>
+                      <p class="mb-3"
+                        >you need to create <strong>"toolbar-options" div only once</strong> in a page in your code, this div fill found
+                        <strong>every "td"</strong> tag in your page, just remove those things.
+                      </p>
+                      <p class="mb-3">and also, in option button add <strong>"p-0" class in "I" tag</strong> to</p>
+                      <p class="mb-3">Thanks...</p>
+                    </div>
+                    <pre class="before:!hidden after:!hidden">
+<code class="language-markup">
+&lt;pre&gt;
+&lt;code class="language-css"&gt;
+    p {
+        color: #1abc9c
+    }
+&lt;/code&gt;
+&lt;/pre&gt;
+</code>
+                            </pre>
+                  </div>
+                </div>
+              </div>
+              <div class="border-b border-theme-border dark:border-themedark-border card-body">
+                <div class="sm:flex items-start gap-3">
+                  <div class="shrink-0 mb-3">
+                    <div class="sm:inline-block flex items-center">
+                      <img class="w-[60px] rounded-full mb-2" src="../assets/images/user/avatar-4.jpg" alt="Generic placeholder image " />
+                      <div class="ms-3 sm:ms-0 sm:text-center">
+                        <p><span class="badge bg-danger-500/10 text-danger-500">1</span> Ticket</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grow">
+                    <div class="flex items-start">
+                      <div class="grow">
+                        <div class="">
+                          <h4 class="inline-block">User</h4>
+                          <span class="badge bg-secondary-500/10 text-secondary-500 mx-1">replied</span>
+                          <p class="text-muted">1 day ago on Wednesday at 8:18am</p>
+                        </div>
+                      </div>
+                      <div class="shrink-0">
+                        <ul class="list-unstyled mb-0">
+                          <li class="inline-block text-[20px] me-1">
+                            <a href="#">
+                              <i data-feather="edit" class="fill-success-500/10 stroke-success-500 w-5 h-5"></i>
+                            </a>
+                          </li>
+                          <li class="inline-block text-[20px]">
+                            <a href="#">
+                              <i data-feather="trash-2" class="fill-danger-500/10 stroke-danger-500 w-5 h-5"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="">
+                      <p class="mb-3"><b>hello john doe,</b></p>
+                      <p class="mb-3"
+                        >you need to create <strong>"toolbar-options" div only once</strong> in a page in your code, this div fill found
+                        <strong>every "td"</strong> tag in your page, just remove those things.
+                      </p>
+                      <p class="mb-3">and also</p>
+                      <p class="mb-3">in option button add <strong>"p-0" class in "I" tag</strong> to</p>
+                      <p class="mb-3">Thanks...</p>
+                    </div>
+                    <div class="grid grid-cols-12 gap-2 text-center mb-2">
+                      <div class="xl:col-span-2 lg:col-span-3 sm:col-span-4 col-span-6">
+                        <img src="../assets/images/light-box/sl1.jpg" class="w-full rounded-md" alt="" />
+                      </div>
+                      <div class="xl:col-span-2 lg:col-span-3 sm:col-span-4 col-span-6">
+                        <img src="../assets/images/light-box/sl2.jpg" class="w-full rounded-md" alt="" />
+                      </div>
+                      <div class="xl:col-span-2 lg:col-span-3 sm:col-span-4 col-span-6">
+                        <img src="../assets/images/light-box/sl5.jpg" class="w-full rounded-md" alt="" />
+                      </div>
+                      <div class="xl:col-span-2 lg:col-span-3 sm:col-span-4 col-span-6">
+                        <img src="../assets/images/light-box/sl6.jpg" class="w-full rounded-md" alt="" />
+                      </div>
+                      <div class="xl:col-span-2 lg:col-span-3 sm:col-span-4 col-span-6">
+                        <img src="../assets/images/light-box/sl1.jpg" class="w-full rounded-md" alt="" />
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-light-danger btn-sm inline-flex items-center"><i data-feather="thumbs-up" class="mr-1 w-4"></i> Like</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border-b border-theme-border dark:border-themedark-border card-body">
+                <div class="sm:flex items-start gap-3">
+                  <div class="shrink-0 mb-3">
+                    <div class="sm:inline-block flex items-center">
+                      <img class="w-[60px] rounded-full mb-2" src="../assets/images/user/avatar-5.jpg" alt="Generic placeholder image " />
+                      <div class="ms-3 sm:ms-0 sm:text-center">
+                        <p><i class="material-icons-two-tone text-lg bg-primary-500 align-sub">thumb_up</i> 4</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grow">
+                    <div class="flex items-start">
+                      <div class="grow">
+                        <div class="">
+                          <h4 class="inline-block">You</h4>
+                          <span class="badge bg-secondary-500/10 text-secondary-500 mx-1">replied</span>
+                          <p class="text-muted">1 day ago on Wednesday at 8:18am</p>
+                        </div>
+                      </div>
+                      <div class="shrink-0">
+                        <ul class="list-unstyled mb-0">
+                          <li class="inline-block text-[20px] me-1">
+                            <a href="#">
+                              <i data-feather="edit" class="fill-success-500/10 stroke-success-500 w-5 h-5"></i>
+                            </a>
+                          </li>
+                          <li class="inline-block text-[20px]">
+                            <a href="#">
+                              <i data-feather="trash-2" class="fill-danger-500/10 stroke-danger-500 w-5 h-5"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="">
+                      <p class="mb-3"><b>hello john doe,</b></p>
+                      <p class="mb-3"
+                        >you need to create <strong>"toolbar-options" div only once</strong> in a page in your code, this div fill found
+                        <strong>every "td"</strong> tag in your page, just remove those things.
+                      </p>
+                      <p class="mb-3">and also, in option button add <strong>"p-0" class in "I" tag</strong> to</p>
+                      <p class="mb-3">Thanks...</p>
+                    </div>
+                    <pre class="before:!hidden after:!hidden">
+<code class="language-markup">
+&lt;pre&gt;
+&lt;code class="language-css"&gt;
+    p {
+        color: #1abc9c
+    }
+&lt;/code&gt;
+&lt;/pre&gt;
+</code>
+                            </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-4">
+            <div class="card">
+              <div class="card-header">
+                <h5>Ticket Details</h5>
+              </div>
+              <div class="card-body border-b border-theme-border dark:border-themedark-border">
+                <div class="alert alert-success d-block text-center text-uppercase"
+                  ><i class="feather icon-check-circle mx-2"></i>Verified Purchase</div
+                >
+                <div class="select-block">
+                  <div class="mb-2">
+                    <select class="form-control col-sm-12">
+                      <option>Open</option>
+                      <option>Close</option>
+                      <option>CLosed Forever</option>
+                    </select>
+                  </div>
+                  <div class="mb-2">
+                    <select class="form-control col-sm-12">
+                      <option value="avatar-5">Jack Pall</option>
+                      <option value="avatar-4">Liza Mac</option>
+                      <option value="avatar-3">Lina Hop</option>
+                      <option value="avatar-2">Sam Hunk</option>
+                      <option value="avatar-1">Jhon White</option>
+                    </select>
+                  </div>
+                  <div class="mb-2">
+                    <select class="form-control col-sm-12">
+                      <option value="prod-1">Able Admin</option>
+                      <option value="prod-2">Guru Dash</option>
+                      <option value="prod-3">Able pro</option>
+                      <option value="prod-4">Able Dash</option>
+                      <option value="prod-5">Dash Able</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                <li class="list-group-item">
+                  <div class="flex align-items-center">
+                    <div class="shrink-0">
+                      <label class="mb-0 block w-[100px]">Customer</label>
+                    </div>
+                    <div class="grow ml-3">
+                      <p class="mb-0"
+                        ><img src="../assets/images/user/avatar-5.jpg" alt="" class="w-5 rounded-lg inline-block ltr:mr-1 rtl:ml-1" /><a
+                          href="#"
+                          class="link-secondary"
+                          >Jack Pall</a
+                        ></p
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex align-items-center">
+                    <div class="shrink-0">
+                      <label class="mb-0 block w-[100px]">Contact</label>
+                    </div>
+                    <div class="grow ml-3">
+                      <p class="mb-0"><i class="feather icon-mail mx-1"></i><a href="#">mail@mail.com</a></p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex align-items-center">
+                    <div class="shrink-0">
+                      <label class="mb-0 block w-[100px]">Category</label>
+                    </div>
+                    <div class="grow ml-3">
+                      <p class="mb-0"
+                        ><img src="../assets/images/admin/p1.jpg" alt="" class="w-5 rounded-lg inline-block ltr:mr-1 rtl:ml-1" /><a
+                          href="#"
+                          class="link-secondary"
+                          >Alpha pro</a
+                        ></p
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex align-items-center">
+                    <div class="shrink-0">
+                      <label class="mb-0 block w-[100px]">Assigned</label>
+                    </div>
+                    <div class="grow ml-3">
+                      <p class="mb-0"
+                        ><img src="../assets/images/user/avatar-4.jpg" alt="" class="w-5 rounded-lg inline-block ltr:mr-1 rtl:ml-1" /><a
+                          href="#"
+                          class="link-secondary"
+                          >Lina Hop</a
+                        ></p
+                      >
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex align-items-center">
+                    <div class="shrink-0">
+                      <label class="mb-0 block w-[100px]">Created</label>
+                    </div>
+                    <div class="grow ml-3">
+                      <p class="mb-0"><i class="feather icon-calendar mx-1"></i><a href="#">Date</a></p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex align-items-center">
+                    <div class="shrink-0">
+                      <label class="mb-0 block w-[100px]">Response</label>
+                    </div>
+                    <div class="grow ml-3">
+                      <p class="mb-0"><i class="feather icon-clock mx-1"></i><a href="#">Time</a></p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <button type="button" class="btn btn-sm btn-light-warning mr-2"><i class="mx-2 feather icon-thumbs-up"></i>Make Private</button>
+                  <button type="button" class="btn btn-sm btn-light-danger"><i class="mx-2 feather icon-trash-2"></i>Delete</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <!-- prism Js -->
+    <script src="../assets/js/plugins/prism.js"></script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

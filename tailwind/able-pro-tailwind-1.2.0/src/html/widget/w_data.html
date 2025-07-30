@@ -1,0 +1,1390 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Data Widget'})
+    <link rel="stylesheet" href="../assets/css/plugins/style.css" />
+    @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Widget', 'breadcrumb-item-active': 'Data'})
+        <div class="grid grid-cols-12 gap-x-6">
+          <div class="col-span-12 xl:col-span-4">
+            <div class="card">
+              <div class="card-body !pb-0">
+                <div class="flex items-center justify-between mb-3">
+                  <h5 class="mb-0">My Task</h5>
+                  <div class="dropdown">
+                    <a
+                      class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                      href="#"
+                      data-pc-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="ti ti-dots-vertical text-lg leading-none"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#">Today</a>
+                      <a class="dropdown-item" href="#">Weekly</a>
+                      <a class="dropdown-item" href="#">Monthly</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                <li class="list-group-item">
+                  <div class="flex items-start">
+                    <div class="grow mr-2">
+                      <h6 class="mb-0">Follow up client for feedback</h6>
+                      <p class="my-1"><i class="ti ti-archive"></i> Sending report</p>
+                      <span class="badge bg-danger-500 text-white rounded-full">00 : 15</span>
+                    </div>
+                    <div class="shrink-0">
+                      <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                        <i class="ti ti-circle-check text-success text-lg leading-none"></i>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex items-start">
+                    <div class="grow mr-2">
+                      <h6 class="mb-0">Add new pages</h6>
+                      <p class="my-1"><i class="ti ti-folder"></i> Received report</p>
+                      <span class="badge bg-success-500 text-white rounded-full">00 : 30</span>
+                    </div>
+                    <div class="shrink-0">
+                      <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                        <i class="ti ti-circle-check text-secondary-500 text-lg leading-none"></i>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex items-start">
+                    <div class="grow mr-2">
+                      <h6 class="mb-0">Send time stamp report</h6>
+                      <p class="my-1"><i class="ti ti-archive"></i> Sending report</p>
+                      <span class="badge bg-danger-500 text-white rounded-full">00 : 15</span>
+                    </div>
+                    <div class="shrink-0">
+                      <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                        <i class="ti ti-circle-check text-secondary-500 text-lg leading-none"></i>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-4 md:col-span-6">
+            <div class="card">
+              <div class="card-header">
+                <div class="flex items-start">
+                  <div class="shrink-0">
+                    <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-danger-500/10 text-danger-500">
+                      <i class="ti ti-brand-google text-lg leading-none"></i>
+                    </div>
+                  </div>
+                  <div class="grow mx-3">
+                    <p class="mb-0">Google LLC</p>
+                    <h6 class="mb-0">Sr. UI designer</h6>
+                  </div>
+                  <div class="shrink-0">
+                    <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                      <i class="ti ti-bookmarks text-lg leading-none"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h6 class="mb-2">Description</h6>
+                <p
+                  >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                  dummy text ever since the 1500s, when an unknown printer took a galley.</p
+                >
+                <ul class="flex items-center gap-2 my-4">
+                  <li class="list-inline-item"><span class="bg-theme-bodybg dark:bg-themedark-bodybg rounded-lg text-sm p-2 border border-theme-border dark:border-themedark-border">Fulltime</span></li>
+                  <li class="list-inline-item"><span class="bg-theme-bodybg dark:bg-themedark-bodybg rounded-lg text-sm p-2 border border-theme-border dark:border-themedark-border">Remote</span></li>
+                  <li class="list-inline-item"><span class="bg-theme-bodybg dark:bg-themedark-bodybg rounded-lg text-sm p-2 border border-theme-border dark:border-themedark-border">Hourly</span></li>
+                </ul>
+                <div class="flex items-center justify-between mt-4">
+                  <ul class="list-inline mb-0 me-2">
+                    <li class="list-inline-item"><i class="text-muted ti ti-map-pin"></i> Pennsylvania,USA</li>
+                    <li class="list-inline-item"><i class="text-muted ti ti-clock"></i> 2 days ago</li>
+                  </ul>
+                  <button class="btn btn-primary">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-4 md:col-span-6">
+            <div class="card">
+              <div class="card-body !pb-0">
+                <div class="flex items-center justify-between mb-3">
+                  <h5 class="mb-0">Team members</h5>
+                  <div class="dropdown">
+                    <a
+                      class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                      href="#"
+                      data-pc-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="ti ti-dots-vertical text-lg leading-none"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#">Today</a>
+                      <a class="dropdown-item" href="#">Weekly</a>
+                      <a class="dropdown-item" href="#">Monthly</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                <li class="list-group-item">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar rounded-lg w-[50px] h-[50px]" />
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-0">David Jones</h6>
+                      <p class="mb-0">Project Leader</p>
+                    </div>
+                    <div class="shrink-0">
+                      <p class="text-muted mb-0">5 min ago</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="user-avtar rounded-lg w-[50px] h-[50px]" />
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-0">Robert Smith</h6>
+                      <p class="mb-0">HR Manager</p>
+                    </div>
+                    <div class="shrink-0">
+                      <p class="text-muted mb-0">Yesterday</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex items-center">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="user-avtar rounded-lg w-[50px] h-[50px]" />
+                    </div>
+                    <div class="grow mx-2">
+                      <h6 class="mb-0">John larry</h6>
+                      <p class="mb-0">Developer</p>
+                    </div>
+                    <div class="shrink-0">
+                      <p class="text-muted mb-0">1 hour ago</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-8 md:col-span-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="flex items-center justify-between mb-3">
+                  <h5 class="mb-0">Products</h5>
+                  <select class="form-select w-auto">
+                    <option>Today</option>
+                    <option>Weekly</option>
+                    <option selected="">Monthly</option>
+                  </select>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-hover" id="pc-dt-simple">
+                    <thead>
+                      <tr>
+                        <th>Product</th>
+                        <th>Status</th>
+                        <th >Price</th>
+                        <th>Sales</th>
+                        <th>Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="flex gap-3 items-center w-[280px]">
+                            <div class="shrink-0">
+                              <img src="../assets/images/widget/img-prod-1.jpg" alt="user-image" class="w-[55px] h-[55px] rounded-lg" />
+                            </div>
+                            <div class="grow">
+                              <h6 class="mb-1"><span class="text-truncate w-100">Matte Flip Flop</span></h6>
+                              <p class="text-muted text-sm mb-0"
+                                ><span class="text-truncate w-100">Leather panels. Laces. Rounded toe. </span></p
+                              >
+                            </div>
+                          </div>
+                        </td>
+                        <td><span class="badge bg-success-500 text-white">Active</span></td>
+                        <td class="font-semibold">$98</td>
+                        <td class="font-semibold"
+                          >$500 <small class="text-success-500 font-normal">+20.6 <i class="ti ti-arrow-up"></i></small
+                        ></td>
+                        <td class="font-semibold"><i class="fas fa-star text-warning-500"></i> 4.5 <span class="font-normal text-muted">(65)</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex gap-3 items-center w-[280px]">
+                            <div class="shrink-0">
+                              <img src="../assets/images/widget/img-prod-2.jpg" alt="user-image" class="w-[55px] h-[55px] rounded-lg" />
+                            </div>
+                            <div class="grow">
+                              <h6 class="mb-1"><span class="text-truncate w-100">Foundations Matte</span></h6>
+                              <p class="text-muted text-sm mb-0"
+                                ><span class="text-truncate w-100">Lorem Ipsum is simply dummy text of</span></p
+                              >
+                            </div>
+                          </div>
+                        </td>
+                        <td><span class="badge bg-warning-500 text-white">Pending</span></td>
+                        <td class="font-semibold">$98</td>
+                        <td class="font-semibold"
+                          >$500 <small class="text-danger-500 font-normal">-10.6 <i class="ti ti-arrow-down"></i></small
+                        ></td>
+                        <td class="font-semibold"><i class="fas fa-star text-warning-500"></i> 2.5 <span class="font-normal text-muted">(65)</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex gap-3 items-center w-[280px]">
+                            <div class="shrink-0">
+                              <img src="../assets/images/widget/img-prod-3.jpg" alt="user-image" class="w-[55px] h-[55px] rounded-lg" />
+                            </div>
+                            <div class="grow">
+                              <h6 class="mb-1"><span class="text-truncate w-100">Logic Coma</span></h6>
+                              <p class="text-muted text-sm mb-0"
+                                ><span class="text-truncate w-100">Leather panels. Laces. Rounded toe. </span></p
+                              >
+                            </div>
+                          </div>
+                        </td>
+                        <td><span class="badge bg-danger-500 text-white">Close</span></td>
+                        <td class=" font-semibold">$98</td>
+                        <td class="font-semibold"
+                          >$500 <small class="text-danger-500 font-normal">20.6 <i class="ti ti-arrow-down"></i></small
+                        ></td>
+                        <td class="font-semibold"><i class="fas fa-star text-warning-500"></i> 4.5 <span class="font-normal text-muted">(65)</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex gap-3 items-center w-[280px]">
+                            <div class="shrink-0">
+                              <img src="../assets/images/widget/img-prod-4.jpg" alt="user-image" class="w-[55px] h-[55px] rounded-lg" />
+                            </div>
+                            <div class="grow">
+                              <h6 class="mb-1"><span class="text-truncate w-100">Foundations Matte Flip Flop</span></h6>
+                              <p class="text-muted text-sm mb-0"
+                                ><span class="text-truncate w-100">the printing and typesetting industry</span></p
+                              >
+                            </div>
+                          </div>
+                        </td>
+                        <td><span class="badge bg-success-500 text-white">Active</span></td>
+                        <td class=" font-semibold">$98</td>
+                        <td class="font-semibold"
+                          >$500 <small class="text-danger-500 font-normal">-15.4 <i class="ti ti-arrow-down"></i></small
+                        ></td>
+                        <td class="font-semibold"><i class="fas fa-star text-warning-500"></i> 3.5 <span class="font-normal text-muted">(65)</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="flex items-center justify-between mb-3">
+                  <h5 class="mb-0">Monthly Revenue</h5>
+                  <div class="dropdown">
+                    <a
+                      class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                      href="#"
+                      data-pc-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="ti ti-dots-vertical text-lg leading-none"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#">Today</a>
+                      <a class="dropdown-item" href="#">Weekly</a>
+                      <a class="dropdown-item" href="#">Monthly</a>
+                    </div>
+                  </div>
+                </div>                
+                <h5 class="mb-1"
+                  >$746.5k <small class="text-success-500 font-normal">+20.6 <i class="ti ti-arrow-up"></i></small
+                ></h5>
+                <p class="text-muted mb-0">Past 30 days</p>
+              </div>
+              <div class="table-body card-body !pt-0 !pb-0">
+                <div class="table-responsive">
+                  <table class="table table-hover mb-0">
+                    <thead>
+                      <tr>
+                        <th>Customer</th>
+                        <th >Plan</th>
+                        <th >MRP</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="flex items-center text-muted">
+                            <div class="w-8 h-8 rounded-xl inline-flex items-center justify-center bg-secondary-500/10 text-secondary-500 shrink-0 ltr:mr-2 rtl:ml-2">
+                              <i class="ti ti-arrow-down text-lg leading-none"></i>
+                            </div>
+                            <span class="truncate w-full">Logicoma</span>
+                          </div>
+                        </td>
+                        <td class=""><span class="badge bg-success-500/10 text-success-500">Team</span></td>
+                        <td class=" font-semibold"><span class="text-danger-500">-$72</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex items-center text-muted">
+                            <div class="w-8 h-8 rounded-xl inline-flex items-center justify-center bg-secondary-500/10 text-secondary-500 shrink-0 ltr:mr-2 rtl:ml-2">
+                              <i class="ti ti-star text-lg leading-none"></i>
+                            </div>
+                            <span class="truncate w-full">UAC</span>
+                          </div>
+                        </td>
+                        <td class=""><span class="badge bg-success-500/10 text-success-500">Team</span></td>
+                        <td class=" font-semibold"><span>$199</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex items-center text-muted">
+                            <div class="w-8 h-8 rounded-xl inline-flex items-center justify-center bg-secondary-500/10 text-secondary-500 shrink-0 ltr:mr-2 rtl:ml-2">
+                              <i class="ti ti-wallet text-lg leading-none"></i>
+                            </div>
+                            <span class="truncate w-full">Biffco</span>
+                          </div>
+                        </td>
+                        <td class=""><span class="badge bg-success-500/10 text-success-500">Team</span></td>
+                        <td class=" font-semibold"><span class="text-danger-500">-$72</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex items-center text-muted">
+                            <div class="w-8 h-8 rounded-xl inline-flex items-center justify-center bg-secondary-500/10 text-secondary-500 shrink-0 ltr:mr-2 rtl:ml-2">
+                              <i class="ti ti-arrow-down text-lg leading-none"></i>
+                            </div>
+                            <span class="truncate w-full">Matsumura shworks</span>
+                          </div>
+                        </td>
+                        <td class=""><span class="badge bg-success-500/10 text-success-500">Team</span></td>
+                        <td class=" font-semibold"><span class="text-danger-500">-$72</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex items-center text-muted">
+                            <div class="w-8 h-8 rounded-xl inline-flex items-center justify-center bg-secondary-500/10 text-secondary-500 shrink-0 ltr:mr-2 rtl:ml-2">
+                              <i class="ti ti-wallet text-lg leading-none"></i>
+                            </div>
+                            <span class="truncate w-full">Biffco</span>
+                          </div>
+                        </td>
+                        <td class=""><span class="badge bg-success-500/10 text-success-500">Team</span></td>
+                        <td class=" font-semibold"><span class="text-danger-500">-$72</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-6">
+            <div class="card new-cust-card">
+              <div class="card-header">
+                <h5>New Customers</h5>
+              </div>
+              <div class="customer-scroll" style="height: 415px; position: relative">
+                <div class="card-body !pb-0">
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-1.jpg" alt="user image" class="w-10 h-10 rounded-full" />
+                    </div>
+                    <div class="grow mx-3">
+                      <a href="#!">
+                        <h6>Alex Thompson</h6>
+                      </a>
+                      <p class="m-b-0">Cheers!</p>
+                    </div>
+                    <div class="shrink-0">
+                      <span class="rounded-full w-2.5 h-2.5 inline-block bg-success-500"></span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-2.jpg" alt="user image" class="w-10 h-10 rounded-full" />
+                    </div>
+                    <div class="grow mx-3">
+                      <a href="#!">
+                        <h6>John Doue</h6>
+                      </a>
+                      <p class="mb-0">stay hungry stay foolish!</p>
+                    </div>
+                    <div class="shrink-0">
+                      <span class="rounded-full w-2.5 h-2.5 inline-block bg-success-500"></span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-3.jpg" alt="user image" class="w-10 h-10 rounded-full" />
+                    </div>
+                    <div class="grow mx-3">
+                      <a href="#!">
+                        <h6>Alex Thompson</h6>
+                      </a>
+                      <p class="mb-0">Cheers!</p>
+                    </div>
+                    <div class="shrink-0">
+                      <span class="inline-block"><i class="far fa-clock mx-2.5"></i>30 min ago</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-4.jpg" alt="user image" class="w-10 h-10 rounded-full" />
+                    </div>
+                    <div class="grow mx-3">
+                      <a href="#!">
+                        <h6>John Doue</h6>
+                      </a>
+                      <p class="mb-0">Cheers!</p>
+                    </div>
+                    <div class="shrink-0">
+                      <span class="inline-block"><i class="far fa-clock mx-2.5"></i>10 min ago</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-5.jpg" alt="user image" class="w-10 h-10 rounded-full" />
+                    </div>
+                    <div class="grow mx-3">
+                      <a href="#!">
+                        <h6>Shirley Hoe</h6>
+                      </a>
+                      <p class="mb-0">stay hungry stay foolish!</p>
+                    </div>
+                    <div class="shrink-0">
+                      <span class="rounded-full w-2.5 h-2.5 inline-block bg-success-500"></span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-1.jpg" alt="user image" class="w-10 h-10 rounded-full" />
+                    </div>
+                    <div class="grow mx-3">
+                      <a href="#!">
+                        <h6>Alex Thompson</h6>
+                      </a>
+                      <p class="m-b-0">Cheers!</p>
+                    </div>
+                    <div class="shrink-0">
+                      <span class="rounded-full w-2.5 h-2.5 inline-block bg-success-500"></span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-2.jpg" alt="user image" class="w-10 h-10 rounded-full" />
+                    </div>
+                    <div class="grow mx-3">
+                      <a href="#!">
+                        <h6>John Doue</h6>
+                      </a>
+                      <p class="mb-0">stay hungry stay foolish!</p>
+                    </div>
+                    <div class="shrink-0">
+                      <span class="rounded-full w-2.5 h-2.5 inline-block bg-success-500"></span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mb-6">
+                    <div class="shrink-0">
+                      <img src="../assets/images/user/avatar-3.jpg" alt="user image" class="w-10 h-10 rounded-full" />
+                    </div>
+                    <div class="grow mx-3">
+                      <a href="#!">
+                        <h6>Alex Thompson</h6>
+                      </a>
+                      <p class="mb-0">Cheers!</p>
+                    </div>
+                    <div class="shrink-0">
+                      <span class="inline-block"><i class="far fa-clock mr-2.5"></i>30 min ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-6">
+            <div class="card table-card">
+              <div class="card-header flex items-center justify-between">
+                <h5>Recent Tickets</h5>
+                <a href="#" class="text-primary-500 hover:text-primary-500/60">View all</a>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover table-borderless !mb-0">
+                    <thead>
+                      <tr>
+                        <th>Subject</th>
+                        <th>Department</th>
+                        <th>Date</th>
+                        <th class="">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Website down for one week</td>
+                        <td>Support</td>
+                        <td>Today 2:00</td>
+                        <td class=""><label class="badge text-success-500 bg-success-500/10">open</label></td>
+                      </tr>
+                      <tr>
+                        <td>Loosing control on server</td>
+                        <td>Support</td>
+                        <td>Yesterday</td>
+                        <td class=""><label class="badge text-primary-500 bg-primary-500/10">progress</label></td>
+                      </tr>
+                      <tr>
+                        <td>Authorizations keys</td>
+                        <td>Support</td>
+                        <td>27, Aug</td>
+                        <td class=""><label class="badge text-danger-500 bg-danger-500/10">closed</label></td>
+                      </tr>
+                      <tr>
+                        <td>Restoring default settings</td>
+                        <td>Support</td>
+                        <td>Today 9:00</td>
+                        <td class=""><label class="badge text-success-500 bg-success-500/10">open</label></td>
+                      </tr>
+                      <tr>
+                        <td>Loosing control on server</td>
+                        <td>Support</td>
+                        <td>Yesterday</td>
+                        <td class=""><label class="badge text-primary-500 bg-primary-500/10">progress</label></td>
+                      </tr>
+                      <tr>
+                        <td>Restoring default settings</td>
+                        <td>Support</td>
+                        <td>Today 9:00</td>
+                        <td class=""><label class="badge text-success-500 bg-success-500/10">open</label></td>
+                      </tr>
+                      <tr>
+                        <td>Loosing control on server</td>
+                        <td>Support</td>
+                        <td>Yesterday</td>
+                        <td class=""><label class="badge text-primary-500 bg-primary-500/10">progress</label></td>
+                      </tr>
+                      <tr>
+                        <td>Authorizations keys</td>
+                        <td>Support</td>
+                        <td>27, Aug</td>
+                        <td class=""><label class="badge text-danger-500 bg-danger-500/10">closed</label></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-6">
+            <div class="card">
+              <div class="card-body border-bottom !pb-0">
+                <div class="flex items-center justify-between mb-3">
+                  <h5 class="mb-0">Transactions</h5>
+                  <div class="dropdown">
+                    <a
+                      class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                      href="#"
+                      data-pc-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="ti ti-dots-vertical text-lg leading-none"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#">Today</a>
+                      <a class="dropdown-item" href="#">Weekly</a>
+                      <a class="dropdown-item" href="#">Monthly</a>
+                    </div>
+                  </div>
+                </div>
+                <ul class="flex flex-wrap w-full text-center nav-tabs border-b border-theme-border dark:border-themedark-border">
+                  <li class="group active">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="tran-1"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                    All Transaction
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="tran-2"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                    Success
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="tran-3"
+                      class="inline-block mr-6 py-4 transition-all duration-300 ease-linear border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                    Pending
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content">
+                <div class="block tab-pane" id="tran-1">
+                  <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> AI </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Apple Inc.</h6>
+                              <p class="text-muted mb-0"><small>#ABLE-PRO-T00232</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">$210,000</h6>
+                              <p class="text-danger-500 mb-0"><i class="ti ti-arrow-down-left"></i> 10.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> SM </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Spotify Music</h6>
+                              <p class="text-muted mb-0"><small>#ABLE-PRO-T10232</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">- 10,000</h6>
+                              <p class="text-success-500 mb-0"><i class="ti ti-arrow-down-right"></i> 30.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> MD </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Medium</h6>
+                              <p class="text-muted mb-0"><small>06:30 pm</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">-26</h6>
+                              <p class="text-warning-500 mb-0"><i class="ti ti-arrows-left-right"></i> 5%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> U </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Uber</h6>
+                              <p class="text-muted mb-0"><small>08:40 pm</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">+210,000</h6>
+                              <p class="text-success-500 mb-0"><i class="ti ti-arrow-up-right"></i> 10.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> OC </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Ola Cabs</h6>
+                              <p class="text-muted mb-0"><small>07:40 pm</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">+210,000</h6>
+                              <p class="text-success-500 mb-0"><i class="ti ti-arrow-up-right"></i> 10.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="hidden tab-pane" id="tran-2">
+                  <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> SM </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Spotify Music</h6>
+                              <p class="text-muted mb-0"><small>#ABLE-PRO-T10232</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">- 10,000</h6>
+                              <p class="text-success-500 mb-0"><i class="ti ti-arrow-down-right"></i> 30.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> MD </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Medium</h6>
+                              <p class="text-muted mb-0"><small>06:30 pm</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">-26</h6>
+                              <p class="text-warning-500 mb-0"><i class="ti ti-arrows-left-right"></i> 5%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> AI </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Apple Inc.</h6>
+                              <p class="text-muted mb-0"><small>#ABLE-PRO-T00232</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">$210,000</h6>
+                              <p class="text-danger-500 mb-0"><i class="ti ti-arrow-down-left"></i> 10.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> U </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Uber</h6>
+                              <p class="text-muted mb-0"><small>08:40 pm</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">+210,000</h6>
+                              <p class="text-success-500 mb-0"><i class="ti ti-arrow-up-right"></i> 10.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> OC </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Ola Cabs</h6>
+                              <p class="text-muted mb-0"><small>07:40 pm</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">+210,000</h6>
+                              <p class="text-success-500 mb-0"><i class="ti ti-arrow-up-right"></i> 10.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="hidden tab-pane" id="tran-3">
+                  <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> U </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Uber</h6>
+                              <p class="text-muted mb-0"><small>08:40 pm</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">+210,000</h6>
+                              <p class="text-success-500 mb-0"><i class="ti ti-arrow-up-right"></i> 10.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> OC </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Ola Cabs</h6>
+                              <p class="text-muted mb-0"><small>07:40 pm</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">+210,000</h6>
+                              <p class="text-success-500 mb-0"><i class="ti ti-arrow-up-right"></i> 10.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> AI </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Apple Inc.</h6>
+                              <p class="text-muted mb-0"><small>#ABLE-PRO-T00232</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">$210,000</h6>
+                              <p class="text-danger-500 mb-0"><i class="ti ti-arrow-down-left"></i> 10.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> SM </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Spotify Music</h6>
+                              <p class="text-muted mb-0"><small>#ABLE-PRO-T10232</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">- 10,000</h6>
+                              <p class="text-success-500 mb-0"><i class="ti ti-arrow-down-right"></i> 30.6%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="shrink-0">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center border border-theme-border dark:border-themedark-border"> MD </div>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <div class="grid grid-cols-12 gap-2">
+                            <div class="col-span-6">
+                              <h6 class="mb-0">Medium</h6>
+                              <p class="text-muted mb-0"><small>06:30 pm</small></p>
+                            </div>
+                            <div class="col-span-6 ">
+                              <h6 class="mb-1">-26</h6>
+                              <p class="text-warning-500 mb-0"><i class="ti ti-arrows-left-right"></i> 5%</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="grid grid-cols-12 gap-2">
+                  <div class="col-span-12 md:col-span-6">
+                    <div class="grid">
+                      <button class="btn btn-outline-secondary grid"
+                        ><span class="truncate w-full">View all Transaction History</span></button
+                      >
+                    </div>
+                  </div>
+                  <div class="col-span-12 md:col-span-6">
+                    <div class="grid">
+                      <button class="btn btn-primary grid"><span class="truncate w-full">Create new Transaction</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-3 md:col-span-6">
+            <div class="card">
+              <div class="card-body !pb-0">
+                <div class="flex items-center justify-between mb-3">
+                  <h5 class="mb-0">Payment History</h5>
+                  <a class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                    <i class="ti ti-plus text-lg leading-none"></i>
+                  </a>
+                </div>
+              </div>
+              <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                <li class="list-group-item">
+                  <div class="flex align-items-center">
+                    <div class="shrink-0">
+                      <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-secondary-500/10">
+                        <img src="../assets/images/widget/img-paypal.png" alt="img" class="img-fluid" />
+                      </div>
+                    </div>
+                    <div class="grow mx-2">
+                      <p class="mb-1">Paypal</p>
+                      <h6 class="mb-0">+210,000 <small class="text-success-500">+ 30.6%</small></h6>
+                    </div>
+                    <div class="shrink-0">
+                      <div class="dropdown">
+                        <a
+                          class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                          href="#"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <i class="ti ti-dots-vertical f-18"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#">Name</a>
+                          <a class="dropdown-item" href="#">Date</a>
+                          <a class="dropdown-item" href="#">Ratting</a>
+                          <a class="dropdown-item" href="#">Unread</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex align-items-center">
+                    <div class="shrink-0">
+                      <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-secondary-500/10">
+                        <img src="../assets/images/widget/img-gpay.png" alt="img" class="img-fluid" />
+                      </div>
+                    </div>
+                    <div class="grow mx-2">
+                      <p class="mb-1">Gpay</p>
+                      <h6 class="mb-0">-$2,000 <small class="text-danger-500">- 30.6%</small></h6>
+                    </div>
+                    <div class="shrink-0">
+                      <div class="dropdown">
+                        <a
+                          class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                          href="#"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <i class="ti ti-dots-vertical f-18"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#">Name</a>
+                          <a class="dropdown-item" href="#">Date</a>
+                          <a class="dropdown-item" href="#">Ratting</a>
+                          <a class="dropdown-item" href="#">Unread</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="flex align-items-center">
+                    <div class="shrink-0">
+                      <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-secondary-500/10">
+                        <img src="../assets/images/widget/img-phonepay.png" alt="img" class="img-fluid" />
+                      </div>
+                    </div>
+                    <div class="grow mx-2">
+                      <p class="mb-1">Phone Pay</p>
+                      <h6 class="mb-0">-$2,000 <small class="text-danger-500">- 30.6%</small></h6>
+                    </div>
+                    <div class="shrink-0">
+                      <div class="dropdown">
+                        <a
+                          class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                          href="#"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <i class="ti ti-dots-vertical f-18"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#">Name</a>
+                          <a class="dropdown-item" href="#">Date</a>
+                          <a class="dropdown-item" href="#">Ratting</a>
+                          <a class="dropdown-item" href="#">Unread</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="card-footer">
+                <div class="grid">
+                  <button class="btn btn-outline-secondary">View all</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-3 md:col-span-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="flex items-center justify-between mb-3">
+                  <h5 class="mb-0">Add new task</h5>
+                  <div class="dropdown">
+                    <a
+                      class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                      href="#"
+                      data-pc-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="ti ti-dots-vertical text-lg leading-none"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#">Today</a>
+                      <a class="dropdown-item" href="#">Weekly</a>
+                      <a class="dropdown-item" href="#">Monthly</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center my-3">
+                  <div class="shrink-0">
+                    <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-success-500/10 text-success-500">
+                      <i class="ti ti-list-check text-xl leading-none"></i>
+                    </div>
+                  </div>
+                  <div class="grow ms-3">
+                    <h5 class="mb-0">New Tasks <span class="badge mx-1 bg-secondary-500/10 text-secondary-500 rounded-full">20</span></h5>
+                  </div>
+                </div>
+                <div class="my-3">
+                  <p class="mb-2">Tasks done <span class="float-right">30%</span></p>
+                  <div class="w-full bg-theme-bodybg rounded-lg h-2 mb-4 dark:bg-themedark-bodybg">
+                    <div
+                      class="bg-primary-500 h-full rounded-lg"
+                      role="progressbar"
+                      style="width: 50%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="grid gap-3">
+                  <a href="#" class="btn btn-link-secondary">
+                    <div class="flex align-items-center">
+                      <div class="shrink-0">
+                        <span class="rounded-full w-2.5 h-2.5 inline-block bg-warning-500"></span>
+                      </div>
+                      <div class="grow-1 mx-2">
+                        <p class="mb-0 grid text-left">
+                          <span class="truncate w-full">Introducation for client</span>
+                        </p>
+                      </div>
+                      <div class="badge inline-flex gap-1 bg-secondary-500/10 text-secondary-500 text-sm"><i class="ti ti-paperclip text-sm"></i> 2</div>
+                    </div>
+                  </a>
+                  <a href="#" class="btn btn-link-secondary">
+                    <div class="flex align-items-center">
+                      <div class="shrink-0">
+                        <span class="rounded-full w-2.5 h-2.5 inline-block bg-primary-500"></span>
+                      </div>
+                      <div class="grow-1 mx-2">
+                        <p class="mb-0 grid text-left">
+                          <span class="truncate w-full">Creating Wireframes </span>
+                        </p>
+                      </div>
+                      <div class="badge inline-flex gap-1 bg-secondary-500/10 text-secondary-500 text-sm"><i class="ti ti-paperclip text-sm"></i> 8</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="grid mt-3">
+                  <button class="btn btn-primary flex items-center justify-center gap-3"
+                    ><i class="ti ti-plus"></i> Add task</button
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-4 md:col-span-6">
+            <div class="card">
+              <div class="card-header flex items-center justify-between">
+                <h5>Incoming Requests</h5>
+                <a href="#" class="text-primary-500 hover:text-primary-500/60">View all</a>
+              </div>
+              <div class="card-body !p-0 income-scroll" style="height: 265px; position: relative">
+                <ul class="rounded-lg *:py-4 *:px-[25px] *:flex *:items-center *:gap-3 divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                  <li><i class="fas fa-circle text-primary-500 text-sm leading-none"></i>Incoming requests</li>
+                  <li><i class="fas fa-circle text-success-500 text-sm leading-none"></i>You have 2 pending requests..</li>
+                  <li><i class="fas fa-circle text-danger-500 text-sm leading-none"></i>You have 3 pending tasks</li>
+                  <li><i class="fas fa-circle text-warning-500 text-sm leading-none"></i>New order received</li>
+                  <li><i class="fas fa-circle text-info-500 text-sm leading-none"></i>Incoming requests</li>
+                  <li><i class="fas fa-circle text-success-500 text-sm leading-none"></i>The 3 Golden Rules Professional Design..</li>
+                  <li><i class="fas fa-circle text-danger-500 text-sm leading-none"></i>You have 4 pending tasks</li>
+                  <li><i class="fas fa-circle text-warning-500 text-sm leading-none"></i>New order received</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <h6 class="text-center text-primary-500 hover:text-primary-500/60 m-0"><a href="#!">Show more</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-4 md:col-span-6">
+            <div class="card table-card">
+              <div class="card-header borderless">
+                <h5>Total Revenue</h5>
+              </div>
+              <div class="card-body px-0 py-0">
+                <div class="table-responsive">
+                  <div class="revenue-scroll" style="height: 310px; position: relative">
+                    <table class="table table-hover mb-0">
+                      <tbody>
+                        <tr>
+                          <td><i class="fas fa-caret-up text-success-500 text-xl leading-none"></i></td>
+                          <td>Bitcoin</td>
+                          <td>
+                            <h6 class="text-success-500">+ $145.85</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-down text-danger-500 text-xl leading-none"></i></td>
+                          <td>Ethereum</td>
+                          <td>
+                            <h6 class="text-danger-500">- $6.368</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-up text-success-500 text-xl leading-none"></i></td>
+                          <td>Ripple</td>
+                          <td>
+                            <h6 class="text-success-500">+ $458.63</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-down text-danger-500 text-xl leading-none"></i></td>
+                          <td>Neo</td>
+                          <td>
+                            <h6 class="text-danger-500">- $5.631</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-down text-danger-500 text-xl leading-none"></i></td>
+                          <td>Bitcoin</td>
+                          <td>
+                            <h6 class="text-danger-500">- $75.86</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-up text-success-500 text-xl leading-none"></i></td>
+                          <td>Ethereum</td>
+                          <td>
+                            <h6 class="text-success-500">+ $453.63</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-down text-danger-500 text-xl leading-none"></i></td>
+                          <td>Ripple</td>
+                          <td>
+                            <h6 class="text-danger-500">+ $786.63</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-up text-success-500 text-xl leading-none"></i></td>
+                          <td>Neo</td>
+                          <td>
+                            <h6 class="text-success-500">+ $145.85</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-down text-danger-500 text-xl leading-none"></i></td>
+                          <td>Bitcoin</td>
+                          <td>
+                            <h6 class="text-danger-500">- $6.368</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-up text-success-500 text-xl leading-none"></i></td>
+                          <td>Ethereum</td>
+                          <td>
+                            <h6 class="text-success-500">+ $458.63</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-down text-danger-500 text-xl leading-none"></i></td>
+                          <td>Neo</td>
+                          <td>
+                            <h6 class="text-danger-500">- $5.631</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-down text-danger-500 text-xl leading-none"></i></td>
+                          <td>Ripple</td>
+                          <td>
+                            <h6 class="text-danger-500">- $75.86</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-up text-success-500 text-xl leading-none"></i></td>
+                          <td>Bitcoin</td>
+                          <td>
+                            <h6 class="text-success-500">+ $453.63</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><i class="fas fa-caret-down text-danger-500 text-xl leading-none"></i></td>
+                          <td>Ethereum</td>
+                          <td>
+                            <h6 class="text-danger-500">+ $786.63</h6>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 xl:col-span-4">
+            <div class="card task-card">
+              <div class="card-header flex items-center justify-between">
+                <h5>Tasks</h5>
+                <a href="#" class="text-primary-500 hover:text-primary-500/60">View all</a>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled task-list relative pl-[30px] *:mb-3">
+                  <li class="absolute h-full w-0.5 top-0 left-2.5 z-10 bg-theme-border dark:bg-themedark-border"></li>
+                  <li class="absolute rounded-full p-0.5 bottom-0 !mb-0 left-[3px] min-w-[15px] min-h-[15px] z-20 bg-theme-border dark:bg-themedark-border"></li>
+                  <li>
+                    <i class="feather icon-check font-semibold rounded-full p-0.5 absolute left-[3px] min-w-[15px] min-h-[15px] z-20 bg-success-500 text-white"></i>
+                    <p class="mb-1">8:50</p>
+                    <h5 class="text-muted"
+                      >Call to customer <span class="text-primary"> <a href="#!" class="text-primary">Jacob</a> </span> and discuss the</h5
+                    >
+                  </li>
+                  <li>
+                    <i class="font-semibold rounded-full p-0.5 absolute left-[3px] min-w-[15px] min-h-[15px] z-20 bg-primary-500 text-white"></i>
+                    <p class="mb-1 leading-none">Sat, 5 Mar</p>
+                    <h5 class="text-muted">Design mobile Application</h5>
+                  </li>
+                  <li>
+                    <i class="font-semibold rounded-full p-0.5 absolute left-[3px] min-w-[15px] min-h-[15px] z-20 bg-danger-500 text-white"></i>
+                    <p class="mb-1 leading-none">Sun, 17 Feb</p>
+                    <h5 class="text-muted">
+                      <span><a href="#!" class="text-primary-500">Jeny</a></span>
+                      assign you a task
+                      <span><a href="#!" class="text-primary-500">Mockup Design.</a></span>
+                    </h5>
+                  </li>
+                  <li>
+                    <i class="font-semibold rounded-full p-0.5 absolute left-[3px] min-w-[15px] min-h-[15px] z-20 bg-warning-500 text-white"></i>
+                    <p class="mb-1 leading-none">Sat, 18 Mar</p>
+                    <h5 class="text-muted">Design logo</h5>
+                  </li>
+                  <li class="pb-3 mb-2">
+                    <i class="font-semibold rounded-full p-0.5 absolute left-[3px] min-w-[15px] min-h-[15px] z-20 bg-success-500 text-white"></i>
+                    <p class="mb-1 leading-none">Sat, 22 Mar</p>
+                    <h5 class="text-muted">Design mobile Application</h5>
+                  </li>
+                </ul>
+                <div class="">
+                  <a href="#!" class="b-b-primary text-primary-500 hover:text-primary-500/60">View Friend List</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html') @@include('../layouts/customizer.html')
+
+    <!-- [Page Specific JS] start -->
+    <script src="../assets/js/plugins/simple-datatables.js"></script>
+    <script>
+      const dataTable = new simpleDatatables.DataTable('#pc-dt-simple', {
+        sortable: false,
+        perPage: 5
+      });
+      // new SimpleBar(document.querySelector('.sale-scroll'));
+      // new SimpleBar(document.querySelector('.feed-scroll'));
+      new SimpleBar(document.querySelector('.revenue-scroll'));
+      new SimpleBar(document.querySelector('.income-scroll'));
+      new SimpleBar(document.querySelector('.customer-scroll'));
+    </script>
+    <!-- [Page Specific JS] end -->
+  </body>
+  <!-- [Body] end -->
+</html>

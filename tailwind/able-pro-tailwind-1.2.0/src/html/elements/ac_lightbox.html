@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Lightbox'})
+    <!-- [Page specific CSS] start -->
+    <link href="../assets/css/plugins/animate.min.css" rel="stylesheet" type="text/css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+
+  <body>
+    <!-- [ Main Content ] start -->
+    @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+    <section class="pt-20 xl:pt-28">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+          <div class="col-span-12 xl:col-span-9">
+            <div class="grid grid-cols-12 gap-6">
+              <!-- prettier-ignore -->
+              @@include('../layouts/component/component-breadcrumb.html',{title:'Lightbox',text:'Use JavaScript modal plugin to add dialogs to your site for lightboxes'})
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ single-light ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>light box</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-3">
+                      Add this code
+                      <code class="text-danger-400 text-sm">data-fslightbox="gallery"</code>
+                      to see road trip gallery in lightbox popup.
+                    </p>
+                    <div class="grid grid-cols-12 gap-6 text-center">
+                      <div class="col-span-12 xl:col-span-2 lg:col-span-3 sm:col-span-4">
+                        <a data-fslightbox="gallery" href="../assets/images/light-box/l1.jpg">
+                          <img src="../assets/images/light-box/sl1.jpg" class="img-fluid m-b-10" alt="" />
+                        </a>
+                      </div>
+                      <div class="col-span-12 xl:col-span-2 lg:col-span-3 sm:col-span-4">
+                        <a data-fslightbox="gallery" href="../assets/images/light-box/l2.jpg">
+                          <img src="../assets/images/light-box/sl2.jpg" class="img-fluid m-b-10" alt="" />
+                        </a>
+                      </div>
+                      <div class="col-span-12 xl:col-span-2 lg:col-span-3 sm:col-span-4">
+                        <a data-fslightbox="gallery" href="../assets/images/light-box/l3.jpg">
+                          <img src="../assets/images/light-box/sl3.jpg" class="img-fluid m-b-10" alt="" />
+                        </a>
+                      </div>
+                      <div class="col-span-12 xl:col-span-2 lg:col-span-3 sm:col-span-4">
+                        <a data-fslightbox="gallery" href="../assets/images/light-box/l4.jpg">
+                          <img src="../assets/images/light-box/sl4.jpg" class="img-fluid m-b-10" alt="" />
+                        </a>
+                      </div>
+                      <div class="col-span-12 xl:col-span-2 lg:col-span-3 sm:col-span-4">
+                        <a data-fslightbox="gallery" href="../assets/images/light-box/l5.jpg">
+                          <img src="../assets/images/light-box/sl5.jpg" class="img-fluid m-b-10" alt="" />
+                        </a>
+                      </div>
+                      <div class="col-span-12 xl:col-span-2 lg:col-span-3 sm:col-span-4">
+                        <a data-fslightbox="gallery" href="../assets/images/light-box/l6.jpg">
+                          <img src="../assets/images/light-box/sl6.jpg" class="img-fluid m-b-10" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Youtube Video box</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-3">
+                      Add this code
+                      <code class="text-danger-400 text-sm">data-fslightbox="html5-youtube-videos"</code>
+                      to see road trip gallery in lightbox popup.
+                    </p>
+                    <div class="grid grid-cols-12 gap-6 text-center">
+                      <div class="col-span-12 xl:col-span-2 lg:col-span-3 sm:col-span-4">
+                        <a data-fslightbox="gallery" href="https://www.youtube.com/watch?v=_YiFAFrd_88">
+                          <img src="../assets/images/light-box/img-video-1.jpg" class="img-fluid m-b-10" alt="" />
+                        </a>
+                      </div>
+                      <div class="col-span-12 xl:col-span-2 lg:col-span-3 sm:col-span-4">
+                        <a data-fslightbox="gallery" href="https://www.youtube.com/watch?v=dzyOc92FQpE">
+                          <img src="../assets/images/light-box/img-video-2.jpg" class="img-fluid m-b-10" alt="" />
+                        </a>
+                      </div>
+                      <div class="col-span-12 xl:col-span-2 lg:col-span-3 sm:col-span-4">
+                        <a data-fslightbox="gallery" href="https://www.youtube.com/watch?v=edru2j2aqVU">
+                          <img src="../assets/images/light-box/img-video-3.jpg" class="img-fluid m-b-10" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ multiple-light ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <script src="../assets/js/plugins/index.js"></script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+</html>

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Cards'})
+    <!-- [Page specific CSS] start -->
+    <link href="../assets/css/plugins/animate.min.css" rel="stylesheet" type="text/css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+
+  <body>
+    <!-- [ Main Content ] start -->
+    @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+    <section class="pt-20 xl:pt-28">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+          <div class="col-span-12 xl:col-span-9">
+            <div class="grid grid-cols-12 gap-6">
+              <!-- prettier-ignore -->
+              @@include('../layouts/component/component-breadcrumb.html',{title:'Cards',text:'Cards provide a flexible and extensible content container with multiple variants and options.'})
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ card ] start -->
+              <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                <h5>Body Content</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="pc-component">
+                  <div class="card"><div class="card-body">This is some text within a card body.</div></div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                <h5>Titles, Text, and Links</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="pc-component">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>Card title</h5>
+                      <h6 class="mb-2 text-secondary-500">Card subtitle</h6>
+                      <p class="mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#!" class="card-link">Card link</a>
+                      <a href="#!" class="card-link">Another link</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                <h5>Header and Footer</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="pc-component">
+                  <div class="card">
+                    <h5 class="card-header">Featured</h5>
+                    <div class="card-body">
+                      <h5 class="mb-2">Special title treatment</h5>
+                      <p class="mb-3">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#!" class="btn btn-success">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12">
+                <div class="grid grid-cols-12 gap-6">
+                  <div class="col-span-12 md:col-span-4">
+                    <h5>Left Align</h5>
+                    <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="pc-component">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="mb-2">Special title treatment</h5>
+                          <p class="mb-3">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#!" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 md:col-span-4">
+                    <h5>Center Align</h5>
+                    <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="pc-component">
+                      <div class="card text-center">
+                        <div class="card-body">
+                          <h5 class="mb-2">Special title treatment</h5>
+                          <p class="mb-3">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#!" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 md:col-span-4">
+                    <h5>Right Align</h5>
+                    <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="pc-component">
+                      <div class="card text-end">
+                        <div class="card-body">
+                          <h5 class="mb-2">Special title treatment</h5>
+                          <p class="mb-3">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#!" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6 2xl:col-span-4">
+                <h5>Image Caps</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="pc-component">
+                  <div class="card mb-3">
+                    <img class="img-fluid rounded-t-xl" src="../assets/images/light-box/l3.jpg" alt="Card image cap" />
+                    <div class="card-body">
+                      <h5 class="mb-2">Card title</h5>
+                      <p class="mb-3">
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little
+                        bit longer.
+                      </p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6 2xl:col-span-4">
+                <h5>Image Caps [ Bottom ]</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="pc-component">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="mb-2">Card title</h5>
+                      <p class="mb-3">
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little
+                        bit longer.
+                      </p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <img class="img-fluid rounded-b-xl" src="../assets/images/light-box/l3.jpg" alt="Card image cap" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6 2xl:col-span-4">
+                <h5>Image Overlays</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="pc-component">
+                  <div class="card bg-dark overflow-hidden">
+                    <img class="img-fluid card-img" src="../assets/images/light-box/l3.jpg" alt="Card image" />
+                    <div class="absolute top-0 left-0 bottom-0 right-0 p-[25px]">
+                      <h5 class="mb-2 text-white">Card title</h5>
+                      <p class="mb-3 text-white">
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little
+                        bit longer.
+                      </p>
+                      <p class="card-text text-white">Last updated 3 mins ago</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12">
+                <h5>Card Styles</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="pc-component">
+                  <div class="grid grid-cols-12 gap-6">
+                    <div class="col-span-12 sm:col-span-4">
+                      <div class="card text-white bg-primary">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="mb-2 text-white">Primary card title</h5>
+                          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-span-12 sm:col-span-4">
+                      <div class="card text-white bg-secondary">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="mb-2 text-white">Primary card title</h5>
+                          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-span-12 sm:col-span-4">
+                      <div class="card text-white bg-success">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="mb-2 text-white">Primary card title</h5>
+                          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-span-12 sm:col-span-4">
+                      <div class="card text-white bg-danger">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="mb-2 text-white">Primary card title</h5>
+                          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-span-12 sm:col-span-4">
+                      <div class="card text-white bg-warning">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="mb-2 text-white">Primary card title</h5>
+                          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-span-12 sm:col-span-4">
+                      <div class="card text-white bg-info">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="mb-2 text-white">Primary card title</h5>
+                          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-span-12 sm:col-span-4">
+                      <div class="card bg-light">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="mb-2">Primary card title</h5>
+                          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-span-12 sm:col-span-4">
+                      <div class="card text-white bg-dark">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                          <h5 class="mb-2 text-white">Primary card title</h5>
+                          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12">
+                <h5>Card Groups</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="pc-component">
+                  <div class="flex flex-row flex-wrap">
+                    <div class="card flex flex-col grow basis-0 ltr:rounded-r-none rtl:rounded-l-none">
+                      <img class="img-fluid ltr:rounded-tl-xl rtl:rounded-tr-xl" src="../assets/images/light-box/l3.jpg" alt="Card image cap" />
+                      <div class="card-body grow basis-auto">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          This is a wider card with supporting text below as a natural lead-in to additional content. This content is a
+                          little bit longer.
+                        </p>
+                      </div>
+                      <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                    </div>
+                    <div class="card flex flex-col grow basis-0 rounded-none">
+                      <img class="img-fluid" src="../assets/images/light-box/l3.jpg" alt="Card image cap" />
+                      <div class="card-body grow basis-auto">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                      <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                    </div>
+                    <div class="card flex flex-col grow basis-0 ltr:rounded-l-none rtl:rounded-r-none">
+                      <img class="img-fluid ltr:rounded-tr-xl rtl:rounded-tl-xl" src="../assets/images/light-box/l3.jpg" alt="Card image cap" />
+                      <div class="card-body grow basis-auto">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          This is a wider card with supporting text below as a natural lead-in to additional content. This card has even
+                          longer content than the first to show that equal height action.
+                        </p>
+                      </div>
+                      <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12">
+                <h5>Horizontal</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+
+                <div class="pc-component">
+                  <div class="my-5">
+                    <div class="card overflow-hidden">
+                      <div class="flex flex-col sm:flex-row">
+                        <div class="sm:shrink-0">
+                          <img
+                            class="h-[200px] w-full object-cover object-bottom sm:w-[300px] sm:object-center"
+                            src="../assets/images/light-box/l3.jpg"
+                            width="202"
+                            height="192"
+                            alt="Beautiful abstract building in the sun"
+                          />
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a
+                            little bit longer.
+                          </p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ card ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+</html>

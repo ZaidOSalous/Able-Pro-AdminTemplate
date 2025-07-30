@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Spinners'})
+    <!-- [Page specific CSS] start -->
+    <link href="../assets/css/plugins/animate.min.css" rel="stylesheet" type="text/css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+
+  <body>
+    <!-- [ Main Content ] start -->
+    @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+    <section class="pt-20 xl:pt-28">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+          <div class="col-span-12 xl:col-span-9">
+            <div class="grid grid-cols-12 gap-6">
+              <!-- prettier-ignore -->
+              @@include('../layouts/component/component-breadcrumb.html',{title:'Spinners',text:'Indicate the loading state of a component or page spinners, built entirely with HTML, CSS, and no JavaScript.'})
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ spinner ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Border spinner</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div
+                      class="inline-block border-[3.5px] border-dark-500 dark:border-white/50 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                      role="status"
+                    >
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Border spinner [ Colors ]</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <div
+                        class="inline-block border-[3.5px] border-primary-500 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div
+                        class="inline-block border-[3.5px] border-secondary-500 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div
+                        class="inline-block border-[3.5px] border-success-500 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div
+                        class="inline-block border-[3.5px] border-danger-500 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div
+                        class="inline-block border-[3.5px] border-warning-500 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div
+                        class="inline-block border-[3.5px] border-info-500 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div
+                        class="inline-block border-[3.5px] border-dark-500 dark:border-white/50 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Growing spinner</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="inline-flex bg-dark-500 dark:bg-white/50 rounded-full opacity-75 size-4 animate-ping" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Growing spinner [ Colors ]</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-6">
+                      <div class="inline-flex bg-primary-500 rounded-full opacity-75 size-4 animate-ping" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="inline-flex bg-secondary-500 rounded-full opacity-75 size-4 animate-ping" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="inline-flex bg-success-500 rounded-full opacity-75 size-4 animate-ping" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="inline-flex bg-danger-500 rounded-full opacity-75 size-4 animate-ping" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="inline-flex bg-warning-500 rounded-full opacity-75 size-4 animate-ping" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="inline-flex bg-info-500 rounded-full opacity-75 size-4 animate-ping" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="inline-flex bg-dark-500 dark:bg-white/50 rounded-full opacity-75 size-4 animate-ping" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Placement</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <h6 class="mb-3">Start</h6>
+                    <div class="flex justify-start">
+                      <div
+                        class="inline-block border-[3.5px] border-dark-500 dark:border-white/50 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                    <hr class="my-4" />
+                    <h6 class="mb-3">Center</h6>
+                    <div class="flex justify-center">
+                      <div
+                        class="inline-block border-[3.5px] border-dark-500 dark:border-white/50 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                    <hr class="my-4" />
+                    <h6 class="mb-3">End</h6>
+                    <div class="flex justify-end">
+                      <div
+                        class="inline-block border-[3.5px] border-dark-500 dark:border-white/50 rounded-full size-8 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Size</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <h6 class="mb-3">Small</h6>
+                    <div class="flex flex-wrap items-center gap-4">
+                      <div
+                        class="inline-block border-[2px] border-dark-500 dark:border-white/50 rounded-full size-4 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="inline-flex bg-dark-500 dark:bg-white/50 rounded-full opacity-75 size-2 animate-ping" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                    <hr class="my-4" />
+                    <h6 class="mb-6">Custom</h6>
+                    <div class="flex flex-wrap items-center gap-4">
+                      <div
+                        class="inline-block border-[2px] border-dark-500 dark:border-white/50 rounded-full size-10 animate-spin border-l-transparent dark:border-l-transparent"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="inline-flex bg-dark-500 dark:bg-white/50 rounded-full opacity-75 size-5 animate-ping" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Buttons</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="grid grid-cols-12 gap-6">
+                      <div class="col-span-12 sm:col-span-6">
+                        <div class="grid grid-cols-12 gap-y-6">
+                          <div class="col-span-12">
+                            <button class="btn btn-primary lh-1" type="button" disabled>
+                              <span
+                                class="flex border-[2px] border-white-500 rounded-full size-4 animate-spin border-l-transparent dark:border-l-transparent"
+                                role="status"
+                              >
+                                <span class="sr-only">Loading...</span>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="col-span-12">
+                            <button class="btn btn-primary lh-1 inline-flex items-center gap-3" type="button" disabled>
+                              <span
+                                class="flex border-[2px] border-white-500 rounded-full size-4 animate-spin border-l-transparent dark:border-l-transparent"
+                                role="status"
+                              >
+                                <span class="sr-only">Loading...</span>
+                              </span>
+                              Loading...
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-span-12 sm:col-span-6">
+                        <div class="grid grid-cols-12 gap-y-6">
+                          <div class="col-span-12">
+                            <button class="btn btn-primary lh-1" type="button" disabled>
+                              <span class="flex bg-white rounded-full opacity-75 size-2 animate-ping" role="status">
+                                <span class="sr-only">Loading...</span>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="col-span-12">
+                            <button class="btn btn-primary lh-1 inline-flex items-center gap-3" type="button" disabled>
+                              <span class="flex bg-white rounded-full opacity-75 size-2 animate-ping" role="status">
+                                <span class="sr-only">Loading...</span>
+                              </span>
+                              Loading...
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ spinner ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+</html>

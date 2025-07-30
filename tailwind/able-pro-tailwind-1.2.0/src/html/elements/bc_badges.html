@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Badges'})
+    <!-- [Page specific CSS] start -->
+    <link href="../assets/css/plugins/animate.min.css" rel="stylesheet" type="text/css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+
+  <body>
+    <!-- [ Main Content ] start -->
+    @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+    <section class="pt-20 xl:pt-28">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+          <div class="col-span-12 xl:col-span-9">
+            <div class="grid grid-cols-12 gap-6">
+              <!-- prettier-ignore -->
+              @@include('../layouts/component/component-breadcrumb.html',{title:'Badges',text:'Documentation and examples for badges, our small count and labeling component.'})
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ badge ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header"><h5>Basic Badges</h5></div>
+                  <div class="card-body pc-component">
+                    <h1 class="mb-2">
+                      Example heading
+                      <span class="badge text-white bg-dark-500">New</span>
+                    </h1>
+                    <h2 class="mb-2">
+                      Example heading
+                      <span class="badge text-white bg-dark-500">New</span>
+                    </h2>
+                    <h3 class="mb-2">
+                      Example heading
+                      <span class="badge text-white bg-dark-500">New</span>
+                    </h3>
+                    <h4 class="mb-2">
+                      Example heading
+                      <span class="badge text-white bg-dark-500">New</span>
+                    </h4>
+                    <h5 class="mb-2">
+                      Example heading
+                      <span class="badge text-white bg-dark-500">New</span>
+                    </h5>
+                    <h6 class="mb-2">
+                      Example heading
+                      <span class="badge text-white bg-dark-500">New</span>
+                    </h6>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header"><h5>Button Badges</h5></div>
+                  <div class="card-body pc-component">
+                    <div class="d-flex flex-wrap gap-2">
+                      <button type="button" class="btn btn-primary mt-2">
+                        primary
+                        <span class="badge bg-white text-dark-500">4</span>
+                      </button>
+                      <button type="button" class="btn btn-secondary relative mt-2">
+                        Inbox
+                        <span
+                          class="absolute top-0 ltr:left-full rtl:right-full -translate-y-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2 badge rounded-full text-white bg-danger-500"
+                        >
+                          99+
+                          <span class="hidden">unread messages</span>
+                        </span>
+                      </button>
+                      <button type="button" class="btn btn-info relative ltr:ml-3 rtl:mr-3 mt-2">
+                        Profile
+                        <span class="absolute top-0 ltr:left-full rtl:right-full -translate-y-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2 p-2 bg-danger-500 rounded-full">
+                          <span class="hidden">New alerts</span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header"><h5>Contextual Variations</h5></div>
+                  <div class="card-body pc-component">
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="badge text-white bg-primary-500">Primary</span>
+                      <span class="badge text-white bg-secondary-500">Secondary</span>
+                      <span class="badge text-white bg-success-500">Success</span>
+                      <span class="badge text-white bg-danger-500">Danger</span>
+                      <span class="badge text-white bg-warning-500">Warning</span>
+                      <span class="badge text-white bg-info-500">Info</span>
+                      <span class="badge text-dark bg-secondary-500/10 dark:text-white">Light</span>
+                      <span class="badge text-white bg-dark-500">Dark</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header"><h5>Pill Badges</h5></div>
+                  <div class="card-body pc-component">
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="badge rounded-full text-white bg-primary-500">Primary</span>
+                      <span class="badge rounded-full text-white bg-secondary-500">Secondary</span>
+                      <span class="badge rounded-full text-white bg-success-500">Success</span>
+                      <span class="badge rounded-full text-white bg-danger-500">Danger</span>
+                      <span class="badge rounded-full text-white bg-warning-500">Warning</span>
+                      <span class="badge rounded-full text-white bg-info-500">Info</span>
+                      <span class="badge rounded-full text-dark bg-secondary-500/10 dark:text-white">Light</span>
+                      <span class="badge rounded-full text-white bg-dark-500">Dark</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header"><h5>Light variant</h5></div>
+                  <div class="card-body pc-component">
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="badge text-primary-500 bg-primary-500/15">Primary</span>
+                      <span class="badge text-secondary-500 bg-secondary-500/15 dark:text-white">Secondary</span>
+                      <span class="badge text-success-500 bg-success-500/15">Success</span>
+                      <span class="badge text-danger-500 bg-danger-500/15">Danger</span>
+                      <span class="badge text-warning-500 bg-warning-500/15">Warning</span>
+                      <span class="badge text-info-500 bg-info-500/15">Info</span>
+                      <span class="badge text-dark bg-secondary-500/10 dark:text-white">Light</span>
+                      <span class="badge text-dark-500 bg-dark-500/15">Dark</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ badge ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+</html>

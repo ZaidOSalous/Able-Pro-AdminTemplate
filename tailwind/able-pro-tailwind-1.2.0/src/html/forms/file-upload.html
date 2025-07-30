@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'File Upload'})
+    <!-- [Page specific CSS] start -->
+    <!-- fileupload-custom css -->
+    <link rel="stylesheet" href="../assets/css/plugins/dropzone.min.css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Forms', 'breadcrumb-item-active': 'File Upload'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- prettier-ignore -->
+          @@include('../layouts/component/component-link.html',{
+            title:'Dropzone',
+            text:'Dropzone.js is one of the most popular drag and drop JavaScript libraries. It is free, fully open source, and makes it easy for you to handle dropped files on your website.',
+            link:'https://www.dropzone.dev/'
+          })
+        </div>
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>File Upload</h5>
+              </div>
+              <div class="card-body">
+                <form action="../assets/json/file-upload.php" class="dropzone">
+                  <div class="fallback">
+                    <input name="file" type="file" multiple />
+                  </div>
+                </form>
+                <div class="text-center m-t-20">
+                  <button class="btn btn-primary">Upload Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <!-- file-upload Js -->
+    <script src="../assets/js/plugins/dropzone-amd-module.min.js"></script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

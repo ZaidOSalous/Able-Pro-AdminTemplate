@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Wizard'}) @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+  @@include('../layouts/layout-vertical.html')
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Forms', 'breadcrumb-item-active': 'Wizard'})
+
+      <!-- [ Main Content ] start -->
+
+      <div class="grid grid-cols-12 gap-x-6">
+        <!-- [ sample-page ] start -->
+        <div class="col-span-12">
+          <div class="card">
+            <div class="card-header !border-b-0">
+              <h5>Wizard</h5>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="w-[375px] max-w-full text-center">
+              <h3>Build Your Profile</h3>
+              <p class="text-muted mb-4">A group of people who collectively are responsible for all of the work
+                necessary to
+                produce working, validated assets.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <ul class="flex flex-wrap w-full text-center nav-tabs">
+                <li class="group active flex-auto">
+                  <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="wizardtab-1"
+                    class="inline-flex w-full items-center justify-center gap-2 px-4 py-2 transition-all duration-300 ease-linear rounded-lg text-primary-500 group-[.active]:bg-primary-500 group-[.active]:text-white">
+                    <i class="ph-duotone ph-user-circle text-xl leading-none"></i>
+                    <span class="d-none d-sm-inline">About me</span>
+                  </a>
+                </li>
+                <li class="group flex-auto">
+                  <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="wizardtab-2"
+                    class="inline-flex w-full items-center justify-center gap-2 px-4 py-2 transition-all duration-300 ease-linear rounded-lg text-primary-500 group-[.active]:bg-primary-500 group-[.active]:text-white">
+                    <i class="ph-duotone ph-map-pin text-xl leading-none"></i>
+                    <span class="d-none d-sm-inline">Address</span>
+                  </a>
+                </li>
+                <li class="group flex-auto">
+                  <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="wizardtab-3"
+                    class="inline-flex w-full items-center justify-center gap-2 px-4 py-2 transition-all duration-300 ease-linear rounded-lg text-primary-500 group-[.active]:bg-primary-500 group-[.active]:text-white">
+                    <i class="ph-duotone ph-graduation-cap text-xl leading-none"></i>
+                    <span class="d-none d-sm-inline">Education Detail</span>
+                  </a>
+                </li>
+                <li class="group flex-auto">
+                  <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="wizardtab-4"
+                    class="inline-flex w-full items-center justify-center gap-2 px-4 py-2 transition-all duration-300 ease-linear rounded-lg text-primary-500 group-[.active]:bg-primary-500 group-[.active]:text-white">
+                    <i class="ph-duotone ph-check-circle text-xl leading-none"></i>
+                    <span class="d-none d-sm-inline">Finish</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="tab-content">
+                <div class="block tab-pane" id="wizardtab-1">
+                  <div class="w-full bg-theme-bodybg rounded-lg h-1.5 mb-4 dark:bg-themedark-bodybg">
+                    <div
+                      class="bg-success-500 bg-[linear-gradient(45deg,rgba(255,255,255,.15)_25%,transparent_25%,transparent_50%,rgba(255,255,255,.15)_50%,rgba(255,255,255,.15)_75%,transparent_75%,transparent)] bg-[length:16px_16px] animate-[1s_linear_infinite_progress-bar-stripes] progress-bar-animated h-full rounded-lg"
+                      style="width: 25%"></div>
+                  </div>
+                  <div class="text-center">
+                    <h3 class="mb-2">Let's start with the basic information</h3>
+                    <sma ll class="text-muted">Let us know your name and email address. Use an address you don't mind
+                      other users contacting you at</small>
+                  </div>
+                  <div class="flex max-sm:flex-col items-center gap-6 mt-4">
+                    <div class="shrink-0 text-center">
+                      <div class="relative mr-3 inline-flex">
+                        <div class="absolute top-2/4 left-full -translate-x-2/4 -translate-y-2/4">
+                          <button class="btn btn-sm btn-primary btn-icon">
+                            <i class="ti ti-pencil"></i>
+                          </button>
+                        </div>
+                        <img src="../assets/images/application/img-prod-3.jpg" alt="user-image"
+                          class="w-[150px] rounded-lg ms-2" />
+                      </div>
+                    </div>
+                    <div class="grow">
+                      <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-12 sm:col-span-6">
+                          <label class="form-label">First Name</label>
+                          <input type="text" class="form-control" placeholder="Enter First Name" />
+                        </div>
+                        <div class="col-span-12 sm:col-span-6">
+                          <label class="form-label">Last Name</label>
+                          <input type="text" class="form-control" placeholder="Enter Last Name" />
+                        </div>
+                        <div class="col-span-12">
+                          <label class="form-label">Email Address</label>
+                          <input type="email" class="form-control" placeholder="Enter Email Address" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between flex-wrap gap-1 mt-4">
+                    <div class="previous">
+                      <a href="javascript:void(0);" class="btn btn-secondary disabled" disabled> Back To Previous </a>
+                    </div>
+                    <div class="next">
+                      <a href="javascript:void(0);" class="btn btn-secondary" onClick="change_tab('#wizardtab-2')"> Next
+                        Step </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden tab-pane" id="wizardtab-2">
+                  <form>
+                    <div class="text-center">
+                      <h3 class="mb-2">Tell me something about Home address</h3>
+                      <small class="text-muted">Let us know your name and email address. Use an address you don't mind
+                        other users contacting you at</small>
+                    </div>
+                    <div class="grid grid-cols-12 gap-6 mt-4">
+                      <div class="col-span-12 sm:col-span-6">
+                        <label class="form-label">Street Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Street Name" />
+                      </div>
+                      <div class="col-span-12 sm:col-span-6">
+                        <label class="form-label">Street No</label>
+                        <input type="text" class="form-control" placeholder="Enter Street No" />
+                      </div>
+                      <div class="col-span-12 sm:col-span-6">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control" placeholder="Enter City" />
+                      </div>
+                      <div class="col-span-12 sm:col-span-6">
+                        <label class="form-label">Country</label>
+                        <select class="form-select">
+                          <option>Select Contry</option>
+                          <option>India</option>
+                          <option>Rusia</option>
+                          <option>Dubai</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="flex items-center justify-between flex-wrap gap-1 mt-4">
+                    <div class="previous">
+                      <a href="javascript:void(0);" class="btn btn-secondary" onClick="change_tab('#wizardtab-1')"> Back
+                        To Previous </a>
+                    </div>
+                    <div class="next">
+                      <a href="javascript:void(0);" class="btn btn-secondary" onClick="change_tab('#wizardtab-3')"> Next
+                        Step </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden tab-pane" id="wizardtab-3">
+                  <form>
+                    <div class="text-center">
+                      <h3 class="mb-2">Tell us about your education</h3>
+                      <small class="text-muted">Let us know your name and email address. Use an address you don't mind
+                        other users contacting you at</small>
+                    </div>
+                    <div class="grid grid-cols-12 gap-6 mt-4">
+                      <div class="col-span-12">
+                        <label class="form-label" for="schoolName">School Name</label>
+                        <input type="text" class="form-control" id="schoolName" placeholder="enter your school name" />
+                      </div>
+                      <div class="col-span-12">
+                        <label class="form-label" for="schoolLocation">School Location</label>
+                        <input type="text" class="form-control" id="schoolLocation"
+                          placeholder="enter your school location" />
+                      </div>
+                    </div>
+                  </form>
+                  <div class="flex items-center justify-between flex-wrap gap-1 mt-4">
+                    <div class="previous">
+                      <a href="javascript:void(0);" class="btn btn-secondary" onClick="change_tab('#wizardtab-2')"> Back
+                        To Previous </a>
+                    </div>
+                    <div class="next">
+                      <a href="javascript:void(0);" class="btn btn-secondary" onClick="change_tab('#wizardtab-4')"> Next
+                        Step </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden tab-pane" id="wizardtab-4">
+                  <div class="text-center">
+                    <i class="ph-duotone ph-gift text-[50px] text-danger"></i>
+                    <h3 class="mt-4 mb-3">Thank you !</h3>
+                    <div class="mb-3">
+                      <div class="form-check d-inline-block">
+                        <input type="checkbox" class="form-check-input" id="customCheck1" />
+                        <label class="form-check-label" for="customCheck1">I agree with the Terms and
+                          Conditions</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between flex-wrap gap-1 mt-4">
+                    <div class="previous">
+                      <a href="javascript:void(0);" class="btn btn-secondary" onClick="change_tab('#wizardtab-3')"> Back
+                        To Previous </a>
+                    </div>
+                    <div class="next">
+                      <a href="javascript:void(0);" class="btn btn-secondary"> Finish </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- [ sample-page ] end -->
+    </div>
+    <!-- [ Main Content ] end -->
+  </div>
+  </div>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+  <script>
+    function change_tab(tab_name) {
+      var pcTargetTabID = tab_name;
+      var pcTabContents = document.querySelector(pcTargetTabID)?.parentElement.querySelectorAll('.tab-pane');
+
+      if (pcTabContents) {
+
+        var activeTabItem = document.querySelector('.nav-tabs > li.active');
+        if (activeTabItem) activeTabItem.classList.remove('active');
+        for (let i = 0; i < pcTabContents.length; i++) {
+          pcTabContents[i].classList.add('hidden');
+          pcTabContents[i].classList.remove('block');
+        }
+        var currentTabItem = document.querySelector('.nav-tabs > li > a[data-pc-target="' + tab_name.substr(1,tab_name.length) + '"]');
+        if (currentTabItem) currentTabItem.parentElement.classList.add('active');
+
+        for (let i = 0; i < pcTabContents.length; i++) {
+          pcTabContents[i].classList.add('hidden');
+          pcTabContents[i].classList.remove('block');
+        }
+        document.querySelector(pcTargetTabID).classList.remove('hidden');
+        document.querySelector(pcTargetTabID).classList.add('block');
+      }
+    }
+  </script>
+  @@include('../layouts/customizer.html')
+</body>
+<!-- [Body] end -->
+
+</html>

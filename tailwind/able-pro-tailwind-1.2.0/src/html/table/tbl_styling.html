@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Styling'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Table', 'breadcrumb-item-active': 'Styling'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- Default Styling table start -->
+          <div class="col-span-12 md:col-span-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Default Styling</h5>
+                <span class="d-block m-t-5">This is default table style</span>
+              </div>
+              <div class="card-body table-border-style">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Default Styling table start -->
+          <!-- [ Footer-Styling ] start -->
+          <div class="col-span-12 md:col-span-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Table Footer Styling</h5>
+                <span class="d-block m-t-5">
+                  use class
+                  <code class="text-danger-400 text-sm">bg-info-500/10</code>
+                  inside tfoot element
+                </span>
+              </div>
+              <div class="card-body table-border-style">
+                <div class="table-responsive">
+                  <table class="table table-styling">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                    </tbody>
+                    <tfoot class="bg-info-500/10">
+                      <tr>
+                        <td>#</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ Footer-Styling ] end -->
+          <!-- [ Custom-Table-Color ] start -->
+          <div class="col-span-12 md:col-span-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Custom Table Color</h5>
+                <span class="d-block m-t-5">
+                  use class
+                  <code class="text-danger-400 text-sm">table-*</code>
+                  inside table element
+                </span>
+              </div>
+              <div class="card-body table-border-style">
+                <div class="table-responsive">
+                  <table class="table table-styling bg-primary-500 text-white">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Mark</td>
+                        <td>Thornton</td>
+                        <td>@facebook</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ Custom-Table-Color ] end -->
+          <!-- Custom Table color with hover and stripped table start -->
+          <div class="col-span-12 md:col-span-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Custom Table Color with Hover and Stripped</h5>
+                <span class="d-block m-t-5">
+                  use class
+                  <code class="text-danger-400 text-sm">table-*</code>
+                  inside table element
+                </span>
+              </div>
+              <div class="card-body table-border-style">
+                <div class="table-responsive">
+                  <table class="table table-hover table-striped table-dark">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Custom Table color with hover and stripped table end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

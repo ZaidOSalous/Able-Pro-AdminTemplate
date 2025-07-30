@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Radio'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Forms', 'breadcrumb-item-active': 'Radio'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- [ form-element ] start -->
+          <div class="col-span-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Custom radio</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label pt-0">Radio</label>
+                    <div class="col-span-12 sm:col-span-9">
+                      <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="group4" value="" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault">Default radio</label>
+                      </div>
+                      <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="group4" value="" id="flexCheckChecked" checked />
+                        <label class="form-check-label" for="flexCheckChecked">Checked radio</label>
+                      </div>
+                      <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="group41" value="" id="flexCheckDisabled" disabled />
+                        <label class="form-check-label" for="flexCheckDisabled">Disabled radio</label>
+                      </div>
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="group41"
+                          value=""
+                          id="flexCheckCheckedDisabled"
+                          checked
+                          disabled
+                        />
+                        <label class="form-check-label" for="flexCheckCheckedDisabled">Disabled checked radio</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label pt-0">Inline</label>
+                    <div class="col-span-12 sm:col-span-9">
+                      <div class="form-check inline-block mr-2">
+                        <input class="form-check-input" type="radio" name="group5" value="" id="customCheckinlh1" />
+                        <label class="form-check-label" for="customCheckinlh1">1</label>
+                      </div>
+                      <div class="form-check inline-block mr-2">
+                        <input class="form-check-input" type="radio" name="group5" value="" id="customCheckinlh2" />
+                        <label class="form-check-label" for="customCheckinlh2">2</label>
+                      </div>
+                      <div class="form-check inline-block mr-2">
+                        <input class="form-check-input" type="radio" name="group5" value="" id="customCheckinlh3" />
+                        <label class="form-check-label" for="customCheckinlh3">3</label>
+                      </div>
+                      <div class="form-check inline-block mr-2">
+                        <input class="form-check-input" type="radio" name="group5" value="" id="customCheckinlh4" disabled />
+                        <label class="form-check-label" for="customCheckinlh4">4 (disabled)</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label pt-0">Inline Radio Checked State</label>
+                    <div class="col-span-12 sm:col-span-9">
+                      <div class="form-check inline-block mr-2">
+                        <input class="form-check-input" type="radio" name="group6" value="" id="customCheckinlhstate1" />
+                        <label class="form-check-label" for="customCheckinlhstate1">1</label>
+                      </div>
+                      <div class="form-check inline-block mr-2">
+                        <input class="form-check-input" type="radio" name="group6" value="" id="customCheckinlhstate2" />
+                        <label class="form-check-label" for="customCheckinlhstate2">2</label>
+                      </div>
+                      <div class="form-check inline-block mr-2">
+                        <input class="form-check-input" type="radio" name="group6" value="" id="customCheckinlhstate3" checked />
+                        <label class="form-check-label" for="customCheckinlhstate3">3</label>
+                      </div>
+                      <div class="form-check inline-block mr-2">
+                        <input class="form-check-input" type="radio" name="group6" value="" id="customCheckinlhstate4" disabled />
+                        <label class="form-check-label" for="customCheckinlhstate4">4 (disabled)</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Color Options</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label pt-0">Color Options</label>
+                    <div class="col-span-12 sm:col-span-9">
+                      <div>
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input input-primary checked:!bg-primary-500 checked:!border-primary-500"
+                            type="radio"
+                            id="customCheckc1"
+                            checked
+                          />
+                          <label class="form-check-label" for="customCheckc1">primary</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input input-secondary checked:!bg-secondary-500 checked:!border-secondary-500"
+                            type="radio"
+                            id="customCheckc2"
+                            checked
+                          />
+                          <label class="form-check-label" for="customCheckc2">secondary</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input input-success checked:!bg-success-500 checked:!border-success-500"
+                            type="radio"
+                            id="customCheckc3"
+                            checked
+                          />
+                          <label class="form-check-label" for="customCheckc3">success</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input input-danger checked:!bg-danger-500 checked:!border-danger-500"
+                            type="radio"
+                            id="customCheckc4"
+                            checked
+                          />
+                          <label class="form-check-label" for="customCheckc4">danger</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input input-warning checked:!bg-warning-500 checked:!border-warning-500"
+                            type="radio"
+                            id="customCheckc5"
+                            checked
+                          />
+                          <label class="form-check-label" for="customCheckc5">warning</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input
+                            class="form-check-input input-info checked:!bg-info-500 checked:!border-info-500"
+                            type="radio"
+                            id="customCheckc6"
+                            checked
+                          />
+                          <label class="form-check-label" for="customCheckc6">info</label>
+                        </div>
+                        <div class="form-check mb-0">
+                          <input
+                            class="form-check-input input-dark checked:!bg-dark-500 checked:!border-dark-500"
+                            type="radio"
+                            id="customCheckc7"
+                            checked
+                          />
+                          <label class="form-check-label" for="customCheckc7">dark</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- [ form-element ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

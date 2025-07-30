@@ -1,0 +1,56 @@
+{% extends "layouts/component-layout.html" %}
+{% load static %}
+{% block title %} 
+{% include 'layouts/head-page-meta.html' with title='Tree View' %}
+{% endblock %}
+
+{% block css1 %}
+<link rel="stylesheet" href={% static "/libs/vanillatree/vanillatree.css" %} />
+{% endblock %}
+
+{% block css2 %} 
+<link rel="stylesheet" href={% static "/assets/css/uikit.css" %} />
+{% endblock %}
+
+{% block mainContent %}
+    <!-- [ Main Content ] start -->
+    <section class="component-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3"> {% include 'layouts/component/component-menu-list.html' %} </div>
+          <div class="col-xl-9">
+            <div class="row">
+              <!-- prettier-ignore -->
+              {% include 'layouts/component/component-breadcrumb.html' with title='Tree View' text='Standalone tree view library' link='https://github.com/finom/vanillatree' %}
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="row">
+              <!-- [ rangeslider ] start -->
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>HTML Demo</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="tree-demo"> </div>
+                    <p id="tree-msg"></p>
+                  </div>
+                </div>
+              </div>
+              <!-- [ rangeslider ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+{% endblock %}
+
+{% block js1 %}
+    <!-- [Page Specific JS] start -->
+    <!-- jstree Js -->
+    <script src={% static "/libs/vanillatree/vanillatree.min.js" %}></script>
+    <script src={% static "/assets/js/elements/ac-treeview.js" %}></script>
+    <!-- [Page Specific JS] end -->
+{% endblock %}

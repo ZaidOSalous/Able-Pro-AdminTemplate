@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Layout 2'}) @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+  @@include('../layouts/layout-vertical.html')
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Layout', 'breadcrumb-item-active': 'Layout 2'})
+
+      <!-- [ Main Content ] start -->
+      <div class="grid grid-cols-12 gap-6">
+        <div class="col-span-12 md:col-span-6">
+          <div class="card">
+            <div class="card-header">
+              <h5>Background Color</h5>
+            </div>
+            <div class="card-body">
+              <h6>Theme Color</h6>
+              <div class="flex items-center flex-wrap gap-4 mt-3">
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-primary-500" onclick="changebrand('bg-primary-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-secondary-500" onclick="changebrand('bg-secondary-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-success-500" onclick="changebrand('bg-success-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-danger-500" onclick="changebrand('bg-danger-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-warning-500" onclick="changebrand('bg-warning-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-info-500" onclick="changebrand('bg-info-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-dark-500" onclick="changebrand('bg-dark-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+              </div>
+              <h6 class="mt-4">Tailwind Color</h6>
+              <div class="flex items-center flex-wrap gap-4 mt-3">
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-slate-500" onclick="changebrand('bg-slate-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gray-500" onclick="changebrand('bg-gray-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-zinc-500" onclick="changebrand('bg-zinc-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-neutral-500" onclick="changebrand('bg-neutral-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-stone-500" onclick="changebrand('bg-stone-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-red-500" onclick="changebrand('bg-red-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-orange-500" onclick="changebrand('bg-orange-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-amber-500" onclick="changebrand('bg-amber-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-yellow-500" onclick="changebrand('bg-yellow-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-lime-500" onclick="changebrand('bg-lime-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-green-500" onclick="changebrand('bg-green-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-emerald-500" onclick="changebrand('bg-emerald-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-teal-500" onclick="changebrand('bg-teal-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-cyan-500" onclick="changebrand('bg-cyan-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-sky-500" onclick="changebrand('bg-sky-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-blue-500" onclick="changebrand('bg-blue-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-indigo-500" onclick="changebrand('bg-indigo-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-violet-500" onclick="changebrand('bg-violet-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-purple-500" onclick="changebrand('bg-purple-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-fuchsia-500" onclick="changebrand('bg-fuchsia-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-pink-500" onclick="changebrand('bg-pink-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-rose-500" onclick="changebrand('bg-rose-500')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6">
+          <div class="card">
+            <div class="card-header">
+              <h5>Background Gradient Color</h5>
+            </div>
+            <div class="card-body">
+              <h6>Theme Color</h6>
+              <div class="flex items-center flex-wrap gap-4 mt-3">
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-primary-600 to-primary-400" onclick="changebrand('bg-gradient-to-r from-primary-600 to-primary-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-secondary-600 to-secondary-400" onclick="changebrand('bg-gradient-to-r from-secondary-600 to-secondary-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-success-600 to-success-400" onclick="changebrand('bg-gradient-to-r from-success-600 to-success-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-danger-600 to-danger-400" onclick="changebrand('bg-gradient-to-r from-danger-600 to-danger-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-warning-600 to-warning-400" onclick="changebrand('bg-gradient-to-r from-warning-600 to-warning-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-info-600 to-info-400" onclick="changebrand('bg-gradient-to-r from-info-600 to-info-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-dark-600 to-dark-400" onclick="changebrand('bg-gradient-to-r from-dark-600 to-dark-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+              </div>
+              <h6 class="mt-4">Tailwind Color</h6>
+              <div class="flex items-center flex-wrap gap-4 mt-3">
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-slate-600 to-slate-400" onclick="changebrand('bg-gradient-to-r from-slate-600 to-slate-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-gray-600 to-gray-400" onclick="changebrand('bg-gradient-to-r from-gray-600 to-gray-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-zinc-600 to-zinc-400" onclick="changebrand('bg-gradient-to-r from-zinc-600 to-zinc-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-neutral-600 to-neutral-400" onclick="changebrand('bg-gradient-to-r from-neutral-600 to-neutral-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-stone-600 to-stone-400" onclick="changebrand('bg-gradient-to-r from-stone-600 to-stone-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-red-600 to-red-400" onclick="changebrand('bg-gradient-to-r from-red-600 to-red-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-orange-400" onclick="changebrand('bg-gradient-to-r from-orange-600 to-orange-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-amber-600 to-amber-400" onclick="changebrand('bg-gradient-to-r from-amber-600 to-amber-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-yellow-600 to-yellow-400" onclick="changebrand('bg-gradient-to-r from-yellow-600 to-yellow-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-lime-600 to-lime-400" onclick="changebrand('bg-gradient-to-r from-lime-600 to-lime-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-green-400" onclick="changebrand('bg-gradient-to-r from-green-600 to-green-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-emerald-600 to-emerald-400" onclick="changebrand('bg-gradient-to-r from-emerald-600 to-emerald-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-teal-600 to-teal-400" onclick="changebrand('bg-gradient-to-r from-teal-600 to-teal-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-cyan-600 to-cyan-400" onclick="changebrand('bg-gradient-to-r from-cyan-600 to-cyan-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-sky-600 to-sky-400" onclick="changebrand('bg-gradient-to-r from-sky-600 to-sky-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-400" onclick="changebrand('bg-gradient-to-r from-blue-600 to-blue-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-indigo-600 to-indigo-400" onclick="changebrand('bg-gradient-to-r from-indigo-600 to-indigo-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-violet-600 to-violet-400" onclick="changebrand('bg-gradient-to-r from-violet-600 to-violet-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-purple-400" onclick="changebrand('bg-gradient-to-r from-purple-600 to-purple-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-fuchsia-600 to-fuchsia-400" onclick="changebrand('bg-gradient-to-r from-fuchsia-600 to-fuchsia-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-pink-600 to-pink-400" onclick="changebrand('bg-gradient-to-r from-pink-600 to-pink-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-rose-600 to-rose-400" onclick="changebrand('bg-gradient-to-r from-rose-600 to-rose-400')"><i class="ph-duotone ph-paint-brush text-white text-lg leading-none"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+  @@include('../layouts/customizer.html')
+  <script>
+    function changebrand(presetColor) {
+      const bodyElement = document.querySelector('body');
+      removeClassByPrefix(bodyElement, 'bg-');
+      removeClassByPrefix(bodyElement, 'from-');
+      removeClassByPrefix(bodyElement, 'to-');
+      console.log(presetColor);
+      bodyElement.setAttribute('class',presetColor);
+    }
+    localStorage.setItem('layout', 'color-header');
+  </script>
+</body>
+<!-- [Body] end -->
+
+</html>

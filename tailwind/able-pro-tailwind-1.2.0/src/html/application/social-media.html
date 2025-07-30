@@ -1,0 +1,2312 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Social Media'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Application', 'breadcrumb-item-active':'Social Media'})
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- [ sample-page ] start -->
+          <div class="col-span-12">
+            <div class="card social-profile overflow-hidden">
+              <img src="../assets/images/application/img-profile-cover.jpg" alt="" class="w-full card-img-top" />
+              <div class="card-body !pt-0">
+                <div class="md:flex gap-6 items-end">
+                  <div class="shrink-0 text-center md:text-start">
+                    <img
+                      class="img-fluid -mt-[20%] w-[90px] rounded-full shadow-[0_0_0_3px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                      src="../assets/images/user/avatar-5.jpg"
+                      alt="User image"
+                    />
+                  </div>
+                  <div class="grow">
+                    <div class="md:flex gap-6 justify-between items-end">
+                      <div class="soc-profile-data">
+                        <h5 class="mb-1">Stebin Ben</h5>
+                        <p class="mb-0">UI/UX Designer</p>
+                      </div>
+                      <div class="btns">
+                        <button class="btn btn-primary me-1">Message</button>
+                        <button class="btn btn-outline-secondary">Follow</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body !py-0">
+                <ul class="flex flex-wrap w-full font-medium text-center nav-tabs">
+                  <li class="group active">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="profile-1"
+                      class="inline-flex items-center mr-6 py-4 transition-all duration-300 ease-linear border-t-2 border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-b-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                      <i class="ti ti-user ltr:mr-2 rtl:ml-2 text-lg leading-none"></i>
+                      Profile
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="profile-2"
+                      class="inline-flex items-center mr-6 py-4 transition-all duration-300 ease-linear border-t-2 border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-b-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                      <i class="ti ti-users ltr:mr-2 rtl:ml-2 text-lg leading-none"></i>
+                      Friends
+                      <span class="badge bg-secondary-500 text-white rounded-full ml-2">99</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="profile-3"
+                      class="inline-flex items-center mr-6 py-4 transition-all duration-300 ease-linear border-t-2 border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-b-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                      <i class="ti ti-user-plus ltr:mr-2 rtl:ml-2 text-lg leading-none"></i>
+                      Friends Request
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a
+                      href="javascript:void(0);"
+                      data-pc-toggle="tab"
+                      data-pc-target="profile-4"
+                      class="inline-flex items-center mr-6 py-4 transition-all duration-300 ease-linear border-t-2 border-b-2 border-transparent group-[.active]:text-primary-500 group-[.active]:border-b-primary-500 hover:text-primary-500 active:text-primary-500"
+                    >
+                      <i class="ti ti-photo ltr:mr-2 rtl:ml-2 text-lg leading-none"></i>
+                      Gallery
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid grid-cols-12 gap-6">
+              <div class="col-span-12 lg:col-span-8 2xl:col-span-9">
+                <div class="tab-content">
+                  <div class="block tab-pane" id="profile-1">
+                    <div class="card">
+                      <div class="card-body user-story-block">
+                        <div class="flex gap-2 items-start">
+                          <div class="card group overflow-hidden mb-0 w-[115px] shrink-0">
+                            <img
+                              src="../assets/images/application/img-story-1.jpg"
+                              class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              alt="img"
+                            />
+                            <div
+                              class="absolute inset-0 flex items-end justify-center z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                            >
+                              <div class="text-center p-5">
+                                <div
+                                  class="w-8 h-8 rounded-full inline-flex items-center justify-center bg-theme-cardbg dark:bg-themedark-cardbg"
+                                >
+                                  <i class="ti ti-plus text-2xl leading-none"></i>
+                                </div>
+                                <h6 class="text-white mb-0 mt-1">Add Story</h6>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="horizontal-scroll-block grow overflow-x-auto">
+                            <div class="flex gap-2 item-start flex-nowrap">
+                              <a
+                                class="card group block overflow-hidden mb-0 min-w-[115px]"
+                                data-fslightbox="gallery"
+                                href="../assets/images/application/img-story-2.jpg"
+                              >
+                                <img
+                                  src="../assets/images/application/img-story-2.jpg"
+                                  class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  alt="img"
+                                />
+                                <div
+                                  class="absolute inset-0 flex items-start justify-start z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                                >
+                                  <div class="p-5">
+                                    <img
+                                      src="../assets/images/user/avatar-2.jpg"
+                                      class="w-[30px] rounded-full shadow-[0_0_0_2px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                                      alt="img"
+                                    />
+                                  </div>
+                                </div>
+                              </a>
+                              <a
+                                class="card group block overflow-hidden mb-0 min-w-[115px]"
+                                data-fslightbox="gallery"
+                                href="../assets/images/application/img-story-3.jpg"
+                              >
+                                <img
+                                  src="../assets/images/application/img-story-3.jpg"
+                                  class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  alt="img"
+                                />
+                                <div
+                                  class="absolute inset-0 flex items-start justify-start z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                                >
+                                  <div class="p-5">
+                                    <img
+                                      src="../assets/images/user/avatar-3.jpg"
+                                      class="w-[30px] rounded-full shadow-[0_0_0_2px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                                      alt="img"
+                                    />
+                                  </div>
+                                </div>
+                              </a>
+                              <a
+                                class="card group block overflow-hidden mb-0 min-w-[115px]"
+                                data-fslightbox="gallery"
+                                href="../assets/images/application/img-story-4.jpg"
+                              >
+                                <img
+                                  src="../assets/images/application/img-story-4.jpg"
+                                  class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  alt="img"
+                                />
+                                <div
+                                  class="absolute inset-0 flex items-start justify-start z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                                >
+                                  <div class="p-5">
+                                    <img
+                                      src="../assets/images/user/avatar-4.jpg"
+                                      class="w-[30px] rounded-full shadow-[0_0_0_2px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                                      alt="img"
+                                    />
+                                  </div>
+                                </div>
+                              </a>
+                              <a
+                                class="card group block overflow-hidden mb-0 min-w-[115px]"
+                                data-fslightbox="gallery"
+                                href="../assets/images/application/img-story-5.jpg"
+                              >
+                                <img
+                                  src="../assets/images/application/img-story-5.jpg"
+                                  class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  alt="img"
+                                />
+                                <div
+                                  class="absolute inset-0 flex items-start justify-start z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                                >
+                                  <div class="p-5">
+                                    <img
+                                      src="../assets/images/user/avatar-5.jpg"
+                                      class="w-[30px] rounded-full shadow-[0_0_0_2px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                                      alt="img"
+                                    />
+                                  </div>
+                                </div>
+                              </a>
+                              <a
+                                class="card group block overflow-hidden mb-0 min-w-[115px]"
+                                data-fslightbox="gallery"
+                                href="../assets/images/application/img-story-6.jpg"
+                              >
+                                <img
+                                  src="../assets/images/application/img-story-6.jpg"
+                                  class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  alt="img"
+                                />
+                                <div
+                                  class="absolute inset-0 flex items-start justify-start z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                                >
+                                  <div class="p-5">
+                                    <img
+                                      src="../assets/images/user/avatar-1.jpg"
+                                      class="w-[30px] rounded-full shadow-[0_0_0_2px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                                      alt="img"
+                                    />
+                                  </div>
+                                </div>
+                              </a>
+                              <a
+                                class="card group block overflow-hidden mb-0 min-w-[115px]"
+                                data-fslightbox="gallery"
+                                href="../assets/images/application/img-story-2.jpg"
+                              >
+                                <img
+                                  src="../assets/images/application/img-story-2.jpg"
+                                  class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  alt="img"
+                                />
+                                <div
+                                  class="absolute inset-0 flex items-start justify-start z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                                >
+                                  <div class="p-5">
+                                    <img
+                                      src="../assets/images/user/avatar-2.jpg"
+                                      class="w-[30px] rounded-full shadow-[0_0_0_2px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                                      alt="img"
+                                    />
+                                  </div>
+                                </div>
+                              </a>
+                              <a
+                                class="card group block overflow-hidden mb-0 min-w-[115px]"
+                                data-fslightbox="gallery"
+                                href="../assets/images/application/img-story-3.jpg"
+                              >
+                                <img
+                                  src="../assets/images/application/img-story-3.jpg"
+                                  class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  alt="img"
+                                />
+                                <div
+                                  class="absolute inset-0 flex items-start justify-start z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                                >
+                                  <div class="p-5">
+                                    <img
+                                      src="../assets/images/user/avatar-3.jpg"
+                                      class="w-[30px] rounded-full shadow-[0_0_0_2px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                                      alt="img"
+                                    />
+                                  </div>
+                                </div>
+                              </a>
+                              <a
+                                class="card group block overflow-hidden mb-0 min-w-[115px]"
+                                data-fslightbox="gallery"
+                                href="../assets/images/application/img-story-4.jpg"
+                              >
+                                <img
+                                  src="../assets/images/application/img-story-4.jpg"
+                                  class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  alt="img"
+                                />
+                                <div
+                                  class="absolute inset-0 flex items-start justify-start z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                                >
+                                  <div class="p-5">
+                                    <img
+                                      src="../assets/images/user/avatar-4.jpg"
+                                      class="w-[30px] rounded-full shadow-[0_0_0_2px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                                      alt="img"
+                                    />
+                                  </div>
+                                </div>
+                              </a>
+                              <a
+                                class="card group block overflow-hidden mb-0 min-w-[115px]"
+                                data-fslightbox="gallery"
+                                href="../assets/images/application/img-story-5.jpg"
+                              >
+                                <img
+                                  src="../assets/images/application/img-story-5.jpg"
+                                  class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  alt="img"
+                                />
+                                <div
+                                  class="absolute inset-0 flex items-start justify-start z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                                >
+                                  <div class="p-5">
+                                    <img
+                                      src="../assets/images/user/avatar-5.jpg"
+                                      class="w-[30px] rounded-full shadow-[0_0_0_2px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                                      alt="img"
+                                    />
+                                  </div>
+                                </div>
+                              </a>
+                              <a
+                                class="card group block overflow-hidden mb-0 min-w-[115px]"
+                                data-fslightbox="gallery"
+                                href="../assets/images/application/img-story-6.jpg"
+                              >
+                                <img
+                                  src="../assets/images/application/img-story-6.jpg"
+                                  class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  alt="img"
+                                />
+                                <div
+                                  class="absolute inset-0 flex items-start justify-start z-20 transition-all duration-300 group-hover:backdrop-blur-[10px]"
+                                >
+                                  <div class="p-5">
+                                    <img
+                                      src="../assets/images/user/avatar-1.jpg"
+                                      class="w-[30px] rounded-full shadow-[0_0_0_2px_#fff] shadow-theme-cardbg dark:shadow-themedark-cardbg"
+                                      alt="img"
+                                    />
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <textarea class="form-control border-0 shadow-none" placeholder="What’s new, Stebin?" rows="1"></textarea>
+                        <div class="flex items-center justify-between mt-4">
+                          <div>
+                            <ul class="flex items-center ml-auto mb-0 gap-1">
+                              <li class="list-inline-item border-r border-r-theme-border dark:border-r-themedark -border pe-2 me-2">
+                                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-warning">
+                                  <i class="ti ti-mood-smile text-lg leading-none"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                  <i class="ti ti-photo text-lg leading-none"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                  <i class="ti ti-paperclip text-lg leading-none"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <button class="btn btn-primary">Post</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="flex items-center mb-3">
+                          <div class="chat-avtar relative shrink-0">
+                            <img class="rounded-full w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                            <div class="bg-success-500 p-1 rounded-full chat-badge absolute right-0 bottom-0"></div>
+                          </div>
+                          <div class="grow mx-2">
+                            <h5 class="mb-0">John Doe</h5>
+                            <span class="text-sm text-muted">Technical Department</span>
+                          </div>
+                          <div class="dropdown shrink-0">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="my-4">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                          type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                          of Lorem Ipsum.
+                        </p>
+                        <div class="grid grid-cols-12 gap-3">
+                          <div class="col-span-12 md:col-span-6">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-post-1.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-post-1.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-search text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-post-2.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-post-2.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-search text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-post-3.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-post-3.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-search text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-post-4.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-post-4.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-search text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-post-5.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-post-5.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-search text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-post-6.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-post-6.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-search text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between flex-wrap my-4">
+                          <div>
+                            <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                              <i class="material-icons-two-tone bg-secondary-500 ltr:mr-2 rtl:ml-2 text-lg leading-none">thumb_up_alt</i>
+                              450K
+                              <small class="text-muted ltr:ml-2 rtl:mr-2">Likes</small>
+                            </a>
+                            <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                              <i class="material-icons-two-tone bg-secondary-500 ltr:mr-2 rtl:ml-2 text-lg leading-none">comment</i>
+                              500
+                              <small class="text-muted ltr:ml-2 rtl:mr-2">Comments</small>
+                            </a>
+                            <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                              <i class="material-icons-two-tone bg-secondary-500 ltr:mr-2 rtl:ml-2 text-lg leading-none">share</i>
+                              100
+                              <small class="text-muted ltr:ml-2 rtl:mr-2">Share</small>
+                            </a>
+                            <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                              <i class="material-icons-two-tone bg-secondary-500 ltr:mr-2 rtl:ml-2 text-lg leading-none">bookmarks</i>
+                              20
+                              <small class="text-muted ltr:ml-2 rtl:mr-2">Saved</small>
+                            </a>
+                          </div>
+                          <div class="text-right">
+                            <div class="flex items-center">
+                              <p class="mb-0 me-2">30 Comments</p>
+                              <div
+                                dir="ltr"
+                                class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border-2 *:border-white"
+                              >
+                                <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                                <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                                <span class="avtar bg-danger text-white">K</span>
+                                <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                                <span class="avtar bg-success text-white">
+                                  <svg class="pc-icon m-0">
+                                    <use xlink:href="#custom-user"></use>
+                                  </svg>
+                                </span>
+                                <img src="../assets/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
+                                <span class="avtar bg-theme-cardbg dark:bg-themedark-cardbg overflow-hidden">
+                                  <span class="flex items-center justify-center w-full h-full bg-primary-500/10 text-primary-500">+2</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment-block">
+                          <div class="p-[25px] rounded-lg comment bg-theme-bodybg dark:bg-themedark-bodybg mb-5">
+                            <div class="flex items-start">
+                              <div class="chat-avtar relative shrink-0">
+                                <img class="rounded-full w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                                <div class="bg-success-500 p-1 rounded-full chat-badge absolute right-0 bottom-0"></div>
+                              </div>
+                              <div class="grow ltr:ml-3 rtl:mr-3">
+                                <h5 class="mb-0">John Doe</h5>
+                                <span class="text-sm text-muted">2 hour ago</span>
+                              </div>
+                            </div>
+                            <div class="comment-content ml-[57px]">
+                              <p class="mb-2 mt-3">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book.
+                              </p>
+                              <a href="#" class="text-primary-500 mb-1">https://phoenixcoded.net/</a>
+                            </div>
+                          </div>
+                          <div class="comment-content ml-[57px]">
+                            <div class="mb-4">
+                              <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                                <i class="material-icons-two-tone bg-secondary-500 mr-1 text-lg leading-none">favorite</i>
+                                450
+                              </a>
+                              <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                                <i class="material-icons-two-tone bg-secondary-500 mr-1 text-lg leading-none">share</i>
+                                100
+                              </a>
+                            </div>
+                          </div>
+                          <div class="comment sub-comment relative ml-[70px]">
+                            <div class="absolute top-10 right-full h-0.5 w-[35px] bg-theme-bodybg dark:bg-themedark-bodybg"></div>
+                            <div
+                              class="absolute top-[-90px] right-[calc(100%_+_32px)] h-[133px] w-0.5 bg-theme-bodybg dark:bg-themedark-bodybg"
+                            ></div>
+                            <div class="p-[25px] rounded-lg comment bg-theme-bodybg dark:bg-themedark-bodybg mb-5">
+                              <div class="flex items-start">
+                                <div class="chat-avtar relative shrink-0">
+                                  <img class="rounded-full w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                                  <div class="bg-success-500 p-1 rounded-full chat-badge absolute right-0 bottom-0"></div>
+                                </div>
+                                <div class="grow ltr:ml-3 rtl:mr-3">
+                                  <h5 class="mb-0">John Doe</h5>
+                                  <span class="text-sm text-muted">2 hour ago</span>
+                                </div>
+                              </div>
+                              <div class="comment-content ml-[57px]">
+                                <div class="card mt-4 mb-0">
+                                  <div class="card-body">
+                                    <h6>Lorem Ipsum is simply dummy</h6>
+                                    <p class="mb-2">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                    <a href="#" class="text-primary-500 mb-1">https://phoenixcoded.net/</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="comment-content ml-[140px]">
+                            <div class="mb-4">
+                              <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                                <i class="material-icons-two-tone bg-secondary-500 mr-1 text-lg leading-none">favorite</i>
+                                450
+                              </a>
+                              <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                                <i class="material-icons-two-tone bg-secondary-500 mr-1 text-lg leading-none">share</i>
+                                100
+                              </a>
+                            </div>
+                          </div>
+                          <div class="p-[25px] rounded-lg comment bg-theme-bodybg dark:bg-themedark-bodybg mb-5">
+                            <div class="flex items-start">
+                              <div class="chat-avtar relative shrink-0">
+                                <img class="rounded-full w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                                <div class="bg-success-500 p-1 rounded-full chat-badge absolute right-0 bottom-0"></div>
+                              </div>
+                              <div class="grow ltr:ml-3 rtl:mr-3">
+                                <h5 class="mb-0">John Doe</h5>
+                                <span class="text-sm text-muted">2 hour ago</span>
+                              </div>
+                            </div>
+                            <div class="comment-content ml-[57px]">
+                              <p class="mb-2 mt-3">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book.
+                              </p>
+                              <a href="#" class="text-primary-500 mb-1">https://phoenixcoded.net/</a>
+                            </div>
+                          </div>
+                          <div class="comment-content ml-[57px]">
+                            <div class="mb-4">
+                              <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                                <i class="material-icons-two-tone bg-secondary-500 mr-1 text-lg leading-none">favorite</i>
+                                450
+                              </a>
+                              <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                                <i class="material-icons-two-tone bg-secondary-500 mr-1 text-lg leading-none">share</i>
+                                100
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex items-center mt-3">
+                          <img
+                            class="img-radius hidden sm:inline-flex mr-3 w-10 rounded-full shrink-0"
+                            src="../assets/images/user/avatar-1.jpg"
+                            alt="User image"
+                          />
+                          <div class="grow mx-3">
+                            <div class="relative">
+                              <input type="email" class="form-control pl-11 pr-24" placeholder="Type a something..." />
+                              <ul class="list-inline absolute top-2 left-3">
+                                <li class="list-inline-item border-end pr-2 mr-2">
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-warning">
+                                    <i class="ti ti-mood-smile text-lg leading-none"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                              <ul class="flex items-center absolute top-2 right-3 gap-1">
+                                <li class="list-inline-item">
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-photo text-lg leading-none"></i>
+                                  </a>
+                                </li>
+                                <li class="list-inline-item">
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-paperclip text-lg leading-none"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn btn-primary">
+                            <i class="ti ti-send text-lg leading-none"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="flex items-center mb-3">
+                          <div class="chat-avtar relative shrink-0">
+                            <img class="rounded-full w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                            <div class="bg-success-500 p-1 rounded-full chat-badge absolute right-0 bottom-0"></div>
+                          </div>
+                          <div class="grow mx-2">
+                            <h5 class="mb-0">John Doe</h5>
+                            <span class="text-sm text-muted">Technical Department</span>
+                          </div>
+                          <div class="dropdown shrink-0">
+                            <a
+                              class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                              href="#"
+                              data-pc-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a class="dropdown-item" href="#">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="my-4">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                          type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                          of Lorem Ipsum.
+                        </p>
+                        <div class="grid grid-cols-12 gap-3">
+                          <div class="col-span-12">
+                            <div class="aspect-[21/9] relative w-full rounded-lg overflow-hidden">
+                              <iframe
+                                class="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/f3NWvUV8MD8"
+                                title="YouTube video"
+                                allowfullscreen
+                              ></iframe>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between flex-wrap my-4">
+                          <div>
+                            <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                              <i class="material-icons-two-tone bg-secondary-500 ltr:mr-2 rtl:ml-2 text-lg leading-none">thumb_up_alt</i>
+                              450K
+                              <small class="text-muted ltr:ml-2 rtl:mr-2">Likes</small>
+                            </a>
+                            <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                              <i class="material-icons-two-tone bg-secondary-500 ltr:mr-2 rtl:ml-2 text-lg leading-none">comment</i>
+                              500
+                              <small class="text-muted ltr:ml-2 rtl:mr-2">Comments</small>
+                            </a>
+                            <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                              <i class="material-icons-two-tone bg-secondary-500 ltr:mr-2 rtl:ml-2 text-lg leading-none">share</i>
+                              100
+                              <small class="text-muted ltr:ml-2 rtl:mr-2">Share</small>
+                            </a>
+                            <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                              <i class="material-icons-two-tone bg-secondary-500 ltr:mr-2 rtl:ml-2 text-lg leading-none">bookmarks</i>
+                              20
+                              <small class="text-muted ltr:ml-2 rtl:mr-2">Saved</small>
+                            </a>
+                          </div>
+                          <div class="text-right">
+                            <div class="flex items-center">
+                              <p class="mb-0 me-2">30 Comments</p>
+                              <div
+                                dir="ltr"
+                                class="flex -space-x-2 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-[30px] *:h-[30px] *:hover:z-10 *:border-2 *:border-white"
+                              >
+                                <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                                <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                                <span class="avtar bg-danger text-white">K</span>
+                                <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                                <span class="avtar bg-success text-white">
+                                  <svg class="pc-icon m-0">
+                                    <use xlink:href="#custom-user"></use>
+                                  </svg>
+                                </span>
+                                <img src="../assets/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
+                                <span class="avtar bg-theme-cardbg dark:bg-themedark-cardbg overflow-hidden">
+                                  <span class="flex items-center justify-center w-full h-full bg-primary-500/10 text-primary-500">+2</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment-block">
+                          <div class="p-[25px] rounded-lg comment bg-theme-bodybg dark:bg-themedark-bodybg mb-5">
+                            <div class="flex items-start">
+                              <div class="chat-avtar relative shrink-0">
+                                <img class="rounded-full w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                                <div class="bg-success-500 p-1 rounded-full chat-badge absolute right-0 bottom-0"></div>
+                              </div>
+                              <div class="grow ltr:ml-3 rtl:mr-3">
+                                <h5 class="mb-0">John Doe</h5>
+                                <span class="text-sm text-muted">2 hour ago</span>
+                              </div>
+                            </div>
+                            <div class="comment-content ml-[57px]">
+                              <p class="mb-2 mt-3">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book.
+                              </p>
+                              <a href="#" class="text-primary-500 mb-1">https://phoenixcoded.net/</a>
+                            </div>
+                          </div>
+                          <div class="comment-content ml-[57px]">
+                            <div class="mb-4">
+                              <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                                <i class="material-icons-two-tone bg-secondary-500 mr-1 text-lg leading-none">favorite</i>
+                                450
+                              </a>
+                              <a href="#" class="btn btn-link-secondary inline-flex items-center">
+                                <i class="material-icons-two-tone bg-secondary-500 mr-1 text-lg leading-none">share</i>
+                                100
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex items-center mt-3">
+                          <img
+                            class="img-radius hidden sm:inline-flex mr-3 w-10 rounded-full shrink-0"
+                            src="../assets/images/user/avatar-1.jpg"
+                            alt="User image"
+                          />
+                          <div class="grow mx-3">
+                            <div class="relative">
+                              <input type="email" class="form-control pl-11 pr-24" placeholder="Type a something..." />
+                              <ul class="list-inline absolute top-2 left-3">
+                                <li class="list-inline-item border-end pr-2 mr-2">
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-warning">
+                                    <i class="ti ti-mood-smile text-lg leading-none"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                              <ul class="flex items-center absolute top-2 right-3 gap-1">
+                                <li class="list-inline-item">
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-photo text-lg leading-none"></i>
+                                  </a>
+                                </li>
+                                <li class="list-inline-item">
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-paperclip text-lg leading-none"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <a href="#" class="w-10 h-10 rounded-xl inline-flex items-center justify-center btn btn-primary">
+                            <i class="ti ti-send text-lg leading-none"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="profile-2">
+                    <div class="card">
+                      <div class="card-header flex items-center justify-between">
+                        <h5 class="flex items-center gap-2">
+                          Your page
+                          <span class="badge bg-primary-500 text-white rounded-full">99</span>
+                        </h5>
+                      </div>
+                      <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">John Doe</h6>
+                              <p class="mb-0">@John_Doe</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Addie Bass</h6>
+                              <p class="mb-0">@A_Bass</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-3.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Alberta Robbins</h6>
+                              <p class="mb-0">@AlbeRob12</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-4.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Agnes McGee</h6>
+                              <p class="mb-0">@AgnMcGee</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Lilla Bardenova</h6>
+                              <p class="mb-0">@lillabardenova</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-6.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">John Doe</h6>
+                              <p class="mb-0">@John_Doe</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-7.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Addie Bass</h6>
+                              <p class="mb-0">@A_Bass</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-8.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Alberta Robbins</h6>
+                              <p class="mb-0">@AlbeRob12</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-9.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Agnes McGee</h6>
+                              <p class="mb-0">@AgnMcGee</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-10.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Lilla Bardenova</h6>
+                              <p class="mb-0">@lillabardenova</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">John Doe</h6>
+                              <p class="mb-0">@John_Doe</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Addie Bass</h6>
+                              <p class="mb-0">@A_Bass</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-3.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Alberta Robbins</h6>
+                              <p class="mb-0">@AlbeRob12</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-4.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Agnes McGee</h6>
+                              <p class="mb-0">@AgnMcGee</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Lilla Bardenova</h6>
+                              <p class="mb-0">@lillabardenova</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-6.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">John Doe</h6>
+                              <p class="mb-0">@John_Doe</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-7.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Addie Bass</h6>
+                              <p class="mb-0">@A_Bass</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-8.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Alberta Robbins</h6>
+                              <p class="mb-0">@AlbeRob12</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-9.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Agnes McGee</h6>
+                              <p class="mb-0">@AgnMcGee</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="flex items-center">
+                            <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-10.jpg" alt="User image" />
+                            <div class="grow mx-2">
+                              <h6 class="mb-0">Lilla Bardenova</h6>
+                              <p class="mb-0">@lillabardenova</p>
+                            </div>
+                            <button class="btn btn-outline-secondary">Message</button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="profile-3">
+                    <div class="card">
+                      <div class="card-header flex items-center justify-between">
+                        <h5 class="flex items-center gap-2">
+                          Friends Request
+                          <span class="badge bg-primary-500 text-white rounded-full">30</span>
+                        </h5>
+                      </div>
+                      <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">John Doe</h6>
+                                <p class="mb-0">@John_Doe</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Addie Bass</h6>
+                                <p class="mb-0">@A_Bass</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-3.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Alberta Robbins</h6>
+                                <p class="mb-0">@AlbeRob12</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-4.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Agnes McGee</h6>
+                                <p class="mb-0">@AgnMcGee</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Lilla Bardenova</h6>
+                                <p class="mb-0">@lillabardenova</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-6.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">John Doe</h6>
+                                <p class="mb-0">@John_Doe</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-7.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Addie Bass</h6>
+                                <p class="mb-0">@A_Bass</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-8.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Alberta Robbins</h6>
+                                <p class="mb-0">@AlbeRob12</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-9.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Agnes McGee</h6>
+                                <p class="mb-0">@AgnMcGee</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-10.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Lilla Bardenova</h6>
+                                <p class="mb-0">@lillabardenova</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">John Doe</h6>
+                                <p class="mb-0">@John_Doe</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Addie Bass</h6>
+                                <p class="mb-0">@A_Bass</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-3.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Alberta Robbins</h6>
+                                <p class="mb-0">@AlbeRob12</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-4.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Agnes McGee</h6>
+                                <p class="mb-0">@AgnMcGee</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Lilla Bardenova</h6>
+                                <p class="mb-0">@lillabardenova</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-6.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">John Doe</h6>
+                                <p class="mb-0">@John_Doe</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-7.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Addie Bass</h6>
+                                <p class="mb-0">@A_Bass</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-8.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Alberta Robbins</h6>
+                                <p class="mb-0">@AlbeRob12</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-9.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Agnes McGee</h6>
+                                <p class="mb-0">@AgnMcGee</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="block sm:flex items-center justify-between">
+                            <div class="flex items-center mb-3 sm:mb-0">
+                              <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-10.jpg" alt="User image" />
+                              <div class="grow mx-2">
+                                <h6 class="mb-0">Lilla Bardenova</h6>
+                                <p class="mb-0">@lillabardenova</p>
+                              </div>
+                            </div>
+                            <div class="ml-12 sm:ml-0">
+                              <button class="btn btn-outline-secondary me-1">Decline</button>
+                              <button class="btn btn-primary">Accept</button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="profile-4">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>Gallery</h5>
+                      </div>
+                      <div class="card-body">
+                        <div class="grid grid-cols-12 gap-3">
+                          <div class="col-span-12 md:col-span-6">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-1.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-1.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6">
+                            <div class="grid grid-cols-12 gap-3">
+                              <div class="col-span-12">
+                                <a
+                                  class="group relative block card overflow-hidden mb-0"
+                                  data-fslightbox="gallery"
+                                  href="../assets/images/application/img-gallery-2.jpg"
+                                >
+                                  <img
+                                    src="../assets/images/application/img-gallery-2.jpg"
+                                    alt="img"
+                                    class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  />
+                                  <div
+                                    class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                                  >
+                                    <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-span-12">
+                                <a
+                                  class="group relative block card overflow-hidden mb-0"
+                                  data-fslightbox="gallery"
+                                  href="../assets/images/application/img-gallery-3.jpg"
+                                >
+                                  <img
+                                    src="../assets/images/application/img-gallery-3.jpg"
+                                    alt="img"
+                                    class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  />
+                                  <div
+                                    class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                                  >
+                                    <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-4">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-4.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-4.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-4">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-5.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-5.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-4">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-6.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-6.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-7.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-7.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-8.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-8.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6">
+                            <div class="grid grid-cols-12 gap-3">
+                              <div class="col-span-12">
+                                <a
+                                  class="group relative block card overflow-hidden mb-0"
+                                  data-fslightbox="gallery"
+                                  href="../assets/images/application/img-gallery-2.jpg"
+                                >
+                                  <img
+                                    src="../assets/images/application/img-gallery-2.jpg"
+                                    alt="img"
+                                    class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  />
+                                  <div
+                                    class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                                  >
+                                    <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="col-span-12">
+                                <a
+                                  class="group relative block card overflow-hidden mb-0"
+                                  data-fslightbox="gallery"
+                                  href="../assets/images/application/img-gallery-3.jpg"
+                                >
+                                  <img
+                                    src="../assets/images/application/img-gallery-3.jpg"
+                                    alt="img"
+                                    class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                                  />
+                                  <div
+                                    class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                                  >
+                                    <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-1.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-1.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-4">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-6.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-6.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+    
+                          <div class="col-span-12 md:col-span-4">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-5.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-5.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-4">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-4.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-4.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-8.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-8.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="col-span-12 md:col-span-6">
+                            <a
+                              class="group relative block card overflow-hidden mb-0"
+                              data-fslightbox="gallery"
+                              href="../assets/images/application/img-gallery-7.jpg"
+                            >
+                              <img
+                                src="../assets/images/application/img-gallery-7.jpg"
+                                alt="img"
+                                class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                              />
+                              <div
+                                class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                              >
+                                <i class="ti ti-cloud-download text-4xl leading-none text-white"></i>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 lg:col-span-4 2xl:col-span-3">
+                <div
+                  class="card border-0 shadow-none drp-upgrade-card bg-cover"
+                  style="background-image: url(../assets/images/layout/img-profile-card.jpg)"
+                >
+                  <div class="card-body">
+                    <div
+                      class="flex -space-x-3 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-10 *:h-10 *:hover:z-10 *:border-2 *:border-white"
+                    >
+                      <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                      <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+                      <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                      <img src="../assets/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
+                      <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
+                      <span class="avtar bg-theme-cardbg dark:bg-themedark-cardbg overflow-hidden">
+                        <span class="flex items-center justify-center w-full h-full bg-primary-500/10 text-primary-500">+20</span>
+                      </span>
+                    </div>
+                    <h3 class="my-4 text-dark">
+                      245.3k
+                      <small class="text-muted">Followers</small>
+                    </h3>
+                    <h5 class="mb-0 text-secondary">People Stebin Ben Follows</h5>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header flex items-center justify-between">
+                    <h5>Bio</h5>
+                    <div class="dropdown">
+                      <a
+                        class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                        href="#"
+                        data-pc-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#">Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-0">
+                      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+                      layout.
+                    </p>
+                    <hr class="my-4 border-t border-theme-border dark:border-themedark-border" />
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a
+                          class="flex items-center text-muted hover:text-primary-500 mb-2"
+                          href="https://phoenixcoded.net/"
+                          target="_blank"
+                        >
+                          <div
+                            class="w-8 h-8 rounded-xl inline-flex items-center justify-center text-secondary-500 bg-secondary-500/10 shrink-0 ltr:mr-2 rtl:ml-2 "
+                          >
+                            <i class="material-icons-two-tone bg-secondary-500 h5 leading-none">language</i>
+                          </div>
+                          <span class="truncate w-full grow">https://phoenixcoded.net/</span>
+                        </a>
+                      </li>
+                      <li>
+                        <div class="flex items-center text-muted mb-2">
+                          <div
+                            class="w-8 h-8 rounded-xl inline-flex items-center justify-center text-secondary-500 bg-secondary-500/10 shrink-0 ltr:mr-2 rtl:ml-2 "
+                          >
+                            <i class="material-icons-two-tone bg-secondary-500 h5 leading-none">home</i>
+                          </div>
+                          <span class="truncate w-full grow">Hanoi, Vietnam</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="flex items-center text-muted mb-2">
+                          <div
+                            class="w-8 h-8 rounded-xl inline-flex items-center justify-center text-secondary-500 bg-secondary-500/10 shrink-0 ltr:mr-2 rtl:ml-2 "
+                          >
+                            <i class="material-icons-two-tone bg-secondary-500 h5 leading-none">calendar_today</i>
+                          </div>
+                          <span class="truncate w-full grow">Auguest, 21,1996</span>
+                        </div>
+                      </li>
+                      <li>
+                        <a class="flex items-center text-muted hover:text-primary-500 mb-2" href="mailto:demo123@mail.com" target="_blank">
+                          <div
+                            class="w-8 h-8 rounded-xl inline-flex items-center justify-center text-secondary-500 bg-secondary-500/10 shrink-0 ltr:mr-2 rtl:ml-2 "
+                          >
+                            <i class="material-icons-two-tone bg-secondary-500 h5 leading-none">email</i>
+                          </div>
+                          <span class="truncate w-full grow">demo123@mail.com</span>
+                        </a>
+                      </li>
+                    </ul>
+                    <hr class="my-4 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="grid grid-cols-12 gap-3">
+                      <div class="col-span-6">
+                        <div class="flex items-center">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-primary-500/10 shrink-0">
+                            <i class="material-icons-two-tone bg-primary-500">people_alt</i>
+                          </div>
+                          <div class="grow ltr:ml-3 rtl:mr-3">
+                            <h5 class="mb-0">239k</h5>
+                            <p class="mb-0 text-sm text-muted">Followers</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-span-6">
+                        <div class="flex items-center">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-warning-500/10 shrink-0">
+                            <i class="material-icons-two-tone bg-warning-500">emoji_emotions</i>
+                          </div>
+                          <div class="grow ltr:ml-3 rtl:mr-3">
+                            <h5 class="mb-0">539k</h5>
+                            <p class="mb-0 text-sm text-muted">Following</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-span-6">
+                        <div class="flex items-center">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-danger-500/10 shrink-0">
+                            <i class="material-icons-two-tone bg-danger-500">favorite</i>
+                          </div>
+                          <div class="grow ltr:ml-3 rtl:mr-3">
+                            <h5 class="mb-0">539k</h5>
+                            <p class="mb-0 text-sm text-muted">Like</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-span-6">
+                        <div class="flex items-center">
+                          <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-success-500/10 shrink-0">
+                            <i class="material-icons-two-tone bg-success-500">history_edu</i>
+                          </div>
+                          <div class="grow ltr:ml-3 rtl:mr-3">
+                            <h5 class="mb-0">400</h5>
+                            <p class="mb-0 text-sm text-muted">Post</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header flex items-center justify-between">
+                    <h5>Gallery</h5>
+                    <div class="dropdown">
+                      <a
+                        class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                        href="#"
+                        data-pc-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#">Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body relative z-0">
+                    <div class="grid grid-cols-12 gap-2">
+                      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                        <a
+                          class="group relative block card overflow-hidden mb-0"
+                          data-fslightbox="gallery"
+                          href="../assets/images/application/img-post-1.jpg"
+                        >
+                          <img
+                            src="../assets/images/application/img-post-1.jpg"
+                            alt="img"
+                            class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                          />
+                          <div
+                            class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                          >
+                            <i class="ti ti-search text-4xl leading-none text-white"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                        <a
+                          class="group relative block card overflow-hidden mb-0"
+                          data-fslightbox="gallery"
+                          href="../assets/images/application/img-post-2.jpg"
+                        >
+                          <img
+                            src="../assets/images/application/img-post-2.jpg"
+                            alt="img"
+                            class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                          />
+                          <div
+                            class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                          >
+                            <i class="ti ti-search text-4xl leading-none text-white"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                        <a
+                          class="group relative block card overflow-hidden mb-0"
+                          data-fslightbox="gallery"
+                          href="../assets/images/application/img-post-3.jpg"
+                        >
+                          <img
+                            src="../assets/images/application/img-post-3.jpg"
+                            alt="img"
+                            class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                          />
+                          <div
+                            class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                          >
+                            <i class="ti ti-search text-4xl leading-none text-white"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                        <a
+                          class="group relative block card overflow-hidden mb-0"
+                          data-fslightbox="gallery"
+                          href="../assets/images/application/img-post-4.jpg"
+                        >
+                          <img
+                            src="../assets/images/application/img-post-4.jpg"
+                            alt="img"
+                            class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                          />
+                          <div
+                            class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                          >
+                            <i class="ti ti-search text-4xl leading-none text-white"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                        <a
+                          class="group relative block card overflow-hidden mb-0"
+                          data-fslightbox="gallery"
+                          href="../assets/images/application/img-post-5.jpg"
+                        >
+                          <img
+                            src="../assets/images/application/img-post-5.jpg"
+                            alt="img"
+                            class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                          />
+                          <div
+                            class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                          >
+                            <i class="ti ti-search text-4xl leading-none text-white"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                        <a
+                          class="group relative block card overflow-hidden mb-0"
+                          data-fslightbox="gallery"
+                          href="../assets/images/application/img-post-6.jpg"
+                        >
+                          <img
+                            src="../assets/images/application/img-post-6.jpg"
+                            alt="img"
+                            class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                          />
+                          <div
+                            class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                          >
+                            <i class="ti ti-search text-4xl leading-none text-white"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                        <a
+                          class="group relative block card overflow-hidden mb-0"
+                          data-fslightbox="gallery"
+                          href="../assets/images/application/img-post-2.jpg"
+                        >
+                          <img
+                            src="../assets/images/application/img-post-2.jpg"
+                            alt="img"
+                            class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                          />
+                          <div
+                            class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                          >
+                            <i class="ti ti-search text-4xl leading-none text-white"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                        <a
+                          class="group relative block card overflow-hidden mb-0"
+                          data-fslightbox="gallery"
+                          href="../assets/images/application/img-post-3.jpg"
+                        >
+                          <img
+                            src="../assets/images/application/img-post-3.jpg"
+                            alt="img"
+                            class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                          />
+                          <div
+                            class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                          >
+                            <i class="ti ti-search text-4xl leading-none text-white"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-span-12 md:col-span-6 xl:col-span-4">
+                        <a
+                          class="group relative block card overflow-hidden mb-0"
+                          data-fslightbox="gallery"
+                          href="../assets/images/application/img-post-4.jpg"
+                        >
+                          <img
+                            src="../assets/images/application/img-post-4.jpg"
+                            alt="img"
+                            class="card-img relative z-10 transition-all duration-300 group-hover:scale-[1.2]"
+                          />
+                          <div
+                            class="absolute inset-0 flex items-center justify-center z-20 backdrop-blur-[10px] transition-all duration-300 opacity-0 group-hover:opacity-100"
+                          >
+                            <i class="ti ti-search text-4xl leading-none text-white"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header flex items-center justify-between">
+                    <h5>Contact</h5>
+                    <div class="dropdown">
+                      <a
+                        class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                        href="#"
+                        data-pc-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_vert</i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#">Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                        <div class="grow mx-2">
+                          <p class="mb-0">John Doe</p>
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                            href="#"
+                            data-pc-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_horiz</i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-2.jpg" alt="User image" />
+                        <div class="grow mx-2">
+                          <p class="mb-0">Addie Bass</p>
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                            href="#"
+                            data-pc-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_horiz</i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-3.jpg" alt="User image" />
+                        <div class="grow mx-2">
+                          <p class="mb-0">Alberta Robbins</p>
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                            href="#"
+                            data-pc-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_horiz</i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-4.jpg" alt="User image" />
+                        <div class="grow mx-2">
+                          <p class="mb-0">Agnes McGee</p>
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                            href="#"
+                            data-pc-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_horiz</i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+                        <div class="grow mx-2">
+                          <p class="mb-0">Deepen Handgun</p>
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary dropdown-toggle arrow-none"
+                            href="#"
+                            data-pc-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            <i class="material-icons-two-tone bg-secondary-500 text-lg leading-none">more_horiz</i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <div class="card-header flex items-center justify-between">
+                    <h5>Event</h5>
+                    <button class="btn btn-link-primary btn-sm">See All</button>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      class="card border-0 shadow-none drp-upgrade-card bg-cover mb-0"
+                      style="background-image: url(../assets/images/application/img-event-bg.jpg)"
+                    >
+                      <div class="card-body">
+                        <h6 class="mb-0 mt-4 sm:mt-5 text-white">New Year Celebration</h6>
+                        <p class="mb-2 text-white opacity-75">Today at 11pm</p>
+                        <div
+                          class="flex -space-x-3 overflow-hidden *:flex *:items-center *:justify-center *:rounded-full *:w-10 *:h-10 *:hover:z-10 *:border-2 *:border-white"
+                        >
+                          <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                          <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                          <img src="../assets/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
+                          <span class="avtar bg-theme-cardbg dark:bg-themedark-cardbg overflow-hidden">
+                            <span class="flex items-center justify-center w-full h-full bg-primary-500/10 text-primary-500">+20</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header flex items-center justify-between">
+                    <h5 class="flex items-center gap-2">
+                      Who is follow you
+                      <span class="badge bg-primary-500 text-white rounded-full">4</span>
+                    </h5>
+                    <button class="btn btn-link-primary btn-sm">See All</button>
+                  </div>
+                  <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+                        <div class="grow mx-2">
+                          <h6 class="mb-0">John Doe</h6>
+                          <p class="mb-0">@John_Doe</p>
+                        </div>
+                        <button class="btn btn-outline-secondary">Follow</button>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-5.jpg" alt="User image" />
+                        <div class="grow mx-2">
+                          <h6 class="mb-0">Addie Bass</h6>
+                          <p class="mb-0">@A_Bass</p>
+                        </div>
+                        <button class="btn btn-outline-secondary">Follow</button>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-3.jpg" alt="User image" />
+                        <div class="grow mx-2">
+                          <h6 class="mb-0">Alberta Robbins</h6>
+                          <p class="mb-0">@AlbeRob12</p>
+                        </div>
+                        <button class="btn btn-outline-secondary">Follow</button>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <img class="rounded-full img-fluid w-10" src="../assets/images/user/avatar-4.jpg" alt="User image" />
+                        <div class="grow mx-2">
+                          <h6 class="mb-0">Agnes McGee</h6>
+                          <p class="mb-0">@AgnMcGee</p>
+                        </div>
+                        <button class="btn btn-outline-secondary">Follow</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <div class="card-header flex items-center justify-between">
+                    <h5 class="flex items-center gap-2">
+                      Your page
+                      <span class="badge bg-secondary-500/10 text-secondary-500 rounded-full">2</span>
+                    </h5>
+                    <button class="btn btn-link-primary btn-sm">See All</button>
+                  </div>
+                  <ul class="rounded-lg *:py-4 *:px-[25px] divide-y divide-inherit border-theme-border dark:border-themedark-border">
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-primary-500/10 shrink-0">
+                          <i class="material-icons-two-tone bg-primary-500">brush</i>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <h5 class="mb-0 font-normal">UI Design Team</h5>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-xl inline-flex items-center justify-center bg-warning-500/10 shrink-0">
+                          <i class="material-icons-two-tone bg-warning-500">color_lens</i>
+                        </div>
+                        <div class="grow ltr:ml-3 rtl:mr-3">
+                          <h5 class="mb-0 font-normal">Creative Team</h5>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ sample-page ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <script src="../assets/js/plugins/index.js"></script>
+    <script>
+      var tc = document.querySelectorAll('.horizontal-scroll-block');
+      for (var t = 0; t < tc.length; t++) {
+        new SimpleBar(tc[t]);
+      }
+    </script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

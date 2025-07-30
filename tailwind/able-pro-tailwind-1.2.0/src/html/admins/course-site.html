@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Site'})
+    <!-- [Page specific CSS] start -->
+    <!-- fileupload-custom css -->
+    <link rel="stylesheet" href="../assets/css/plugins/dropzone.min.css" />
+    <link href="https://tutsplus.github.io/syntax-highlighter-demos/highlighters/highlightjs/styles/monokai_sublime.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/plugins/quill.core.css" />
+    <link rel="stylesheet" href="../assets/css/plugins/quill.snow.css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Online Courses', 'breadcrumb-item-active': 'Site'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-x-6">
+          <div class="col-span-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Site</h5>
+              </div>
+              <div class="card-body">
+                <div class="text-center">
+                  <ul class="inline-flex mx-auto flex-wrap justify-center text-center nav-tabs relative">
+                    <li class="absolute top-[26px] z-10 l-[60px] w-[calc(100%_-_120px)] h-px bg-theme-border dark:bg-themedark-border"></li>
+                    <li class="group active">
+                      <a
+                        href="javascript:void(0);"
+                        data-pc-toggle="tab"
+                        data-pc-target="contactDetail"
+                        class="inline-block px-4 md:px-8 py-2 transition-all duration-300 ease-linear"
+                      >
+                        <div class="w-9 h-9 bg-theme-cardbg dark:bg-themedark-cardbg relative z-20 inline-flex items-center justify-center rounded-full group-[.active]:bg-primary group-[.active]:text-white border border-theme-border dark:border-themedark-border transition-all duration-300 ease-linear">
+                          <span>1</span>
+                        </div>
+                        <span class="mt-2 hidden sm:block">Theme</span>
+                      </a>
+                    </li>
+                    <li class="group">
+                      <a
+                        href="javascript:void(0);"
+                        data-pc-toggle="tab"
+                        data-pc-target="jobDetail"
+                        class="inline-block px-4 md:px-8 py-2 transition-all duration-300 ease-linear"
+                      >
+                      <div class="w-9 h-9 bg-theme-cardbg dark:bg-themedark-cardbg relative z-20 inline-flex items-center justify-center rounded-full group-[.active]:bg-primary group-[.active]:text-white border border-theme-border dark:border-themedark-border transition-all duration-300 ease-linear">
+                        <span>2</span>
+                      </div>
+                      <span class="mt-2 hidden sm:block">Domain</span>
+                      </a>
+                    </li>
+                    <li class="group">
+                      <a
+                        href="javascript:void(0);"
+                        data-pc-toggle="tab"
+                        data-pc-target="educationDetail"
+                        class="inline-block px-4 md:px-8 py-2 transition-all duration-300 ease-linear"
+                      >
+                      <div class="w-9 h-9 bg-theme-cardbg dark:bg-themedark-cardbg relative z-20 inline-flex items-center justify-center rounded-full group-[.active]:bg-primary group-[.active]:text-white border border-theme-border dark:border-themedark-border transition-all duration-300 ease-linear">
+                        <span>3</span>
+                      </div>
+                      <span class="mt-2 hidden sm:block">Bio</span>
+                      </a>
+                    </li>
+                    <li class="group">
+                      <a
+                        href="javascript:void(0);"
+                        data-pc-toggle="tab"
+                        data-pc-target="finish"
+                        class="inline-block px-4 md:px-8 py-2 transition-all duration-300 ease-linear"
+                      >
+                        <div class="w-9 h-9 bg-theme-cardbg dark:bg-themedark-cardbg relative z-20 inline-flex items-center justify-center rounded-full group-[.active]:bg-primary group-[.active]:text-white border border-theme-border dark:border-themedark-border transition-all duration-300 ease-linear">
+                          <span>4</span>
+                        </div>
+                        <span class="mt-2 hidden sm:block">Page</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-5 tab-content">
+                  <div class="block tab-pane" id="contactDetail">
+                    <h5>Logo & Branding</h5>
+                    <p class="text-muted mb-4"
+                      >Incorporate a custom logo and favicon, and fine-tune your school thumbnail to enhance its appearance and
+                      branding</p
+                    >
+                    <div class="grid grid-cols-12 gap-x-6 g-3">
+                      <div class="col-span-12 md:col-span-4">
+                        <p class="mb-2">Logo & Branding</p>
+                        <form action="../assets/json/file-upload.php" class="dropzone">
+                          <div class="fallback">
+                            <input name="file" type="file" multiple />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                        <p class="mb-2">Thumbnail</p>
+                        <form action="../assets/json/file-upload.php" class="dropzone">
+                          <div class="fallback">
+                            <input name="file" type="file" multiple />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                        <p class="mb-2">Favicon</p>
+                        <form action="../assets/json/file-upload.php" class="dropzone">
+                          <div class="fallback">
+                            <input name="file" type="file" multiple />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="flex items-center mb-4">
+                      <div class="shrink-0">
+                        <img src="../assets/images/admin/img-star.png" alt="img" class="img-fluid" />
+                      </div>
+                      <div class="grow ltr:ml-3 rtl:mr-3">
+                        <h6 class="mb-1">Able pro Branding</h6>
+                        <p class="mb-0 text-muted"
+                          >Personalize your school and eliminate Able Pro branding from your school website, emails, and products. To
+                          access this feature, upgrade to the Professional plan.</p
+                        >
+                      </div>
+                    </div>
+                    <h5>Font Family</h5>
+                    <p class="text-muted mb-4">Change the font used across your school.</p>
+                    <div class="card border-theme-border dark:border-themedark-border">
+                      <div class="card-body">
+                        <select class="form-select w-auto mb-3">
+                          <option selected>Open Sans</option>
+                          <option value="1">Inter</option>
+                          <option value="2">Popince</option>
+                          <option value="3">Roboto</option>
+                        </select>
+                        <p class="mb-0 text-muted"
+                          >Make your school your own and remove Teachable branding from your school website, emails, and all
+                          products. Upgrade to the Professional plan to use this feature.</p
+                        >
+                      </div>
+                    </div>
+                    <h5>Color Palette</h5>
+                    <p class="text-muted mb-4"
+                      >Select a predefined color scheme to establish consistency across your site and products. Alternatively, customize
+                      your own color palette to reflect your unique branding and preferences.</p
+                    >
+                    <div class="card border border-theme-border dark:border-themedark-border">
+                      <div class="card-body">
+                        <div class="grid grid-cols-12 gap-6 mb-4">
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <div class="set-color-block p-5 rounded-lg border border-transparent hover:border-theme-border dark:hover:border-themedark-border transition-all duration-300 cursor-pointer">
+                              <h6 class="mb-1">Preset 1</h6>
+                              <p class="text-muted text-sm mb-2">Theme Color</p>
+                              <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                                <div class="flex items-center justify-center gap-2">
+                                  <i class="fas fa-circle text-[26px] text-green-600"></i>
+                                  <i class="fas fa-circle text-[26px] text-green-400"></i>
+                                  <i class="fas fa-circle text-[26px] text-green-200"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <div class="set-color-block p-5 rounded-lg border border-transparent hover:border-theme-border dark:hover:border-themedark-border transition-all duration-300 cursor-pointer">
+                              <h6 class="mb-1">Preset 2</h6>
+                              <p class="text-muted text-sm mb-2">Theme Color</p>
+                              <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                                <div class="flex items-center justify-center gap-2">
+                                  <i class="fas fa-circle text-[26px] text-yellow-600"></i>
+                                  <i class="fas fa-circle text-[26px] text-yellow-400"></i>
+                                  <i class="fas fa-circle text-[26px] text-yellow-200"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <div class="set-color-block p-5 rounded-lg border border-theme-border dark:border-themedark-border hover:border-theme-border dark:hover:border-themedark-border transition-all duration-300 cursor-pointer">
+                              <h6 class="mb-1">Preset 3</h6>
+                              <p class="text-muted text-sm mb-2">Theme Color</p>
+                              <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                                <div class="flex items-center justify-center gap-2">
+                                  <i class="fas fa-circle text-[26px] text-blue-600"></i>
+                                  <i class="fas fa-circle text-[26px] text-blue-400"></i>
+                                  <i class="fas fa-circle text-[26px] text-blue-200"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <div class="set-color-block p-5 rounded-lg border border-transparent hover:border-theme-border dark:hover:border-themedark-border transition-all duration-300 cursor-pointer">
+                              <h6 class="mb-1">Preset 4</h6>
+                              <p class="text-muted text-sm mb-2">Theme Color</p>
+                              <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                                <div class="flex items-center justify-center gap-2">
+                                  <i class="fas fa-circle text-[26px] text-gray-600"></i>
+                                  <i class="fas fa-circle text-[26px] text-gray-400"></i>
+                                  <i class="fas fa-circle text-[26px] text-gray-200"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="grid grid-cols-12 gap-6">
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <h6 class="mb-1">Nav Bar & Footer Background</h6>
+                            <p class="text-muted text-sm mb-2">Fixed, scrolling & email</p>
+                            <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                              <div class="flex items-center justify-start gap-2">
+                                <i class="fas fa-circle text-[26px] text-green-400"></i>
+                                <p class="mb-0">#96D4BF</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <h6 class="mb-1">Navigation Bar Link</h6>
+                            <p class="text-muted text-sm mb-2">Links when nav bar is fixed</p>
+                            <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                              <div class="flex items-center justify-start gap-2">
+                                <i class="fas fa-circle text-[26px] text-red-500"></i>
+                                <p class="mb-0">#FF602E</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <h6 class="mb-1">Navigation Bar</h6>
+                            <p class="text-muted text-sm mb-2">Links when nav bar is scrolling</p>
+                            <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                              <div class="flex items-center justify-start gap-2">
+                                <i class="fas fa-circle text-[26px] text-green-200"></i>
+                                <p class="mb-0">#96C9D4</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <h6 class="mb-1">Homepage Headings & Subtitle</h6>
+                            <p class="text-muted text-sm mb-2">When a background is set</p>
+                            <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                              <div class="flex items-center justify-start gap-2">
+                                <i class="fas fa-circle text-[26px] text-gray-400"></i>
+                                <p class="mb-0">#A7A6A6</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <h6 class="mb-1">Course Page Heading & Subtitle</h6>
+                            <p class="text-muted text-sm mb-2">When a Background is set</p>
+                            <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                              <div class="flex items-center justify-start gap-2">
+                                <i class="fas fa-circle text-[26px] text-gray-200"></i>
+                                <p class="mb-0">#E6F5F0</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <h6 class="mb-1">Headings</h6>
+                            <p class="text-muted text-sm mb-2">&lt;h2&gt; to &lt;h5&gt;</p>
+                            <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                              <div class="flex items-center justify-start gap-2">
+                                <i class="fas fa-circle text-[26px] text-gray-500"></i>
+                                <p class="mb-0">#737373</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <h6 class="mb-1">Body text</h6>
+                            <p class="text-muted text-sm mb-2">&lt;body&gt; , &lt;p&gt;</p>
+                            <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                              <div class="flex items-center justify-start gap-2">
+                                <i class="fas fa-circle text-[26px] text-gray-800"></i>
+                                <p class="mb-0">#3A3A3A</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                            <h6 class="mb-1">Buttons & Links</h6>
+                            <p class="text-muted text-sm mb-2">&lt;a&gt; , &lt;button&gt;</p>
+                            <div class="card border p-4 border-theme-border dark:border-themedark-border shadow-none mb-0">
+                              <div class="flex items-center justify-start gap-2">
+                                <i class="fas fa-circle text-[26px] text-green-500"></i>
+                                <p class="mb-0">#00C853</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="jobDetail">
+                    <div class="flex items-center justify-center">
+                      <div class="w-[500px] max-w-full">
+                        <div class="card border text-center">
+                          <div class="card-body">
+                            <h5 class="mb-3">Confirm your domain</h5>
+                            <p class="text-muted mb-4">If you edit this domain, your school URL will update the next time you log out.</p>
+                            <img src="../assets/images/admin/img-domain.png" alt="images" class="img-fluid mb-4 mx-auto" />
+                            <div class="mb-3 text-start">
+                              <label class="form-label">URL</label>
+                              <div class="flex items-center">
+                                <div class="grow ltr:mr-3 rtl:ml-3">
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="https://admin123-20" />
+                                    <span class="input-group-text">.ablepro.com</span>
+                                  </div>
+                                </div>
+                                <div class="shrink-0">
+                                  <button class="btn btn-primary">Confirm</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="educationDetail">
+                    <div class="text-right mb-3">
+                      <button type="button" class="btn btn-primary" data-pc-toggle="modal" data-pc-target="#exampleModal">
+                        Add Bio
+                      </button>
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Bio</h5>
+                            <button type="button" data-pc-modal-dismiss="#exampleModal" class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500">
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="flex flex-col gap-3 items-center mb-4">
+                              <img src="../assets/images/admin/img-add-user.png" alt="img" class="img-fluid" />
+                              <button class="btn btn-sm btn-outline-secondary">Add Image</button>
+                            </div>
+                            <div dir="ltr">
+                              <div id="pc-quil-1" style="height: 125px"></div>
+                            </div>
+                            <div class="mt-3 text-center">
+                              <button data-pc-modal-dismiss="#exampleModal" class="btn btn-primary">Add Bio</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card table-card border border-theme-border dark:border-themedark-border shadow-none">
+                      <div class="card-body pb-0">
+                        <div class="table-responsive">
+                          <table class="table table-hover mb-0" id="pc-dt-simple">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Date/Time</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="flex items-center w-44">
+                                    <div class="shrink-0">
+                                      <img src="../assets/images/user/avatar-1.jpg" alt="user image" class="w-10 rounded-full" />
+                                    </div>
+                                    <div class="grow ltr:ml-3 rtl:mr-3">
+                                      <h6 class="mb-0">Airi Satou</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>2023/09/12 <span class="text-muted text-sm block">09:05 PM</span></td>
+                                <td>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-eye text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-edit text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-trash text-xl leading-none"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="flex items-center  w-44">
+                                    <div class="shrink-0">
+                                      <img src="../assets/images/user/avatar-2.jpg" alt="user image" class="w-10 rounded-full" />
+                                    </div>
+                                    <div class="grow ltr:ml-3 rtl:mr-3">
+                                      <h6 class="mb-0">Ashton Cox</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>2023/12/24 <span class="text-muted text-sm block">09:05 PM</span></td>
+                                <td>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-eye text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-edit text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-trash text-xl leading-none"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="flex items-center  w-44">
+                                    <div class="shrink-0">
+                                      <img src="../assets/images/user/avatar-3.jpg" alt="user image" class="w-10 rounded-full" />
+                                    </div>
+                                    <div class="grow ltr:ml-3 rtl:mr-3">
+                                      <h6 class="mb-0">Bradley Greer</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>2022/09/19 <span class="text-muted text-sm block">09:05 PM</span></td>
+                                <td>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-eye text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-edit text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-trash text-xl leading-none"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="flex items-center  w-44">
+                                    <div class="shrink-0">
+                                      <img src="../assets/images/user/avatar-4.jpg" alt="user image" class="w-10 rounded-full" />
+                                    </div>
+                                    <div class="grow ltr:ml-3 rtl:mr-3">
+                                      <h6 class="mb-0">Brielle Williamson</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>2022/08/22 <span class="text-muted text-sm block">09:05 PM</span></td>
+                                <td>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-eye text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-edit text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-trash text-xl leading-none"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="flex items-center  w-44">
+                                    <div class="shrink-0">
+                                      <img src="../assets/images/user/avatar-5.jpg" alt="user image" class="w-10 rounded-full" />
+                                    </div>
+                                    <div class="grow ltr:ml-3 rtl:mr-3">
+                                      <h6 class="mb-0">Airi Satou</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>2023/09/12 <span class="text-muted text-sm block">09:05 PM</span></td>
+                                <td>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-eye text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-edit text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-trash text-xl leading-none"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="flex items-center  w-44">
+                                    <div class="shrink-0">
+                                      <img src="../assets/images/user/avatar-6.jpg" alt="user image" class="w-10 rounded-full" />
+                                    </div>
+                                    <div class="grow ltr:ml-3 rtl:mr-3">
+                                      <h6 class="mb-0">Ashton Cox</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>2023/12/24 <span class="text-muted text-sm block">09:05 PM</span></td>
+                                <td>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-eye text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-edit text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-trash text-xl leading-none"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="flex items-center  w-44">
+                                    <div class="shrink-0">
+                                      <img src="../assets/images/user/avatar-7.jpg" alt="user image" class="w-10 rounded-full" />
+                                    </div>
+                                    <div class="grow ltr:ml-3 rtl:mr-3">
+                                      <h6 class="mb-0">Bradley Greer</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>2022/09/19 <span class="text-muted text-sm block">09:05 PM</span></td>
+                                <td>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-eye text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-edit text-xl leading-none"></i>
+                                  </a>
+                                  <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                    <i class="ti ti-trash text-xl leading-none"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden tab-pane" id="finish">
+                    <div class="table-responsive">
+                      <table class="table table-hover mb-0">
+                        <thead>
+                          <tr>
+                            <th>Page Title</th>
+                            <th>URL</th>
+                            <th>State</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Main Page</td>
+                            <td>/main.page</td>
+                            <td><span class="badge bg-success-500 text-white">Published</span></td>
+                            <td>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-eye text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-edit text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-trash text-xl leading-none"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Login Page</td>
+                            <td>/login-page.design</td>
+                            <td><span class="badge bg-success-500 text-white">Published</span></td>
+                            <td>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-eye text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-edit text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-trash text-xl leading-none"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Privacy Policy</td>
+                            <td>/privacy-policy</td>
+                            <td><span class="badge bg-danger-500 text-white">Unpublished</span></td>
+                            <td>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-eye text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-edit text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-trash text-xl leading-none"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Main Page</td>
+                            <td>/main.page</td>
+                            <td><span class="badge bg-success-500 text-white">Published</span></td>
+                            <td>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-eye text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-edit text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-trash text-xl leading-none"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Login Page</td>
+                            <td>/login-page.design</td>
+                            <td><span class="badge bg-success-500 text-white">Published</span></td>
+                            <td>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-eye text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-edit text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-trash text-xl leading-none"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Privacy Policy</td>
+                            <td>/privacy-policy</td>
+                            <td><span class="badge bg-danger-500 text-white">Unpublished</span></td>
+                            <td>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-eye text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-edit text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-trash text-xl leading-none"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Main Page</td>
+                            <td>/main.page</td>
+                            <td><span class="badge bg-success-500 text-white">Published</span></td>
+                            <td>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-eye text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-edit text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-trash text-xl leading-none"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Login Page</td>
+                            <td>/login-page.design</td>
+                            <td><span class="badge bg-success-500 text-white">Published</span></td>
+                            <td>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-eye text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-edit text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-trash text-xl leading-none"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Privacy Policy</td>
+                            <td>/privacy-policy</td>
+                            <td><span class="badge bg-danger-500 text-white">Unpublished</span></td>
+                            <td>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-eye text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-edit text-xl leading-none"></i>
+                              </a>
+                              <a href="#" class="w-8 h-8 rounded-xl inline-flex items-center justify-center btn-link-secondary">
+                                <i class="ti ti-trash text-xl leading-none"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ sample-page ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <!-- file-upload Js -->
+    <script src="../assets/js/plugins/dropzone-amd-module.min.js"></script>
+    <script src="../assets/js/plugins/quill.js"></script>
+    <script>
+      var quill = new Quill('#pc-quil-1', {
+        modules: {
+          toolbar: [
+            [
+              {
+                header: [1, 2, false]
+              }
+            ],
+            ['bold', 'italic', 'underline'],
+            ['image', 'code-block']
+          ]
+        },
+        placeholder: '',
+        theme: 'snow'
+      });
+    </script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

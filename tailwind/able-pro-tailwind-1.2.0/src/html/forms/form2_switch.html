@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Switch'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Forms', 'breadcrumb-item-active': 'Switch'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- [ form-element ] start -->
+          <div class="col-span-12 lg:col-span-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Inline Switch</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                      <input type="checkbox" class="form-check-input input-primary" id="customCheckinl1" />
+                      <label class="form-check-label" for="customCheckinl1">Inline 1</label>
+                    </div>
+                    <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                      <input type="checkbox" class="form-check-input input-primary" id="customCheckinl2" />
+                      <label class="form-check-label" for="customCheckinl2">Inline 2</label>
+                    </div>
+                    <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                      <input type="checkbox" class="form-check-input input-primary" id="customCheckinl3" />
+                      <label class="form-check-label" for="customCheckinl3">Inline 3</label>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-muted mb-3">With Checked State</label>
+                    <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                      <input type="checkbox" class="form-check-input input-primary" id="customCheckinl4" checked />
+                      <label class="form-check-label" for="customCheckinl4">Inline 1</label>
+                    </div>
+                    <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                      <input type="checkbox" class="form-check-input input-primary" id="customCheckinl5" />
+                      <label class="form-check-label" for="customCheckinl5">Inline 2</label>
+                    </div>
+                    <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                      <input type="checkbox" class="form-check-input input-primary" id="customCheckinl6" checked />
+                      <label class="form-check-label" for="customCheckinl6">Inline 3</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5>Switch in Horizontal Form</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label pt-0">Switches</label>
+                    <div class="col-span-12 sm:col-span-9">
+                      <div class="form-check form-switch custom-switch-v1 mb-2">
+                        <input type="checkbox" class="form-check-input input-primary" id="customCheckdefh1" />
+                        <label class="form-check-label" for="customCheckdefh1">Default</label>
+                      </div>
+                      <div class="form-check form-switch custom-switch-v1 mb-2">
+                        <input type="checkbox" class="form-check-input input-primary" id="customCheckdefh2" />
+                        <label class="form-check-label" for="customCheckdefh2">Option 2</label>
+                      </div>
+                      <div class="form-check form-switch custom-switch-v1 mb-2">
+                        <input type="checkbox" class="form-check-input input-primary" id="customCheckdefh3" disabled />
+                        <label class="form-check-label" for="customCheckdefh3">Disabled</label>
+                      </div>
+                      <div class="form-check form-switch custom-switch-v1 mb-2">
+                        <input type="checkbox" class="form-check-input input-primary" id="customCheckdefh4" checked />
+                        <label class="form-check-label" for="customCheckdefh4">Checked</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label pt-0">Inline Switches</label>
+                    <div class="col-span-12 sm:col-span-9">
+                      <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                        <input type="checkbox" class="form-check-input input-primary" id="customCheckinlh1" />
+                        <label class="form-check-label" for="customCheckinlh1">Inline 1</label>
+                      </div>
+                      <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                        <input type="checkbox" class="form-check-input input-primary" id="customCheckinlh2" />
+                        <label class="form-check-label" for="customCheckinlh2">Inline 2</label>
+                      </div>
+                      <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                        <input type="checkbox" class="form-check-input input-primary" id="customCheckinlh3" />
+                        <label class="form-check-label" for="customCheckinlh3">Inline 3</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 sm:text-end col-form-label pt-0">Inline States</label>
+                    <div class="col-span-12 sm:col-span-9">
+                      <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                        <input type="checkbox" class="form-check-input input-primary" id="customCheckinlh4" checked />
+                        <label class="form-check-label" for="customCheckinlh4">Inline 1</label>
+                      </div>
+                      <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                        <input type="checkbox" class="form-check-input input-primary" id="customCheckinlh5" />
+                        <label class="form-check-label" for="customCheckinlh5">Inline 2</label>
+                      </div>
+                      <div class="form-check form-switch custom-switch-v1 !inline-flex mr-2">
+                        <input type="checkbox" class="form-check-input input-primary" id="customCheckinlh6" checked />
+                        <label class="form-check-label" for="customCheckinlh6">Inline 3</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Sizing</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label class="mb-2">Small Switches</label>
+                    <div class="form-check form-switch switch-sm">
+                      <input type="checkbox" class="form-check-input input-primary text-sm" id="customCheckdefcol1" />
+                      <label class="form-check-label" for="customCheckdefcol1">Default</label>
+                    </div>
+                    <div class="form-check form-switch switch-sm">
+                      <input type="checkbox" class="form-check-input input-primary text-sm" id="customCheckdefcol2" />
+                      <label class="form-check-label" for="customCheckdefcol2">Option 2</label>
+                    </div>
+                    <div class="form-check form-switch switch-sm">
+                      <input type="checkbox" class="form-check-input input-primary text-sm" id="customCheckdefcol3" disabled />
+                      <label class="form-check-label" for="customCheckdefcol3">Disabled</label>
+                    </div>
+                    <div class="form-check form-switch switch-sm">
+                      <input type="checkbox" class="form-check-input input-primary text-sm" id="customCheckdefcol4" checked />
+                      <label class="form-check-label" for="customCheckdefcol4">Checked</label>
+                    </div>
+                    <small class="form-text text-muted">Some help text goes here</small>
+                  </div>
+                  <div class="mb-3">
+                    <label class="mb-2">Large Switches</label>
+                    <div class="form-check form-switch switch-lg">
+                      <input type="checkbox" class="form-check-input input-primary text-lg" id="customCheckdefout1" />
+                      <label class="form-check-label" for="customCheckdefout1">Default</label>
+                    </div>
+                    <div class="form-check form-switch switch-lg">
+                      <input type="checkbox" class="form-check-input input-primary text-lg" id="customCheckdefout2" />
+                      <label class="form-check-label" for="customCheckdefout2">Option 2</label>
+                    </div>
+                    <div class="form-check form-switch switch-lg">
+                      <input type="checkbox" class="form-check-input input-primary text-lg" id="customCheckdefout3" disabled />
+                      <label class="form-check-label" for="customCheckdefout3">Disabled</label>
+                    </div>
+                    <div class="form-check form-switch switch-lg">
+                      <input type="checkbox" class="form-check-input input-primary text-lg" id="customCheckdefout4" checked />
+                      <label class="form-check-label" for="customCheckdefout4">Checked</label>
+                    </div>
+                    <small class="form-text text-muted">Some help text goes here</small>
+                  </div>
+                  <div class="mb-3">
+                    <label class="mb-2">Color States</label>
+                    <div class="form-check form-switch">
+                      <input
+                        type="checkbox"
+                        class="form-check-input checked:!bg-primary-500 checked:!border-primary-500"
+                        id="customCheckc1"
+                        checked
+                      />
+                      <label class="form-check-label" for="customCheckc1">primary</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input
+                        type="checkbox"
+                        class="form-check-input checked:!bg-secondary-500 checked:!border-secondary-500"
+                        id="customCheckc2"
+                        checked
+                      />
+                      <label class="form-check-label" for="customCheckc2">secondary</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input
+                        type="checkbox"
+                        class="form-check-input checked:!bg-success-500 checked:!border-success-500"
+                        id="customCheckc3"
+                        checked
+                      />
+                      <label class="form-check-label" for="customCheckc3">success</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input
+                        type="checkbox"
+                        class="form-check-input checked:!bg-danger-500 checked:!border-danger-500"
+                        id="customCheckc4"
+                        checked
+                      />
+                      <label class="form-check-label" for="customCheckc4">danger</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input
+                        type="checkbox"
+                        class="form-check-input checked:!bg-warning-500 checked:!border-warning-500"
+                        id="customCheckc5"
+                        checked
+                      />
+                      <label class="form-check-label" for="customCheckc5">warning</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input
+                        type="checkbox"
+                        class="form-check-input checked:!bg-info-500 checked:!border-info-500"
+                        id="customCheckc6"
+                        checked
+                      />
+                      <label class="form-check-label" for="customCheckc6">info</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input
+                        type="checkbox"
+                        class="form-check-input checked:!bg-dark-500 checked:!border-dark-500"
+                        id="customCheckc7"
+                        checked
+                      />
+                      <label class="form-check-label" for="customCheckc7">dark</label>
+                    </div>
+                    <small class="form-text text-muted">Some help text goes here</small>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- [ form-element ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

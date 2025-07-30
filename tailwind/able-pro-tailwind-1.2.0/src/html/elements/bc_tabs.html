@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Tabs & Pills'}) @@include('../layouts/head-css.html')
+</head>
+
+<body>
+  <!-- [ Main Content ] start -->
+  @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+  <section class="pt-20 xl:pt-28">
+    <div class="container">
+      <div class="grid grid-cols-12 gap-6">
+        <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+        <div class="col-span-12 xl:col-span-9">
+          <div class="grid grid-cols-12 gap-6">
+            <!-- prettier-ignore -->
+            @@include('../layouts/component/component-breadcrumb.html',{title:'Tabs & Pills',text:'Takes the basic nav from above to generate a tabbed interface.'})
+          </div>
+          <!-- [ Main Content ] start -->
+          <div class="grid grid-cols-12 gap-x-6">
+            <!-- [ demo-modal ] start -->
+            <div class="col-span-12">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Basic Tabs</h5>
+                </div>
+                <div class="card-body">
+                  <ul
+                    class="flex flex-wrap w-full text-center border-b border-theme-border dark:border-themedark-border nav-tabs">
+                    <li class="group active">
+                      <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="basictab-1"
+                        class="inline-block px-4 py-2 transition-all duration-300 ease-linear rounded-t-md text-primary-500 group-[.active]:text-theme-bodycolor dark:group-[.active]:text-themedark-bodycolor border border-transparent group-[.active]:border-theme-border dark:group-[.active]:border-themedark-border group-[.active]:border-b-theme-cardbg dark:group-[.active]:border-b-themedark-cardbg -mb-[1px]">
+                        Home
+                      </a>
+                    </li>
+                    <li class="group">
+                      <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="basictab-2"
+                        class="inline-block px-4 py-2 transition-all duration-300 ease-linear rounded-t-md text-primary-500 group-[.active]:text-theme-bodycolor dark:group-[.active]:text-themedark-bodycolor border border-transparent group-[.active]:border-theme-border dark:group-[.active]:border-themedark-border group-[.active]:border-b-theme-cardbg dark:group-[.active]:border-b-themedark-cardbg -mb-[1px]">
+                        Profile
+                      </a>
+                    </li>
+                    <li class="group">
+                      <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="basictab-3"
+                        class="inline-block px-4 py-2 transition-all duration-300 ease-linear rounded-t-md text-primary-500 group-[.active]:text-theme-bodycolor dark:group-[.active]:text-themedark-bodycolor border border-transparent group-[.active]:border-theme-border dark:group-[.active]:border-themedark-border group-[.active]:border-b-theme-cardbg dark:group-[.active]:border-b-themedark-cardbg -mb-[1px]">
+                        Contact
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="mt-5 tab-content">
+                    <div class="block tab-pane" id="basictab-1">
+                      <p class="mb-0">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                      </p>
+                    </div>
+                    <div class="hidden tab-pane" id="basictab-2">
+                      <p class="mb-0">
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like
+                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                        their infancy.
+                      </p>
+                    </div>
+                    <div class="hidden tab-pane" id="basictab-3">
+                      <p class="mb-0">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or words which don't look even slightly believable.
+                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                        embarrassing hidden in the middle of text.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h5>Basic Pills</h5>
+                </div>
+                <div class="card-body">
+                  <ul class="flex flex-wrap w-full text-center nav-tabs">
+                    <li class="group active">
+                      <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="basicpills-1"
+                        class="inline-block px-4 py-2 transition-all duration-300 ease-linear rounded-lg text-primary-500 group-[.active]:bg-primary-500 group-[.active]:text-white">
+                        Home
+                      </a>
+                    </li>
+                    <li class="group">
+                      <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="basicpills-2"
+                        class="inline-block px-4 py-2 transition-all duration-300 ease-linear rounded-lg text-primary-500 group-[.active]:bg-primary-500 group-[.active]:text-white">
+                        Profile
+                      </a>
+                    </li>
+                    <li class="group">
+                      <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="basicpills-3"
+                        class="inline-block px-4 py-2 transition-all duration-300 ease-linear rounded-lg text-primary-500 group-[.active]:bg-primary-500 group-[.active]:text-white">
+                        Contact
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="mt-5 tab-content">
+                    <div class="block tab-pane" id="basicpills-1">
+                      <p class="mb-0">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                      </p>
+                    </div>
+                    <div class="hidden tab-pane" id="basicpills-2">
+                      <p class="mb-0">
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like
+                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                        their infancy.
+                      </p>
+                    </div>
+                    <div class="hidden tab-pane" id="basicpills-3">
+                      <p class="mb-0">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or words which don't look even slightly believable.
+                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                        embarrassing hidden in the middle of text.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h5>Vertical Pills</h5>
+                </div>
+                <div class="card-body">
+                  <div class="grid grid-cols-12 gap-6">
+                    <div class="col-span-12 md:col-span-3">
+                      <ul class="flex flex-col w-full text-center nav-tabs">
+                        <li class="group grow active">
+                          <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="verticalpills-1"
+                            class="w-full inline-block px-4 py-2 transition-all duration-300 ease-linear rounded-lg text-primary-500 group-[.active]:bg-primary-500 group-[.active]:text-white">
+                            Home
+                          </a>
+                        </li>
+                        <li class="group grow">
+                          <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="verticalpills-2"
+                            class="w-full inline-block px-4 py-2 transition-all duration-300 ease-linear rounded-lg text-primary-500 group-[.active]:bg-primary-500 group-[.active]:text-white">
+                            Profile
+                          </a>
+                        </li>
+                        <li class="group grow">
+                          <a href="javascript:void(0);" data-pc-toggle="tab" data-pc-target="verticalpills-3"
+                            class="w-full inline-block px-4 py-2 transition-all duration-300 ease-linear rounded-lg text-primary-500 group-[.active]:bg-primary-500 group-[.active]:text-white">
+                            Contact
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-span-12 md:col-span-9">
+                      <div class="tab-content">
+                        <div class="block tab-pane" id="verticalpills-1">
+                          <p class="mb-0">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                            but also the leap into electronic typesetting, remaining essentially unchanged.
+                          </p>
+                        </div>
+                        <div class="hidden tab-pane" id="verticalpills-2">
+                          <p class="mb-0">
+                            It is a long established fact that a reader will be distracted by the readable content of a page
+                            when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look like
+                            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                            their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                            their infancy.
+                          </p>
+                        </div>
+                        <div class="hidden tab-pane" id="verticalpills-3">
+                          <p class="mb-0">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                            alteration in some form, by injected humour, or words which don't look even slightly believable.
+                            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                            embarrassing hidden in the middle of text.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>              
+                </div>
+              </div>
+            </div>
+            <!-- [ demo-modal ] end -->
+          </div>
+          <!-- [ Main Content ] end -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+  @@include('../layouts/customizer.html')
+</body>
+
+</html>

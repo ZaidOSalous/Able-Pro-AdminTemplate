@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Collapse'})
+    <!-- [Page specific CSS] start -->
+    <link href="../assets/css/plugins/animate.min.css" rel="stylesheet" type="text/css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+
+  <body>
+    <!-- [ Main Content ] start -->
+    @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+    <section class="pt-20 xl:pt-28">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+          <div class="col-span-12 xl:col-span-9">
+            <div class="grid grid-cols-12 gap-6">
+              <!-- prettier-ignore -->
+              @@include('../layouts/component/component-breadcrumb.html',{title:'Collapse',text:'Toggle the visibility of content across your project with a few classes and our JavaScript plugins.'})
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ basic-collapse ] start -->
+              <div class="col-span-12">
+                <h5 class="mb-3">Basic Collapse</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="pc-component">
+                  <div class="card overflow-hidden">
+                    <div class="card-header">
+                      <a
+                        class="btn btn-primary mt-1 mx-1"
+                        data-pc-toggle="collapse"
+                        href="#collapseExample"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="collapseExample"
+                      >
+                        Link with href
+                      </a>
+                      <button
+                        class="btn btn-primary mt-1 mx-1"
+                        type="button"
+                        data-pc-toggle="collapse"
+                        data-pc-target="#collapseExample"
+                        aria-expanded="false"
+                        aria-controls="collapseExample"
+                      >
+                        Button with data-pc-target
+                      </button>
+                    </div>
+                    <div class="hidden" id="collapseExample">
+                      <div class="card-body">
+                        <p class="mb-0">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+                          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ basic-collapse ] end -->
+              <!-- [ multiple-collapse ] start -->
+              <div class="col-span-12 mb-3">
+                <h5 class="mb-3">Multiple Targets</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="pc-component">
+                  <a
+                    class="btn mb-1 btn-primary"
+                    data-pc-toggle="collapse"
+                    href="#multiCollapseExample1"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="multiCollapseExample1"
+                  >
+                    Toggle first element
+                  </a>
+                  <button
+                    class="btn mb-1 btn-primary mx-1"
+                    type="button"
+                    data-pc-toggle="collapse"
+                    data-pc-target="#multiCollapseExample2"
+                    aria-expanded="false"
+                    aria-controls="multiCollapseExample2"
+                  >
+                    Toggle second element
+                  </button>
+                  <button
+                    class="btn mb-1 btn-primary"
+                    type="button"
+                    data-pc-toggle="collapse"
+                    data-pc-target=".multi-collapse"
+                    aria-expanded="false"
+                    aria-controls="multiCollapseExample1 multiCollapseExample2"
+                  >
+                    Toggle both elements
+                  </button>
+                  <div class="grid grid-cols-12 gap-6">
+                    <div class="col-span-12 sm:col-span-6">
+                      <div class="mt-2 hidden multi-collapse" id="multiCollapseExample1">
+                        <div class="card">
+                          <div class="card-body">
+                            <p class="mb-0">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+                              keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-span-12 sm:col-span-6">
+                      <div class="mt-2 hidden multi-collapse" id="multiCollapseExample2">
+                        <div class="card">
+                          <div class="card-body">
+                            <p class="mb-0">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+                              keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ multiple-collapse ] end -->
+              <!-- [ accordion-collapse ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Accordion</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="accordion card" id="accordionExample">
+                      <div class="accordion-item">
+                        <button
+                          class="card-header accordion-header show"
+                          id="headingOne"
+                          type="button"
+                          data-pc-toggle="collapse"
+                          data-pc-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Accordion Item #1
+                        </button>
+                        <div id="collapseOne" class="show" aria-labelledby="headingOne" data-pc-parent="#accordionExample">
+                          <div class="card-body">
+                            <strong>This is the first item's accordion body.</strong>
+                            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each
+                            element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                            You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just
+                            about any HTML can go within the
+                            <code>.accordion-body</code>
+                            , though the transition does limit overflow.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button
+                          class="card-header accordion-header"
+                          id="headingTwo"
+                          type="button"
+                          data-pc-toggle="collapse"
+                          data-pc-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          Accordion Item #2
+                        </button>
+                        <div id="collapseTwo" class="hidden" aria-labelledby="headingTwo" data-pc-parent="#accordionExample">
+                          <div class="card-body">
+                            <strong>This is the second item's accordion body.</strong>
+                            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each
+                            element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                            You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just
+                            about any HTML can go within the
+                            <code>.accordion-body</code>
+                            , though the transition does limit overflow.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button
+                          class="card-header accordion-header"
+                          id="headingThree"
+                          type="button"
+                          data-pc-toggle="collapse"
+                          data-pc-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          Accordion Item #3
+                        </button>
+                        <div id="collapseThree" class="hidden" aria-labelledby="headingThree" data-pc-parent="#accordionExample">
+                          <div class="card-body">
+                            <strong>This is the third item's accordion body.</strong>
+                            It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each
+                            element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                            You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just
+                            about any HTML can go within the
+                            <code>.accordion-body</code>
+                            , though the transition does limit overflow.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h5 class="mt-4 mb-3">Accordion Flush</h5>
+                <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                <div class="card">
+                  <div class="card-body pc-component">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                      <div class="accordion-item">
+                        <button
+                          class="card-header accordion-header show"
+                          id="flush-headingOne"
+                          type="button"
+                          data-pc-toggle="collapse"
+                          data-pc-target="#flush-collapseOne"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseOne"
+                        >
+                          Accordion Item #1
+                        </button>
+                        <div id="flush-collapseOne" class="show" aria-labelledby="flush-headingOne" data-pc-parent="#accordionFlushExample">
+                          <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+                            moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                            haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button
+                          class="card-header accordion-header"
+                          id="flush-headingTwo"
+                          type="button"
+                          data-pc-toggle="collapse"
+                          data-pc-target="#flush-collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseTwo"
+                        >
+                          Accordion Item #2
+                        </button>
+                        <div
+                          id="flush-collapseTwo"
+                          class="hidden"
+                          aria-labelledby="flush-headingTwo"
+                          data-pc-parent="#accordionFlushExample"
+                        >
+                          <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+                            moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                            haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button
+                          class="card-header accordion-header"
+                          id="flush-headingThree"
+                          type="button"
+                          data-pc-toggle="collapse"
+                          data-pc-target="#flush-collapseThree"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseThree"
+                        >
+                          Accordion Item #3
+                        </button>
+                        <div
+                          id="flush-collapseThree"
+                          class="hidden"
+                          aria-labelledby="flush-headingThree"
+                          data-pc-parent="#accordionFlushExample"
+                        >
+                          <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+                            moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                            haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ accordion-collapse ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+</html>

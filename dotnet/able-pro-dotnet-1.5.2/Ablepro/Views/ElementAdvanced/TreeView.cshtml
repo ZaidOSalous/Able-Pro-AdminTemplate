@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Tree View";
+    ViewBag.BreadcrumbItemActive = "Tree View";
+    ViewBag.BreadcrumItem = "Advance UI";
+    ViewBag.Text = "Standalone tree view library";
+    ViewBag.Link = "https://github.com/finom/vanillatree";
+    Layout = "~/Views/Shared/_Layout-component.cshtml";
+}
+
+@section styles {
+    <!-- [Page specific CSS] start -->
+    <!-- jstree css -->
+    <link rel="stylesheet" href="../assets/css/plugins/vanillatree.css" >
+    <!-- Page specific CSS end  -->
+}
+
+    <!-- [ Main Content ] start -->
+    <div class="row">
+        <!-- [ rangeslider ] start -->
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>HTML Demo</h5>
+                </div>
+                <div class="card-body">
+                    <div id="tree-demo"> </div>
+                    <p id="tree-msg"></p>
+                </div>
+            </div>
+        </div>
+        <!-- [ rangeslider ] end -->
+    </div>
+    <!-- [ Main Content ] end -->
+    @section scripts {
+    <!-- [Page Specific JS] start -->
+    <!-- jstree Js -->
+    <script src="../assets/js/plugins/vanillatree.min.js"></script>
+    <script src="../assets/js/elements/ac-treeview.js"></script>
+    <!-- [Page Specific JS] end -->
+    }

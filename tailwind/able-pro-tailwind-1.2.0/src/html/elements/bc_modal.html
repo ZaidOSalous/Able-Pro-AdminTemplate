@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Modal'}) @@include('../layouts/head-css.html')
+  </head>
+
+  <body>
+    <!-- [ Main Content ] start -->
+    @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+    <section class="pt-20 xl:pt-28">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+          <div class="col-span-12 xl:col-span-9">
+            <div class="grid grid-cols-12 gap-6">
+              <!-- prettier-ignore -->
+              @@include('../layouts/component/component-breadcrumb.html',{title:'Modal',text:'dialogs to your site for lightboxes, user notifications, or completely custom content.'})
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="grid grid-cols-12 gap-x-6">
+              <!-- [ demo-modal ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Demo Modal</h5>
+                  </div>
+                  <div class="card-body pb-0">
+                    <div class="rounded-lg bg-secondary-300/10 border overflow-hidden border-theme-border dark:border-themedark-border">
+                      <div class="modal-dialog flex z-0 transform-none translate-none opacity-100 relative" role="document">
+                        <div class="modal-content relative">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Modal Title</h5>
+                            <button
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-pc-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary ltr:ml-2 rtl:mr-2">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div
+                      id="exampleModalLive"
+                      class="modal fade"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="exampleModalLiveLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Modal Title</h5>
+                            <button
+                              data-pc-modal-dismiss="#exampleModalLive"
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-pc-modal-dismiss="#exampleModalLive">Close</button>
+                            <button type="button" class="btn btn-primary ltr:ml-2 rtl:mr-2">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-pc-toggle="modal" data-pc-target="#exampleModalLive">
+                      Launch demo modal
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- [ demo-modal ] end -->
+              <!-- [ Scrolling-modal ] start -->
+              <div class="col-span-12 xl:col-span-4 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Scrolling Long Content</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div
+                      id="exampleModalLong"
+                      class="modal fade"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="exampleModalLongTitle"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Modal Title</h5>
+                            <button
+                              data-pc-modal-dismiss="#exampleModalLong"
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-pc-modal-dismiss="#exampleModalLong">Close</button>
+                            <button type="button" class="btn btn-primary ml-1">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-pc-toggle="modal" data-pc-target="#exampleModalLong">
+                      Launch demo modal
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- [ Scrolling-modal ] end -->
+              <!-- [ vertically-modal ] start -->
+              <div class="col-span-12 xl:col-span-4 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Vertically Centered</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div
+                      id="exampleModalCenter"
+                      class="modal fade"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="exampleModalCenterTitle"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Modal Title</h5>
+                            <button
+                              data-pc-modal-dismiss="#exampleModalCenter"
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-pc-modal-dismiss="#exampleModalCenter">Close</button>
+                            <button type="button" class="btn btn-primary ml-2">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-pc-toggle="modal" data-pc-target="#exampleModalCenter">
+                      Launch demo modal
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- [ vertically-modal ] end -->
+              <!-- [ optional-modal ] start -->
+              <div class="col-span-12 xl:col-span-4 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Optional Sizes</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <button type="button" class="btn btn-primary mr-2 mb-2" data-pc-toggle="modal" data-pc-target="#bd-example-modal-lg">
+                      Large modal
+                    </button>
+                    <button type="button" class="btn btn-primary mr-2 mb-2" data-pc-toggle="modal" data-pc-target="#bd-example-modal-sm">
+                      Small modal
+                    </button>
+                    <div
+                      class="modal fade"
+                      id="bd-example-modal-lg"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="myLargeModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title h4" id="myLargeModalLabel">Large Modal</h5>
+                            <button
+                              data-pc-modal-dismiss="#bd-example-modal-lg"
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">...</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="modal fade"
+                      id="bd-example-modal-sm"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="mySmallModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title h4" id="mySmallModalLabel">Small Modal</h5>
+                            <button
+                              data-pc-modal-dismiss="#bd-example-modal-sm"
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">...</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ optional-modal ] end -->
+
+              <!-- [ Full screen modal ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Full screen modal</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn btn-primary" data-pc-toggle="modal" data-pc-target="#exampleModalFullscreen">
+                        Full screen
+                      </button>
+                      <button type="button" class="btn btn-primary" data-pc-toggle="modal" data-pc-target="#exampleModalFullscreenSm">
+                        Full screen below sm
+                      </button>
+                      <button type="button" class="btn btn-primary" data-pc-toggle="modal" data-pc-target="#exampleModalFullscreenMd">
+                        Full screen below md
+                      </button>
+                      <button type="button" class="btn btn-primary" data-pc-toggle="modal" data-pc-target="#exampleModalFullscreenLg">
+                        Full screen below lg
+                      </button>
+                      <button type="button" class="btn btn-primary" data-pc-toggle="modal" data-pc-target="#exampleModalFullscreenXl">
+                        Full screen below xl
+                      </button>
+                    </div>
+                    <div
+                      class="modal fade"
+                      id="exampleModalFullscreen"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalFullscreenLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Full screen modal</h5>
+                            <button
+                              data-pc-modal-dismiss="#exampleModalFullscreen"
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                            <p>
+                              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                              Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                            <p>
+                              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+                              rutrum faucibus dolor auctor.
+                            </p>
+                            <p>
+                              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                              et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-pc-modal-dismiss="#exampleModalFullscreen">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="modal fade"
+                      id="exampleModalFullscreenSm"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalFullscreenSmLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen-sm-down">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title h4" id="exampleModalFullscreenSmLabel">Full screen below sm</h5>
+                            <button
+                              data-pc-modal-dismiss="#exampleModalFullscreenSm"
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">...</div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-pc-modal-dismiss="#exampleModalFullscreenSm">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="modal fade"
+                      id="exampleModalFullscreenMd"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalFullscreenMdLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen-md-down">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title h4" id="exampleModalFullscreenMdLabel">Full screen below md</h5>
+                            <button
+                              data-pc-modal-dismiss="#exampleModalFullscreenMd"
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">...</div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-pc-modal-dismiss="#exampleModalFullscreenMd">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="modal fade"
+                      id="exampleModalFullscreenLg"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalFullscreenLgLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen-lg-down">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title h4" id="exampleModalFullscreenLgLabel">Full screen below lg</h5>
+                            <button
+                              data-pc-modal-dismiss="#exampleModalFullscreenLg"
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">...</div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-pc-modal-dismiss="#exampleModalFullscreenLg">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="modal fade"
+                      id="exampleModalFullscreenXl"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalFullscreenXlLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-fullscreen-xl-down">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title h4" id="exampleModalFullscreenXlLabel">Full screen below xl</h5>
+                            <button
+                              data-pc-modal-dismiss="#exampleModalFullscreenXl"
+                              class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                          </div>
+                          <div class="modal-body">...</div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-pc-modal-dismiss="#exampleModalFullscreenXl">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ Full screen modal ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+</html>

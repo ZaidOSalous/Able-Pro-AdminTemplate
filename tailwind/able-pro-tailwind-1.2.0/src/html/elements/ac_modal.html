@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Modal'}) @@include('../layouts/head-css.html')
+</head>
+
+<body>
+  <!-- [ Main Content ] start -->
+  @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+  <section class="pt-20 xl:pt-28">
+    <div class="container">
+      <div class="grid grid-cols-12 gap-6">
+        <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+        <div class="col-span-12 xl:col-span-9">
+          <div class="grid grid-cols-12 gap-6">
+            <!-- prettier-ignore -->
+            @@include('../layouts/component/component-breadcrumb.html',{title:'Modal',text:'JavaScript modal plugin to add dialogs to your site for lightboxes or completely custom content'})
+          </div>
+          <!-- [ Main Content ] start -->
+          <div class="grid grid-cols-12 gap-x-6">
+            <!-- [ single-light ] start -->
+            <div class="col-span-12 md:col-span-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Fade</h5>
+                </div>
+                <div class="card-body btn-page">
+                  <button data-pc-animate="fade-in-scale" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                    data-pc-target="#animateModal">
+                    Fade in &amp; Scale
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Slide</h5>
+                </div>
+                <div class="card-body btn-page">
+                  <div class="flex flex-wrap gap-1">
+                    <button data-pc-animate="slide-in-right" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                      data-pc-target="#animateModal">
+                      Slide in (right)
+                    </button>
+                    <button data-pc-animate="slide-in-bottom" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                      data-pc-target="#animateModal">
+                      Slide in (bottom)
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Fall</h5>
+                </div>
+                <div class="card-body btn-page">
+                  <div class="flex flex-wrap gap-1">
+                    <button data-pc-animate="fall" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                      data-pc-target="#animateModal">
+                      Fall
+                    </button>
+                    <button data-pc-animate="side-fall" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                      data-pc-target="#animateModal">
+                      Side Fall
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Flip</h5>
+                </div>
+                <div class="card-body btn-page">
+                  <div class="flex flex-wrap gap-1">
+                    <button data-pc-animate="3d-flip-horizontal" type="button" class="btn btn-primary"
+                      data-pc-toggle="modal" data-pc-target="#animateModal">
+                      3D Flip (horizontal)
+                    </button>
+                    <button data-pc-animate="3d-flip-vertical" type="button" class="btn btn-primary"
+                      data-pc-toggle="modal" data-pc-target="#animateModal">
+                      3D Flip (vertical)
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Rotate</h5>
+                </div>
+                <div class="card-body btn-page">
+                  <div class="flex flex-wrap gap-1">
+                    <button data-pc-animate="3d-rotate-bottom" type="button" class="btn btn-primary"
+                      data-pc-toggle="modal" data-pc-target="#animateModal">
+                      3D Rotate Bottom
+                    </button>
+                    <button data-pc-animate="3d-rotate-InLeft" type="button" class="btn btn-primary"
+                      data-pc-toggle="modal" data-pc-target="#animateModal">
+                      3D Rotate InLeft
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Advance</h5>
+                </div>
+                <div class="card-body btn-page">
+                  <button data-pc-animate="blur" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                    data-pc-target="#animateModal">
+                    Blur
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-12">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Other</h5>
+                </div>
+                <div class="card-body btn-page">
+                  <div class="flex flex-wrap gap-2">
+                    <button data-pc-animate="sticky-up" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                      data-pc-target="#animateModal">
+                      Sticky Up
+                    </button>
+                    <button data-pc-animate="3d-sign" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                      data-pc-target="#animateModal">
+                      3D Sign
+                    </button>
+                    <button data-pc-animate="super-scaled" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                      data-pc-target="#animateModal">
+                      Super Scaled
+                    </button>
+                    <button data-pc-animate="just-me" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                      data-pc-target="#animateModal">
+                      Just Me
+                    </button>
+                    <button data-pc-animate="3d-slit" type="button" class="btn btn-primary" data-pc-toggle="modal"
+                      data-pc-target="#animateModal">
+                      3D Slit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- [ single-light ] end -->
+          </div>
+          <div id="animateModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="animateModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Animate Modal</h5>
+                  <button data-pc-modal-dismiss="#animateModal"
+                    class="text-lg flex items-center justify-center rounded w-7 h-7 text-secondary-500 hover:bg-danger-500/10 hover:text-danger-500">
+                    <i class="ti ti-x"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5 class="mb-4">This is a modal window</h5>
+                  <p class="mb-3">You can do the following things with it:</p>
+                  <p class="mb-3"> <b>Read:</b> modal windows will probably tell you something important so don't forget
+                    to read what they say.</p>
+                  <p class="mb-3"><b>Look:</b> a modal window enjoys a certain kind of attention; just look at it and
+                    appreciate its presence.</p>
+                  <p class="mb-0"><b>Close:</b> click on the button below to close the modal.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-pc-modal-dismiss="#animateModal">Close</button>
+                  <button type="button" class="btn btn-primary ltr:ml-2 rtl:mr-2">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ Main Content ] end -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+  @@include('../layouts/customizer.html')
+</body>
+
+</html>

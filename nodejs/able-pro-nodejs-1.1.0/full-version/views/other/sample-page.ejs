@@ -1,0 +1,33 @@
+<%- contentFor('title') %>  
+<%- include('../layouts/head-page-meta', { title:"Sample Page" }) %>
+    
+
+<%- contentFor('css1') %>  
+<!-- Add your CSS block content here if any -->
+    
+
+<%- contentFor('css2') %>
+<!-- Add your second CSS block content here if any -->
+
+<%- contentFor('mainContent') %>  
+        <%-include('../layouts/breadcrumb', { parentTitle:'Other', title:'Sample Page' }) %>
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- [ sample-page ] start -->
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Hello card</h5>
+              </div>
+              <div class="card-body"> </div>
+            </div>
+          </div>
+          <!-- [ sample-page ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    
+
+<%- contentFor('js1') %>
+<%- contentFor('js2') %>
+    
+      

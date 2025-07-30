@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Mega Option'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Forms', 'breadcrumb-item-active': 'Mega Option'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- [ form-element ] start -->
+          <div class="col-span-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Example</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div>
+                    <label class="form-label">Choose Delivery Type</label>
+                    <div class="grid grid-cols-12 gap-6 mb-2">
+                      <div class="col-span-12 lg:col-span-6">
+                        <div class="border card p-4">
+                          <div class="form-check">
+                            <input type="radio" name="radio1" class="form-check-input mt-1" id="customCheckdef1" />
+                            <label class="form-check-label inline-block ml-2 w-[calc(100%_-_30px)]" for="customCheckdef1">
+                              <span>
+                                <span class="text-[16px] font-semibold block">
+                                  <strong class="float-right"><span class="badge bg-primary-500/10 text-primary-500">Free</span></strong>
+                                  Trial plan
+                                </span>
+                                <span class="text-[12px] text-muted">
+                                  Free server basic collection
+                                  <br />
+                                  (5 Items are allowed to download)
+                                </span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-span-12 lg:col-span-6">
+                        <div class="border card p-4">
+                          <div class="form-check">
+                            <input type="radio" name="radio1" class="form-check-input mt-1" id="customCheckdef2" />
+                            <label class="form-check-label inline-block ml-2 w-[calc(100%_-_30px)]" for="customCheckdef2">
+                              <span>
+                                <span class="text-[16px] font-semibold block">
+                                  <span class="float-right font-semibold">$&nbsp;12.46</span>
+                                  Premium plan
+                                </span>
+                                <span class="text-[12px] text-muted">
+                                  Free server unlimited approx 255k+ Premium collection
+                                  <br />
+                                  (Download unlimited premium items)
+                                </span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <label class="form-label mb-2 pt-2">Membership Plan</label>
+                    <div class="grid grid-cols-12 gap-6 mb-2">
+                      <div class="col-span-12 lg:col-span-6">
+                        <div class="form-check my-2">
+                          <input type="radio" name="radio2" class="form-check-input mt-1" id="customCheckmem1" />
+                          <label class="form-check-label inline-block ml-2 w-[calc(100%_-_30px)]" for="customCheckmem1">
+                            <span>
+                              <span class="text-[16px] font-semibold block">SUPERNET 50</span>
+                              <span class="text-[12px] text-muted">360 days Speed upto 50 Mbps Unlimited( Rs. 5094 )</span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-span-12 lg:col-span-6">
+                        <div class="form-check my-2">
+                          <input type="radio" name="radio2" class="form-check-input mt-1" id="customCheckmem2" />
+                          <label class="form-check-label inline-block ml-2 w-[calc(100%_-_30px)]" for="customCheckmem2">
+                            <span>
+                              <span class="text-[16px] font-semibold block">SUPERSONIC 75</span>
+                              <span class="text-[12px] text-muted">360 days Speed upto 75 Mbps 6000 GB( Rs. 6042 )</span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5>Horizontal Form Example</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 sm:col-span-3 col-form-label">Choose Delivery Type</label>
+                    <div class="col-span-12 sm:col-span-9">
+                      <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-12 lg:col-span-6">
+                          <div class="border card p-3">
+                            <div class="form-check">
+                              <input type="radio" name="radio3" class="form-check-input mt-1" id="customCheckdefhor1" />
+                              <label class="form-check-label inline-block ml-2 w-[calc(100%_-_30px)]" for="customCheckdefhor1">
+                                <span>
+                                  <span class="text-[16px] font-semibold block">
+                                    <strong class="float-right"><span class="badge bg-primary-500/10 text-primary-500">Free</span></strong>
+                                    Trial plan
+                                  </span>
+                                  <span class="text-[12px] text-muted">
+                                    Free server basic collection
+                                    <br />
+                                    (5 Items are allowed to download)
+                                  </span>
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-span-12 lg:col-span-6">
+                          <div class="border card p-3">
+                            <div class="form-check">
+                              <input type="radio" name="radio3" class="form-check-input mt-1" id="customCheckdefhor2" />
+                              <label class="form-check-label inline-block ml-2 w-[calc(100%_-_30px)]" for="customCheckdefhor2">
+                                <span>
+                                  <span class="text-[16px] font-semibold block">
+                                    <span class="float-right font-semibold">$&nbsp;8.00</span>
+                                    Premium plan
+                                  </span>
+                                  <span class="text-[12px] text-muted">
+                                    Free server unlimited approx 255k+ Premium collection
+                                    <br />
+                                    (Download unlimited premium items)
+                                  </span>
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-4 border-0 border-t border-theme-border dark:border-themedark-border" />
+                  <div class="grid grid-cols-12 gap-6 pt-3">
+                    <label class="col-span-12 sm:col-span-3 col-form-label">Membership :</label>
+                    <div class="col-span-12 sm:col-span-9">
+                      <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-12 lg:col-span-6">
+                          <div class="form-check my-2">
+                            <input type="radio" name="radio4" class="form-check-input mt-1" id="customCheckmemhor1" />
+                            <label class="form-check-label inline-block ml-2 w-[calc(100%_-_30px)]" for="customCheckmemhor1">
+                              <span>
+                                <span class="text-[16px] font-semibold block">SUPERNET 50</span>
+                                <span class="text-[12px] text-muted">360 days Speed upto 50 Mbps Unlimited( Rs. 5094 )</span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-span-12 lg:col-span-6">
+                          <div class="form-check my-2">
+                            <input type="radio" name="radio4" class="form-check-input mt-1" id="customCheckmemhor2" />
+                            <label class="form-check-label inline-block ml-2 w-[calc(100%_-_30px)]" for="customCheckmemhor2">
+                              <span>
+                                <span class="text-[16px] font-semibold block">SUPERSONIC 75</span>
+                                <span class="text-[12px] text-muted">360 days Speed upto 75 Mbps 6000 GB( Rs. 6042 )</span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- [ form-element ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

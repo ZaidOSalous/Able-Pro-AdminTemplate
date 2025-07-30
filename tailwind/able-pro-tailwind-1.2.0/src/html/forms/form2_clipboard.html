@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Clipboard'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Forms', 'breadcrumb-item-active': 'Clipboard'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- prettier-ignore -->
+          @@include('../layouts/component/component-link.html',{
+            title:'Clipboard.js',
+            text:'A modern approach to copy text to clipboard, Copying text to the clipboard shouldnt be hard. It shouldnt require dozens of steps to configure or hundreds of KBs to load.',
+            link:'https://clipboardjs.com/'
+          })
+        </div>
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12">
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 lg:col-span-3 lg:text-end col-form-label">Copy text from another element</label>
+                    <div class="col-span-12 lg:col-span-6 md:col-span-9">
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="pc-clipboard-1" placeholder="Type some value to copy" />
+                        <a href="#" class="btn btn-lg btn-primary" data-clipboard="true" data-clipboard-target="#pc-clipboard-1">
+                          <i class="feather icon-copy"></i>
+                        </a>
+                      </div>
+                      <small>
+                        You can do by adding a
+                        <code class="text-danger-400 text-sm">data-clipboard-target</code>
+                        attribute in your trigger element
+                      </small>
+                    </div>
+                  </div>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 lg:col-span-3 lg:text-end col-form-label">Cut text from another element</label>
+                    <div class="col-span-12 lg:col-span-6 md:col-span-9">
+                      <textarea class="form-control mb-2" id="pc-clipboard-3" rows="6">
+Lorem ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga.</textarea
+                      >
+                      <small>
+                        you can define a
+                        <code class="text-danger-400 text-sm">data-clipboard-action</code>
+                        attribute to specify if you want to either
+                        <code class="text-danger-400 text-sm">copy</code>
+                        or
+                        <code class="text-danger-400 text-sm">cut</code>
+                        content
+                      </small>
+                      <br />
+                      <button
+                        class="btn btn-danger mt-2"
+                        data-clipboard="true"
+                        data-clipboard-action="cut"
+                        data-clipboard-target="#pc-clipboard-3"
+                      >
+                        Cut to clipboard
+                      </button>
+                    </div>
+                  </div>
+                  <div class="mb-3 grid grid-cols-12 gap-6">
+                    <label class="col-span-12 lg:col-span-3 lg:text-end col-form-label">Copy text from attribute</label>
+                    <div class="col-span-12 lg:col-span-6 md:col-span-9">
+                      <button
+                        class="btn btn-success mb-2"
+                        data-clipboard="true"
+                        data-clipboard-text="Just because you can doesn't mean you should — clipboard.js"
+                      >
+                        Copy to clipboard
+                      </button>
+                      <br />
+                      <small>
+                        You can just include a
+                        <code class="text-danger-400 text-sm">data-clipboard-text</code>
+                        attribute in your trigger element
+                      </small>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-12 gap-6">
+                    <label class="col-span-12 lg:col-span-3 lg:text-end col-form-label">Copy From Container</label>
+                    <div class="col-span-12 lg:col-span-6 md:col-span-9">
+                      <div id="pc-clipboard-4" style="border: 4px solid rgba(234, 234, 234, 0.5); padding: 10px">
+                        Lorem ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis.
+                        Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é
+                        amistosis quis leo. Manduma pindureta quium dia nois paga.
+                      </div>
+                      <a href="#" class="btn btn-primary mt-2" data-clipboard="true" data-clipboard-target="#pc-clipboard-4">
+                        Copy to clipboard
+                      </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <!-- [Page Specific JS] start -->
+    <!-- clipboard -->
+    <script src="../assets/js/plugins/clipboard.min.js"></script>
+    <script>
+      // basic example
+      new ClipboardJS('[data-clipboard=true]').on('success', function (e) {
+        e.clearSelection();
+        alert('Copied!');
+      });
+    </script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

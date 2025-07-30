@@ -1,0 +1,49 @@
+{% extends "layouts/main-layout.html" %}
+{% block title %} 
+{% with title='ReCaptcha' %}
+{% include 'layouts/head-page-meta.html' %}
+{% endwith %} 
+{% endblock %}    
+
+{% block css1 %}
+<!-- Add your CSS block content here if any -->
+{% endblock %}    
+
+{% block css2 %}
+<!-- Add your second CSS block content here if any -->
+{% endblock %}
+
+{% block mainContent %} 
+        {% with parentTitle='ReCaptcha', title='Forms' %}
+{% include 'layouts/breadcrumb.html' %}
+{% endwith %}
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- prettier-ignore -->
+          {% with title='ReCaptcha', text='reCAPTCHA uses an advanced risk analysis engine and adaptive challenges to keep malicious software from engaging in abusive activities on your website.', link='https://www.google.com/recaptcha/about/' %}
+{% include 'layouts/component/component-link.html' %}
+{% endwith %}
+        </div>
+        <div class="row">
+          <!-- [ form-element ] start -->
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <div class="row">
+                    <label class="col-form-label col-lg-3 col-sm-12 text-lg-end">reCaptcha</label>
+                    <div class="col-lg-4 col-md-9 col-sm-12">
+                      <div class="g-recaptcha" data-sitekey="6LdnLwgUAAAAAAIb9L3PQlHQgvSCi16sYgbMIMFR"></div>
+                    </div>
+                    <script src="https://www.google.com/recaptcha/api.js"></script>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ form-element ] end -->
+{% endblock %}    
+
+{% block js1 %}
+{% endblock %}    

@@ -1,0 +1,39 @@
+<script>
+  import Customizer from './../../../lib/Components/Layouts/Partials/Customizer.svelte';
+</script>
+
+<svelte:head>
+  <title>Site is Under Maintenance | Able Pro Dashboard Template</title>
+</svelte:head>
+
+<!-- [ Main Content ] start -->
+<div class="maintenance-block">
+  <div class="container">
+    <div class="row">
+      <!-- [ sample-page ] start -->
+      <div class="col-sm-12">
+        <div class="card construction-card">
+          <div class="card-body">
+            <div class="construction-image-block">
+              <div class="row justify-content-center">
+                <div class="col-10">
+                  <img class="img-fluid" src="/assets/images/pages/img-cunstruct-2.svg" alt="img" />
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <h1 class="mt-4"><b>Under Construction</b></h1>
+              <p class="mt-4 text-muted"
+                >Hey! Please check out this site later. We are doing <br />
+                some maintenance on it right now.</p
+              >
+              <a href="/dashboard/index" class="btn btn-primary mb-3">Back To Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- [ sample-page ] end -->
+  </div>
+</div>
+<Customizer />

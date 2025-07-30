@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Dropdowns'}) @@include('../layouts/head-css.html')
+  </head>
+
+  <body>
+    <!-- [ Main Content ] start -->
+    @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+    <section class="pt-20 xl:pt-28">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+          <div class="col-span-12 xl:col-span-9">
+            <div class="grid grid-cols-12 gap-6">
+              <!-- prettier-ignore -->
+              @@include('../layouts/component/component-breadcrumb.html',{title:'Dropdowns',text:'Toggle contextual overlays for displaying lists of links and more.'})
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ basic-dropdown-button ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Basic Dropdown Button</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-primary dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Primary
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-secondary dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Secondary
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-success dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Success
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-danger dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Danger
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-warning dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Warning
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-info dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Info
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ basic-dropdown-button ] end -->
+              <!-- [ split-danger-button ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Split Dropdown Button</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-primary ltr:rounded-r-none rtl:rounded-l-none">Primary</button>
+                        <button
+                          type="button"
+                          class="btn btn-primary dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-secondary ltr:rounded-r-none rtl:rounded-l-none">Secondary</button>
+                        <button
+                          type="button"
+                          class="btn btn-secondary dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-success ltr:rounded-r-none rtl:rounded-l-none">Success</button>
+                        <button
+                          type="button"
+                          class="btn btn-success dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-danger ltr:rounded-r-none rtl:rounded-l-none">Danger</button>
+                        <button
+                          type="button"
+                          class="btn btn-danger dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-warning ltr:rounded-r-none rtl:rounded-l-none">Warning</button>
+                        <button
+                          type="button"
+                          class="btn btn-warning dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-info ltr:rounded-r-none rtl:rounded-l-none">Info</button>
+                        <button
+                          type="button"
+                          class="btn btn-info dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ split-danger-button ] end -->
+              <!-- [ outline-dropdown-button ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Basic Outline Dropdown Button</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-outline-primary dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Primary
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-outline-secondary dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Secondary
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-outline-success dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Success
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-outline-danger dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Danger
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-outline-warning dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Warning
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-outline-info dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Info
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ outline-dropdown-button ] end -->
+              <!-- [ split-dropdown-button ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Split Outline Dropdown Button</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-outline-primary ltr:rounded-r-none rtl:rounded-l-none">Primary</button>
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-outline-secondary ltr:rounded-r-none rtl:rounded-l-none">Secondary</button>
+                        <button
+                          type="button"
+                          class="btn btn-outline-secondary dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-outline-success ltr:rounded-r-none rtl:rounded-l-none">Success</button>
+                        <button
+                          type="button"
+                          class="btn btn-outline-success dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-outline-danger ltr:rounded-r-none rtl:rounded-l-none">Danger</button>
+                        <button
+                          type="button"
+                          class="btn btn-outline-danger dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-outline-warning ltr:rounded-r-none rtl:rounded-l-none">Warning</button>
+                        <button
+                          type="button"
+                          class="btn btn-outline-warning dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                      <div class="btn-group inline-flex items-center">
+                        <button type="button" class="btn btn-outline-info ltr:rounded-r-none rtl:rounded-l-none">Info</button>
+                        <button
+                          type="button"
+                          class="btn btn-outline-info dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none px-2"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#!">Separated link</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ split-dropdown-button ] end -->
+              <!-- [ basic-dropdown-button ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Dark dropdowns</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-primary dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Primary
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-dark">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-secondary dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Secondary
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-dark">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-success dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Success
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-dark">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-danger dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Danger
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-dark">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-warning dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Warning
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-dark">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                        <button
+                          class="btn btn-info dropdown-toggle"
+                          type="button"
+                          data-pc-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Info
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-dark">
+                          <a class="dropdown-item" href="#!">Action</a>
+                          <a class="dropdown-item" href="#!">Another action</a>
+                          <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ basic-dropdown-button ] end -->
+              <!-- [ Text ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Text</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="btn-group">
+                      <button
+                        class="btn btn-danger dropdown-toggle"
+                        type="button"
+                        data-pc-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        Text
+                      </button>
+                      <div class="dropdown-menu">
+                        <div class="p-4">
+                          <h6>Some title example</h6>
+                          <p class="mb-2 text-muted small">And this is more</p>
+                          <p class="mb-0 text-muted">Some example text that's free-flowing within the dropdown menu.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ Text ] end -->
+              <!-- [ Forms ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Forms</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="btn-group">
+                      <button
+                        class="btn btn-success dropdown-toggle"
+                        type="button"
+                        data-pc-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        Forms
+                      </button>
+                      <div class="dropdown-menu" style="min-width: 16rem">
+                        <form class="px-4 py-3">
+                          <div class="mb-3">
+                            <label for="exampleDropdownFormEmail1" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com" />
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" />
+                          </div>
+                          <div class="mb-3">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="dropdownCheck" />
+                              <label class="form-check-label" for="dropdownCheck">Remember me</label>
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+                          <button type="submit" class="btn btn-light btn-sm">Reset</button>
+                        </form>
+                        <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                        <a class="dropdown-item" href="#">New around here? Sign up</a>
+                        <a class="dropdown-item" href="#">Forgot password?</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ Forms ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+</html>

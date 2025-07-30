@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Button'})
+    <!-- [Page specific CSS] start -->
+    <link href="../assets/css/plugins/animate.min.css" rel="stylesheet" type="text/css" />
+    <!-- [Page specific CSS] end -->
+    @@include('../layouts/head-css.html')
+  </head>
+
+  <body>
+    <!-- [ Main Content ] start -->
+    @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+    <section class="pt-20 xl:pt-28">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 xl:col-span-3"> @@include('../layouts/component/component-menu-list.html') </div>
+          <div class="col-span-12 xl:col-span-9">
+            <div class="grid grid-cols-12 gap-6">
+              <!-- prettier-ignore -->
+              @@include('../layouts/component/component-breadcrumb.html',{title:'Button',text:'Use button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.'})
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ default-button ] start -->
+              <div class="col-span-12 sm:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Default</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn btn-primary">Primary</button>
+                      <button type="button" class="btn btn-secondary">Secondary</button>
+                      <button type="button" class="btn btn-success">Success</button>
+                      <button type="button" class="btn btn-danger">Danger</button>
+                      <button type="button" class="btn btn-warning">Warning</button>
+                      <button type="button" class="btn btn-info">Info</button>
+                      <button type="button" class="btn btn-light">Light</button>
+                      <button type="button" class="btn btn-dark">Dark</button>
+                      <button type="button" class="btn btn-link">Link</button>
+                    </div>
+                    <div class="grid gap-2 mt-2">
+                      <button class="btn btn-primary" type="button">Block Level Button</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ default-button ] end -->
+              <!-- [ light-button ] start -->
+              <div class="col-span-12 sm:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Light</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn btn-light-primary">Primary</button>
+                      <button type="button" class="btn btn-light-secondary">Secondary</button>
+                      <button type="button" class="btn btn-light-success">Success</button>
+                      <button type="button" class="btn btn-light-danger">Danger</button>
+                      <button type="button" class="btn btn-light-warning">Warning</button>
+                      <button type="button" class="btn btn-light-info">Info</button>
+                      <button type="button" class="btn btn-light-dark">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ light-button ] end -->
+              <!-- [ link-button ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Link</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <a class="btn btn-primary" role="button" href="#">Primary link</a>
+                      <a class="btn btn-primary disabled" tabindex="-1" role="button" href="#">Disabled Primary link</a>
+                      <a class="btn btn-link-success" role="button" href="#">Light Success link</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ link-button ] end -->
+              <!-- [ outline-button ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Outline</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn btn-outline-primary">Primary</button>
+                      <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                      <button type="button" class="btn btn-outline-success">Success</button>
+                      <button type="button" class="btn btn-outline-danger">Danger</button>
+                      <button type="button" class="btn btn-outline-warning">Warning</button>
+                      <button type="button" class="btn btn-outline-info">Info</button>
+                      <button type="button" class="btn btn-outline-dark">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ outline-button ] end -->
+              <!-- [ disabled-button ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Disabled Button</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <p class="mb-3"
+                      >use <code class="text-danger-400 text-sm">.disabled</code> in class
+                      <code class="text-danger-400 text-sm">.btn</code> class to get Disabled button</p
+                    >
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn disabled btn-primary">Primary</button>
+                      <button type="button" class="btn disabled btn-secondary">Secondary</button>
+                      <button type="button" class="btn disabled btn-success">Success</button>
+                      <button type="button" class="btn disabled btn-danger">Danger</button>
+                      <button type="button" class="btn disabled btn-warning">Warning</button>
+                      <button type="button" class="btn disabled btn-info">Info</button>
+                      <button type="button" class="btn disabled btn-light">Light</button>
+                      <button type="button" class="btn disabled btn-dark">Dark</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ disabled-button ] end -->
+              <!-- [ default-shadow ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Shadow</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn shadow-[0_6px_7px_-1px_rgba(80,86,175,.3)] btn-primary">Primary</button>
+                      <button type="button" class="btn shadow-[0_6px_7px_-1px_rgba(80,86,175,.3)] btn-secondary">Secondary</button>
+                      <button type="button" class="btn shadow-[0_6px_7px_-1px_rgba(80,86,175,.3)] btn-success">Success</button>
+                      <button type="button" class="btn shadow-[0_6px_7px_-1px_rgba(80,86,175,.3)] btn-danger">Danger</button>
+                      <button type="button" class="btn shadow-[0_6px_7px_-1px_rgba(80,86,175,.3)] btn-warning">Warning</button>
+                      <button type="button" class="btn shadow-[0_6px_7px_-1px_rgba(80,86,175,.3)] btn-info">Info</button>
+                      <button type="button" class="btn shadow-[0_6px_7px_-1px_rgba(80,86,175,.3)] btn-light">Light</button>
+                      <button type="button" class="btn shadow-[0_6px_7px_-1px_rgba(80,86,175,.3)] btn-dark">Dark</button>
+                      <button type="button" class="btn shadow-[0_6px_7px_-1px_rgba(80,86,175,.3)] btn-link">Link</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ default-shadow ] end -->
+              <!-- [ size-button ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Sizes [ Large ]</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <p class="mb-3"
+                      >use <code class="text-danger-400 text-sm">.btn-lg</code> in class
+                      <code class="text-danger-400 text-sm">.btn</code> class to get Large button</p
+                    >
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                      <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ size-button ] end -->
+              <!-- [ size-small-button ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Sizes [ Small ]</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <p class="mb-3"
+                      >use <code class="text-danger-400 text-sm">.btn-sm</code> in class
+                      <code class="text-danger-400 text-sm">.btn</code> class to get Small button</p
+                    >
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                      <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ size-small-button ] end -->
+            </div>
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ button-icon ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Button With Icon</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn btn-primary inline-flex items-center">
+                        <i class="ti ti-thumb-up text-lg leading-none me-1"></i>Primary
+                      </button>
+                      <button type="button" class="btn btn-secondary inline-flex items-center"
+                        ><i class="ti ti-camera text-lg leading-none me-1"></i>Secondary</button
+                      >
+                      <button type="button" class="btn btn-success inline-flex items-center"
+                        ><i class="ti ti-circle-check text-lg leading-none me-1"></i>Success</button
+                      >
+                      <button type="button" class="btn btn-danger inline-flex items-center"
+                        ><i class="ti ti-alert-triangle text-lg leading-none me-1"></i>Danger</button
+                      >
+                      <button type="button" class="btn btn-warning inline-flex items-center"
+                        ><i class="ti ti-triangle text-lg leading-none me-1"></i>Warning</button
+                      >
+                      <button type="button" class="btn btn-info inline-flex items-center">
+                        <i class="ti ti-info-circle text-lg leading-none me-1"></i>Info</button
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ button-icon ] end -->
+              <!-- [ button-outline ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Outline Icon Buttons</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="btn btn-outline-primary inline-flex items-center"
+                        ><i class="ti ti-thumb-up text-lg leading-none me-1"></i>Primary</button
+                      >
+                      <button type="button" class="btn btn-outline-secondary inline-flex items-center"
+                        ><i class="ti ti-camera text-lg leading-none me-1"></i>Secondary</button
+                      >
+                      <button type="button" class="btn btn-outline-success inline-flex items-center"
+                        ><i class="ti ti-circle-check text-lg leading-none me-1"></i>Success</button
+                      >
+                      <button type="button" class="btn btn-outline-danger inline-flex items-center"
+                        ><i class="ti ti-alert-triangle text-lg leading-none me-1"></i>Danger</button
+                      >
+                      <button type="button" class="btn btn-outline-warning inline-flex items-center"
+                        ><i class="ti ti-triangle text-lg leading-none me-1"></i>Warning</button
+                      >
+                      <button type="button" class="btn btn-outline-info inline-flex items-center"
+                        ><i class="ti ti-info-circle text-lg leading-none me-1"></i>Info</button
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ button-outline ] end -->
+              <!-- [ only-icon ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Button Icon</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="grid grid-cols-12 gap-6">
+                      <div class="col-span-12 lg:col-span-6">
+                        <h5 class="mb-3">Basic</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                          <button type="button" class="btn btn-icon btn-primary"><i class="ti ti-thumb-up"></i></button>
+                          <button type="button" class="btn btn-icon btn-secondary"><i class="ti ti-camera"></i></button>
+                          <button type="button" class="btn btn-icon btn-success"><i class="ti ti-circle-check"></i></button>
+                          <button type="button" class="btn btn-icon btn-danger"><i class="ti ti-alert-triangle"></i></button>
+                          <button type="button" class="btn btn-icon btn-warning"><i class="ti ti-triangle"></i></button>
+                          <button type="button" class="btn btn-icon btn-info"><i class="ti ti-info-circle"></i></button>
+                        </div>
+                      </div>
+                      <div class="col-span-12 lg:col-span-6">
+                        <h5 class="mb-3">Light</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                          <button type="button" class="btn btn-icon btn-light-primary"><i class="ti ti-thumb-up"></i></button>
+                          <button type="button" class="btn btn-icon btn-light-secondary"><i class="ti ti-camera"></i></button>
+                          <button type="button" class="btn btn-icon btn-light-success"><i class="ti ti-circle-check"></i></button>
+                          <button type="button" class="btn btn-icon btn-light-danger"><i class="ti ti-alert-triangle"></i></button>
+                          <button type="button" class="btn btn-icon btn-light-warning"><i class="ti ti-triangle"></i></button>
+                          <button type="button" class="btn btn-icon btn-light-info"><i class="ti ti-info-circle"></i></button>
+                        </div>
+                      </div>
+                      <div class="col-span-12 lg:col-span-6">
+                        <h5 class="mb-3">Outline</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                          <button type="button" class="btn btn-icon btn-outline-primary"><i class="ti ti-thumb-up"></i></button>
+                          <button type="button" class="btn btn-icon btn-outline-secondary"><i class="ti ti-camera"></i></button>
+                          <button type="button" class="btn btn-icon btn-outline-success"><i class="ti ti-circle-check"></i></button>
+                          <button type="button" class="btn btn-icon btn-outline-danger"><i class="ti ti-alert-triangle"></i></button>
+                          <button type="button" class="btn btn-icon btn-outline-warning"><i class="ti ti-triangle"></i></button>
+                          <button type="button" class="btn btn-icon btn-outline-info"><i class="ti ti-info-circle"></i></button>
+                        </div>
+                      </div>
+                      <div class="col-span-12 lg:col-span-6">
+                        <h5 class="mb-3">Link</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                          <button type="button" class="btn btn-icon btn-link-primary"><i class="ti ti-thumb-up"></i></button>
+                          <button type="button" class="btn btn-icon btn-link-secondary"><i class="ti ti-camera"></i></button>
+                          <button type="button" class="btn btn-icon btn-link-success"><i class="ti ti-circle-check"></i></button>
+                          <button type="button" class="btn btn-icon btn-link-danger"><i class="ti ti-alert-triangle"></i></button>
+                          <button type="button" class="btn btn-icon btn-link-warning"><i class="ti ti-triangle"></i></button>
+                          <button type="button" class="btn btn-icon btn-link-info"><i class="ti ti-info-circle"></i></button>
+                        </div>
+                      </div>
+                      <div class="col-span-12 lg:col-span-6">
+                        <h5 class="mb-3">Size</h5>
+                        <div class="flex flex-wrap gap-2">
+                          <button type="button" class="btn btn-icon btn-primary avtar-xl mb-0">A</button>
+                          <button type="button" class="btn btn-icon btn-primary avtar-l mb-0">A</button>
+                          <button type="button" class="btn btn-icon btn-primary mb-0">A</button>
+                          <button type="button" class="btn btn-icon btn-primary avtar-s mb-0">A</button>
+                          <button type="button" class="btn btn-icon btn-primary avtar-xs mb-0">A</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ only-icon ] end -->
+            </div>
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ basic-button-group ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Basic Button Group</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="inline-flex items-center" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-primary ltr:rounded-r-none rtl:rounded-l-none">Left</button>
+                      <button type="button" class="btn btn-primary rounded-none">Middle</button>
+                      <button type="button" class="btn btn-primary ltr:rounded-l-none rtl:rounded-r-none">Right</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ basic-button-group ] end -->
+              <!-- [ button-toolbar ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Button Toolbar</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="flex flex-wrap gap-2" role="toolbar">
+                      <div class="inline-flex items-center" role="group">
+                        <button type="button" class="btn btn-light-secondary ltr:rounded-r-none rtl:rounded-l-none">1</button>
+                        <button type="button" class="btn btn-light-secondary rounded-none">2</button>
+                        <button type="button" class="btn btn-light-secondary rounded-none">3</button>
+                        <button type="button" class="btn btn-light-secondary ltr:rounded-l-none rtl:rounded-r-none">4</button>
+                      </div>
+                      <div class="inline-flex items-center" role="group">
+                        <button type="button" class="btn btn-light-secondary ltr:rounded-r-none rtl:rounded-l-none">5</button>
+                        <button type="button" class="btn btn-light-secondary rounded-none">6</button>
+                        <button type="button" class="btn btn-light-secondary ltr:rounded-l-none rtl:rounded-r-none">7</button>
+                      </div>
+                      <div class="inline-flex items-center" role="group">
+                        <button type="button" class="btn btn-light-secondary">8</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ button-toolbar ] end -->
+              <!-- [ button-toolbar-input ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Button Toolbar Input</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="row">
+                      <div class="flex flex-wrap gap-2 mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="inline-flex items-center my-1 me-2" role="group" aria-label="First group">
+                          <button type="button" class="btn btn-light-secondary ltr:rounded-r-none rtl:rounded-l-none">1</button>
+                          <button type="button" class="btn btn-light-secondary rounded-none">2</button>
+                          <button type="button" class="btn btn-light-secondary rounded-none">3</button>
+                          <button type="button" class="btn btn-light-secondary ltr:rounded-l-none rtl:rounded-r-none">4</button>
+                        </div>
+                        <div class="input-group my-1">
+                          <div class="input-group-text" id="btnGroupAddon">@</div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Input group example"
+                            aria-label="Input group example"
+                            aria-describedby="btnGroupAddon"
+                          />
+                        </div>
+                      </div>
+                      <div class="flex flex-wrap gap-2 justify-between" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="inline-flex items-center my-1" role="group" aria-label="First group">
+                          <button type="button" class="btn btn-light-secondary ltr:rounded-r-none rtl:rounded-l-none">1</button>
+                          <button type="button" class="btn btn-light-secondary rounded-none">2</button>
+                          <button type="button" class="btn btn-light-secondary rounded-none">3</button>
+                          <button type="button" class="btn btn-light-secondary ltr:rounded-l-none rtl:rounded-r-none">4</button>
+                        </div>
+                        <div class="input-group my-1">
+                          <div class="input-group-text" id="btnGroupAddon2">@</div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Input group example"
+                            aria-label="Input group example"
+                            aria-describedby="btnGroupAddon2"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ button-toolbar-input ] end -->
+              <!-- [ button-toolbar-size ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Button Toolbar Size</h5>
+                    <p class="text-sm"
+                      >use <code class="text-danger-400 text-sm">.btn-group-lg</code> in class
+                      <code class="text-danger-400 text-sm">.btn-group</code> class to get Large size button group</p
+                    >
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="row">
+                      <div class="col-xxl-4 col-md-12 mb-2">
+                        <div class="inline-flex items-center" role="group" aria-label="button groups xl">
+                          <button type="button" class="btn btn-secondary btn-lg ltr:rounded-r-none rtl:rounded-l-none">Left</button>
+                          <button type="button" class="btn btn-secondary btn-lg rounded-none">Middle</button>
+                          <button type="button" class="btn btn-secondary btn-lg ltr:rounded-l-none rtl:rounded-r-none">Right</button>
+                        </div>
+                      </div>
+                      <div class="col-xxl-4 md:col-span-6 mt-3 mb-2">
+                        <div class="inline-flex items-center" role="group" aria-label="button groups">
+                          <button type="button" class="btn btn-light-secondary ltr:rounded-r-none rtl:rounded-l-none">Left</button>
+                          <button type="button" class="btn btn-light-secondary rounded-none">Middle</button>
+                          <button type="button" class="btn btn-light-secondary ltr:rounded-l-none rtl:rounded-r-none">Right</button>
+                        </div>
+                      </div>
+                      <div class="col-xxl-4 md:col-span-6 mt-4 mb-2">
+                        <div class="inline-flex items-center" role="group" aria-label="button groups sm">
+                          <button type="button" class="btn btn-secondary btn-sm ltr:rounded-r-none rtl:rounded-l-none">Left</button>
+                          <button type="button" class="btn btn-secondary btn-sm rounded-none">Middle</button>
+                          <button type="button" class="btn btn-secondary btn-sm ltr:rounded-l-none rtl:rounded-r-none">Right</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ button-toolbar-size ] end -->
+              <!-- [ nesting ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Nesting</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="inline-flex items-center" role="group" aria-label="Button group with nested dropdown">
+                      <button type="button" class="btn btn-primary ltr:rounded-r-none rtl:rounded-l-none">1</button>
+                      <button type="button" class="btn btn-primary rounded-none">2</button>
+                      <div class="btn-group" role="group">
+                        <button
+                          id="btnGroupDrop1"
+                          type="button"
+                          class="btn btn-primary dropdown-toggle ltr:rounded-l-none rtl:rounded-r-none"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Dropdown
+                        </button>
+                        <div class="dropdown-menu absolute" aria-labelledby="btnGroupDrop1">
+                          <a class="dropdown-item" href="#!">Dropdown link</a>
+                          <a class="dropdown-item" href="#!">Dropdown link</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ nesting ] end -->
+              <!-- [ vertical-variation ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Vertical Variation</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="grid grid-cols-12 gap-6">
+                      <div class="col-span-4">
+                        <div class="inline-flex items-stretch flex-col" role="group" aria-label="Button group with nested dropdown">
+                          <button type="button" class="btn btn-secondary rounded-b-none">1</button>
+                          <button type="button" class="btn btn-secondary rounded-none">2</button>
+                          <button type="button" class="btn btn-secondary rounded-t-none">3</button>
+                        </div>
+                      </div>
+                      <div class="col-span-8">
+                        <div class="inline-flex items-stretch flex-col" role="group" aria-label="Button group with nested dropdown">
+                          <button type="button" class="btn btn-secondary rounded-b-none">1</button>
+                          <button type="button" class="btn btn-secondary rounded-none">2</button>
+                          <div class="btn-group" role="group">
+                            <button
+                              id="btnGroupDrop3"
+                              type="button"
+                              class="btn btn-secondary dropdown-toggle rounded-t-none"
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                              >Dropdown</button
+                            >
+                            <div class="dropdown-menu absolute" aria-labelledby="btnGroupDrop3">
+                              <a class="dropdown-item" href="#!">Dropdown link</a>
+                              <a class="dropdown-item" href="#!">Dropdown link</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ vertical-variation ] end -->
+              <!-- [ Mixed styles ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Mixed styles</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="inline-flex items-center" role="group">
+                      <button type="button" class="btn ltr:rounded-r-none rtl:rounded-l-none btn-danger">A</button>
+                      <button type="button" class="btn rounded-none btn-warning">A</button>
+                      <button type="button" class="btn rounded-none btn-primary">A</button>
+                      <button type="button" class="btn ltr:rounded-l-none rtl:rounded-r-none btn-success">A</button>
+                    </div>
+                    <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="inline-flex items-center" role="group">
+                      <button type="button" class="btn ltr:rounded-r-none rtl:rounded-l-none btn-light-danger">A</button>
+                      <button type="button" class="btn rounded-none btn-light-warning">A</button>
+                      <button type="button" class="btn rounded-none btn-light-primary">A</button>
+                      <button type="button" class="btn ltr:rounded-l-none rtl:rounded-r-none btn-light-success">A</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ Mixed styles ] end -->
+              <!-- [ Outlined styles ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Outlined styles</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="inline-flex items-center" role="group">
+                      <button type="button" class="btn ltr:rounded-r-none rtl:rounded-l-none btn-outline-secondary">Left</button>
+                      <button type="button" class="btn rounded-none btn-outline-secondary">Middle</button>
+                      <button type="button" class="btn ltr:rounded-l-none rtl:rounded-r-none btn-outline-secondary">Right</button>
+                    </div>
+                    <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="inline-flex items-center" role="group">
+                      <button type="button" class="btn ltr:rounded-r-none rtl:rounded-l-none btn-outline-primary">Left</button>
+                      <button type="button" class="btn rounded-none btn-outline-success">Middle</button>
+                      <button type="button" class="btn ltr:rounded-l-none rtl:rounded-r-none btn-outline-danger">Right</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ Mixed styles ] end -->
+              <!-- [ Checkbox button groups ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Checkbox button groups</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="inline-flex items-center" role="group">
+                      <label
+                        class="btn btn-outline-secondary cursor-pointer ltr:rounded-r-none rtl:rounded-l-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btncheck1"
+                      >
+                        <input type="checkbox" class="forced-colors:appearance-auto appearance-none" id="btncheck1" />Check 1</label
+                      >
+                      <label
+                        class="btn btn-outline-secondary cursor-pointer rounded-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btncheck2"
+                      >
+                        <input type="checkbox" class="forced-colors:appearance-auto appearance-none" id="btncheck2" />Check 2</label
+                      >
+                      <label
+                        class="btn btn-outline-secondary cursor-pointer ltr:rounded-l-none rtl:rounded-r-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btncheck3"
+                        ><input type="checkbox" class="forced-colors:appearance-auto appearance-none" id="btncheck3" />Check 3</label
+                      >
+                    </div>
+                    <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="inline-flex items-center" role="group">
+                      <label
+                        class="btn btn-light-secondary cursor-pointer ltr:rounded-r-none rtl:rounded-l-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btnchecklite1"
+                        ><input type="checkbox" class="forced-colors:appearance-auto appearance-none" id="btnchecklite1" />Check 1</label
+                      >
+                      <label
+                        class="btn btn-light-secondary cursor-pointer rounded-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btnchecklite2"
+                        ><input type="checkbox" class="forced-colors:appearance-auto appearance-none" id="btnchecklite2" />Check 2</label
+                      >
+                      <label
+                        class="btn btn-light-secondary cursor-pointer ltr:rounded-l-none rtl:rounded-r-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btnchecklite3"
+                        ><input type="checkbox" class="forced-colors:appearance-auto appearance-none" id="btnchecklite3" />Check 3</label
+                      >
+                    </div>
+                    <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="inline-flex items-center" role="group">
+                      <label
+                        class="btn btn-light-primary cursor-pointer ltr:rounded-r-none rtl:rounded-l-none has-[:checked]:bg-primary-500 has-[:checked]:text-white"
+                        for="btnchecklitecol1"
+                        ><input type="checkbox" class="forced-colors:appearance-auto appearance-none" id="btnchecklitecol1" />Check
+                        1</label
+                      >
+                      <label
+                        class="btn btn-light-success cursor-pointer rounded-none has-[:checked]:bg-success-500 has-[:checked]:text-white"
+                        for="btnchecklitecol2"
+                        ><input type="checkbox" class="forced-colors:appearance-auto appearance-none" id="btnchecklitecol2" />Check
+                        2</label
+                      >
+                      <label
+                        class="btn btn-light-danger cursor-pointer ltr:rounded-l-none rtl:rounded-r-none has-[:checked]:bg-danger-500 has-[:checked]:text-white"
+                        for="btnchecklitecol3"
+                        ><input type="checkbox" class="forced-colors:appearance-auto appearance-none" id="btnchecklitecol3" />Check
+                        3</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ Checkbox button groups ] end -->
+              <!-- [ radio button groups ] start -->
+              <div class="col-span-12 md:col-span-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Radio button groups</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <div class="inline-flex items-center" role="group">
+                      <label
+                        class="btn btn-outline-secondary cursor-pointer ltr:rounded-r-none rtl:rounded-l-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btnrdo1"
+                      >
+                        <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdo1" name="btn_radio1" />Radio
+                        1</label
+                      >
+                      <label
+                        class="btn btn-outline-secondary cursor-pointer rounded-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btnrdo2"
+                      >
+                        <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdo2" name="btn_radio1" />Radio
+                        2</label
+                      >
+                      <label
+                        class="btn btn-outline-secondary cursor-pointer ltr:rounded-l-none rtl:rounded-r-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btnrdo3"
+                      >
+                        <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdo3" name="btn_radio1" />Radio
+                        3</label
+                      >
+                    </div>
+                    <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="inline-flex items-center" role="group">
+                      <label
+                        class="btn btn-light-secondary cursor-pointer ltr:rounded-r-none rtl:rounded-l-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btnrdolite1"
+                      >
+                        <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdolite1" name="btn_radio2" />Radio
+                        1</label
+                      >
+                      <label
+                        class="btn btn-light-secondary cursor-pointer rounded-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btnrdolite2"
+                      >
+                        <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdolite2" name="btn_radio2" />Radio
+                        2</label
+                      >
+                      <label
+                        class="btn btn-light-secondary cursor-pointer ltr:rounded-l-none rtl:rounded-r-none has-[:checked]:bg-secondary-500 has-[:checked]:text-white"
+                        for="btnrdolite3"
+                      >
+                        <input type="radio" class="forced-colors:appearance-auto appearance-none" id="btnrdolite3" name="btn_radio2" />Radio
+                        3</label
+                      >
+                    </div>
+                    <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <div class="inline-flex items-center" role="group">
+                      <label
+                        class="btn btn-light-primary cursor-pointer ltr:rounded-r-none rtl:rounded-l-none has-[:checked]:bg-primary-500 has-[:checked]:text-white"
+                        for="btnrdolitecol1"
+                      >
+                        <input
+                          type="radio"
+                          class="forced-colors:appearance-auto appearance-none"
+                          id="btnrdolitecol1"
+                          name="btn_radio3"
+                        />Radio 1</label
+                      >
+                      <label
+                        class="btn btn-light-success cursor-pointer rounded-none has-[:checked]:bg-success-500 has-[:checked]:text-white"
+                        for="btnrdolitecol2"
+                      >
+                        <input
+                          type="radio"
+                          class="forced-colors:appearance-auto appearance-none"
+                          id="btnrdolitecol2"
+                          name="btn_radio3"
+                        />Radio 2</label
+                      >
+                      <label
+                        class="btn btn-light-danger cursor-pointer ltr:rounded-l-none rtl:rounded-r-none has-[:checked]:bg-danger-500 has-[:checked]:text-white"
+                        for="btnrdolitecol3"
+                      >
+                        <input
+                          type="radio"
+                          class="forced-colors:appearance-auto appearance-none"
+                          id="btnrdolitecol3"
+                          name="btn_radio3"
+                        />Radio 3</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ radio button groups ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+</html>

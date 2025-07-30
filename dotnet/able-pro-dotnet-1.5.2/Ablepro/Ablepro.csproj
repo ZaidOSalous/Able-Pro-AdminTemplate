@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\Workspace\Projects\CodedTheme\Ablepro-dotnet\Ablepro\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Workspace\Projects\CodedTheme\Ablepro-dotnet\Ablepro\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\ApplicationInvoice\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Views\Dashboard\TextTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+</Project>

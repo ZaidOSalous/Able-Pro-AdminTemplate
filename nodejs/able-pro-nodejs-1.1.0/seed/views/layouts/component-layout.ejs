@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- title %>
+        <%- css1 %>
+
+        <%- include('./head-css') %>
+        
+        <%- css2 %>
+    </head>
+
+    <body data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-layout="vertical" data-pc-direction="ltr" data-pc-theme_contrast="" data-pc-theme="light" class="component-page">
+      
+        <%- include('./loader') %>
+        <%-include('./component/component-header') %>
+        <%-mainContent %>  
+              <!-- Add your main content here -->
+      
+      <%-js1 %>
+      <%-include('./footer-js') %>
+      <%-include('./component/layout-component-footer-js') %>
+      <%-js2 %>
+      <%-include('./customizer') %>
+  <body>
+
+</html>

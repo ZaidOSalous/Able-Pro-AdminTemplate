@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Detail Invoice'}) @@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+
+  <body>
+    @@include('../layouts/layout-vertical.html')
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        @@include('../layouts/breadcrumb.html', {'breadcrumb-item': 'Invoice', 'breadcrumb-item-active':'Detail'})
+
+        <!-- [ Main Content ] start -->
+        <div class="grid grid-cols-12 gap-x-6">
+          <div class="col-span-12">
+            <div class="print:hidden card mb-3">
+              <div class="card-body !p-3">
+                <ul class="ml-auto mb-0 flex justify-end flex-wrap gap-1">
+                  <li class="list-inline-item align-bottom">
+                    <a href="#" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary">
+                      <i class="ph-duotone ph-pencil-simple-line text-[22px]"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item align-bottom">
+                    <a href="#" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary">
+                      <i class="ph-duotone ph-eye text-[22px]"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item align-bottom">
+                    <a href="#" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary">
+                      <i class="ph-duotone ph-download-simple text-[22px]"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item align-bottom">
+                    <a href="#" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary">
+                      <i class="ph-duotone ph-printer text-[22px]"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item align-bottom">
+                    <a href="#" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary">
+                      <i class="ph-duotone ph-paper-plane-tilt text-[22px]"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item align-bottom">
+                    <a href="#" class="w-10 h-10 inline-flex items-center justify-center rounded-xl btn-link-secondary">
+                      <i class="ph-duotone ph-share-network text-[22px]"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="grid grid-cols-12 gap-4">
+                  <div class="col-span-12">
+                    <div class="grid grid-cols-12 gap-4">
+                      <div class="col-span-12 sm:col-span-6">
+                        <div class="d-flex align-items-center mb-2">
+                          <img src="../assets/images/logo-dark.svg" class="img-fluid inline-block" alt="images" />
+                          <span class="badge bg-secondary-500/10 text-secondary-500 rounded-full ml-2">Paid</span>
+                        </div>
+                        <p class="mb-0">INV - 000457</p>
+                      </div>
+                      <div class="col-span-12 sm:col-span-6 ltr:sm:text-right rtl:sm:text-left">
+                        <h6>Date <span class="text-muted font-normal">03/8/2023</span></h6>
+                        <h6>Due Date <span class="text-muted font-normal">10/8/2023</span></h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6">
+                    <div class="border border-theme-border dark:border-themedark-border rounded-lg p-4">
+                      <h6 class="mb-0">From:</h6>
+                      <h5>Garcia-Cameron and Sons</h5>
+                      <p class="mb-0">8534 Saunders Hill Apt. 583</p>
+                      <p class="mb-0">(970) 982-3353</p>
+                      <p class="mb-0">brandon07@pierce.com</p>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6">
+                    <div class="border border-theme-border dark:border-themedark-border rounded-lg p-4">
+                      <h6 class="mb-0">To:</h6>
+                      <h5>Dickinson-Cummerata</h5>
+                      <p class="mb-0">55D Leatha Way Ernaburgh, NT 2146</p>
+                      <p class="mb-0">75-9079921</p>
+                      <p class="mb-0">kasandra.conn@borer.com</p>
+                    </div>
+                  </div>
+                  <div class="col-span-12">
+                    <div class="table-responsive">
+                      <table class="table table-hover mb-0">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th class="ltr:!text-right rtl:!text-left">Qty</th>
+                            <th class="ltr:!text-right rtl:!text-left">Price</th>
+                            <th class="ltr:!text-right rtl:!text-left">Total Amount</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Mauris</td>
+                            <td>Malesuada adipiscing</td>
+                            <td class="ltr:!text-right rtl:!text-left">2</td>
+                            <td class="ltr:!text-right rtl:!text-left">$80.00</td>
+                            <td class="ltr:!text-right rtl:!text-left">$160.00</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Vitae</td>
+                            <td>Hac egestas</td>
+                            <td class="ltr:!text-right rtl:!text-left">3</td>
+                            <td class="ltr:!text-right rtl:!text-left">$40.00</td>
+                            <td class="ltr:!text-right rtl:!text-left">$120.00</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Mauris</td>
+                            <td>Malesuada adipiscing</td>
+                            <td class="ltr:!text-right rtl:!text-left">4</td>
+                            <td class="ltr:!text-right rtl:!text-left">$80.00</td>
+                            <td class="ltr:!text-right rtl:!text-left">$320.00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="text-left">
+                      <hr class="mb-4 mt-1 border-t-theme-border dark:border-t-themedark-border opacity-50" />
+                    </div>
+                  </div>
+                  <div class="col-span-12">
+                    <div class="invoice-total max-w-full w-[400px] ml-auto">
+                      <div class="grid grid-cols-12 gap-3">
+                        <div class="col-span-6"><p class="text-muted ltr:text-left rtl:text-right">Sub Total :</p></div>
+                        <div class="col-span-6"><p class="font-semibold ltr:text-right rtl:text-left">$20.00</p></div>
+                        <div class="col-span-6"><p class="text-muted ltr:text-left rtl:text-right">Discount :</p></div>
+                        <div class="col-span-6"><p class="font-semibold ltr:text-right rtl:text-left text-success-500">$10.00</p></div>
+                        <div class="col-span-6"><p class="text-muted ltr:text-left rtl:text-right">Taxes :</p></div>
+                        <div class="col-span-6"><p class="font-semibold ltr:text-right rtl:text-left">$5.000</p></div>
+                        <div class="col-span-6"><p class="font-semibold ltr:text-left rtl:text-right">Grand Total :</p></div>
+                        <div class="col-span-6"><p class="font-semibold ltr:text-right rtl:text-left">$25.00</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12">
+                    <label class="form-label">Note</label>
+                    <p class="mb-0"
+                      >It was a pleasure working with you and your team. We hope you will keep us in mind for future freelance projects.
+                      Thank You!</p
+                    >
+                  </div>
+                  <div class="col-span-12 text-right print:hidden">
+                    <button class="btn btn-outline-secondary btn-print-invoice">Download</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-block.html') @@include('../layouts/footer-js.html')
+    <script>
+      document.querySelector('.btn-print-invoice').addEventListener('click', function () {
+        var link2 = document.createElement('link');
+        link2.innerHTML =
+          '<style>@media print{*,::after,::before{text-shadow:none!important;box-shadow:none!important}a:not(.btn){text-decoration:none}abbr[title]::after{content:" ("attr(title) ")"}pre{white-space:pre-wrap!important}blockquote,pre{border:1px solid #adb5bd;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}@page{size:a3}body{min-width:992px!important}.container{min-width:992px!important}.page-header,.pc-sidebar,.pc-mob-header,.pc-header,.pct-customizer,.modal,.navbar{display:none}.pc-container{top:0;}.invoice-contact{padding-top:0;}@page,.card-body,.card-header,body,.pcoded-content{padding:0;margin:0}.badge{border:1px solid #000}.table{border-collapse:collapse!important}.table td,.table th{background-color:#fff!important}.table-bordered td,.table-bordered th{border:1px solid #dee2e6!important}.table-dark{color:inherit}.table-dark tbody+tbody,.table-dark td,.table-dark th,.table-dark thead th{border-color:#dee2e6}.table .thead-dark th{color:inherit;border-color:#dee2e6}}</style>';
+        document.getElementsByTagName('head')[0].appendChild(link2);
+        window.print();
+      });
+    </script>
+    <!-- [Page Specific JS] end -->
+    @@include('../layouts/customizer.html')
+  </body>
+  <!-- [Body] end -->
+</html>

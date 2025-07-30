@@ -1,0 +1,54 @@
+<%- contentFor('title') %>  
+<%- include('../layouts/head-page-meta', { title:"Dynamic Import" }) %>
+    
+
+<%- contentFor('css1') %>  
+<!-- Add your CSS block content here if any -->
+<link rel="stylesheet" href="/libs/simple-datatables/dist/style.css" />
+    
+
+<%- contentFor('css2') %>
+<!-- Add your second CSS block content here if any -->
+
+<%- contentFor('mainContent') %>  
+        <%-include('../layouts/breadcrumb', { parentTitle:'Dynamic Import', title:'Table' }) %>
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- prettier-ignore -->
+          <%- include('../layouts/component/component-link', { title:"Simple-datatables", text:"A lightweight, extendable, JavaScript HTML table library written in TypeScript and transpilled to Vanilla JavaScript. Similar to jQuery DataTables for use in modern browsers, but without the jQuery dependency." , link:"https://github.com/fiduswriter/simple-datatables" }) %>
+        </div>
+        <div class="row">
+          <!-- [ Dynamic Import ] start -->
+          <div class="col-xl-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Dynamic Import</h5>
+              </div>
+              <div class="card-body table-border-style">
+                <div class="table-responsive">
+                  <table class="table" id="pc-dt-dynamic-import"> </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ Dynamic Import ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    
+
+<%- contentFor('js1') %> 
+    <script type="module">
+      import { DataTable, convertCSV } from '/libs/simple-datatables/dist/module.js';
+      const dataTable = new DataTable('#pc-dt-dynamic-import');
+      const convertedData = convertCSV({
+        type: 'csv',
+        data: 'Name,Ext.,City,Start Date|Hammett Gordon,8101,Wah,1998/06/09|Kyra Moses,3796,Quenast,1998/07/07|Kelly Cameron,4836,Fontaine-Valmont,1999/02/07|Theodore Duran,8971,Dhanbad,1999/04/07|Hammett Gordon,8101,Wah,1998/06/09|Kyra Moses,3796,Quenast,1998/07/07|Kelly Cameron,4836,Fontaine-Valmont,1999/02/07|Theodore Duran,8971,Dhanbad,1999/04/07|Hammett Gordon,8101,Wah,1998/06/09|Kyra Moses,3796,Quenast,1998/07/07|Kelly Cameron,4836,Fontaine-Valmont,1999/02/07|Theodore Duran,8971,Dhanbad,1999/04/07|Hammett Gordon,8101,Wah,1998/06/09|Kyra Moses,3796,Quenast,1998/07/07|Kelly Cameron,4836,Fontaine-Valmont,1999/02/07|Theodore Duran,8971,Dhanbad,1999/04/07',
+        headings: true,
+        columnDelimiter: ',',
+        lineDelimiter: '|'
+      });
+      dataTable.insert(convertedData);
+    </script>
+<%- contentFor('js2') %> 
+    
+

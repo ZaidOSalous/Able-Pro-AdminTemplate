@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Fetch API";
+    ViewBag.BreadcrumbItemActive = "Fetch API";
+    ViewBag.BreadcrumItem = "Table";
+    ViewBag.plugintitle="Simple-datatables";
+    ViewBag.text="A lightweight, extendable, JavaScript HTML table library written in TypeScript and transpilled to Vanilla JavaScript. Similar to jQuery DataTables for use in modern browsers, but without the jQuery dependency.";
+    ViewBag.link="https://github.com/fiduswriter/simple-datatables";
+}
+@section styles {
+  <!-- [Page specific CSS] start -->
+  <!-- Vanila Data table css -->
+  <link rel="stylesheet" href="../assets/css/plugins/style.css">
+  <!-- [Page specific CSS] end -->
+}
+@Html.Partial("~/Views/Shared/_breadcrumb.cshtml")
+
+<!-- [ Main Content ] start -->
+@Html.Partial("~/Views/Shared/_component-link.cshtml")
+<div class="row">
+  <!-- [ basic-table ] start -->
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Fetch API</h5>
+      </div>
+      <div class="card-body table-border-style">
+        <div class="table-responsive">
+          <table class="table" id="pc-dt-fetchapi"> </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ basic-table ] end -->
+</div>
+<!-- [ Main Content ] end -->
+@section scripts {
+  <!-- [Page Specific JS] start -->
+  <script src="../assets/js/plugins/simple-datatables.js"></script>
+  <script>
+    fetch('../assets/json/datatable.json')
+      .then((response) => response.json())
+      .then((data) => {
+        if (!data.length) {
+          return;
+        }
+
+        let table = new simpleDatatables.DataTable('#pc-dt-fetchapi', {
+          data: {
+            headings: Object.keys(data[0]),
+            data: data.map((item) => Object.values(item))
+          }
+        });
+      });
+  </script>
+  <!-- [Page Specific JS] end -->
+}

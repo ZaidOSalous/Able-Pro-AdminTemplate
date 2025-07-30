@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Pagination'}) @@include('../layouts/head-css.html')
+  </head>
+
+  <body>
+    <!-- [ Main Content ] start -->
+    @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html')
+    <section class="pt-20 xl:pt-28">
+      <div class="container">
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 xl:col-span-3">@@include('../layouts/component/component-menu-list.html')</div>
+          <div class="col-span-12 xl:col-span-9">
+            <div class="grid grid-cols-12 gap-6">
+              <!-- prettier-ignore -->
+              @@include('../layouts/component/component-breadcrumb.html',{title:'Pagination',text:'showing pagination to indicate a series of related content exists across multiple pages.'})
+            </div>
+            <!-- [ Main Content ] start -->
+            <div class="grid grid-cols-12 gap-6">
+              <!-- [ Breadcrumbs & Pagination ] start -->
+              <div class="col-span-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Pagination</h5>
+                  </div>
+                  <div class="card-body pc-component">
+                    <nav aria-label="Page navigation example">
+                      <ul
+                        class="flex *:*:inline-block *:*:px-3 *:*:py-1.5 *:border *:border-theme-border *:dark:border-themedark-border *:hover:bg-secondary-300/10"
+                      >
+                        <li class="ltr:rounded-l-lg rtl:rounded-r-lg"><a href="#!">Previous</a></li>
+                        <li><a href="#!">1</a></li>
+                        <li><a href="#!">2</a></li>
+                        <li><a href="#!">3</a></li>
+                        <li class="ltr:rounded-r-lg rtl:rounded-l-lg"><a href="#!">Next</a></li>
+                      </ul>
+                    </nav>
+                    <h5 class="mt-4 mb-0">Working with Icons</h5>
+                    <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <nav aria-label="Page navigation example">
+                      <ul
+                        class="flex *:*:inline-block *:*:px-3 *:*:py-1.5 *:border *:border-theme-border *:dark:border-themedark-border *:hover:bg-secondary-300/10"
+                      >
+                        <li class="ltr:rounded-l-lg rtl:rounded-r-lg">
+                          <a href="#!" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                        </li>
+                        <li><a href="#!">1</a></li>
+                        <li><a href="#!">2</a></li>
+                        <li><a href="#!">3</a></li>
+                        <li class="ltr:rounded-r-lg rtl:rounded-l-lg">
+                          <a href="#!" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <h5 class="mt-4 mb-0">Disabled and Active States</h5>
+                    <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <nav aria-label="...">
+                      <ul
+                        class="flex *:*:inline-block *:*:px-3 *:*:py-1.5 *:border *:border-theme-border *:dark:border-themedark-border *:hover:bg-secondary-300/10"
+                      >
+                        <li class="ltr:rounded-l-lg rtl:rounded-r-lg select-none !bg-secondary-500/10"><span>Previous</span></li>
+                        <li><a href="#!">1</a></li>
+                        <li class="!bg-primary-500 !text-white !border-primary-500">
+                          <span>
+                            2
+                            <span class="sr-only">(current)</span>
+                          </span>
+                        </li>
+                        <li><a href="#!">3</a></li>
+                        <li class="ltr:rounded-r-lg rtl:rounded-l-lg"><a href="#!">Next</a></li>
+                      </ul>
+                    </nav>
+                    <h5 class="mt-4 mb-0">Sizing</h5>
+                    <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <nav class="mb-3" aria-label="...">
+                      <ul
+                        class="flex *:*:inline-block *:*:px-6 *:*:py-3 *:border *:border-theme-border *:dark:border-themedark-border *:hover:bg-secondary-300/10"
+                      >
+                        <li class="ltr:rounded-l-lg rtl:rounded-r-lg">
+                          <a href="#!" tabindex="-1">1</a>
+                        </li>
+                        <li><a href="#!">2</a></li>
+                        <li class="ltr:rounded-r-lg rtl:rounded-l-lg"><a href="#!">3</a></li>
+                      </ul>
+                    </nav>
+                    <nav aria-label="...">
+                      <ul
+                        class="flex *:*:inline-block *:*:px-2 *:*:py-1 *:border *:border-theme-border *:dark:border-themedark-border *:hover:bg-secondary-300/10"
+                      >
+                        <li class="ltr:rounded-l-lg rtl:rounded-r-lg">
+                          <a href="#!" tabindex="-1">1</a>
+                        </li>
+                        <li><a href="#!">2</a></li>
+                        <li class="ltr:rounded-r-lg rtl:rounded-l-lg"><a href="#!">3</a></li>
+                      </ul>
+                    </nav>
+                    <h5 class="mt-4 mb-0">Alignment</h5>
+                    <hr class="my-3 border-0 border-t border-theme-border dark:border-themedark-border" />
+                    <nav aria-label="Page navigation example">
+                      <ul
+                        class="flex justify-center *:*:inline-block *:*:px-3 *:*:py-1.5 *:border *:border-theme-border *:dark:border-themedark-border *:hover:bg-secondary-300/10 mb-3"
+                      >
+                        <li class="ltr:rounded-l-lg rtl:rounded-r-lg"><a href="#!">Previous</a></li>
+                        <li><a href="#!">1</a></li>
+                        <li><a href="#!">2</a></li>
+                        <li><a href="#!">3</a></li>
+                        <li class="ltr:rounded-r-lg rtl:rounded-l-lg"><a href="#!">Next</a></li>
+                      </ul>
+                    </nav>
+                    <nav aria-label="Page navigation example">
+                      <ul
+                        class="flex justify-end *:*:inline-block *:*:px-3 *:*:py-1.5 *:border *:border-theme-border *:dark:border-themedark-border *:hover:bg-secondary-300/10"
+                      >
+                        <li class="ltr:rounded-l-lg rtl:rounded-r-lg"><a href="#!">Previous</a></li>
+                        <li><a href="#!">1</a></li>
+                        <li><a href="#!">2</a></li>
+                        <li><a href="#!">3</a></li>
+                        <li class="ltr:rounded-r-lg rtl:rounded-l-lg"><a href="#!">Next</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <!-- [ Breadcrumbs & Pagination ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+    @@include('../layouts/footer-js.html') @@include('../layouts/component/layout-component-footer-js.html')
+    @@include('../layouts/customizer.html')
+  </body>
+</html>
