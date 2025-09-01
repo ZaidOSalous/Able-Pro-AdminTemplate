@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "أحمد",
+      "lastName": "محمد",
+      "email": "ahmed@example.com",
+      "phone": "+966501234567",
+      "role": "Admin",
+      "status": "active",
+      "avatar": null,
+      "createdAt": "2025-08-09T02:31:18.149Z",
+      "updatedAt": "2025-08-09T02:31:18.149Z"
+    },
+    {
+      "id": 2,
+      "firstName": "فاطمة",
+      "lastName": "علي",
+      "email": "fatima@example.com",
+      "phone": "+966507654321",
+      "role": "User",
+      "status": "active",
+      "avatar": null,
+      "createdAt": "2025-08-09T02:31:18.149Z",
+      "updatedAt": "2025-08-09T02:31:18.149Z"
+    }
+  ],
+  "settings": {
+    "siteName": "نظام إدارة المستخدمين",
+    "language": "ar",
+    "timezone": "Asia/Riyadh",
+    "emailNotifications": true,
+    "smsNotifications": false
+  },
+  "roles": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "permissions": [
+        "all"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "User",
+      "permissions": [
+        "read"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Manager",
+      "permissions": [
+        "read",
+        "write"
+      ]
+    }
+  ]
+}

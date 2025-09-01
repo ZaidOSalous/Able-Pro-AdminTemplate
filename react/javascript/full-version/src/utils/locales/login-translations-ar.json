@@ -1,0 +1,14 @@
+{
+  "email_address": "البريد الإلكتروني",
+  "enter_email_address": "أدخل البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "enter_password": "أدخل كلمة المرور",
+  "keep_me_sign_in": "تذكرني",
+  "forgot_password": "نسيت كلمة المرور؟",
+  "login_button": "تسجيل الدخول",
+  "sign_in_with_facebook": "تسجيل الدخول باستخدام فيسبوك",
+  "sign_in_with_twitter": "تسجيل الدخول باستخدام تويتر",
+  "sign_in_with_google": "تسجيل الدخول باستخدام جوجل",
+  "or": "أو",
+  "dont_have_account": "ليس لديك حساب؟"
+}

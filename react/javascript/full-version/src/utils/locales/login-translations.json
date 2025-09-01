@@ -1,0 +1,14 @@
+{
+  "email_address": "Email Address",
+  "enter_email_address": "Enter email address",
+  "password": "Password",
+  "enter_password": "Enter password",
+  "keep_me_sign_in": "Keep me sign in",
+  "forgot_password": "Forgot Password?",
+  "login_button": "Login",
+  "sign_in_with_facebook": "Sign In with Facebook",
+  "sign_in_with_twitter": "Sign In with Twitter",
+  "sign_in_with_google": "Sign In with Google",
+  "or": "OR",
+  "dont_have_account": "Don't have an account?"
+}

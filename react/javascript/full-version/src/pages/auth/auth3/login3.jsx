@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -54,6 +55,7 @@ export default function Login3Page() {
   const [skipped, setSkipped] = useState(new Set());
   const [selectedValue, setSelectedValue] = useState('Personal');
   const [otp, setOtp] = useState();
+  const intl = useIntl();
 
   const isStepSkipped = (step) => skipped.has(step);
 
@@ -96,9 +98,9 @@ export default function Login3Page() {
           <AuthCard border={false}>
             {activeStep === steps.length ? (
               <>
-                <Alert sx={{ my: 3 }}>All steps completed - you can now Login</Alert>
+                <Alert sx={{ my: 3 }}><FormattedMessage id="all_steps_completed" defaultMessage="All steps completed - you can now Login" /></Alert>
                 <Button component={Link} to={isLoggedIn ? '/auth/login' : '/login'} color="primary" variant="contained" fullWidth>
-                  Login
+                  <FormattedMessage id="login_button" defaultMessage="Login" />
                 </Button>
               </>
             ) : (
@@ -111,7 +113,7 @@ export default function Login3Page() {
                           <Typography variant="h3">Welcome to the Able Pro</Typography>
                         </Grid>
                         <Grid size={12}>
-                          <Typography>Sign up or login with your work email.</Typography>
+                          <Typography><FormattedMessage id="sign_up_or_login" defaultMessage="Sign up or login with your work email." /></Typography>
                         </Grid>
                       </Grid>
                     </Grid>
@@ -125,25 +127,22 @@ export default function Login3Page() {
                               alt="Facebook"
                               sx={{ my: 0, mx: 1.25, width: 16, height: 16 }}
                             />
-                            Continue with work email
+                            <FormattedMessage id="continue_with_work_email" defaultMessage="Continue with work email" />
                           </AuthSocButton>
                         </Grid>
                         <Grid size={12}>
                           <AuthSocButton>
-                            <CardMedia component="img" src={imgFacebook} alt="Facebook" sx={{ my: 0, mx: 1.25, width: 'auto' }} /> Sign In
-                            with Facebook
+                            <CardMedia component="img" src={imgFacebook} alt="Facebook" sx={{ my: 0, mx: 1.25, width: 'auto' }} /> <FormattedMessage id="sign_in_with_facebook" defaultMessage="Sign In with Facebook" />
                           </AuthSocButton>
                         </Grid>
                         <Grid size={12}>
                           <AuthSocButton>
-                            <CardMedia component="img" src={imgTwitter} alt="Twitter" sx={{ my: 0, mx: 1.25, width: 'auto' }} /> Sign In
-                            with Twitter
+                            <CardMedia component="img" src={imgTwitter} alt="Twitter" sx={{ my: 0, mx: 1.25, width: 'auto' }} /> <FormattedMessage id="sign_in_with_twitter" defaultMessage="Sign In with Twitter" />
                           </AuthSocButton>
                         </Grid>
                         <Grid size={12}>
                           <AuthSocButton>
-                            <CardMedia component="img" src={imgGoogle} alt="Google" sx={{ my: 0, mx: 1.25, width: 'auto' }} /> Sign In with
-                            Google
+                            <CardMedia component="img" src={imgGoogle} alt="Google" sx={{ my: 0, mx: 1.25, width: 'auto' }} /> <FormattedMessage id="sign_in_with_google" defaultMessage="Sign In with Google" />
                           </AuthSocButton>
                         </Grid>
                       </Grid>
@@ -155,21 +154,21 @@ export default function Login3Page() {
                     <Grid sx={{ textAlign: 'center' }} size={12}>
                       <Stack sx={{ gap: 1 }}>
                         <Typography variant="h3">Welcome to the Able Pro</Typography>
-                        <Typography>Sign up or login with your work email.</Typography>
+                        <Typography><FormattedMessage id="sign_up_or_login" defaultMessage="Sign up or login with your work email." /></Typography>
                       </Stack>
                     </Grid>
                     <Grid size={12}>
                       <Stack sx={{ gap: 3 }}>
                         <Stack sx={{ gap: 1 }}>
-                          <InputLabel htmlFor="email-login">Enter your work email to continue</InputLabel>
-                          <OutlinedInput id="email-login" type="email" name="email" placeholder="Enter email address" fullWidth />
+                          <InputLabel htmlFor="email-login"><FormattedMessage id="enter_work_email" defaultMessage="Enter your work email to continue" /></InputLabel>
+                          <OutlinedInput id="email-login" type="email" name="email" placeholder={intl.formatMessage({ id: 'enter_email_address', defaultMessage: 'Enter email address' })} fullWidth />
                         </Stack>
                         <Stack direction="row" sx={{ gap: 1 }}>
                           <Button color="secondary" variant="outlined" onClick={handleBack} fullWidth>
-                            Back
+                            <FormattedMessage id="back" defaultMessage="Back" />
                           </Button>
                           <Button onClick={handleNext} variant="contained" color="primary" fullWidth>
-                            Continue
+                            <FormattedMessage id="continue" defaultMessage="Continue" />
                           </Button>
                         </Stack>
                       </Stack>

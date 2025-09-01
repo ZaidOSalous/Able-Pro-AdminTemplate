@@ -64,14 +64,14 @@ export let DropzopType;
 
 const config = {
   fontFamily: `Inter var`,
-  i18n: 'en',
+  i18n: 'ar',
   menuOrientation: MenuOrientation.VERTICAL,
   menuCaption: true,
   miniDrawer: false,
   container: true,
   mode: ThemeMode.LIGHT,
   presetColor: 'default',
-  themeDirection: ThemeDirection.LTR,
+  themeDirection: ThemeDirection.RTL,
   themeContrast: false
 };
 

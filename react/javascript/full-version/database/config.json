@@ -1,0 +1,24 @@
+﻿{
+  "development": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "able_pro_db",
+    "username": "able_pro_user",
+    "password": "AblePro2024!",
+    "dialect": "mysql",
+    "charset": "utf8mb4",
+    "collate": "utf8mb4_unicode_ci",
+    "timezone": "+03:00"
+  },
+  "production": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "able_pro_db_prod",
+    "username": "able_pro_user",
+    "password": "CHANGE_THIS_PASSWORD",
+    "dialect": "mysql",
+    "charset": "utf8mb4",
+    "collate": "utf8mb4_unicode_ci",
+    "timezone": "+03:00"
+  }
+}

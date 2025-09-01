@@ -3,7 +3,7 @@ import { handlerCustomerDialog } from 'api/customer';
 import { NavActionType } from 'config';
 
 // assets
-import { Add, Link1, KyberNetwork, Messages2, Calendar1, Kanban, Profile2User, Bill, UserSquare, ShoppingBag } from 'iconsax-reactjs';
+import { Add, Link1, KyberNetwork, Messages2, Calendar1, Kanban, Profile2User, Bill, UserSquare, ShoppingBag, People, Setting2, Task } from 'iconsax-reactjs';
 
 // icons
 const icons = {
@@ -11,10 +11,13 @@ const icons = {
   chat: Messages2,
   calendar: Calendar1,
   kanban: Kanban,
+  monday: Task,
   customer: Profile2User,
   invoice: Bill,
   profile: UserSquare,
   ecommerce: ShoppingBag,
+  users: People,
+  settings: Setting2,
   add: Add,
   link: Link1
 };
@@ -59,6 +62,26 @@ const applications = {
       url: '/apps/kanban/board',
       link: '/apps/kanban/:tab',
       breadcrumbs: false
+    },
+    {
+      id: 'monday',
+      title: 'Monday Dashboard',
+      type: 'collapse',
+      icon: icons.monday,
+      children: [
+        {
+          id: 'monday-dashboard',
+          title: 'Projects',
+          type: 'item',
+          url: '/apps/monday'
+        },
+        {
+          id: 'monday-project-details',
+          title: 'Project Details',
+          type: 'item',
+          url: '/apps/monday/project/1'
+        }
+      ]
     },
     {
       id: 'customer',
@@ -193,6 +216,43 @@ const applications = {
           url: '/apps/e-commerce/checkout'
         }
       ]
+    },
+    {
+      id: 'users',
+      title: 'User Management',
+      type: 'collapse',
+      icon: icons.users,
+      children: [
+        {
+          id: 'users-list',
+          title: 'Users List',
+          type: 'item',
+          url: '/apps/users/list',
+          breadcrumbs: false
+        },
+        {
+          id: 'users-add',
+          title: 'Add User',
+          type: 'item',
+          url: '/apps/users/add',
+          breadcrumbs: false
+        },
+        {
+          id: 'users-roles',
+          title: 'Roles & Permissions',
+          type: 'item',
+          url: '/apps/users/roles',
+          breadcrumbs: false
+        }
+      ]
+    },
+    {
+      id: 'settings',
+      title: 'Settings',
+      type: 'item',
+      url: '/apps/settings',
+      icon: icons.settings,
+      breadcrumbs: false
     }
   ]
 };

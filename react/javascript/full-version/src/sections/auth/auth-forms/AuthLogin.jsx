@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { preload } from 'swr';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 // material-ui
 import Button from '@mui/material/Button';
@@ -26,6 +27,7 @@ import IconButton from 'components/@extended/IconButton';
 import useAuth from 'hooks/useAuth';
 import useScriptRef from 'hooks/useScriptRef';
 import { fetcher } from 'utils/axios';
+import FirebaseSocial from './FirebaseSocial';
 
 // assets
 import { Eye, EyeSlash } from 'iconsax-reactjs';
@@ -37,6 +39,7 @@ export default function AuthLogin({ forgot }) {
 
   const { isLoggedIn, login } = useAuth();
   const scriptedRef = useScriptRef();
+  const intl = useIntl();
 
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => {
@@ -86,7 +89,9 @@ export default function AuthLogin({ forgot }) {
             <Grid container spacing={3}>
               <Grid size={12}>
                 <Stack sx={{ gap: 1 }}>
-                  <InputLabel htmlFor="email-login">Email Address</InputLabel>
+                  <InputLabel htmlFor="email-login">
+                    <FormattedMessage id="email_address" defaultMessage="Email Address" />
+                  </InputLabel>
                   <OutlinedInput
                     id="email-login"
                     type="email"
@@ -94,7 +99,7 @@ export default function AuthLogin({ forgot }) {
                     name="email"
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    placeholder="Enter email address"
+                    placeholder={intl.formatMessage({ id: 'enter_email_address', defaultMessage: 'Enter email address' })}
                     fullWidth
                     error={Boolean(touched.email && errors.email)}
                   />
@@ -107,7 +112,9 @@ export default function AuthLogin({ forgot }) {
               </Grid>
               <Grid size={12}>
                 <Stack sx={{ gap: 1 }}>
-                  <InputLabel htmlFor="password-login">Password</InputLabel>
+                  <InputLabel htmlFor="password-login">
+                    <FormattedMessage id="password" defaultMessage="Password" />
+                  </InputLabel>
                   <OutlinedInput
                     fullWidth
                     error={Boolean(touched.password && errors.password)}
@@ -130,7 +137,7 @@ export default function AuthLogin({ forgot }) {
                         </IconButton>
                       </InputAdornment>
                     }
-                    placeholder="Enter password"
+                    placeholder={intl.formatMessage({ id: 'enter_password', defaultMessage: 'Enter password' })}
                   />
                 </Stack>
                 {touched.password && errors.password && (
@@ -152,11 +159,11 @@ export default function AuthLogin({ forgot }) {
                         size="small"
                       />
                     }
-                    label={<Typography variant="h6">Keep me sign in</Typography>}
+                    label={<Typography variant="h6"><FormattedMessage id="keep_me_sign_in" defaultMessage="Keep me sign in" /></Typography>}
                   />
 
                   <Link variant="h6" component={RouterLink} to={isLoggedIn && forgot ? forgot : '/forgot-password'} color="text.primary">
-                    Forgot Password?
+                    <FormattedMessage id="forgot_password" defaultMessage="Forgot Password?" />
                   </Link>
                 </Stack>
               </Grid>
@@ -168,9 +175,21 @@ export default function AuthLogin({ forgot }) {
               <Grid size={12}>
                 <AnimateButton>
                   <Button disableElevation disabled={isSubmitting} fullWidth size="large" type="submit" variant="contained" color="primary">
-                    Login
+                    <FormattedMessage id="login_button" defaultMessage="Login" />
                   </Button>
                 </AnimateButton>
+              </Grid>
+              
+              <Grid size={12}>
+                <Stack direction="row" sx={{ alignItems: 'center', gap: 1 }}>
+                  <Typography variant="body2" color="text.secondary" sx={{ flex: 1, textAlign: 'center' }}>
+                    <FormattedMessage id="or_continue_with" defaultMessage="Or continue with" />
+                  </Typography>
+                </Stack>
+              </Grid>
+              
+              <Grid size={12}>
+                <FirebaseSocial />
               </Grid>
             </Grid>
           </form>

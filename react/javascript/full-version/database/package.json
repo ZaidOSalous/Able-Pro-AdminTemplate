@@ -1,0 +1,29 @@
+﻿{
+  "name": "able-pro-database",
+  "version": "1.0.0",
+  "description": "MySQL database setup for Able Pro Admin Template",
+  "main": "config.json",
+  "scripts": {
+    "db:create": "mysql -u root -p < able_pro_database.sql",
+    "db:backup": "mysqldump -u able_pro_user -p able_pro_db > backup.sql",
+    "db:restore": "mysql -u able_pro_user -p able_pro_db < backup.sql"
+  },
+  "dependencies": {
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.1"
+  },
+  "keywords": [
+    "mysql",
+    "database",
+    "able-pro",
+    "admin-template",
+    "sequelize"
+  ],
+  "author": "Able Pro Team",
+  "license": "MIT"
+}

@@ -19,6 +19,16 @@ const WidgetStatistics = Loadable(lazy(() => import('pages/widget/statistics')))
 const WidgetData = Loadable(lazy(() => import('pages/widget/data')));
 const WidgetChart = Loadable(lazy(() => import('pages/widget/chart')));
 
+// render - user management
+const UsersList = Loadable(lazy(() => import('pages/apps/users/list')));
+const UsersAdd = Loadable(lazy(() => import('pages/apps/users/add')));
+const UsersEdit = Loadable(lazy(() => import('pages/apps/users/edit')));
+const UsersView = Loadable(lazy(() => import('pages/apps/users/view')));
+const UsersRoles = Loadable(lazy(() => import('pages/apps/users/roles')));
+
+// render - settings
+const AppSettings = Loadable(lazy(() => import('pages/apps/settings')));
+
 // render - admin panel
 const OnlineCoursesDashboard = Loadable(lazy(() => import('pages/admin-panel/online-courses/dashboard/online-dashboard')));
 const OnlineCoursesTeacherList = Loadable(lazy(() => import('pages/admin-panel/online-courses/teacher/list')));
@@ -53,6 +63,10 @@ const AppCalendar = Loadable(lazy(() => import('pages/apps/calendar')));
 const AppKanban = Loadable(lazy(() => import('pages/apps/kanban')));
 const AppKanbanBacklogs = Loadable(lazy(() => import('sections/apps/kanban/Backlogs')));
 const AppKanbanBoard = Loadable(lazy(() => import('sections/apps/kanban/Board')));
+
+// render - monday dashboard
+const MondayDashboard = Loadable(lazy(() => import('pages/monday-dashboard')));
+const MondayProjectDetails = Loadable(lazy(() => import('pages/monday-dashboard/project-details')));
 
 const AppCustomerList = Loadable(lazy(() => import('pages/apps/customer/list')));
 const AppCustomerCard = Loadable(lazy(() => import('pages/apps/customer/card')));
@@ -434,6 +448,48 @@ const MainRoutes = {
                   ]
                 }
               ]
+            },
+            {
+              path: 'users',
+              children: [
+                {
+                  path: 'list',
+                  element: <UsersList />
+                },
+                {
+                  path: 'add',
+                  element: <UsersAdd />
+                },
+                {
+                  path: 'edit/:id',
+                  element: <UsersEdit />
+                },
+                {
+                  path: 'view/:id',
+                  element: <UsersView />
+                },
+                {
+                  path: 'roles',
+                  element: <UsersRoles />
+                }
+              ]
+            },
+            {
+              path: 'monday',
+              children: [
+                {
+                  path: 'dashboard',
+                  element: <MondayDashboard />
+                },
+                {
+                  path: 'project/:id',
+                  element: <MondayProjectDetails />
+                }
+              ]
+            },
+            {
+              path: 'settings',
+              element: <AppSettings />
             },
             {
               path: 'e-commerce',

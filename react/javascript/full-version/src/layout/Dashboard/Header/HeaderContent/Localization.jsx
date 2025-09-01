@@ -27,7 +27,7 @@ import { LanguageSquare } from 'iconsax-reactjs';
 export default function Localization() {
   const downMD = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
-  const { i18n, onChangeLocalization } = useConfig();
+  const { i18n, onChangeLocalization, onChangeDirection } = useConfig();
 
   const anchorRef = useRef(null);
   const [open, setOpen] = useState(false);
@@ -43,7 +43,15 @@ export default function Localization() {
   };
 
   const handleListItemClick = (lang) => {
+    console.log('Changing language to:', lang);
     onChangeLocalization(lang);
+    // Set RTL direction for Arabic language
+    if (lang === 'ar') {
+      onChangeDirection('rtl');
+    } else if (i18n === 'ar') {
+      // If switching from Arabic to another language, set direction back to LTR
+      onChangeDirection('ltr');
+    }
     setOpen(false);
   };
 
@@ -144,6 +152,18 @@ export default function Localization() {
                             <Typography sx={{ color: 'text.primary' }}>中国人</Typography>
                             <Typography variant="caption" sx={{ color: 'text.secondary', ml: '8px' }}>
                               (Chinese)
+                            </Typography>
+                          </Grid>
+                        }
+                      />
+                    </ListItemButton>
+                    <ListItemButton selected={i18n === 'ar'} onClick={() => handleListItemClick('ar')}>
+                      <ListItemText
+                        primary={
+                          <Grid container>
+                            <Typography sx={{ color: 'text.primary' }}>العربية</Typography>
+                            <Typography variant="caption" sx={{ color: 'text.secondary', ml: '8px' }}>
+                              (Arabic)
                             </Typography>
                           </Grid>
                         }
